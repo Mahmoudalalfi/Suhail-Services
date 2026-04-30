@@ -855,9 +855,17 @@ function HomeServiceCard({ service }) {
 }
 
 function HomeServicesGrid() {
+  const { t } = useLanguage()
   const trackRef = useRef(null)
+  const translatedServices = t('home.homeServices') || []
+  // Merge translated text with icons/slugs from the static array
+  const services = HOME_SERVICES.map((svc, i) => ({
+    ...svc,
+    title: translatedServices[i]?.title || svc.title,
+    desc: translatedServices[i]?.desc || svc.desc,
+  }))
 
-  const doubled = [...HOME_SERVICES, ...HOME_SERVICES]
+  const doubled = [...services, ...services]
 
   return (
     <section style={{

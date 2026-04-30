@@ -6,29 +6,26 @@ import { useLanguage } from '../i18n/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const GALLERY_ITEMS = [
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png', title: 'Security Team' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png', title: 'Facility Security' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg', title: 'Our Team' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', title: 'Construction Sites' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png', title: 'Janitorial Services' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490754/suhail-services/pencil-security-technology.jpg', title: 'Security Technology' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png', title: 'Project: Retail Security' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', title: 'Our People' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', title: 'Healthcare Facilities' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', title: 'Outdoor Area Care' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490564/suhail-services/pencil-day-service-staff.png', title: 'Day Service Staff' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png', title: 'Maintenance Cleaning' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png', title: 'Project: Office Complex' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png', title: 'Project: Warehouse' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', title: 'Glass Facade Cleaning' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490813/suhail-services/work-project-05.png', title: 'Project: Berlin Site' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490381/suhail-services/imprint-extra-operations.png', title: 'Special Operations' },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png', title: 'Project: Retail Chain' },
+const GALLERY_URLS = [
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490754/suhail-services/pencil-security-technology.jpg',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490564/suhail-services/pencil-day-service-staff.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490813/suhail-services/work-project-05.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490381/suhail-services/imprint-extra-operations.png',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png',
 ]
-
-// Duplicate for seamless infinite loop
-const ITEMS = [...GALLERY_ITEMS, ...GALLERY_ITEMS]
 
 const CARD_W = 320
 const CARD_GAP = 20
@@ -39,14 +36,16 @@ const SPEED_PX_PER_SEC = 60
 let _setGlobalZoomed = null
 let _setGlobalPaused = null
 
-function GallerySlideshow({ reverse = false }) {
+function GallerySlideshow({ reverse = false, galleryItems }) {
   const trackRef = useRef(null)
   const animRef = useRef(null)
   const posRef = useRef(0)
   const pausedRef = useRef(false)
   const [hoveredIdx, setHoveredIdx] = useState(null)
 
-  const totalOrigW = GALLERY_ITEMS.length * CARD_STRIDE
+  // Triple the items for seamless infinite scroll
+  const ITEMS = [...galleryItems, ...galleryItems, ...galleryItems]
+  const totalOrigW = galleryItems.length * CARD_STRIDE
 
   useEffect(() => {
     let last = null
@@ -224,6 +223,13 @@ export default function GalleryPage() {
   const row1Ref = useRef(null)
   const row2Ref = useRef(null)
 
+  // Build gallery items from URLs + translated labels
+  const imageLabels = t('gallery.imageLabels') || []
+  const galleryItems = GALLERY_URLS.map((url, i) => ({
+    url,
+    title: imageLabels[i] || '',
+  }))
+
   useEffect(() => {
     if (headRef.current) {
       gsap.fromTo(headRef.current,
@@ -289,10 +295,10 @@ export default function GalleryPage() {
         overflow: 'hidden',
       }}>
         <div ref={row1Ref} style={{ opacity: 0, marginBottom: CARD_GAP + 8 }}>
-          <GallerySlideshow />
+          <GallerySlideshow galleryItems={galleryItems} />
         </div>
         <div ref={row2Ref} style={{ opacity: 0 }}>
-          <GallerySlideshow reverse />
+          <GallerySlideshow reverse galleryItems={galleryItems} />
         </div>
       </section>
 
@@ -575,7 +581,9 @@ function ServiceCard({ service, delay }) {
 }
 
 function ServicesSection() {
+  const { t } = useLanguage()
   const headRef = useRef(null)
+  const servicesData = t('gallery.servicesData') || SERVICES_DATA
 
   useEffect(() => {
     if (!headRef.current) return
@@ -604,7 +612,7 @@ function ServicesSection() {
           color: 'rgba(30,31,40,0.42)',
           marginBottom: 14,
         }}>
-          WHAT WE DO
+          {t('gallery.servicesEyebrow')}
         </p>
         <h2 style={{
           fontSize: 'clamp(28px,4.5vw,58px)',
@@ -614,7 +622,7 @@ function ServicesSection() {
           lineHeight: 1.08,
           margin: '0 auto 20px',
         }}>
-          Our Services
+          {t('gallery.servicesTitle')}
         </h2>
         <div style={{
           width: 44, height: 4, borderRadius: 2,
@@ -631,8 +639,8 @@ function ServicesSection() {
         maxWidth: 1200,
         margin: '0 auto',
       }}>
-        {SERVICES_DATA.map((svc, i) => (
-          <ServiceCard key={svc.slug} service={svc} delay={i * 0.06} />
+        {servicesData.map((svc, i) => (
+          <ServiceCard key={svc.slug || svc.category} service={svc} delay={i * 0.06} />
         ))}
       </div>
     </section>
@@ -640,7 +648,14 @@ function ServicesSection() {
 }
 
 function WhyChooseUs() {
+  const { t } = useLanguage()
   const headRef = useRef(null)
+  const translatedWhyItems = t('gallery.whyItems') || []
+  // Merge translated text with icons from the hardcoded WHY_ITEMS
+  const whyItems = translatedWhyItems.map((item, i) => ({
+    ...item,
+    icon: WHY_ITEMS[i]?.icon || null,
+  }))
 
   useEffect(() => {
     if (!headRef.current) return
@@ -668,7 +683,7 @@ function WhyChooseUs() {
           color: 'rgba(30,31,40,0.42)',
           marginBottom: 14,
         }}>
-          OUR STRENGTHS
+          {t('gallery.whyEyebrow')}
         </p>
         <h2 style={{
           fontSize: 'clamp(28px,4.5vw,58px)',
@@ -678,7 +693,7 @@ function WhyChooseUs() {
           lineHeight: 1.08,
           margin: '0 auto 20px',
         }}>
-          Why Choose Us?
+          {t('gallery.whyTitle')}
         </h2>
         <div style={{
           width: 44, height: 4, borderRadius: 2,
@@ -696,7 +711,7 @@ function WhyChooseUs() {
       }}
         className="why-grid"
       >
-        {WHY_ITEMS.map((item, i) => (
+        {whyItems.map((item, i) => (
           <WhyCard key={i} item={item} delay={i * 0.07} />
         ))}
       </div>
