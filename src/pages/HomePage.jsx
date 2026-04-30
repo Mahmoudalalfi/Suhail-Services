@@ -106,12 +106,12 @@ const heroImages = [
   { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',                alt: 'About 2',            top: 80, left: 19,  w: 148, h: 102, rot: -6,  delay: 1.05, depth: 1.0 },
 
   // ── TOP CENTER — above the text block ────────────────────────
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png',           alt: 'Healthcare top',     top: 4,  left: 34,  w: 152, h: 108, rot: -6,  delay: 0.42, depth: 0.7 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png',             alt: 'Outdoor top',        top: 3,  left: 55,  w: 160, h: 112, rot: 7,   delay: 0.50, depth: 0.9 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png',                      alt: 'Work 2',             top: 4,  left: 34,  w: 152, h: 108, rot: -6,  delay: 0.42, depth: 0.7 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png',          alt: 'Maintenance top',    top: 3,  left: 55,  w: 160, h: 112, rot: 7,   delay: 0.50, depth: 0.9 },
 
   // ── BOTTOM CENTER — below the text block ──────────────────────
   { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490564/suhail-services/pencil-day-service-staff.png',             alt: 'Day staff',          top: 78, left: 32,  w: 148, h: 108, rot: 6,   delay: 0.70, depth: 1.0 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png',          alt: 'Maintenance',        top: 76, left: 56,  w: 142, h: 104, rot: -7,  delay: 0.75, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png',                      alt: 'Work bottom',        top: 76, left: 56,  w: 142, h: 104, rot: -7,  delay: 0.75, depth: 1.0 },
 
   // top-right cluster
   { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png',             alt: 'Outdoor care',       top: 6,  left: 68,  w: 182, h: 122, rot: -9,  delay: 0.38, depth: 1.1 },
