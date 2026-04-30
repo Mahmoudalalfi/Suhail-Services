@@ -80,7 +80,7 @@ export default {
         {
           title: 'Kaufhaus Reinigung',
           tag: 'Gebäudereinigung & Unterhaltsreinigung',
-          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png',
+          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg',
         },
         {
           title: 'Bürokomplex Berlin',
@@ -744,7 +744,7 @@ export default {
       title1: 'Arbeit, die',
       title2: 'überzeugt',
       projects: [
-        { title: 'Kaufhaus Reinigung', tag: 'Gebäudereinigung', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png' },
+        { title: 'Kaufhaus Reinigung', tag: 'Gebäudereinigung', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg' },
         { title: 'Bürokomplex Berlin', tag: 'Unterhaltsreinigung', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
         { title: 'Industriegelände Süd', tag: 'Facility Management', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png' },
         { title: 'Großbaustelle Mitte', tag: 'Bauschlussreinigung', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
@@ -758,7 +758,7 @@ export default {
       title2: 'aus unserem Alltag',
       readTime: 'Lesezeit',
       posts: [
-        { date: 'April 2024', tag: 'Reinigung', title: "Professionelle Grundreinigung: Was Unternehmen beachten müssen", excerpt: "Eine Grundreinigung ist mehr als Routinereinigung. Rechtliche Vorgaben, Spezialgeräte und Fachpersonal sind entscheidend.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png', read: '5 Min' },
+        { date: 'April 2024', tag: 'Reinigung', title: "Professionelle Grundreinigung: Was Unternehmen beachten müssen", excerpt: "Eine Grundreinigung ist mehr als Routinereinigung. Rechtliche Vorgaben, Spezialgeräte und Fachpersonal sind entscheidend.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg', read: '5 Min' },
         { date: 'März 2024', tag: 'Reinigung', title: "Effiziente Baustellenreinigung für reibungslose Abläufe", excerpt: "Warum eine kontinuierliche Reinigung während der Bauphase nicht nur für Ordnung, sondern auch für Arbeitssicherheit sorgt.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
         { date: 'Februar 2024', tag: 'Baulogistik', title: "Baustellenlogistik: Der unsichtbare Erfolgsfaktor", excerpt: "Ohne präzise Logistik stehen Baustellen still. Erfahren Sie, wie wir Material und Personal auf Großbaustellen optimal steuern.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg', read: '6 Min' },
         { date: 'Januar 2024', tag: 'Facility', title: "Wie Facility Management Betriebskosten senkt", excerpt: "Professionelles Facility Management hält Gebäude in Top-Zustand und hilft Unternehmen, langfristige Instandhaltungskosten zu reduzieren.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png', read: '4 Min' },
@@ -790,7 +790,7 @@ export default {
           strap: 'Berlin · Gewerblich registriert',
         },
         {
-          image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490381/suhail-services/imprint-extra-operations.png',
+          image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg',
           alt: 'Objektschutz und Sicherheitsdienst an repräsentativer Immobilie',
           strap: 'Objektschutz · Professionelle Standards',
         },
@@ -902,7 +902,7 @@ export default {
         {
           title: 'Department Store Cleaning',
           tag: 'Building Cleaning & Maintenance',
-          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png',
+          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg',
         },
         {
           title: 'Berlin Office Complex',
@@ -1565,7 +1565,7 @@ export default {
       title1: 'Work that',
       title2: 'Convinces',
       projects: [
-        { title: 'Department Store Cleaning', tag: 'Building Cleaning', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png' },
+        { title: 'Department Store Cleaning', tag: 'Building Cleaning', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg' },
         { title: 'Berlin Office Complex', tag: 'Maintenance Cleaning', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
         { title: 'Industrial Park South', tag: 'Facility Management', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png' },
         { title: 'Large Construction Mitte', tag: 'Construction Cleaning', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
@@ -1579,7 +1579,7 @@ export default {
       title2: 'from our daily work',
       readTime: 'read',
       posts: [
-        { date: 'April 2024', tag: 'Cleaning', title: "Professional Deep Cleaning: What Businesses Need to Know", excerpt: "A thorough deep clean is more than routine tidying. Legal standards, specialist equipment, and expert staff are the key.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png', read: '5 Min' },
+        { date: 'April 2024', tag: 'Cleaning', title: "Professional Deep Cleaning: What Businesses Need to Know", excerpt: "A thorough deep clean is more than routine tidying. Legal standards, specialist equipment, and expert staff are the key.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg', read: '5 Min' },
         { date: 'March 2024', tag: 'Cleaning', title: "Efficient Construction Cleaning for Smooth Operations", excerpt: "Why continuous cleaning during the construction phase ensures not only order but also occupational safety.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
         { date: 'February 2024', tag: 'Logistics', title: "Construction Logistics: The Invisible Success Factor", excerpt: "Without precise logistics, sites stand still. Learn how we optimally control material and personnel on large projects.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg', read: '6 Min' },
         { date: 'January 2024', tag: 'Facility', title: "How Facility Management Reduces Operational Costs", excerpt: "Smart facility management keeps buildings running smoothly and helps organisations cut long-term maintenance spend.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png', read: '4 Min' },
@@ -1611,7 +1611,7 @@ export default {
           strap: 'Berlin · commercially registered',
         },
         {
-          image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490381/suhail-services/imprint-extra-operations.png',
+          image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg',
           alt: 'Property protection and security services at a commercial site',
           strap: 'Property protection · Professional standards',
         },

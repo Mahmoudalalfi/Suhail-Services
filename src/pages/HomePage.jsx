@@ -105,11 +105,11 @@ const heroImages = [
   { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', alt: 'About 2', top: 80, left: 19, w: 148, h: 102, rot: -6, delay: 1.05, depth: 1.0 },
 
   // ── TOP CENTER — above the text block ────────────────────────
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png', alt: 'Work 2', top: 4, left: 34, w: 152, h: 108, rot: -6, delay: 0.42, depth: 0.7 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg', alt: 'Work 2', top: 4, left: 34, w: 152, h: 108, rot: -6, delay: 0.42, depth: 0.7 },
   { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png', alt: 'Maintenance top', top: 3, left: 55, w: 160, h: 112, rot: 7, delay: 0.50, depth: 0.9 },
 
   // ── BOTTOM CENTER — below the text block ──────────────────────
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490564/suhail-services/pencil-day-service-staff.png', alt: 'Day staff', top: 78, left: 32, w: 148, h: 108, rot: 6, delay: 0.70, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580100/pencil-day-service-staff_koskip.jpg', alt: 'Day staff', top: 78, left: 32, w: 148, h: 108, rot: 6, delay: 0.70, depth: 1.0 },
   { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png', alt: 'Work bottom', top: 76, left: 56, w: 142, h: 104, rot: -7, delay: 0.75, depth: 1.0 },
 
   // top-right cluster
@@ -120,8 +120,8 @@ const heroImages = [
   { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png', alt: 'Work 3', top: 30, left: 91, w: 138, h: 104, rot: 12, delay: 0.72, depth: 1.8 },
   // bottom-right cluster
   { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', top: 62, left: 68, w: 142, h: 116, rot: -10, delay: 0.78, depth: 1.3 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490813/suhail-services/work-project-05.png', alt: 'Work 5', top: 60, left: 84, w: 155, h: 118, rot: 6, delay: 0.90, depth: 0.8 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490381/suhail-services/imprint-extra-operations.png', alt: 'Operations', top: 82, left: 70, w: 132, h: 90, rot: -4, delay: 1.00, depth: 0.6 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580142/work-project-05_pwdduz.png', alt: 'Work 5', top: 60, left: 84, w: 155, h: 118, rot: 6, delay: 0.90, depth: 0.8 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg', alt: 'Operations', top: 82, left: 70, w: 132, h: 90, rot: -4, delay: 1.00, depth: 0.6 },
   { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Sites right', top: 81, left: 88, w: 138, h: 94, rot: 7, delay: 1.10, depth: 1.0 },
 ]
 
