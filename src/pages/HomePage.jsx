@@ -142,7 +142,7 @@ const MOBILE_HERO_CARDS = [
 ]
 
 /* Each card gets a unique parallax depth multiplier */
-const MOBILE_CARD_DEPTHS = [18, 12, 14, 20]
+const MOBILE_CARD_DEPTHS = [52, 34, 44, 60]
 
 const needsGyroPermission = () =>
   typeof DeviceOrientationEvent !== 'undefined' &&
@@ -159,8 +159,8 @@ function MobileHeroCards() {
       const beta  = e.beta  ?? 0
       const gamma = e.gamma ?? 0
       if (baseRef.current.beta === null) baseRef.current = { beta, gamma }
-      const dx = (gamma - baseRef.current.gamma) / 30
-      const dy = (beta  - baseRef.current.beta)  / 40
+      const dx = (gamma - baseRef.current.gamma) / 12
+      const dy = (beta  - baseRef.current.beta)  / 16
       setGyro({ x: Math.max(-1, Math.min(1, dx)), y: Math.max(-1, Math.min(1, dy)) })
     }
     window.addEventListener('deviceorientation', handler)
@@ -244,7 +244,7 @@ function MobileHeroCards() {
             transition={
               gyro.x === 0 && gyro.y === 0
                 ? { delay: 0.25 + i * 0.12, duration: 0.65, ease: [0.16, 1, 0.3, 1] }
-                : { type: 'spring', stiffness: 60, damping: 18, mass: 0.8 }
+                : { type: 'spring', stiffness: 35, damping: 12, mass: 1.1 }
             }
             style={{
               position: 'absolute',
