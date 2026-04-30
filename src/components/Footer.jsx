@@ -19,17 +19,26 @@ export default function Footer() {
             {t('footer.brandTagline')}
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 18 }}>
-            <a href="mailto:kontact@suhaili.de" style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
+            {[
+              'kontact@suhaili.de',
+              'hussein@suhaili.de',
+              'hasan@suhaili.de',
+              'service.plan@suhaili.de',
+              'service@suhaili.de',
+              'buero@suhaili.de',
+            ].map(email => (
+              <a key={email} href={`mailto:${email}`} style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
+                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
+                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}
+              >
+                {email}
+              </a>
+            ))}
+            <a href="tel:+4917641180455" style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
               onMouseEnter={e => e.currentTarget.style.color = '#fff'}
               onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}
             >
-              kontact@suhaili.de
-            </a>
-            <a href="tel:+4917620607329" style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
-              onMouseEnter={e => e.currentTarget.style.color = '#fff'}
-              onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}
-            >
-              +49 176 20607329
+              +49 176 41180455
             </a>
           </div>
         </div>

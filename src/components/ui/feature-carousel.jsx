@@ -25,7 +25,6 @@ const SUB_IMAGES = {
   "maintenance-cleaning":   "https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=1400",
   "cashier-services":       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1400",
   "warehouse-services":     "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1400",
-  "construction-interior":  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1400",
   "installation-unpacking": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1400",
   "electrical-assistance":  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1400",
   "transport":              "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1400",

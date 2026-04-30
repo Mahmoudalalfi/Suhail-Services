@@ -53,8 +53,8 @@ export default function ContactPage() {
         </svg>
       ),
       label: t('contact.infoPhone'),
-      content: '+49 176 20607329',
-      href: 'tel:+4917620607329',
+      content: '+49 176 41180455',
+      href: 'tel:+4917641180455',
     },
     {
       icon: (
@@ -63,8 +63,15 @@ export default function ContactPage() {
         </svg>
       ),
       label: t('contact.infoEmail'),
-      content: 'kontact@suhail.de',
-      href: 'mailto:kontact@suhail.de',
+      content: [
+        'kontact@suhaili.de',
+        'hussein@suhaili.de',
+        'hasan@suhaili.de',
+        'service.plan@suhaili.de',
+        'service@suhaili.de',
+        'buero@suhaili.de',
+      ],
+      href: null,
     },
   ]
 
@@ -134,7 +141,16 @@ export default function ContactPage() {
                   }}>{icon}</div>
                   <div>
                     <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(30,31,40,0.35)', marginBottom: 5 }}>{label}</p>
-                    {href ? (
+                    {Array.isArray(content) ? (
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                        {content.map(email => (
+                          <a key={email} href={`mailto:${email}`} style={{ fontSize: 14, color: '#0a0a0a', textDecoration: 'none', letterSpacing: '-0.01em', lineHeight: 1.5 }}
+                            onMouseEnter={e => e.currentTarget.style.color = '#1d4ed8'}
+                            onMouseLeave={e => e.currentTarget.style.color = '#0a0a0a'}
+                          >{email}</a>
+                        ))}
+                      </div>
+                    ) : href ? (
                       <a href={href} style={{ fontSize: 15, color: '#0a0a0a', textDecoration: 'none', letterSpacing: '-0.01em', lineHeight: 1.5 }}
                         onMouseEnter={e => e.currentTarget.style.color = '#1d4ed8'}
                         onMouseLeave={e => e.currentTarget.style.color = '#0a0a0a'}

@@ -395,11 +395,6 @@ const SERVICE_ICON = {
       <path d="M2 20V8l10-5 10 5v12" /><rect x="8" y="14" width="8" height="6" /><line x1="12" y1="14" x2="12" y2="20" />
     </svg>
   ),
-  'Construction & Interior Work': (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-    </svg>
-  ),
   'Installation & Unpacking': (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="21 8 21 21 3 21 3 8" /><rect x="1" y="3" width="22" height="5" /><line x1="10" y1="12" x2="14" y2="12" />
@@ -446,12 +441,6 @@ const SERVICES_DATA = [
     slug: 'warehouse-services',
     desc: 'Professional warehouse work – from order picking to goods inspection.',
     bullets: ['Picking', 'Sorting', 'Packing', 'Goods inspection'],
-  },
-  {
-    category: 'Construction & Interior Work',
-    slug: 'construction-interior',
-    desc: 'Skilled support for construction projects and interior finishing.',
-    bullets: ['Construction assistance', 'Interior finishing', 'Renovation', 'Drywall work'],
   },
   {
     category: 'Installation & Unpacking',

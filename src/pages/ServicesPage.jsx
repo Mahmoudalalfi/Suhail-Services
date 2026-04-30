@@ -14,11 +14,10 @@ const SERVICES_HASH_INDEX = {
   'cleaning':               1,
   'cashier-services':       2,
   'warehouse-services':     3,
-  'construction-interior':  4,
-  'installation-unpacking': 5,
-  'electrical-assistance':  6,
-  'transport':              7,
-  'staffing-services':      8,
+  'installation-unpacking': 4,
+  'electrical-assistance':  5,
+  'transport':              6,
+  'staffing-services':      7,
 }
 
 function hashToServicesPanelIndex(hash) {
