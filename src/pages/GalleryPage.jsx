@@ -73,28 +73,21 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
     return () => cancelAnimationFrame(animRef.current)
   }, [totalOrigW])
 
-  const isTouch = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
-
   function handleMouseEnter(idx, item) {
-    if (isTouch) return
     pausedRef.current = true
     setHoveredIdx(idx)
     if (_setGlobalZoomed) _setGlobalZoomed(item)
   }
 
   function handleMouseLeave() {
-    if (isTouch) return
     pausedRef.current = false
     setHoveredIdx(null)
     if (_setGlobalZoomed) _setGlobalZoomed(null)
   }
 
-  function handleClick(idx, item) {
-    if (!isTouch) return
-    const already = hoveredIdx === idx
-    pausedRef.current = !already
-    setHoveredIdx(already ? null : idx)
-    if (_setGlobalZoomed) _setGlobalZoomed(already ? null : item)
+  function handleClick(item) {
+    pausedRef.current = true
+    if (_setGlobalZoomed) _setGlobalZoomed(item)
   }
 
   return (
@@ -113,7 +106,7 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
             key={idx}
             onMouseEnter={() => handleMouseEnter(idx, item)}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick(idx, item)}
+            onClick={() => handleClick(item)}
             style={{
               flexShrink: 0,
               width: CARD_W,
@@ -175,7 +168,6 @@ function ZoomedOverlay() {
 
   function close() {
     setZoomed(null)
-    if (_setGlobalZoomed) _setGlobalZoomed(null)
   }
 
   return (
