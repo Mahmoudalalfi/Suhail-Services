@@ -1,0 +1,404 @@
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const MotionLink = motion(Link);
+
+function useCarouselMobile() {
+  const [mobile, setMobile] = useState(() => window.innerWidth < 768)
+  useEffect(() => {
+    const h = () => setMobile(window.innerWidth < 768)
+    window.addEventListener('resize', h)
+    return () => window.removeEventListener('resize', h)
+  }, [])
+  return mobile
+}
+import { useLanguage } from "../../i18n/LanguageContext";
+
+const CATEGORY_KEYS = ["general", "cleaning", "cashier", "warehouse", "construction", "installation", "electrical", "transport", "staffing"];
+
+const SUB_IMAGES = {
+  "general-services":       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1400",
+  "office-cleaning":        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1400",
+  "construction-cleaning":  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1400",
+  "deep-cleaning":          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1400",
+  "maintenance-cleaning":   "https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=1400",
+  "cashier-services":       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1400",
+  "warehouse-services":     "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1400",
+  "construction-interior":  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1400",
+  "installation-unpacking": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1400",
+  "electrical-assistance":  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1400",
+  "transport":              "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1400",
+  "staffing-services":      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1400",
+};
+
+const FALLBACKS = [
+  "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1400",
+  "https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=1400",
+  "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1400",
+  "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1400",
+];
+
+const CAT_COLORS = ["#FACC15", "#38bdf8", "#34d399", "#fb923c", "#a78bfa", "#f472b6", "#22d3ee", "#FACC15", "#38bdf8"];
+const AUTO_MS = 3800;
+
+export function FeatureCarousel({ servicesList, openCategoryIndex }) {
+  const { t } = useLanguage();
+
+  const categories = (servicesList || []).map((s, i) => ({
+    key:      CATEGORY_KEYS[i] || `cat-${i}`,
+    label:    (s.category || s.name || "").replace("\n", " "),
+    desc:     s.desc || "",
+    color:    CAT_COLORS[i] || CAT_COLORS[0],
+    fallback: FALLBACKS[i] || FALLBACKS[0],
+    items:    (s.items || []).map(item => ({
+      ...item,
+      image: SUB_IMAGES[item.slug] || FALLBACKS[i] || FALLBACKS[0],
+    })),
+  }));
+
+  const isMobile = useCarouselMobile();
+  const [catIdx, setCatIdx] = useState(() => typeof openCategoryIndex === "number" ? openCategoryIndex : 0);
+  const [cur, setCur]       = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [hovItem, setHovItem] = useState(null);
+
+  const cat   = categories[catIdx] || categories[0];
+  const items = cat?.items || [];
+  const len   = items.length;
+  const accent = cat.color;
+  const displayItem = hovItem !== null ? items[hovItem] : items[cur];
+
+  useEffect(() => {
+    if (typeof openCategoryIndex === "number") setCatIdx(openCategoryIndex);
+  }, [openCategoryIndex]);
+
+  useEffect(() => { setCur(0); setHovItem(null); }, [catIdx]);
+
+  useEffect(() => {
+    if (paused || len <= 1) return;
+    const id = setInterval(() => setCur(c => (c + 1) % len), AUTO_MS);
+    return () => clearInterval(id);
+  }, [paused, len, catIdx]);
+
+  return (
+    <div
+      style={{ padding: "0 clamp(16px, 3vw, 48px)" }}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => { setPaused(false); setHovItem(null); }}
+    >
+      {/* ── Category tab bar ── */}
+      {isMobile && (
+        <div style={{
+          display: "flex", alignItems: "center", justifyContent: "space-between",
+          padding: "8px clamp(4px, 2vw, 12px) 6px",
+          borderBottom: "none",
+        }}>
+          <span style={{
+            fontSize: 10, fontWeight: 700, letterSpacing: "0.12em",
+            textTransform: "uppercase", color: "rgba(0,0,0,0.35)",
+          }}>
+            {catIdx + 1} / {categories.length}
+          </span>
+          <span style={{
+            fontSize: 10, fontWeight: 600, letterSpacing: "0.08em",
+            textTransform: "uppercase", color: "rgba(0,0,0,0.35)",
+            display: "flex", alignItems: "center", gap: 4,
+          }}>
+            Scroll for more &nbsp;›
+          </span>
+        </div>
+      )}
+      <div style={{
+        position: isMobile ? "relative" : "static",
+      }}>
+      <div style={{
+        display: "flex", gap: 0,
+        marginBottom: 0,
+        borderBottom: "1px solid rgba(0,0,0,0.08)",
+        overflowX: isMobile ? "auto" : "visible",
+        WebkitOverflowScrolling: "touch",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
+      }}>
+        {categories.map((c, i) => {
+          const active = i === catIdx;
+          return (
+            <button
+              key={c.key}
+              onClick={() => { setCatIdx(i); setPaused(false); }}
+              style={{
+                flex: isMobile ? "0 0 auto" : 1,
+                padding: isMobile ? "14px 16px" : "18px 12px",
+                border: "none", background: "transparent",
+                cursor: "pointer", position: "relative",
+                transition: "background 0.2s",
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={e => { if (!active) e.currentTarget.style.background = "rgba(0,0,0,0.03)"; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "transparent"; }}
+            >
+              <span style={{
+                display: "block",
+                fontSize: isMobile ? 11 : "clamp(10px, 1.1vw, 12px)",
+                fontWeight: active ? 700 : 500,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: active ? "#0a0a0a" : "rgba(0,0,0,0.35)",
+                transition: "color 0.2s",
+              }}>
+                {c.label}
+              </span>
+              {active && (
+                <motion.div
+                  layoutId="tab-underline"
+                  style={{
+                    position: "absolute", bottom: -1, left: 0, right: 0,
+                    height: 3, background: accent, borderRadius: "3px 3px 0 0",
+                  }}
+                  transition={{ type: "spring", stiffness: 480, damping: 34 }}
+                />
+              )}
+            </button>
+          );
+        })}
+      </div>
+      {/* Right fade + arrow indicator — only on mobile */}
+      {isMobile && (
+        <div style={{
+          position: "absolute", top: 0, right: 0, bottom: 0,
+          width: 48,
+          background: "linear-gradient(to right, transparent, rgba(255,255,255,0.96))",
+          pointerEvents: "none",
+          display: "flex", alignItems: "center", justifyContent: "flex-end",
+          paddingRight: 8,
+          zIndex: 2,
+        }}>
+          <span style={{ fontSize: 16, color: "rgba(0,0,0,0.4)", fontWeight: 700 }}>›</span>
+        </div>
+      )}
+      </div>
+
+      {/* ── Main stage ── */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={catIdx}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.22 }}
+          style={{
+            display: "grid",
+            gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+            height: isMobile ? "auto" : 560,
+          }}
+        >
+          {/* LEFT — big typography + image */}
+          <div style={{
+            position: "relative",
+            overflow: "hidden",
+            background: "#0a0a0a",
+            minHeight: isMobile ? 320 : "auto",
+          }}>
+            {/* BG image cross-fade */}
+            <AnimatePresence mode="sync">
+              <motion.div
+                key={displayItem?.image}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                style={{
+                  position: "absolute", inset: 0,
+                  backgroundImage: `url(${displayItem?.image || cat.fallback})`,
+                  backgroundSize: "cover", backgroundPosition: "center",
+                }}
+              />
+            </AnimatePresence>
+
+            {/* Strong gradient so text pops */}
+            <div style={{
+              position: "absolute", inset: 0,
+              background: "linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.2) 100%)",
+            }} />
+
+            {/* Giant category number */}
+            <div style={{
+              position: "absolute", top: 24, right: 28,
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: "clamp(80px, 10vw, 140px)",
+              fontWeight: 900,
+              lineHeight: 1,
+              color: "transparent",
+              WebkitTextStroke: `1px ${accent}33`,
+              letterSpacing: "-0.04em",
+              userSelect: "none",
+              pointerEvents: "none",
+            }}>
+              {String(catIdx + 1).padStart(2, "0")}
+            </div>
+
+            {/* Bottom content */}
+            <div style={{
+              position: "absolute", inset: "auto 0 0 0",
+              padding: "clamp(24px, 3vw, 40px)",
+            }}>
+              {/* Accent tag */}
+              <div style={{
+                display: "inline-flex", alignItems: "center", gap: 8,
+                background: accent,
+                borderRadius: 6, padding: "4px 12px",
+                marginBottom: 14,
+              }}>
+                <span style={{
+                  fontSize: 9, fontWeight: 800, letterSpacing: "0.15em",
+                  textTransform: "uppercase", color: "#000",
+                }}>
+                  {cat.label}
+                </span>
+              </div>
+
+              {/* Active service name */}
+              <AnimatePresence mode="wait">
+                <motion.h2
+                  key={`${catIdx}-${displayItem?.slug}`}
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.25 }}
+                  style={{
+                    fontSize: "clamp(22px, 2.8vw, 38px)",
+                    fontWeight: 800,
+                    color: "#fff",
+                    letterSpacing: "-0.03em",
+                    lineHeight: 1.1,
+                    margin: "0 0 10px",
+                  }}
+                >
+                  {displayItem?.name || cat.label}
+                </motion.h2>
+              </AnimatePresence>
+
+              <p style={{
+                fontSize: 12, color: "rgba(255,255,255,0.45)",
+                lineHeight: 1.6, margin: "0 0 20px",
+                maxWidth: 340,
+              }}>
+                {cat.desc}
+              </p>
+
+              {/* Progress + count */}
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <span style={{
+                  fontSize: 10, fontWeight: 700,
+                  color: accent, letterSpacing: "0.1em", fontFamily: "monospace",
+                }}>
+                  {String((hovItem ?? cur) + 1).padStart(2, "0")} / {String(len).padStart(2, "0")}
+                </span>
+                <div style={{ flex: 1, height: 2, background: "rgba(255,255,255,0.12)", borderRadius: 2, overflow: "hidden" }}>
+                  <motion.div
+                    animate={{ width: `${((hovItem ?? cur) + 1) / len * 100}%` }}
+                    transition={{ duration: 0.35 }}
+                    style={{ height: "100%", background: accent, borderRadius: 2 }}
+                  />
+                </div>
+                {displayItem?.slug && (
+                  <Link
+                    to={`/services/${displayItem.slug}`}
+                    style={{
+                      fontSize: 10, fontWeight: 700, letterSpacing: "0.1em",
+                      textTransform: "uppercase", color: accent,
+                      textDecoration: "none", display: "flex", alignItems: "center", gap: 4,
+                      flexShrink: 0,
+                    }}
+                  >
+                    Explore →
+                  </Link>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT — numbered list */}
+          <div style={{
+            background: "#fff",
+            display: "flex", flexDirection: "column",
+            overflow: isMobile ? "visible" : "hidden",
+            height: isMobile ? "auto" : "100%",
+          }}>
+            <div style={{ flex: 1, overflowY: isMobile ? "visible" : "auto", display: "flex", flexDirection: "column" }}>
+            {items.map((item, idx) => {
+              const isActive = hovItem === idx || (hovItem === null && cur === idx);
+              return (
+                <MotionLink
+                  key={item.slug}
+                  to={`/services/${item.slug}`}
+                  onMouseEnter={() => setHovItem(idx)}
+                  onMouseLeave={() => setHovItem(null)}
+                  style={{
+                    display: "flex", alignItems: "center",
+                    padding: isMobile ? "16px clamp(16px, 4vw, 24px)" : "0 clamp(20px, 3vw, 40px)",
+                    borderBottom: "1px solid rgba(0,0,0,0.07)",
+                    cursor: "pointer",
+                    background: isActive ? accent : "transparent",
+                    transition: "background 0.18s",
+                    flex: isMobile ? "0 0 auto" : 1,
+                    minHeight: isMobile ? 56 : 0,
+                    gap: 16,
+                    textDecoration: "none",
+                  }}
+                >
+                  {/* Number */}
+                  <span style={{
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontSize: "clamp(26px, 2.8vw, 40px)",
+                    fontWeight: 900,
+                    color: isActive ? "rgba(0,0,0,0.18)" : "rgba(0,0,0,0.07)",
+                    letterSpacing: "-0.03em",
+                    lineHeight: 1,
+                    flexShrink: 0,
+                    transition: "color 0.18s",
+                    userSelect: "none",
+                    minWidth: "clamp(36px, 3.5vw, 52px)",
+                  }}>
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+
+                  {/* Name */}
+                  <span style={{
+                    flex: 1,
+                    fontSize: "clamp(13px, 1.3vw, 16px)",
+                    fontWeight: 600,
+                    letterSpacing: "-0.02em",
+                    color: isActive ? "#000" : "#1a1a1a",
+                    transition: "color 0.18s",
+                  }}>
+                    {item.name}
+                  </span>
+
+                  {/* Arrow */}
+                  <motion.span
+                    animate={{
+                      opacity: isActive ? 1 : 0,
+                      x: isActive ? 0 : -6,
+                    }}
+                    transition={{ duration: 0.15 }}
+                    style={{
+                      fontSize: 16, color: "#000", fontWeight: 700,
+                      flexShrink: 0,
+                    }}
+                  >
+                    →
+                  </motion.span>
+                </MotionLink>
+              );
+            })}
+            </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
+
+export default FeatureCarousel;
