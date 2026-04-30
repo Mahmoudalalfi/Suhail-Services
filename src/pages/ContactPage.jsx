@@ -20,7 +20,7 @@ export default function ContactPage() {
     gsap.set([headRef.current, leftRef.current, rightRef.current], { opacity: 0, y: 40 })
     const tl = gsap.timeline({ delay: 0.05 })
     tl.to(headRef.current, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
-    tl.to(leftRef.current,  { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
+    tl.to(leftRef.current, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
     tl.to(rightRef.current, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.55')
   }, [])
 
@@ -30,8 +30,8 @@ export default function ContactPage() {
   }
 
   const fields = [
-    { id: 'name',    label: t('contact.name'),  type: 'text',  required: true },
-    { id: 'email',   label: t('contact.email'), type: 'email', required: true },
+    { id: 'name', label: t('contact.name'), type: 'text', required: true },
+    { id: 'email', label: t('contact.email'), type: 'email', required: true },
     ...(companyLabel ? [{ id: 'company', label: companyLabel, type: 'text', required: false }] : []),
   ]
 
@@ -39,7 +39,7 @@ export default function ContactPage() {
     {
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
         </svg>
       ),
       label: t('contact.infoAddress'),
@@ -49,7 +49,7 @@ export default function ContactPage() {
     {
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.16 11.9 19.79 19.79 0 0 1 1.08 3.26 2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.16 11.9 19.79 19.79 0 0 1 1.08 3.26 2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
         </svg>
       ),
       label: t('contact.infoPhone'),
@@ -59,12 +59,12 @@ export default function ContactPage() {
     {
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" />
         </svg>
       ),
       label: t('contact.infoEmail'),
-      content: 'contact@suhaili.de',
-      href: 'mailto:contact@suhaili.de',
+      content: 'kontact@suhail.de',
+      href: 'mailto:kontact@suhail.de',
     },
   ]
 
@@ -184,7 +184,7 @@ export default function ContactPage() {
             <div style={{ maxWidth: 480 }}>
               <div style={{ width: 56, height: 56, borderRadius: '50%', background: '#dcfce7', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 24 }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
+                  <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
               <p style={{ fontSize: 'clamp(22px,3vw,36px)', fontWeight: 700, color: '#0a0a0a', letterSpacing: '-0.03em', lineHeight: 1.2, marginBottom: 12 }}>

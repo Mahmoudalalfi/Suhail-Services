@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url'
 
 // ── Config ────────────────────────────────────────────────────────────────────
 const CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME || 'dfc0qnh88'
-const API_KEY    = process.env.CLOUDINARY_API_KEY    || ''
+const API_KEY = process.env.CLOUDINARY_API_KEY || ''
 const API_SECRET = process.env.CLOUDINARY_API_SECRET || ''
 
 if (!API_KEY || !API_SECRET) {
@@ -24,9 +24,9 @@ if (!API_KEY || !API_SECRET) {
 
 cloudinary.config({ cloud_name: CLOUD_NAME, api_key: API_KEY, api_secret: API_SECRET, secure: true })
 
-const __dirname  = path.dirname(fileURLToPath(import.meta.url))
-const ROOT       = path.resolve(__dirname, '..')
-const SRC_DIR    = path.join(ROOT, 'src')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const ROOT = path.resolve(__dirname, '..')
+const SRC_DIR = path.join(ROOT, 'src')
 
 // ── Image sources ─────────────────────────────────────────────────────────────
 // localPrefix: the string pattern used in source code
@@ -34,12 +34,12 @@ const SRC_DIR    = path.join(ROOT, 'src')
 // cloudFolder: Cloudinary folder to upload into
 const IMAGE_SOURCES = [
   {
-    absDir:      path.join(ROOT, 'dist', 'images'),
+    absDir: path.join(ROOT, 'dist', 'images'),
     localPrefix: '/images/',
     cloudFolder: 'suhail-services/images',
   },
   {
-    absDir:      path.join(ROOT, 'assets', 'facility-services-images'),
+    absDir: path.join(ROOT, 'assets', 'facility-services-images'),
     // serviceDetails.js uses paths like: /assets/facility-services-images/facility-automotive.png
     // or possibly relative — we handle both
     localPrefix: '/assets/facility-services-images/',
@@ -83,17 +83,17 @@ for (const source of IMAGE_SOURCES) {
   console.log(`\n📦  ${source.absDir}\n    ${files.length} images to upload\n`)
 
   for (const file of files) {
-    const rel      = path.relative(source.absDir, file).replace(/\\/g, '/')
-    const noExt    = rel.replace(/\.[^.]+$/, '')
+    const rel = path.relative(source.absDir, file).replace(/\\/g, '/')
+    const noExt = rel.replace(/\.[^.]+$/, '')
     const publicId = source.cloudFolder + '/' + noExt
     const localUrl = source.localPrefix + rel
 
     try {
       const result = await cloudinary.uploader.upload(file, {
-        public_id:     publicId,
-        overwrite:     true,
+        public_id: publicId,
+        overwrite: true,
         resource_type: 'image',
-        use_filename:  false,
+        use_filename: false,
       })
       urlMap[localUrl] = result.secure_url
       console.log(`  ✅  ${localUrl}\n      → ${result.secure_url}`)

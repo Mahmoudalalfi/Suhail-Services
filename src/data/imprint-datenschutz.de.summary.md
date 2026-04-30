@@ -13,7 +13,7 @@ Eine **vollständige englischsprachige** Datenschutzerklärung folgt **auf der S
 ### Verantwortlicher (Art. 4 Nr. 7 DSGVO)
 
 **Adler Services & Security GmbH**, Forstweg 99, 13465 Berlin  
-E-Mail: contact@suhaili.de  
+E-Mail: kontact@suhail.de  
 Ausführliches Impressum: siehe Menüpunkt Impressum auf dieser Website.
 
 ### Kernrechte Betroffener

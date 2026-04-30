@@ -19,11 +19,11 @@ export default function Footer() {
             {t('footer.brandTagline')}
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 18 }}>
-            <a href="mailto:contact@suhaili.de" style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
+            <a href="mailto:kontact@suhaili.de" style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
               onMouseEnter={e => e.currentTarget.style.color = '#fff'}
               onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}
             >
-              contact@suhaili.de
+              kontact@suhaili.de
             </a>
             <a href="tel:+4917620607329" style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
               onMouseEnter={e => e.currentTarget.style.color = '#fff'}
@@ -36,11 +36,11 @@ export default function Footer() {
 
         {/* Nav */}
         <FooterCol title={t('footer.linksTitle')} links={[
-          { label: t('nav.projects'),  to: '/work' },
-          { label: t('nav.about'),     to: '/about' },
-          { label: t('nav.services'),  to: '/services' },
-          { label: t('nav.news'),      to: '/blog' },
-          { label: t('nav.contact'),   to: '/contact' },
+          { label: t('nav.projects'), to: '/work' },
+          { label: t('nav.about'), to: '/about' },
+          { label: t('nav.services'), to: '/services' },
+          { label: t('nav.news'), to: '/blog' },
+          { label: t('nav.contact'), to: '/contact' },
         ]} />
 
         {/* Services */}
@@ -51,14 +51,14 @@ export default function Footer() {
 
         {/* Social & Legal */}
         <FooterCol title={t('footer.legalTitle')} links={[
-          { label: t('footer.impressum'),      to: '/imprint' },
+          { label: t('footer.impressum'), to: '/imprint' },
           { label: t('footer.dataProtection'), to: '/data-protection' },
         ]} />
       </div>
 
       <div className="footer-bottom">
         <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.22)' }}>
-          © {new Date().getFullYear()} Suhail Services. {t('footer.rightsReserved')}
+          © {new Date().getFullYear()} suhail Services. {t('footer.rightsReserved')}
         </p>
         <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.22)' }}>
           {t('footer.location')}

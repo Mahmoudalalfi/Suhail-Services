@@ -8,18 +8,17 @@ import { TextRotate } from '../components/ui/text-rotate'
 import { Floating, FloatingElement } from '../components/ui/parallax-floating'
 import LiquidButton from '../components/ui/LiquidButton'
 import BrandLogo from '../components/BrandLogo'
-import { ContainerScroll } from '../components/ui/ContainerScroll'
 
 // All candidate grid cells — spread across the hero area
 const ALL_SQUARES = [
-  [2,2],[5,1],[8,3],[12,2],[16,4],[20,1],[24,3],[28,2],[32,4],[36,1],
-  [3,8],[7,6],[11,9],[15,7],[19,8],[23,6],[27,9],[31,7],
-  [1,14],[5,12],[9,15],[13,13],[17,14],[21,12],[25,15],[29,13],
-  [4,18],[8,17],[12,19],[16,18],[20,17],[24,19],[28,18],
-  [2,22],[6,21],[10,23],[14,22],[18,21],[22,23],[26,22],
-  [3,5],[9,4],[15,3],[21,5],[27,4],[33,3],
-  [6,10],[12,11],[18,10],[24,11],[30,10],
-  [1,16],[7,17],[13,16],[19,17],[25,16],[31,17],
+  [2, 2], [5, 1], [8, 3], [12, 2], [16, 4], [20, 1], [24, 3], [28, 2], [32, 4], [36, 1],
+  [3, 8], [7, 6], [11, 9], [15, 7], [19, 8], [23, 6], [27, 9], [31, 7],
+  [1, 14], [5, 12], [9, 15], [13, 13], [17, 14], [21, 12], [25, 15], [29, 13],
+  [4, 18], [8, 17], [12, 19], [16, 18], [20, 17], [24, 19], [28, 18],
+  [2, 22], [6, 21], [10, 23], [14, 22], [18, 21], [22, 23], [26, 22],
+  [3, 5], [9, 4], [15, 3], [21, 5], [27, 4], [33, 3],
+  [6, 10], [12, 11], [18, 10], [24, 11], [30, 10],
+  [1, 16], [7, 17], [13, 16], [19, 17], [25, 16], [31, 17],
 ]
 
 function FlickerGrid({ width = 44, height = 44, x = -1, y = -1 }) {
@@ -94,44 +93,44 @@ gsap.registerPlugin(ScrollTrigger)
 */
 const heroImages = [
   // top-left cluster
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png',                alt: 'Security team',      top: 8,  left: 1,   w: 155, h: 108, rot: -5,  delay: 0.30, depth: 0.8 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png', alt: 'Facility hero',      top: 5,  left: 13,  w: 185, h: 125, rot: -11, delay: 0.45, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png', alt: 'Security team', top: 8, left: 1, w: 155, h: 108, rot: -5, delay: 0.30, depth: 0.8 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png', alt: 'Facility hero', top: 5, left: 13, w: 185, h: 125, rot: -11, delay: 0.45, depth: 1.0 },
   // mid-left
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg',                alt: 'About team',         top: 32, left: 0,   w: 160, h: 118, rot: 7,   delay: 0.40, depth: 1.2 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png',   alt: 'Construction',       top: 28, left: 17,  w: 158, h: 112, rot: -8,  delay: 0.55, depth: 0.9 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg', alt: 'About team', top: 32, left: 0, w: 160, h: 118, rot: 7, delay: 0.40, depth: 1.2 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Construction', top: 28, left: 17, w: 158, h: 112, rot: -8, delay: 0.55, depth: 0.9 },
   // bottom-left cluster
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png',           alt: 'Janitorial',         top: 62, left: 1,   w: 148, h: 148, rot: -4,  delay: 0.65, depth: 1.6 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490754/suhail-services/pencil-security-technology.jpg',           alt: 'Security tech',      top: 60, left: 16,  w: 145, h: 112, rot: 9,   delay: 0.80, depth: 1.3 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png',                      alt: 'Work 1',             top: 82, left: 2,   w: 132, h: 92,  rot: 5,   delay: 0.95, depth: 0.7 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',                alt: 'About 2',            top: 80, left: 19,  w: 148, h: 102, rot: -6,  delay: 1.05, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png', alt: 'Janitorial', top: 62, left: 1, w: 148, h: 148, rot: -4, delay: 0.65, depth: 1.6 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490754/suhail-services/pencil-security-technology.jpg', alt: 'Security tech', top: 60, left: 16, w: 145, h: 112, rot: 9, delay: 0.80, depth: 1.3 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png', alt: 'Work 1', top: 82, left: 2, w: 132, h: 92, rot: 5, delay: 0.95, depth: 0.7 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', alt: 'About 2', top: 80, left: 19, w: 148, h: 102, rot: -6, delay: 1.05, depth: 1.0 },
 
   // ── TOP CENTER — above the text block ────────────────────────
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png',                      alt: 'Work 2',             top: 4,  left: 34,  w: 152, h: 108, rot: -6,  delay: 0.42, depth: 0.7 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png',          alt: 'Maintenance top',    top: 3,  left: 55,  w: 160, h: 112, rot: 7,   delay: 0.50, depth: 0.9 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png', alt: 'Work 2', top: 4, left: 34, w: 152, h: 108, rot: -6, delay: 0.42, depth: 0.7 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png', alt: 'Maintenance top', top: 3, left: 55, w: 160, h: 112, rot: 7, delay: 0.50, depth: 0.9 },
 
   // ── BOTTOM CENTER — below the text block ──────────────────────
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490564/suhail-services/pencil-day-service-staff.png',             alt: 'Day staff',          top: 78, left: 32,  w: 148, h: 108, rot: 6,   delay: 0.70, depth: 1.0 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png',                      alt: 'Work bottom',        top: 76, left: 56,  w: 142, h: 104, rot: -7,  delay: 0.75, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490564/suhail-services/pencil-day-service-staff.png', alt: 'Day staff', top: 78, left: 32, w: 148, h: 108, rot: 6, delay: 0.70, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png', alt: 'Work bottom', top: 76, left: 56, w: 142, h: 104, rot: -7, delay: 0.75, depth: 1.0 },
 
   // top-right cluster
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png',             alt: 'Outdoor care',       top: 6,  left: 68,  w: 182, h: 122, rot: -9,  delay: 0.38, depth: 1.1 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png',                      alt: 'Work 6',             top: 5,  left: 84,  w: 148, h: 106, rot: 8,   delay: 0.50, depth: 0.9 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor care', top: 6, left: 68, w: 182, h: 122, rot: -9, delay: 0.38, depth: 1.1 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png', alt: 'Work 6', top: 5, left: 84, w: 148, h: 106, rot: 8, delay: 0.50, depth: 0.9 },
   // mid-right
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png',           alt: 'Healthcare',         top: 31, left: 76,  w: 152, h: 152, rot: -6,  delay: 0.60, depth: 1.5 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png',                      alt: 'Work 3',             top: 30, left: 91,  w: 138, h: 104, rot: 12,  delay: 0.72, depth: 1.8 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', top: 31, left: 76, w: 152, h: 152, rot: -6, delay: 0.60, depth: 1.5 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png', alt: 'Work 3', top: 30, left: 91, w: 138, h: 104, rot: 12, delay: 0.72, depth: 1.8 },
   // bottom-right cluster
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png',         alt: 'Glass cleaning',     top: 62, left: 68,  w: 142, h: 116, rot: -10, delay: 0.78, depth: 1.3 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490813/suhail-services/work-project-05.png',                      alt: 'Work 5',             top: 60, left: 84,  w: 155, h: 118, rot: 6,   delay: 0.90, depth: 0.8 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490381/suhail-services/imprint-extra-operations.png',             alt: 'Operations',         top: 82, left: 70,  w: 132, h: 90,  rot: -4,  delay: 1.00, depth: 0.6 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png',   alt: 'Sites right',        top: 81, left: 88,  w: 138, h: 94,  rot: 7,   delay: 1.10, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', top: 62, left: 68, w: 142, h: 116, rot: -10, delay: 0.78, depth: 1.3 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490813/suhail-services/work-project-05.png', alt: 'Work 5', top: 60, left: 84, w: 155, h: 118, rot: 6, delay: 0.90, depth: 0.8 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490381/suhail-services/imprint-extra-operations.png', alt: 'Operations', top: 82, left: 70, w: 132, h: 90, rot: -4, delay: 1.00, depth: 0.6 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Sites right', top: 81, left: 88, w: 138, h: 94, rot: 7, delay: 1.10, depth: 1.0 },
 ]
 
 // 4 corner images for mobile — positioned away from the center text
 const mobileHeroImages = [
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png',                alt: 'Security team',  top: 4,  left: -4,  w: 150, h: 108, rot: -6,  delay: 0.25, depth: 1.0 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png',                      alt: 'Work 6',         top: 3,  left: 60,  w: 150, h: 108, rot: 7,   delay: 0.35, depth: 0.9 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png',           alt: 'Janitorial',     top: 70, left: -4,  w: 150, h: 116, rot: 5,   delay: 0.45, depth: 1.1 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png',           alt: 'Healthcare',     top: 72, left: 60,  w: 150, h: 116, rot: -5,  delay: 0.55, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png', alt: 'Security team', top: 4, left: -4, w: 150, h: 108, rot: -6, delay: 0.25, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png', alt: 'Work 6', top: 3, left: 60, w: 150, h: 108, rot: 7, delay: 0.35, depth: 0.9 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png', alt: 'Janitorial', top: 70, left: -4, w: 150, h: 116, rot: 5, delay: 0.45, depth: 1.1 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', top: 72, left: 60, w: 150, h: 116, rot: -5, delay: 0.55, depth: 1.0 },
 ]
 
 /* ─────────────────────────── HeroFitTwoLines (kept for potential reuse) ─────────────────────────── */
@@ -334,18 +333,18 @@ function Ticker() {
 
 /* ─────────────────────────── Testimonials (3-D Marquee) ─────────────────────────── */
 const TESTIMONIALS = [
-  { name: 'Ava Green',    username: '@ava_g',    body: 'Absolutely professional team — security on point every single shift.',      img: 'https://randomuser.me/api/portraits/women/32.jpg', flag: 'https://flagcdn.com/w40/au.png', country: 'Australia' },
-  { name: 'Ana Müller',   username: '@ana_m',    body: 'The cleaning crew transformed our office completely. Highly recommended.',   img: 'https://randomuser.me/api/portraits/women/68.jpg', flag: 'https://flagcdn.com/w40/de.png', country: 'Germany'   },
-  { name: 'Mateo Rossi',  username: '@mat_r',    body: 'Warehouse staff was efficient, careful, and always on time.',               img: 'https://randomuser.me/api/portraits/men/51.jpg',   flag: 'https://flagcdn.com/w40/it.png', country: 'Italy'     },
-  { name: 'Maya Patel',   username: '@maya_p',   body: 'From cashier services to transport — everything was seamlessly handled.',   img: 'https://randomuser.me/api/portraits/women/53.jpg', flag: 'https://flagcdn.com/w40/in.png', country: 'India'     },
-  { name: 'Noah Smith',   username: '@noah_s',   body: 'Best facility service partner we have ever worked with. Period.',           img: 'https://randomuser.me/api/portraits/men/33.jpg',   flag: 'https://flagcdn.com/w40/us.png', country: 'USA'       },
-  { name: 'Lucas Dubois', username: '@luc_d',    body: 'The staffing team adapted to our peak season demands perfectly.',          img: 'https://randomuser.me/api/portraits/men/22.jpg',   flag: 'https://flagcdn.com/w40/fr.png', country: 'France'    },
-  { name: 'Haruto Sato',  username: '@haru_s',   body: 'Electrical assistance crew was fast and extremely professional on site.',   img: 'https://randomuser.me/api/portraits/men/85.jpg',   flag: 'https://flagcdn.com/w40/jp.png', country: 'Japan'     },
-  { name: 'Emma Lee',     username: '@emma_l',   body: 'Our retail chain runs smoothly thanks to their cashier service team.',     img: 'https://randomuser.me/api/portraits/women/45.jpg', flag: 'https://flagcdn.com/w40/ca.png', country: 'Canada'    },
-  { name: 'Carlos Rey',   username: '@carl_r',   body: 'Construction cleaning was spotless — well ahead of our handover date.',    img: 'https://randomuser.me/api/portraits/men/61.jpg',   flag: 'https://flagcdn.com/w40/es.png', country: 'Spain'     },
-  { name: 'Sara Jensen',  username: '@sara_j',   body: 'The deep cleaning service exceeded every expectation we had set.',         img: 'https://randomuser.me/api/portraits/women/12.jpg', flag: 'https://flagcdn.com/w40/dk.png', country: 'Denmark'   },
-  { name: 'Liam Walsh',   username: '@liam_w',   body: 'Reliable, punctual, and always professional — great partner to have.',     img: 'https://randomuser.me/api/portraits/men/43.jpg',   flag: 'https://flagcdn.com/w40/ie.png', country: 'Ireland'   },
-  { name: 'Chiara Bianchi', username: '@chia_b', body: 'Interior work done with real craftsmanship. Very happy with the outcome.',  img: 'https://randomuser.me/api/portraits/women/76.jpg', flag: 'https://flagcdn.com/w40/it.png', country: 'Italy'     },
+  { name: 'Ava Green', username: '@ava_g', body: 'Absolutely professional team — security on point every single shift.', img: 'https://randomuser.me/api/portraits/women/32.jpg', flag: 'https://flagcdn.com/w40/au.png', country: 'Australia' },
+  { name: 'Ana Müller', username: '@ana_m', body: 'The cleaning crew transformed our office completely. Highly recommended.', img: 'https://randomuser.me/api/portraits/women/68.jpg', flag: 'https://flagcdn.com/w40/de.png', country: 'Germany' },
+  { name: 'Mateo Rossi', username: '@mat_r', body: 'Warehouse staff was efficient, careful, and always on time.', img: 'https://randomuser.me/api/portraits/men/51.jpg', flag: 'https://flagcdn.com/w40/it.png', country: 'Italy' },
+  { name: 'Maya Patel', username: '@maya_p', body: 'From cashier services to transport — everything was seamlessly handled.', img: 'https://randomuser.me/api/portraits/women/53.jpg', flag: 'https://flagcdn.com/w40/in.png', country: 'India' },
+  { name: 'Noah Smith', username: '@noah_s', body: 'Best facility service partner we have ever worked with. Period.', img: 'https://randomuser.me/api/portraits/men/33.jpg', flag: 'https://flagcdn.com/w40/us.png', country: 'USA' },
+  { name: 'Lucas Dubois', username: '@luc_d', body: 'The staffing team adapted to our peak season demands perfectly.', img: 'https://randomuser.me/api/portraits/men/22.jpg', flag: 'https://flagcdn.com/w40/fr.png', country: 'France' },
+  { name: 'Haruto Sato', username: '@haru_s', body: 'Electrical assistance crew was fast and extremely professional on site.', img: 'https://randomuser.me/api/portraits/men/85.jpg', flag: 'https://flagcdn.com/w40/jp.png', country: 'Japan' },
+  { name: 'Emma Lee', username: '@emma_l', body: 'Our retail chain runs smoothly thanks to their cashier service team.', img: 'https://randomuser.me/api/portraits/women/45.jpg', flag: 'https://flagcdn.com/w40/ca.png', country: 'Canada' },
+  { name: 'Carlos Rey', username: '@carl_r', body: 'Construction cleaning was spotless — well ahead of our handover date.', img: 'https://randomuser.me/api/portraits/men/61.jpg', flag: 'https://flagcdn.com/w40/es.png', country: 'Spain' },
+  { name: 'Sara Jensen', username: '@sara_j', body: 'The deep cleaning service exceeded every expectation we had set.', img: 'https://randomuser.me/api/portraits/women/12.jpg', flag: 'https://flagcdn.com/w40/dk.png', country: 'Denmark' },
+  { name: 'Liam Walsh', username: '@liam_w', body: 'Reliable, punctual, and always professional — great partner to have.', img: 'https://randomuser.me/api/portraits/men/43.jpg', flag: 'https://flagcdn.com/w40/ie.png', country: 'Ireland' },
+  { name: 'Chiara Bianchi', username: '@chia_b', body: 'Interior work done with real craftsmanship. Very happy with the outcome.', img: 'https://randomuser.me/api/portraits/women/76.jpg', flag: 'https://flagcdn.com/w40/it.png', country: 'Italy' },
 ]
 
 const COL_A = TESTIMONIALS.slice(0, 3)
@@ -357,7 +356,7 @@ function TestimonialCard({ img, name, username, body, flag, country }) {
   return (
     <div style={{
       width: '100%',
-      maxWidth: 220,
+      maxWidth: 300,
       background: '#fff',
       border: '1px solid rgba(30,31,40,0.10)',
       borderRadius: 14,
@@ -422,7 +421,7 @@ function Testimonials() {
         /* ── Desktop: centred 3-D block ── */
         .testi-scene {
           position: relative;
-          height: 460px;
+          height: 560px;
           overflow: hidden;
           border-radius: 20px;
           perspective: 900px;
@@ -434,8 +433,8 @@ function Testimonials() {
           flex-direction: row;
           align-items: flex-start;
           justify-content: center;
-          gap: 14px;
-          padding: 20px 24px;
+          gap: 18px;
+          padding: 20px 32px;
           transform: translateY(20px) rotateX(18deg) rotateY(-8deg) rotateZ(18deg);
           transform-style: preserve-3d;
         }
@@ -484,8 +483,8 @@ function Testimonials() {
         </div>
 
         {/* Gradient fades */}
-        <div style={{ pointerEvents:'none', position:'absolute', inset:0, background:'linear-gradient(to bottom, #fff 0%, transparent 22%, transparent 78%, #fff 100%)', zIndex:2 }} />
-        <div style={{ pointerEvents:'none', position:'absolute', inset:0, background:'linear-gradient(to right, #fff 0%, transparent 18%, transparent 82%, #fff 100%)', zIndex:2 }} />
+        <div style={{ pointerEvents: 'none', position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #fff 0%, transparent 22%, transparent 78%, #fff 100%)', zIndex: 2 }} />
+        <div style={{ pointerEvents: 'none', position: 'absolute', inset: 0, background: 'linear-gradient(to right, #fff 0%, transparent 18%, transparent 82%, #fff 100%)', zIndex: 2 }} />
       </div>
     </section>
   )
@@ -496,13 +495,11 @@ export default function HomePage() {
   const { t, lang } = useLanguage()
   const featured = t('home.featured')
 
-  const heroRef    = useRef(null)
-  const subRef     = useRef(null)
-  const workRef    = useRef(null)
-  const card1Ref   = useRef(null)
-  const card2Ref   = useRef(null)
-  const missionRef = useRef(null)
-
+  const heroRef = useRef(null)
+  const subRef = useRef(null)
+  const workRef = useRef(null)
+  const card1Ref = useRef(null)
+  const card2Ref = useRef(null)
   /* Alternates #FACC15 (yellow) and #1D4ED8 (blue) on each text rotation */
   const ROTATE_COLORS = ['#FACC15', '#1D4ED8']
   const [rotateColorIdx, setRotateColorIdx] = useState(0)
@@ -513,31 +510,18 @@ export default function HomePage() {
     gsap.set(card1Ref.current, { opacity: 0, y: 50 })
     gsap.set(card2Ref.current, { opacity: 0, y: 60 })
     const ctx = gsap.context(() => {
-      gsap.to(card1Ref.current, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out',
-        scrollTrigger: { trigger: card1Ref.current, start: 'top 85%', once: true } })
-      gsap.to(card2Ref.current, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out',
-        scrollTrigger: { trigger: card2Ref.current, start: 'top 85%', once: true } })
+      gsap.to(card1Ref.current, {
+        opacity: 1, y: 0, duration: 0.85, ease: 'power3.out',
+        scrollTrigger: { trigger: card1Ref.current, start: 'top 85%', once: true }
+      })
+      gsap.to(card2Ref.current, {
+        opacity: 1, y: 0, duration: 0.85, ease: 'power3.out',
+        scrollTrigger: { trigger: card2Ref.current, start: 'top 85%', once: true }
+      })
     })
     return () => ctx.revert()
   }, [])
 
-  /* ── Mission text scroll reveal ── */
-  useEffect(() => {
-    if (!missionRef.current) return
-    const el = missionRef.current
-    gsap.set(el, { opacity: 0, y: 40 })
-    const ctx = gsap.context(() => {
-      gsap.to(el, {
-        opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
-        scrollTrigger: { trigger: el, start: 'top 85%', once: true },
-      })
-    })
-    return () => {
-      ctx.revert()
-      // ensure visible if component unmounts before trigger fires
-      gsap.set(el, { clearProps: 'opacity,y' })
-    }
-  }, [])
 
   return (
     <div>
@@ -700,6 +684,9 @@ export default function HomePage() {
 
       <Ticker />
 
+      {/* ════ SERVICES SLIDESHOW ════ */}
+      <HomeServicesGrid />
+
       {/* ════ WORK PREVIEW ════ */}
       <section ref={workRef} style={{
         background: 'linear-gradient(180deg, #ffffff 0%, #fafafa 100%)',
@@ -742,50 +729,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════ MISSION ════ */}
-      <section style={{
-        background: 'linear-gradient(180deg, #fafafa 0%, #ffffff 72%)',
-        borderTop: '1px solid rgba(30,31,40,0.07)',
-        overflow: 'hidden',
-      }}>
-        <ContainerScroll>
-          <div
-            ref={missionRef}
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 28,
-              padding: 'clamp(36px, 5vw, 56px)',
-            }}
-          >
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-              <span style={{
-                width: 4, height: 36, borderRadius: 2, flexShrink: 0,
-                background: 'linear-gradient(180deg, #FACC15 0%, #EAB308 100%)',
-              }} />
-              <p style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700, fontSize: 13, letterSpacing: '0.11em',
-                textTransform: 'uppercase', color: 'rgba(30,31,40,0.5)', margin: 0,
-              }}>
-                {t('home.missionEyebrow')}
-              </p>
-            </div>
-            <p style={{
-              fontSize: 'clamp(22px, 2.85vw, 32px)', fontWeight: 400,
-              color: 'rgba(30,31,40,0.94)', lineHeight: 1.5,
-              letterSpacing: '-0.012em', margin: 0, maxWidth: '38em',
-            }}>
-              {t('home.mission')}
-            </p>
-            <div style={{ marginTop: 8 }}>
-              <LiquidButton as={Link} to="/about" tint="#FACC15" textColor="#0f0f12">
-                {t('home.aboutLink')} →
-              </LiquidButton>
-            </div>
-          </div>
-        </ContainerScroll>
-      </section>
+      {/* ════ SERVICES GRID (moved above) ════ */}
 
       {/* ════ TESTIMONIALS ════ */}
       <Testimonials />
@@ -807,14 +751,14 @@ export default function HomePage() {
             letterSpacing: '-0.008em',
             ...(lang === 'de'
               ? {
-                  textTransform: 'none',
-                  textRendering: 'optimizeLegibility',
-                  fontVariantLigatures: 'none',
-                }
+                textTransform: 'none',
+                textRendering: 'optimizeLegibility',
+                fontVariantLigatures: 'none',
+              }
               : {
-                  textTransform: 'uppercase',
-                  lineHeight: 0.87,
-                }),
+                textTransform: 'uppercase',
+                lineHeight: 0.87,
+              }),
           }}
         >
           {[t('home.cta1'), t('home.cta2'), t('home.cta3')].map((line, i) => (
@@ -831,11 +775,127 @@ export default function HomePage() {
           ))}
         </div>
         <div style={{ alignSelf: 'flex-start' }}>
-          <LiquidButton as="a" href="mailto:contact@suhaili.de" tint="#FACC15" textColor="#000000" style={{ fontSize: 15, padding: '10px 24px' }}>
-            contact@suhaili.de ↗
+          <LiquidButton as="a" href="mailto:kontact@suhail.de" tint="#FACC15" textColor="#000000" style={{ fontSize: 15, padding: '10px 24px' }}>
+            kontact@suhail.de ↗
           </LiquidButton>
         </div>
       </section>
     </div>
+  )
+}
+
+/* ─────────────────────────────────────────────
+   HOME SERVICES GRID
+───────────────────────────────────────────── */
+const HOME_SERVICES = [
+  { slug: 'office-cleaning', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l9-9" /><path d="M12.5 5.5l6 6" /><path d="M6 15l3-3 6.5-6.5a2.12 2.12 0 0 1 3 3L12 15l-3 3z" /></svg>, title: 'Cleaning', desc: 'Office, construction, deep & maintenance cleaning.' },
+  { slug: 'warehouse-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20V8l10-5 10 5v12" /><rect x="8" y="14" width="8" height="6" /><line x1="12" y1="14" x2="12" y2="20" /></svg>, title: 'Warehouse Services', desc: 'Picking, sorting, packing & goods inspection.' },
+  { slug: 'cashier-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /><line x1="6" y1="15" x2="6.01" y2="15" /><line x1="10" y1="15" x2="14" y2="15" /></svg>, title: 'Cashier Services', desc: 'Qualified checkout staff for retail & supermarkets.' },
+  { slug: 'transport', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg>, title: 'Transport', desc: 'Moving vans, delivery & logistics support.' },
+  { slug: 'electrical-assistance', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>, title: 'Electrical Assistance', desc: 'Helper services for electrical work on site.' },
+  { slug: 'installation-unpacking', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polyline points="21 8 21 21 3 21 3 8" /><rect x="1" y="3" width="22" height="5" /><line x1="10" y1="12" x2="14" y2="12" /></svg>, title: 'Installation & Unpacking', desc: 'Furniture assembly, installation & packing.' },
+  { slug: 'construction-interior', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>, title: 'Construction & Interior', desc: 'Construction assistance, renovation & drywall.' },
+  { slug: 'staffing-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>, title: 'Staffing Services', desc: 'Temporary workers & flexible workforce solutions.' },
+  { slug: 'general-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 0 0-4 0v2" /><line x1="12" y1="12" x2="12" y2="16" /><line x1="10" y1="14" x2="14" y2="14" /></svg>, title: 'General Services', desc: 'Flexible on-demand support for companies & private clients.' },
+]
+
+function HomeServiceCard({ service }) {
+  const [hov, setHov] = useState(false)
+
+  return (
+    <Link
+      to={`/services/${service.slug}`}
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        opacity: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        background: hov ? '#0f0f12' : '#fff',
+        border: `1.5px solid ${hov ? '#FACC15' : 'rgba(30,31,40,0.09)'}`,
+        borderRadius: 16,
+        padding: 'clamp(18px,2.5vw,28px)',
+        textDecoration: 'none',
+        transition: 'background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease',
+        boxShadow: hov ? '0 12px 40px rgba(250,204,21,0.12)' : '0 2px 12px rgba(10,11,18,0.06)',
+        transform: hov ? 'translateY(-4px)' : 'translateY(0)',
+        cursor: 'pointer',
+      }}
+    >
+      <div style={{
+        width: 52, height: 52, borderRadius: 12,
+        background: hov ? 'rgba(250,204,21,0.15)' : 'rgba(30,31,40,0.05)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        marginBottom: 16,
+        color: hov ? '#FACC15' : '#0f0f12',
+        transition: 'background 0.28s ease, color 0.28s ease',
+      }}>
+        {service.icon}
+      </div>
+      <p style={{
+        fontFamily: "'Barlow Condensed', sans-serif",
+        fontSize: 'clamp(15px,1.4vw,18px)', fontWeight: 700,
+        color: hov ? '#FACC15' : '#0f0f12',
+        letterSpacing: '-0.01em', margin: '0 0 8px',
+        textTransform: 'uppercase',
+        transition: 'color 0.25s ease',
+      }}>
+        {service.title}
+      </p>
+      <p style={{
+        fontSize: 13,
+        color: hov ? 'rgba(255,255,255,0.65)' : 'rgba(30,31,40,0.55)',
+        margin: 0, lineHeight: 1.6,
+        transition: 'color 0.25s ease',
+      }}>
+        {service.desc}
+      </p>
+    </Link>
+  )
+}
+
+function HomeServicesGrid() {
+  const trackRef = useRef(null)
+
+  const doubled = [...HOME_SERVICES, ...HOME_SERVICES]
+
+  return (
+    <section style={{
+      padding: '28px 0',
+      background: '#f5f5f7',
+      overflow: 'hidden',
+      borderBottom: '1px solid rgba(30,31,40,0.07)',
+    }}>
+      <style>{`
+        @keyframes slide-ltr {
+          from { transform: translateX(-50%); }
+          to   { transform: translateX(0); }
+        }
+        .services-track {
+          display: flex;
+          gap: 20px;
+          width: max-content;
+          animation: slide-ltr 32s linear infinite;
+        }
+        .services-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      {/* Fade edges */}
+      <div style={{ position: 'relative' }}>
+        <div style={{
+          pointerEvents: 'none', position: 'absolute', inset: 0, zIndex: 2,
+          background: 'linear-gradient(to right, #f5f5f7 0%, transparent 8%, transparent 92%, #f5f5f7 100%)',
+        }} />
+        <div ref={trackRef} className="services-track" style={{ padding: '8px 0' }}>
+          {doubled.map((svc, i) => (
+            <div key={i} style={{ flexShrink: 0, width: 'clamp(220px, 22vw, 280px)' }}>
+              <HomeServiceCard service={svc} delay={0} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }

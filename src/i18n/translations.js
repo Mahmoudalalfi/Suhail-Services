@@ -40,15 +40,15 @@ export default {
       location: 'Berlin, Deutschland',
       linkedIn: 'LinkedIn',
       offerLinks: [
-        { hash: 'general-services',      label: 'Allgemeine Dienstleistungen' },
-        { hash: 'cleaning',              label: 'Reinigung' },
-        { hash: 'cashier-services',      label: 'Kassendienste' },
-        { hash: 'warehouse-services',    label: 'Lagerdienstleistungen' },
+        { hash: 'general-services', label: 'Allgemeine Dienstleistungen' },
+        { hash: 'cleaning', label: 'Reinigung' },
+        { hash: 'cashier-services', label: 'Kassendienste' },
+        { hash: 'warehouse-services', label: 'Lagerdienstleistungen' },
         { hash: 'construction-interior', label: 'Bau & Innenausbau' },
-        { hash: 'installation-unpacking',label: 'Montage & Auspacken' },
+        { hash: 'installation-unpacking', label: 'Montage & Auspacken' },
         { hash: 'electrical-assistance', label: 'Elektrohilfsarbeiten' },
-        { hash: 'transport',             label: 'Transport' },
-        { hash: 'staffing-services',     label: 'Personaldienstleistungen' },
+        { hash: 'transport', label: 'Transport' },
+        { hash: 'staffing-services', label: 'Personaldienstleistungen' },
       ],
     },
     home: {
@@ -93,13 +93,13 @@ export default {
       testimonials: [
         {
           company: 'Einzelhandel GmbH',
-          quote: '"Suhail Services sorgt für die absolute Sicherheit unserer Filialen. Professionelle Detektive und kompetentes Kassenpersonal, auf das wir uns voll und ganz verlassen können."',
+          quote: '"suhail Services sorgt für die absolute Sicherheit unserer Filialen. Professionelle Detektive und kompetentes Kassenpersonal, auf das wir uns voll und ganz verlassen können."',
           author: 'Filialleiter',
           role: 'Berlin',
         },
         {
           company: 'Bauprojekt Mitte',
-          quote: '"Die Baustellenreinigung und Logistik lief dank Suhail Services reibungslos ab. Effiziente und schnelle Arbeit, die unsere Erwartungen übertroffen hat. Wir planen bereits das nächste Projekt gemeinsam."',
+          quote: '"Die Baustellenreinigung und Logistik lief dank suhail Services reibungslos ab. Effiziente und schnelle Arbeit, die unsere Erwartungen übertroffen hat. Wir planen bereits das nächste Projekt gemeinsam."',
           author: 'Bauleitung',
           role: '',
         },
@@ -136,10 +136,10 @@ export default {
           category: 'Reinigung',
           desc: 'Professionelle Reinigungsdienstleistungen für alle Bereiche – zuverlässig, effizient und maßgeschneidert.',
           items: [
-            { slug: 'office-cleaning',        name: 'Büroreinigung',        subtitle: 'Saubere Arbeitsumgebung',         desc: 'Regelmäßige und gründliche Reinigung Ihrer Büroräume für ein hygienisches Arbeitsumfeld.' },
-            { slug: 'construction-cleaning',  name: 'Bauendreinigung',      subtitle: 'Professionelle Bauabschlussreinigung', desc: 'Ordnung, Sicherheit und ein makelloser Abschluss Ihrer Bauprojekte.' },
-            { slug: 'deep-cleaning',          name: 'Grundreinigung',       subtitle: 'Tiefenreinigung für höchste Ansprüche', desc: 'Intensive Reinigung für hartnäckige Verschmutzungen – flexibel und auf Ihre Bedürfnisse zugeschnitten.' },
-            { slug: 'maintenance-cleaning',   name: 'Unterhaltsreinigung',  subtitle: 'Sauberkeit und Hygiene',          desc: 'Regelmäßige Reinigungsarbeiten für ein gepflegtes und hygienisches Arbeitsumfeld.' },
+            { slug: 'office-cleaning', name: 'Büroreinigung', subtitle: 'Saubere Arbeitsumgebung', desc: 'Regelmäßige und gründliche Reinigung Ihrer Büroräume für ein hygienisches Arbeitsumfeld.' },
+            { slug: 'construction-cleaning', name: 'Bauendreinigung', subtitle: 'Professionelle Bauabschlussreinigung', desc: 'Ordnung, Sicherheit und ein makelloser Abschluss Ihrer Bauprojekte.' },
+            { slug: 'deep-cleaning', name: 'Grundreinigung', subtitle: 'Tiefenreinigung für höchste Ansprüche', desc: 'Intensive Reinigung für hartnäckige Verschmutzungen – flexibel und auf Ihre Bedürfnisse zugeschnitten.' },
+            { slug: 'maintenance-cleaning', name: 'Unterhaltsreinigung', subtitle: 'Sauberkeit und Hygiene', desc: 'Regelmäßige Reinigungsarbeiten für ein gepflegtes und hygienisches Arbeitsumfeld.' },
           ],
         },
         {
@@ -193,25 +193,25 @@ export default {
         },
       ],
       process: [
-        { num: '01', title: 'Analyse',    desc: 'Wir analysieren Ihren individuellen Bedarf und die örtlichen Gegebenheiten detailliert.' },
-        { num: '02', title: 'Konzept',    desc: 'Wir entwickeln ein maßgeschneidertes Sicherheits- und Servicekonzept für Sie.' },
-        { num: '03', title: 'Umsetzung',  desc: 'Unsere qualifizierten Mitarbeiter setzen die Maßnahmen professionell und zuverlässig um.' },
+        { num: '01', title: 'Analyse', desc: 'Wir analysieren Ihren individuellen Bedarf und die örtlichen Gegebenheiten detailliert.' },
+        { num: '02', title: 'Konzept', desc: 'Wir entwickeln ein maßgeschneidertes Sicherheits- und Servicekonzept für Sie.' },
+        { num: '03', title: 'Umsetzung', desc: 'Unsere qualifizierten Mitarbeiter setzen die Maßnahmen professionell und zuverlässig um.' },
       ],
       testimonials: [
         {
           company: 'Einzelhandel GmbH',
-          quote: '"Suhail Services sorgt für die absolute Sicherheit unserer Filialen. Professionelle Detektive und kompetentes Kassenpersonal, auf das wir uns voll und ganz verlassen können."',
+          quote: '"suhail Services sorgt für die absolute Sicherheit unserer Filialen. Professionelle Detektive und kompetentes Kassenpersonal, auf das wir uns voll und ganz verlassen können."',
           author: 'Filialleiter — Berlin',
         },
         {
           company: 'Bauprojekt Mitte',
-          quote: 'Die Baustellenreinigung und Logistik lief dank Suhail Services reibungslos ab. Effiziente und schnelle Arbeit, die unsere Erwartungen übertroffen hat. Wir planen bereits das nächste Projekt gemeinsam.',
+          quote: 'Die Baustellenreinigung und Logistik lief dank suhail Services reibungslos ab. Effiziente und schnelle Arbeit, die unsere Erwartungen übertroffen hat. Wir planen bereits das nächste Projekt gemeinsam.',
           author: 'Bauleitung',
         },
       ]
     },
     about: {
-      hero1: 'Willkommen bei Suhaili Service',
+      hero1: 'Willkommen bei suhaili Service',
       hero2: '',
       mission1: '',
       mission2: 'Seit unserer Gründung stehen wir als Unternehmen für Vertrauen, Qualität und Innovation. Mit Hauptsitz in Berlin sind wir ein zuverlässiger Partner für Sicherheits-, Reinigungs- und Gebäudedienstleistungen – mit umfassenden Lösungen aus einer Hand.',
@@ -248,26 +248,26 @@ export default {
         { year: '2024', event: 'Durch eine Beteiligung am IT-Spezialisten G.I.P. bietet KÖTTER Security als einer der ersten Sicherheitsdienstleister in Europa umfassende 360-Grad-Lösungen.' },
       ],
       aboutSections: [
-        { id: 'history-facts',           title: 'Geschichte & Fakten',                    body: '' },
-        { id: 'references',              title: 'Referenzen',                             body: '' },
-        { id: 'quality-certificates',    title: 'Qualität / Zertifikate / Auszeichnungen', body: '' },
-        { id: 'csr-esg',                 title: 'CSR / ESG',                              body: '' },
-        { id: 'philosophy-code',         title: 'Philosophie & Verhaltenskodex',          body: '' },
-        { id: 'compliance-lksg',         title: 'Compliance & LkSG',                      body: '' },
-        { id: 'security-advisory-board', title: 'Sicherheitsbeirat',                     body: '' },
-        { id: 'association-work',        title: 'Verbandsarbeit',                         body: '' },
-        { id: 'other-companies',         title: 'Weitere Gesellschaften & Beteiligungen', body: '' },
+        { id: 'history-facts', title: 'Geschichte & Fakten', body: '' },
+        { id: 'references', title: 'Referenzen', body: '' },
+        { id: 'quality-certificates', title: 'Qualität / Zertifikate / Auszeichnungen', body: '' },
+        { id: 'csr-esg', title: 'CSR / ESG', body: '' },
+        { id: 'philosophy-code', title: 'Philosophie & Verhaltenskodex', body: '' },
+        { id: 'compliance-lksg', title: 'Compliance & LkSG', body: '' },
+        { id: 'security-advisory-board', title: 'Sicherheitsbeirat', body: '' },
+        { id: 'association-work', title: 'Verbandsarbeit', body: '' },
+        { id: 'other-companies', title: 'Weitere Gesellschaften & Beteiligungen', body: '' },
       ],
       statsTitle: 'Unsere Expertise in Zahlen',
       stats: [
-        { num: '100',    label: 'Standorte bundesweit' },
-        { num: '770',    label: 'Millionen Euro Gruppenerlös' },
-        { num: '92',     label: 'Jahre Expertenerfahrung' },
+        { num: '100', label: 'Standorte bundesweit' },
+        { num: '770', label: 'Millionen Euro Gruppenerlös' },
+        { num: '92', label: 'Jahre Expertenerfahrung' },
         { num: '16.400', label: 'Herausragende Mitarbeiter' },
       ],
       statsBody:
         'Unsere Kennzahlen stehen für mehr als nur Wachstum: Sie belegen langjährige Partnerschaften, das Vertrauen unserer Kunden und das kontinuierliche Engagement unserer Mitarbeitenden.',
-      solutionsTitle: 'Suhaili Service – maßgeschneiderte Lösungen aus einer Hand',
+      solutionsTitle: 'suhaili Service – maßgeschneiderte Lösungen aus einer Hand',
       solutionsDesc: 'Unser Leistungsspektrum umfasst Sicherheitsdienstleistungen, Sicherheitstechnik, Reinigung und Personaldienstleistungen. Unsere individuell zugeschnittenen Konzepte schaffen die Freiheit, die Sie benötigen, um sich vollständig auf Ihr Kerngeschäft zu konzentrieren.',
       clientsTitle: 'Diese Kunden vertrauen uns',
       clientsDesc: 'Zuverlässigkeit, Qualität und maßgeschneiderte Lösungen machen den Unterschied. Deshalb vertrauen uns viele Unternehmen seit Jahren – branchenübergreifend und in ganz Deutschland.',
@@ -281,12 +281,12 @@ export default {
       imgAlt1: 'Sicherheitspersonal',
       imgAlt2: 'Gebäudereinigung',
       team: [
-        { name: 'Michael',  role: 'Geschäftsführung',    img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg' },
-        { name: 'Sarah',    role: 'Einsatzleitung',      img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg' },
-        { name: 'Thomas',   role: 'Sicherheitstechnik',  img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490369/suhail-services/home_featured_1_1777327621389.jpg' },
-        { name: 'Elena',    role: 'Gebäudereinigung',    img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
-        { name: 'Markus',   role: 'Objektschutz',        img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490824/suhail-services/work_1_1777327673494.jpg' },
-        { name: 'Dennis',   role: 'Bauleitung',          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
+        { name: 'Michael', role: 'Geschäftsführung', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg' },
+        { name: 'Sarah', role: 'Einsatzleitung', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg' },
+        { name: 'Thomas', role: 'Sicherheitstechnik', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490369/suhail-services/home_featured_1_1777327621389.jpg' },
+        { name: 'Elena', role: 'Gebäudereinigung', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
+        { name: 'Markus', role: 'Objektschutz', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490824/suhail-services/work_1_1777327673494.jpg' },
+        { name: 'Dennis', role: 'Bauleitung', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
       ]
     },
     referencesPage: {
@@ -389,7 +389,7 @@ export default {
       eyebrowMuted: 'Werte und Leitlinien',
       title: 'Philosophie & Verhaltenskodex',
       introP1:
-        'Unsere Unternehmensphilosophie und unser Verhaltenskodex sind die Basis dessen, wie wir bei Suhaili Service täglich entscheiden und handeln.',
+        'Unsere Unternehmensphilosophie und unser Verhaltenskodex sind die Basis dessen, wie wir bei suhaili Service täglich entscheiden und handeln.',
       introP2:
         'Als inhabergeführter Partner mit klarem Qualitätsanspruch verbinden wir Zuverlässigkeit mit einem offenen Blick auf Märkte, Menschen und Standards — regional verwurzelt, mit einem professionellen Leistungsportfolio aus Service- und Facilitybereichen.',
       heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490768/suhail-services/philosophy-hero-collaboration.png',
@@ -446,7 +446,7 @@ export default {
       eyebrowMuted: 'Für faire Zusammenarbeit',
       title: 'Compliance und LkSG',
       heroP1:
-        'Geschäftsführung und Teams bei Suhaili Service verpflichten sich, geltendes Recht einzuhalten und mit Auftraggebern, Lieferanten und Partnern fair zusammenzuarbeiten — gestützt auf klare interne Regeln und überprüfbare Zuständigkeiten.',
+        'Geschäftsführung und Teams bei suhaili Service verpflichten sich, geltendes Recht einzuhalten und mit Auftraggebern, Lieferanten und Partnern fair zusammenzuarbeiten — gestützt auf klare interne Regeln und überprüfbare Zuständigkeiten.',
       heroP2:
         'Hinweise auf Verstöße gegen Gesetze, Tarif- oder Gleichbehandlungsvorgaben sowie gegen Maßstäbe unseres Verhaltenskodex nehmen wir ernst und bearbeiten sie entlang definierter Prüf- und Eskalationspfade.',
       heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490347/suhail-services/compliance-hero-integrity.png',
@@ -514,7 +514,7 @@ export default {
 
       dialogueHeading: 'Dialog, Kooperation und Konzeption',
       dialogueP1:
-        'Kooperation mit Kommunen, Behörden und Bundesländern stellt hohe Anforderungen an Beratungsqualität und Nachvollziehbarkeit — deshalb berät bei Suhaili Service ein Sicherheitsbeirat Management und Fachbereiche unabhängig und erfahrungsnah.',
+        'Kooperation mit Kommunen, Behörden und Bundesländern stellt hohe Anforderungen an Beratungsqualität und Nachvollziehbarkeit — deshalb berät bei suhaili Service ein Sicherheitsbeirat Management und Fachbereiche unabhängig und erfahrungsnah.',
       dialogueP2:
         'Ziel ist der Austausch über regulatorische Entwicklungen, Ausschreibungen und Qualitätsstandards sowie die Unterstützung bei der Konzeption spezialisierter Leistungsfelder — etwa Objekt- und Personenschutz, kritische Infrastruktur oder projektbezogene Sicherheitskonzepte.',
       dialogueP3:
@@ -559,13 +559,13 @@ export default {
 
       youngTalentHeading: 'Nachwuchs profitiert von Spezialistenwissen',
       youngTalentBody:
-        'Die Expertise der Beiratsmitglieder wirkt auch in Aus- und Weiterbildung: Der Sicherheitsbeirat unterstützt die Pflege, Aktualisierung und Umsetzung von Qualifikationsformaten — etwa innerhalb der internen Akademie- und Schulungslandschaft von Suhaili Service.',
+        'Die Expertise der Beiratsmitglieder wirkt auch in Aus- und Weiterbildung: Der Sicherheitsbeirat unterstützt die Pflege, Aktualisierung und Umsetzung von Qualifikationsformaten — etwa innerhalb der internen Akademie- und Schulungslandschaft von suhaili Service.',
     },
     associationWorkPage: {
       eyebrowMuted: 'Gemeinsam stärker',
       title: 'Verbandsarbeit',
       heroP1:
-        'Hohe Qualität orientiert sich an gemeinsamen Standards — nicht nur intern. Deshalb engagiert sich Suhaili Service in nationalen und internationalen Verbänden: für Austausch, Weiterentwicklung belastbarer Regeln und die nachhaltige Stärkung von Aus- und Weiterbildung.',
+        'Hohe Qualität orientiert sich an gemeinsamen Standards — nicht nur intern. Deshalb engagiert sich suhaili Service in nationalen und internationalen Verbänden: für Austausch, Weiterentwicklung belastbarer Regeln und die nachhaltige Stärkung von Aus- und Weiterbildung.',
       heroP2:
         'Über diese Vernetzung tragen wir zu Orientierung und Qualität in der Branche bei — mit dem Anspruch, Service verlässlich und professionell zu halten.',
       heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490344/suhail-services/association-work-hero.png',
@@ -713,14 +713,14 @@ export default {
       title1: 'Arbeit, die für',
       title2: 'Sicherheit sorgt',
       projects: [
-        { title: 'Kaufhaus Sicherheit',      tag: 'Objektschutz',           year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png' },
-        { title: 'Bürokomplex Berlin',        tag: 'Gebäudereinigung',       year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png' },
-        { title: 'Industriegelände Süd',      tag: 'Videoüberwachung',       year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png' },
-        { title: 'Großbaustelle Mitte',       tag: 'Baustellenlogistik',     year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png' },
-        { title: 'Einkaufszentrum West',      tag: 'Sicherheitsdienste',     year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490813/suhail-services/work-project-05.png' },
-        { title: 'Eventhalle Nord',           tag: 'Veranstaltungsschutz',   year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png' },
-        { title: 'Hotel Royal',               tag: 'Empfangsdienste',        year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490819/suhail-services/work-project-07.png' },
-        { title: 'Wohnanlage Ost',            tag: 'Unterhaltsreinigung',    year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490822/suhail-services/work-project-08.png' },
+        { title: 'Kaufhaus Sicherheit', tag: 'Objektschutz', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png' },
+        { title: 'Bürokomplex Berlin', tag: 'Gebäudereinigung', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png' },
+        { title: 'Industriegelände Süd', tag: 'Videoüberwachung', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png' },
+        { title: 'Großbaustelle Mitte', tag: 'Baustellenlogistik', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png' },
+        { title: 'Einkaufszentrum West', tag: 'Sicherheitsdienste', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490813/suhail-services/work-project-05.png' },
+        { title: 'Eventhalle Nord', tag: 'Veranstaltungsschutz', year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png' },
+        { title: 'Hotel Royal', tag: 'Empfangsdienste', year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490819/suhail-services/work-project-07.png' },
+        { title: 'Wohnanlage Ost', tag: 'Unterhaltsreinigung', year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490822/suhail-services/work-project-08.png' },
       ]
     },
     blog: {
@@ -728,12 +728,12 @@ export default {
       title2: 'aus unserem Alltag',
       readTime: 'Lesezeit',
       posts: [
-        { date: 'April 2024',    tag: 'Sicherheit',     title: "Moderne Videoüberwachung: Was Unternehmen beachten müssen",                 excerpt: "Die Installation von Kamerasystemen ist mehr als nur Technik. Rechtliche Grundlagen und strategische Platzierung sind entscheidend.",        img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490824/suhail-services/work_1_1777327673494.jpg', read: '5 Min' },
-        { date: 'März 2024',     tag: 'Reinigung',      title: "Effiziente Baustellenreinigung für reibungslose Abläufe",                 excerpt: "Warum eine kontinuierliche Reinigung während der Bauphase nicht nur für Ordnung, sondern auch für Arbeitssicherheit sorgt.",                  img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
-        { date: 'Februar 2024',  tag: 'Baulogistik',    title: "Baustellenlogistik: Der unsichtbare Erfolgsfaktor",                       excerpt: "Ohne präzise Logistik stehen Baustellen still. Erfahren Sie, wie wir Material und Personal auf Großbaustellen optimal steuern.",            img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg', read: '6 Min' },
-        { date: 'Januar 2024',   tag: 'Objektschutz',   title: "Wie präsenter Objektschutz Vandalismus effektiv verhindert",              excerpt: "Sichtbare Sicherheitskräfte sind oft die beste Prävention. Eine Analyse unserer Einsätze in gewerblichen Immobilien.",                        img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490369/suhail-services/home_featured_1_1777327621389.jpg', read: '4 Min' },
-        { date: 'Dezember 2023', tag: 'Team',           title: "Qualifizierung im Sicherheitsgewerbe: Unsere Standards",                  excerpt: "Die Ausbildung unserer Mitarbeiter geht weit über den § 34a GewO hinaus. Ein Blick hinter die Kulissen unserer internen Schulungen.",         img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', read: '7 Min' },
-        { date: 'November 2023', tag: 'Case Study',     title: "Sicherheitskonzept für das neue Einkaufszentrum West",                    excerpt: "Ein detaillierter Einblick, wie wir den kompletten Sicherheits- und Reinigungsbedarf für eines der größten neuen Einkaufszentren decken.",  img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg', read: '10 Min' },
+        { date: 'April 2024', tag: 'Sicherheit', title: "Moderne Videoüberwachung: Was Unternehmen beachten müssen", excerpt: "Die Installation von Kamerasystemen ist mehr als nur Technik. Rechtliche Grundlagen und strategische Platzierung sind entscheidend.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490824/suhail-services/work_1_1777327673494.jpg', read: '5 Min' },
+        { date: 'März 2024', tag: 'Reinigung', title: "Effiziente Baustellenreinigung für reibungslose Abläufe", excerpt: "Warum eine kontinuierliche Reinigung während der Bauphase nicht nur für Ordnung, sondern auch für Arbeitssicherheit sorgt.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
+        { date: 'Februar 2024', tag: 'Baulogistik', title: "Baustellenlogistik: Der unsichtbare Erfolgsfaktor", excerpt: "Ohne präzise Logistik stehen Baustellen still. Erfahren Sie, wie wir Material und Personal auf Großbaustellen optimal steuern.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg', read: '6 Min' },
+        { date: 'Januar 2024', tag: 'Objektschutz', title: "Wie präsenter Objektschutz Vandalismus effektiv verhindert", excerpt: "Sichtbare Sicherheitskräfte sind oft die beste Prävention. Eine Analyse unserer Einsätze in gewerblichen Immobilien.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490369/suhail-services/home_featured_1_1777327621389.jpg', read: '4 Min' },
+        { date: 'Dezember 2023', tag: 'Team', title: "Qualifizierung im Sicherheitsgewerbe: Unsere Standards", excerpt: "Die Ausbildung unserer Mitarbeiter geht weit über den § 34a GewO hinaus. Ein Blick hinter die Kulissen unserer internen Schulungen.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', read: '7 Min' },
+        { date: 'November 2023', tag: 'Case Study', title: "Sicherheitskonzept für das neue Einkaufszentrum West", excerpt: "Ein detaillierter Einblick, wie wir den kompletten Sicherheits- und Reinigungsbedarf für eines der größten neuen Einkaufszentren decken.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg', read: '10 Min' },
       ]
     },
     imprint: {
@@ -743,7 +743,7 @@ export default {
       representedByTitle: 'Vertreten durch:',
       representedBy: 'Al Darwish (Inhaber und Geschäftsführer)',
       contactTitle: 'Kontakt:',
-      email: 'contact@suhaili.de',
+      email: 'kontact@suhaili.de',
       phones: ['+49 176 20607329', '+49 159 01031484'],
       vatTitle: 'Umsatzsteuer-Identifikationsnummer:',
       vatNumber: '30/Z01/54Z74',
@@ -832,15 +832,15 @@ export default {
       location: 'Berlin, Germany',
       linkedIn: 'LinkedIn',
       offerLinks: [
-        { hash: 'general-services',      label: 'General Services' },
-        { hash: 'cleaning',              label: 'Cleaning' },
-        { hash: 'cashier-services',      label: 'Cashier Services' },
-        { hash: 'warehouse-services',    label: 'Warehouse Services' },
+        { hash: 'general-services', label: 'General Services' },
+        { hash: 'cleaning', label: 'Cleaning' },
+        { hash: 'cashier-services', label: 'Cashier Services' },
+        { hash: 'warehouse-services', label: 'Warehouse Services' },
         { hash: 'construction-interior', label: 'Construction & Interior Work' },
-        { hash: 'installation-unpacking',label: 'Installation & Unpacking' },
+        { hash: 'installation-unpacking', label: 'Installation & Unpacking' },
         { hash: 'electrical-assistance', label: 'Electrical Assistance' },
-        { hash: 'transport',             label: 'Transport' },
-        { hash: 'staffing-services',     label: 'Staffing Services' },
+        { hash: 'transport', label: 'Transport' },
+        { hash: 'staffing-services', label: 'Staffing Services' },
       ],
     },
     home: {
@@ -885,13 +885,13 @@ export default {
       testimonials: [
         {
           company: 'Retail GmbH',
-          quote: '"Suhail Services ensures absolute security in our stores. Professional detectives and competent checkout staff we can fully rely on."',
+          quote: '"suhail Services ensures absolute security in our stores. Professional detectives and competent checkout staff we can fully rely on."',
           author: 'Store Manager',
           role: 'Berlin',
         },
         {
           company: 'Mitte Construction',
-          quote: '"Construction site cleaning and logistics ran smoothly thanks to Suhail Services. Efficient and fast work that exceeded our expectations. We are already planning the next project together."',
+          quote: '"Construction site cleaning and logistics ran smoothly thanks to suhail Services. Efficient and fast work that exceeded our expectations. We are already planning the next project together."',
           author: 'Site Management',
           role: '',
         },
@@ -928,10 +928,10 @@ export default {
           category: 'Cleaning',
           desc: 'Professional cleaning services for every area – reliable, efficient, and tailored to your needs.',
           items: [
-            { slug: 'office-cleaning',       name: 'Office Cleaning',       subtitle: 'Clean working environment',             desc: 'Regular and thorough cleaning of your office spaces for a hygienic working environment.' },
+            { slug: 'office-cleaning', name: 'Office Cleaning', subtitle: 'Clean working environment', desc: 'Regular and thorough cleaning of your office spaces for a hygienic working environment.' },
             { slug: 'construction-cleaning', name: 'Construction Cleaning', subtitle: 'Professional post-construction cleaning', desc: 'Order, safety, and a flawless completion for your construction projects.' },
-            { slug: 'deep-cleaning',         name: 'Deep Cleaning',         subtitle: 'Deep cleaning for the highest demands',  desc: 'Intensive cleaning for stubborn dirt – flexible and tailored to your needs.' },
-            { slug: 'maintenance-cleaning',  name: 'Maintenance Cleaning',  subtitle: 'Cleanliness and hygiene',               desc: 'Regular cleaning work to keep your premises well-maintained and hygienic.' },
+            { slug: 'deep-cleaning', name: 'Deep Cleaning', subtitle: 'Deep cleaning for the highest demands', desc: 'Intensive cleaning for stubborn dirt – flexible and tailored to your needs.' },
+            { slug: 'maintenance-cleaning', name: 'Maintenance Cleaning', subtitle: 'Cleanliness and hygiene', desc: 'Regular cleaning work to keep your premises well-maintained and hygienic.' },
           ],
         },
         {
@@ -985,25 +985,25 @@ export default {
         },
       ],
       process: [
-        { num: '01', title: 'Analysis',       desc: 'We analyze your individual needs and local conditions in detail.' },
-        { num: '02', title: 'Concept',        desc: 'We develop a customized security and service concept for you.' },
-        { num: '03', title: 'Execution',      desc: 'Our qualified staff implements the measures professionally and reliably.' },
+        { num: '01', title: 'Analysis', desc: 'We analyze your individual needs and local conditions in detail.' },
+        { num: '02', title: 'Concept', desc: 'We develop a customized security and service concept for you.' },
+        { num: '03', title: 'Execution', desc: 'Our qualified staff implements the measures professionally and reliably.' },
       ],
       testimonials: [
         {
           company: 'Retail GmbH',
-          quote: '"Suhail Services ensures absolute security in our stores. Professional detectives and competent checkout staff we can fully rely on."',
+          quote: '"suhail Services ensures absolute security in our stores. Professional detectives and competent checkout staff we can fully rely on."',
           author: 'Store Manager — Berlin',
         },
         {
           company: 'Mitte Construction',
-          quote: 'Construction site cleaning and logistics ran smoothly thanks to Suhail Services. Efficient and fast work that exceeded our expectations. We are already planning the next project together.',
+          quote: 'Construction site cleaning and logistics ran smoothly thanks to suhail Services. Efficient and fast work that exceeded our expectations. We are already planning the next project together.',
           author: 'Site Management',
         },
       ]
     },
     about: {
-      hero1: 'Welcome to Suhaili Service',
+      hero1: 'Welcome to suhaili Service',
       hero2: '',
       mission1: '',
       mission2: 'Since our founding, we have stood for trust, quality, and innovation. With headquarters in Berlin, we are a reliable partner for security, cleaning, and facility services — providing comprehensive solutions from a single source.',
@@ -1040,26 +1040,26 @@ export default {
         { year: '2024', event: 'Through its investment in IT specialist G.I.P., KÖTTER Security becomes one of the first security service providers in Europe to offer truly 360-degree security solutions.' },
       ],
       aboutSections: [
-        { id: 'history-facts',           title: 'History & Facts',                body: '' },
-        { id: 'references',              title: 'References',                     body: '' },
-        { id: 'quality-certificates',    title: 'Quality / Certificates / Awards', body: '' },
-        { id: 'csr-esg',                 title: 'CSR / ESG',                      body: '' },
-        { id: 'philosophy-code',         title: 'Philosophy & Code of Conduct',   body: '' },
-        { id: 'compliance-lksg',         title: 'Compliance & LkSG',              body: '' },
-        { id: 'security-advisory-board', title: 'Security Advisory Board',        body: '' },
-        { id: 'association-work',        title: 'Association Work',               body: '' },
-        { id: 'other-companies',         title: 'Other Companies & Investments',  body: '' },
+        { id: 'history-facts', title: 'History & Facts', body: '' },
+        { id: 'references', title: 'References', body: '' },
+        { id: 'quality-certificates', title: 'Quality / Certificates / Awards', body: '' },
+        { id: 'csr-esg', title: 'CSR / ESG', body: '' },
+        { id: 'philosophy-code', title: 'Philosophy & Code of Conduct', body: '' },
+        { id: 'compliance-lksg', title: 'Compliance & LkSG', body: '' },
+        { id: 'security-advisory-board', title: 'Security Advisory Board', body: '' },
+        { id: 'association-work', title: 'Association Work', body: '' },
+        { id: 'other-companies', title: 'Other Companies & Investments', body: '' },
       ],
       statsTitle: 'Our Expertise in Numbers',
       stats: [
-        { num: '100',    label: 'Branches Nationwide' },
-        { num: '770',    label: 'Million Euros in Group Revenue' },
-        { num: '92',     label: 'Years of Expert Experience' },
+        { num: '100', label: 'Branches Nationwide' },
+        { num: '770', label: 'Million Euros in Group Revenue' },
+        { num: '92', label: 'Years of Expert Experience' },
         { num: '16.400', label: 'Outstanding Employees' },
       ],
       statsBody:
         'Our key figures represent more than just growth: they are proof of long-standing partnerships, the trust of our clients, and the continuous dedication of our employees.',
-      solutionsTitle: 'Suhaili Service – tailor-made solutions from a single source',
+      solutionsTitle: 'suhaili Service – tailor-made solutions from a single source',
       solutionsDesc: 'Our range of services includes security services, security technology, cleaning, and personnel services. Our individually tailored concepts create the freedom you need to focus entirely on your core business.',
       clientsTitle: 'These clients rely on us',
       clientsDesc: 'Reliability, quality, and customised solutions make the difference. That\'s why many companies have trusted us for years — across all industries and throughout Germany.',
@@ -1073,12 +1073,12 @@ export default {
       imgAlt1: 'Security personnel',
       imgAlt2: 'Building cleaning',
       team: [
-        { name: 'Michael',  role: 'Management',          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg' },
-        { name: 'Sarah',    role: 'Operations',          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg' },
-        { name: 'Thomas',   role: 'Security Tech',       img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490369/suhail-services/home_featured_1_1777327621389.jpg' },
-        { name: 'Elena',    role: 'Building Cleaning',   img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
-        { name: 'Markus',   role: 'Property Protection', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490824/suhail-services/work_1_1777327673494.jpg' },
-        { name: 'Dennis',   role: 'Site Management',     img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
+        { name: 'Michael', role: 'Management', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg' },
+        { name: 'Sarah', role: 'Operations', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg' },
+        { name: 'Thomas', role: 'Security Tech', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490369/suhail-services/home_featured_1_1777327621389.jpg' },
+        { name: 'Elena', role: 'Building Cleaning', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
+        { name: 'Markus', role: 'Property Protection', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490824/suhail-services/work_1_1777327673494.jpg' },
+        { name: 'Dennis', role: 'Site Management', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
       ]
     },
     referencesPage: {
@@ -1181,7 +1181,7 @@ export default {
       eyebrowMuted: 'Values and guidelines',
       title: 'Philosophy & Code of Conduct',
       introP1:
-        'Our corporate philosophy and code of conduct underpin how we decide and act every day at Suhaili Service.',
+        'Our corporate philosophy and code of conduct underpin how we decide and act every day at suhaili Service.',
       introP2:
         'As an owner-led partner with a clear quality ambition, we combine reliability with an open eye on markets, people, and standards — rooted locally, supported by a professional portfolio across service and facility disciplines.',
       heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490768/suhail-services/philosophy-hero-collaboration.png',
@@ -1238,7 +1238,7 @@ export default {
       eyebrowMuted: 'For fair cooperation',
       title: 'Compliance & LkSG',
       heroP1:
-        'At Suhaili Service, management and teams commit to complying with applicable law and working fairly with clients, suppliers, and partners — supported by clear internal rules and accountable responsibilities.',
+        'At suhaili Service, management and teams commit to complying with applicable law and working fairly with clients, suppliers, and partners — supported by clear internal rules and accountable responsibilities.',
       heroP2:
         'We take seriously any indications of breaches of law, collective-bargaining provisions, equal treatment rules, or expectations anchored in our Code of Conduct — and route them through defined review and escalation paths.',
       heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490347/suhail-services/compliance-hero-integrity.png',
@@ -1306,7 +1306,7 @@ export default {
 
       dialogueHeading: 'Dialogue, cooperation and conception',
       dialogueP1:
-        'Working with municipalities, authorities and federal states demands strong advisory discipline and traceability — at Suhaili Service an advisory board therefore complements management and specialist departments with independent, practice-oriented counsel.',
+        'Working with municipalities, authorities and federal states demands strong advisory discipline and traceability — at suhaili Service an advisory board therefore complements management and specialist departments with independent, practice-oriented counsel.',
       dialogueP2:
         'The aim is to exchange views on regulatory developments, tenders and quality benchmarks, and to assist with designing specialised service lines — such as site and personnel protection, critical infrastructure, or project-specific security concepts.',
       dialogueP3:
@@ -1351,13 +1351,13 @@ export default {
 
       youngTalentHeading: 'Junior staff benefit from specialist insight',
       youngTalentBody:
-        'Advisory expertise also strengthens vocational pathways: the board supports the maintenance, updating and delivery of qualification programmes — including formats anchored in Suhaili Service’s internal academy and training landscape.',
+        'Advisory expertise also strengthens vocational pathways: the board supports the maintenance, updating and delivery of qualification programmes — including formats anchored in suhaili Service’s internal academy and training landscape.',
     },
     associationWorkPage: {
       eyebrowMuted: 'Even stronger together',
       title: 'Association work',
       heroP1:
-        'High-calibre service extends beyond our own organisation — which is why Suhaili Service participates in national and international associations: to share experience, evolve recognised standards, and strengthen vocational pathways sustainably.',
+        'High-calibre service extends beyond our own organisation — which is why suhaili Service participates in national and international associations: to share experience, evolve recognised standards, and strengthen vocational pathways sustainably.',
       heroP2:
         'Through that network we contribute to professional orientation across our sectors — guided by dependable quality and service standards.',
       heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490344/suhail-services/association-work-hero.png',
@@ -1504,14 +1504,14 @@ export default {
       title1: 'Work that ensures',
       title2: 'Security',
       projects: [
-        { title: 'Department Store Security',  tag: 'Property Protection',    year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png' },
-        { title: 'Berlin Office Complex',      tag: 'Building Cleaning',      year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png' },
-        { title: 'Industrial Park South',      tag: 'Video Surveillance',     year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png' },
-        { title: 'Large Construction Mitte',   tag: 'Site Logistics',         year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png' },
-        { title: 'Shopping Center West',       tag: 'Security Services',      year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490813/suhail-services/work-project-05.png' },
-        { title: 'Event Hall North',           tag: 'Event Security',         year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png' },
-        { title: 'Hotel Royal',                tag: 'Reception Services',     year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490819/suhail-services/work-project-07.png' },
-        { title: 'Residential East',           tag: 'Maintenance Cleaning',   year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490822/suhail-services/work-project-08.png' },
+        { title: 'Department Store Security', tag: 'Property Protection', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png' },
+        { title: 'Berlin Office Complex', tag: 'Building Cleaning', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490803/suhail-services/work-project-02.png' },
+        { title: 'Industrial Park South', tag: 'Video Surveillance', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png' },
+        { title: 'Large Construction Mitte', tag: 'Site Logistics', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png' },
+        { title: 'Shopping Center West', tag: 'Security Services', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490813/suhail-services/work-project-05.png' },
+        { title: 'Event Hall North', tag: 'Event Security', year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png' },
+        { title: 'Hotel Royal', tag: 'Reception Services', year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490819/suhail-services/work-project-07.png' },
+        { title: 'Residential East', tag: 'Maintenance Cleaning', year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490822/suhail-services/work-project-08.png' },
       ]
     },
     blog: {
@@ -1519,12 +1519,12 @@ export default {
       title2: 'from our daily work',
       readTime: 'read',
       posts: [
-        { date: 'April 2024',    tag: 'Security',     title: "Modern Video Surveillance: What Companies Must Consider",                   excerpt: "Installing camera systems is more than just tech. Legal foundations and strategic placement are critical.",                  img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490824/suhail-services/work_1_1777327673494.jpg', read: '5 Min' },
-        { date: 'March 2024',    tag: 'Cleaning',     title: "Efficient Construction Cleaning for Smooth Operations",                     excerpt: "Why continuous cleaning during the construction phase ensures not only order but also occupational safety.",                 img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
-        { date: 'February 2024', tag: 'Logistics',    title: "Construction Logistics: The Invisible Success Factor",                      excerpt: "Without precise logistics, sites stand still. Learn how we optimally control material and personnel on large projects.",     img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg', read: '6 Min' },
-        { date: 'January 2024',  tag: 'Protection',   title: "How Present Property Protection Effectively Prevents Vandalism",            excerpt: "Visible security guards are often the best prevention. An analysis of our operations in commercial real estate.",            img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490369/suhail-services/home_featured_1_1777327621389.jpg', read: '4 Min' },
-        { date: 'December 2023', tag: 'Team',         title: "Qualifications in the Security Industry: Our Standards",                    excerpt: "Our employees' training goes far beyond basic requirements. A look behind the scenes of our internal courses.",              img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', read: '7 Min' },
-        { date: 'November 2023', tag: 'Case Study',   title: "Security Concept for the New Shopping Center West",                         excerpt: "A detailed insight into how we cover the complete security and cleaning needs for one of the largest new shopping centers.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg', read: '10 Min' },
+        { date: 'April 2024', tag: 'Security', title: "Modern Video Surveillance: What Companies Must Consider", excerpt: "Installing camera systems is more than just tech. Legal foundations and strategic placement are critical.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490824/suhail-services/work_1_1777327673494.jpg', read: '5 Min' },
+        { date: 'March 2024', tag: 'Cleaning', title: "Efficient Construction Cleaning for Smooth Operations", excerpt: "Why continuous cleaning during the construction phase ensures not only order but also occupational safety.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
+        { date: 'February 2024', tag: 'Logistics', title: "Construction Logistics: The Invisible Success Factor", excerpt: "Without precise logistics, sites stand still. Learn how we optimally control material and personnel on large projects.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg', read: '6 Min' },
+        { date: 'January 2024', tag: 'Protection', title: "How Present Property Protection Effectively Prevents Vandalism", excerpt: "Visible security guards are often the best prevention. An analysis of our operations in commercial real estate.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490369/suhail-services/home_featured_1_1777327621389.jpg', read: '4 Min' },
+        { date: 'December 2023', tag: 'Team', title: "Qualifications in the Security Industry: Our Standards", excerpt: "Our employees' training goes far beyond basic requirements. A look behind the scenes of our internal courses.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', read: '7 Min' },
+        { date: 'November 2023', tag: 'Case Study', title: "Security Concept for the New Shopping Center West", excerpt: "A detailed insight into how we cover the complete security and cleaning needs for one of the largest new shopping centers.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg', read: '10 Min' },
       ]
     },
     imprint: {
@@ -1534,7 +1534,7 @@ export default {
       representedByTitle: 'Represented by:',
       representedBy: 'Al Darwish (Owner and Managing Director)',
       contactTitle: 'Contact:',
-      email: 'contact@suhaili.de',
+      email: 'kontact@suhaili.de',
       phones: ['+49 176 20607329', '+49 159 01031484'],
       vatTitle: 'VAT identification number:',
       vatNumber: '30/Z01/54Z74',

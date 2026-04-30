@@ -10,7 +10,7 @@ export default function BrandLogo({ variant = 'dark', compact = false, mobile = 
   return (
     <img
       src="https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490797/suhail-services/ServiceLogo.png"
-      alt="Suhail Services"
+      alt="suhail Services"
       style={{
         height: h,
         width: 'auto',
