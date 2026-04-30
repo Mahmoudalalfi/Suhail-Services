@@ -200,8 +200,10 @@ function MobileHeroCards() {
           style={{
             position: 'absolute',
             bottom: '3%',
-            left: '50%',
-            transform: 'translateX(-50%)',
+            left: 0,
+            right: 0,
+            margin: '0 auto',
+            width: 'fit-content',
             zIndex: 10,
             pointerEvents: 'auto',
             background: 'rgba(15,15,18,0.72)',
@@ -221,7 +223,7 @@ function MobileHeroCards() {
             whiteSpace: 'nowrap',
           }}
         >
-          <span style={{ fontSize: 16 }}>📐</span> Tap to enable tilt effect
+          Tap to enable tilt effect
         </motion.button>
       )}
 
@@ -423,7 +425,9 @@ function WorkCard({ project }) {
         transition: 'background 0.25s, color 0.25s',
         backdropFilter: 'blur(6px)',
         boxShadow: '0 2px 12px rgba(30,31,40,0.12)',
-      }}>↗</div>
+      }}>
+        {'↗︎'}
+      </div>
     </Link>
   )
 }
@@ -571,24 +575,19 @@ function Testimonials() {
           transform-style: preserve-3d;
         }
 
-        /* ── Mobile: flat 2-col grid, no 3-D tilt ── */
+        /* ── Mobile: keep 3-D tilt, 2 cols, tighter height ── */
         @media (max-width: 600px) {
           .testi-scene {
-            height: auto;
-            max-height: 520px;
-            perspective: none;
+            height: 420px;
+            perspective: 600px;
+            border-radius: 14px;
           }
           .testi-inner {
-            position: relative;
-            inset: auto;
-            transform: none;
-            flex-wrap: wrap;
-            justify-content: center;
-            overflow: hidden;
-            padding: 16px 12px;
-            max-height: 520px;
+            transform: translateY(14px) rotateX(16deg) rotateY(-6deg) rotateZ(14deg);
+            gap: 10px;
+            padding: 14px 10px;
           }
-          .testi-col { width: calc(50% - 7px); }
+          .testi-col { width: calc(50% - 5px); }
         }
       `}</style>
 
