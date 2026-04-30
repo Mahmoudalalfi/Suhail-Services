@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -126,12 +127,12 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
             key={idx}
             onMouseEnter={() => { 
               if (window.innerWidth >= 1024) {
-                pausedRef.current = true; setHoveredIdx(idx); openZoom(item) 
+                pausedRef.current = true; setHoveredIdx(idx); openZoom(item);
               }
             }}
             onMouseLeave={() => { 
               if (window.innerWidth >= 1024) {
-                if (!_getGlobalZoomed?.()) closeZoom() 
+                closeZoom() 
               }
             }}
             onClick={(e) => {
@@ -140,6 +141,8 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
                 e.stopPropagation();
                 pausedRef.current = true;
                 setHoveredIdx(idx);
+              } else {
+                openZoom(item);
               }
             }}
             onTouchEnd={(e) => { 
@@ -214,14 +217,14 @@ function ZoomedOverlay() {
     if (_closeAllRows) _closeAllRows()
   }
 
-  return (
+  return createPortal(
     <div
       onClick={zoomed ? close : undefined}
       style={{
         position: 'fixed',
         inset: 0,
         zIndex: 200,
-        pointerEvents: zoomed ? 'auto' : 'none',
+        pointerEvents: 'none',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -268,7 +271,8 @@ function ZoomedOverlay() {
           </>
         )}
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
 
