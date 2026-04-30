@@ -34,7 +34,7 @@ const SPEED_PX_PER_SEC = 60
 
 // Shared zoomed state lifted to module level so both rows share one overlay
 let _setGlobalZoomed = null
-let _setGlobalPaused = null
+let _getGlobalZoomed = null
 
 function GallerySlideshow({ reverse = false, galleryItems }) {
   const trackRef = useRef(null)
@@ -74,12 +74,14 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
   }, [totalOrigW])
 
   function handleMouseEnter(idx, item) {
+    if (_getGlobalZoomed && _getGlobalZoomed()) return
     pausedRef.current = true
     setHoveredIdx(idx)
     if (_setGlobalZoomed) _setGlobalZoomed(item)
   }
 
   function handleMouseLeave() {
+    if (_getGlobalZoomed && _getGlobalZoomed()) return
     pausedRef.current = false
     setHoveredIdx(null)
     if (_setGlobalZoomed) _setGlobalZoomed(null)
@@ -160,10 +162,12 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
 
 function ZoomedOverlay() {
   const [zoomed, setZoomed] = useState(null)
+  const zoomedRef = useRef(null)
 
   useEffect(() => {
-    _setGlobalZoomed = setZoomed
-    return () => { _setGlobalZoomed = null }
+    _setGlobalZoomed = (item) => { zoomedRef.current = item; setZoomed(item) }
+    _getGlobalZoomed = () => zoomedRef.current
+    return () => { _setGlobalZoomed = null; _getGlobalZoomed = null }
   }, [])
 
   function close() {
