@@ -35,6 +35,8 @@ const SPEED_PX_PER_SEC = 60
 // Shared zoomed state lifted to module level so both rows share one overlay
 let _setGlobalZoomed = null
 let _getGlobalZoomed = null
+let _closeAllRows = null
+function _registerClose(fn) { _closeAllRows = fn }
 
 function GallerySlideshow({ reverse = false, galleryItems }) {
   const trackRef = useRef(null)
@@ -73,24 +75,40 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
     return () => cancelAnimationFrame(animRef.current)
   }, [totalOrigW])
 
-  function handleMouseEnter(idx, item) {
-    if (_getGlobalZoomed && _getGlobalZoomed()) return
+  function openZoom(item) {
     pausedRef.current = true
-    setHoveredIdx(idx)
     if (_setGlobalZoomed) _setGlobalZoomed(item)
   }
 
-  function handleMouseLeave() {
-    if (_getGlobalZoomed && _getGlobalZoomed()) return
+  function closeZoom() {
     pausedRef.current = false
     setHoveredIdx(null)
     if (_setGlobalZoomed) _setGlobalZoomed(null)
   }
 
-  function handleClick(item) {
-    pausedRef.current = true
-    if (_setGlobalZoomed) _setGlobalZoomed(item)
-  }
+  // expose closeZoom so overlay can resume the ribbon
+  useEffect(() => {
+    _registerClose(closeZoom)
+    return () => _registerClose(null)
+  })
+
+  // Handle clicking outside on mobile to resume
+  useEffect(() => {
+    function handleOutside(e) {
+      if (window.innerWidth < 1024) {
+        if (trackRef.current && !trackRef.current.contains(e.target)) {
+          pausedRef.current = false
+          setHoveredIdx(null)
+        }
+      }
+    }
+    document.addEventListener('touchstart', handleOutside)
+    document.addEventListener('mousedown', handleOutside)
+    return () => {
+      document.removeEventListener('touchstart', handleOutside)
+      document.removeEventListener('mousedown', handleOutside)
+    }
+  }, [])
 
   return (
     <div style={{ overflow: 'hidden', width: '100%' }}>
@@ -106,9 +124,29 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
         {ITEMS.map((item, idx) => (
           <div
             key={idx}
-            onMouseEnter={() => handleMouseEnter(idx, item)}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick(item)}
+            onMouseEnter={() => { 
+              if (window.innerWidth >= 1024) {
+                pausedRef.current = true; setHoveredIdx(idx); openZoom(item) 
+              }
+            }}
+            onMouseLeave={() => { 
+              if (window.innerWidth >= 1024) {
+                if (!_getGlobalZoomed?.()) closeZoom() 
+              }
+            }}
+            onClick={(e) => {
+              if (window.innerWidth < 1024) {
+                e.preventDefault();
+                e.stopPropagation();
+                pausedRef.current = true;
+                setHoveredIdx(idx);
+              }
+            }}
+            onTouchEnd={(e) => { 
+              if (window.innerWidth >= 1024) {
+                e.preventDefault(); openZoom(item) 
+              }
+            }}
             style={{
               flexShrink: 0,
               width: CARD_W,
@@ -171,7 +209,9 @@ function ZoomedOverlay() {
   }, [])
 
   function close() {
+    zoomedRef.current = null
     setZoomed(null)
+    if (_closeAllRows) _closeAllRows()
   }
 
   return (
@@ -245,6 +285,10 @@ export default function GalleryPage() {
     title: imageLabels[i] || '',
   }))
 
+  const halfIdx = Math.ceil(galleryItems.length / 2)
+  const row1Items = galleryItems.slice(0, halfIdx)
+  const row2Items = galleryItems.slice(halfIdx)
+
   useEffect(() => {
     if (headRef.current) {
       gsap.fromTo(headRef.current,
@@ -310,10 +354,10 @@ export default function GalleryPage() {
         overflow: 'hidden',
       }}>
         <div ref={row1Ref} style={{ opacity: 0, marginBottom: CARD_GAP + 8 }}>
-          <GallerySlideshow galleryItems={galleryItems} />
+          <GallerySlideshow galleryItems={row1Items} />
         </div>
         <div ref={row2Ref} style={{ opacity: 0 }}>
-          <GallerySlideshow reverse galleryItems={galleryItems} />
+          <GallerySlideshow reverse galleryItems={row2Items} />
         </div>
       </section>
 
