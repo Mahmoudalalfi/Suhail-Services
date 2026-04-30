@@ -66,7 +66,7 @@ function ProjectCard({ project, index }) {
           transition: 'background 0.25s, color 0.25s',
           backdropFilter: 'blur(6px)',
           boxShadow: '0 2px 12px rgba(30,31,40,0.12)',
-        }}>↗</div>
+        }}>{'↗︎'}</div>
       </Link>
     </div>
   )

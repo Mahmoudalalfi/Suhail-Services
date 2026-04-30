@@ -636,6 +636,12 @@ export default function HomePage() {
   const [rotateColorIdx, setRotateColorIdx] = useState(0)
   const handleRotateNext = (idx) => setRotateColorIdx(idx % ROTATE_COLORS.length)
 
+  /* Lock hero height to the initial viewport so mobile browser chrome hide/show doesn't resize it */
+  const [heroH, setHeroH] = useState('100svh')
+  useEffect(() => {
+    setHeroH(`${window.innerHeight}px`)
+  }, [])
+
   /* ── Work cards scroll reveal ── */
   useEffect(() => {
     gsap.set(card1Ref.current, { opacity: 0, y: 50 })
@@ -661,7 +667,7 @@ export default function HomePage() {
         ref={heroRef}
         className="relative w-full overflow-hidden flex flex-col items-center justify-center"
         style={{
-          height: '100svh',
+          height: heroH,
           background: '#f0f3fa',
           paddingTop: 80,
           willChange: 'transform',
@@ -913,7 +919,7 @@ export default function HomePage() {
         </div>
         <div style={{ alignSelf: 'flex-start' }}>
           <LiquidButton as="a" href="mailto:kontact@suhail.de" tint="#FACC15" textColor="#000000" style={{ fontSize: 15, padding: '10px 24px' }}>
-            kontact@suhail.de ↗
+            {'kontact@suhail.de ↗︎'}
           </LiquidButton>
         </div>
       </section>
@@ -948,6 +954,8 @@ function HomeServiceCard({ service }) {
         opacity: 1,
         display: 'flex',
         flexDirection: 'column',
+        width: '100%',
+        height: '100%',
         background: hov ? '#0f0f12' : '#fff',
         border: `1.5px solid ${hov ? '#FACC15' : 'rgba(30,31,40,0.09)'}`,
         borderRadius: 16,
@@ -1035,7 +1043,7 @@ function HomeServicesGrid() {
         }} />
         <div ref={trackRef} className="services-track" style={{ padding: '8px 0' }}>
           {doubled.map((svc, i) => (
-            <div key={i} style={{ flexShrink: 0, width: 'clamp(220px, 22vw, 280px)' }}>
+            <div key={i} style={{ flexShrink: 0, width: 'clamp(220px, 22vw, 280px)', height: 180, display: 'flex' }}>
               <HomeServiceCard service={svc} delay={0} />
             </div>
           ))}

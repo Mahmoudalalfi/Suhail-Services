@@ -73,16 +73,28 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
     return () => cancelAnimationFrame(animRef.current)
   }, [totalOrigW])
 
+  const isTouch = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
+
   function handleMouseEnter(idx, item) {
+    if (isTouch) return
     pausedRef.current = true
     setHoveredIdx(idx)
     if (_setGlobalZoomed) _setGlobalZoomed(item)
   }
 
   function handleMouseLeave() {
+    if (isTouch) return
     pausedRef.current = false
     setHoveredIdx(null)
     if (_setGlobalZoomed) _setGlobalZoomed(null)
+  }
+
+  function handleClick(idx, item) {
+    if (!isTouch) return
+    const already = hoveredIdx === idx
+    pausedRef.current = !already
+    setHoveredIdx(already ? null : idx)
+    if (_setGlobalZoomed) _setGlobalZoomed(already ? null : item)
   }
 
   return (
@@ -101,6 +113,7 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
             key={idx}
             onMouseEnter={() => handleMouseEnter(idx, item)}
             onMouseLeave={handleMouseLeave}
+            onClick={() => handleClick(idx, item)}
             style={{
               flexShrink: 0,
               width: CARD_W,
@@ -160,24 +173,30 @@ function ZoomedOverlay() {
     return () => { _setGlobalZoomed = null }
   }, [])
 
+  function close() {
+    setZoomed(null)
+    if (_setGlobalZoomed) _setGlobalZoomed(null)
+  }
+
   return (
     <div
+      onClick={zoomed ? close : undefined}
       style={{
         position: 'fixed',
         inset: 0,
         zIndex: 200,
-        pointerEvents: 'none',
+        pointerEvents: zoomed ? 'auto' : 'none',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: zoomed ? 'rgba(10,11,18,0.72)' : 'rgba(10,11,18,0)',
+        background: zoomed ? 'rgba(10,11,18,0.82)' : 'rgba(10,11,18,0)',
         backdropFilter: zoomed ? 'blur(6px)' : 'blur(0px)',
         transition: 'background 0.35s ease, backdrop-filter 0.35s ease',
+        cursor: zoomed ? 'zoom-out' : 'default',
       }}
     >
       <div style={{
-        width: '50vw',
-        maxWidth: 860,
+        width: 'clamp(280px, 88vw, 860px)',
         borderRadius: 18,
         overflow: 'hidden',
         boxShadow: '0 32px 96px rgba(0,0,0,0.55)',
@@ -192,7 +211,7 @@ function ZoomedOverlay() {
             <img
               src={zoomed.url}
               alt={zoomed.title}
-              style={{ width: '100%', height: '56vw', maxHeight: 500, objectFit: 'cover', display: 'block' }}
+              style={{ width: '100%', height: 'clamp(200px, 56vw, 500px)', objectFit: 'cover', display: 'block' }}
             />
             <div style={{
               position: 'absolute', bottom: 0, left: 0, right: 0,
@@ -632,13 +651,27 @@ function ServicesSection() {
       </div>
 
       {/* Grid */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%,220px), 1fr))',
-        gap: 'clamp(12px,1.8vw,20px)',
-        maxWidth: 1200,
-        margin: '0 auto',
-      }}>
+      <style>{`
+        .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: clamp(12px,1.8vw,20px);
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        @media (max-width: 640px) {
+          .services-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+          .services-grid > *:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+            max-width: calc(50% - 6px);
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      `}</style>
+      <div className="services-grid">
         {servicesData.map((svc, i) => (
           <ServiceCard key={svc.slug || svc.category} service={svc} delay={i * 0.06} />
         ))}
@@ -702,15 +735,34 @@ function WhyChooseUs() {
         }} />
       </div>
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        gap: 'clamp(12px,2vw,22px)',
-        maxWidth: 1200,
-        margin: '0 auto',
-      }}
-        className="why-grid"
-      >
+      <style>{`
+        .why-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: clamp(12px,2vw,22px);
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        @media (max-width: 640px) {
+          .why-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .why-grid > * { height: 100%; }
+          .why-card-inner { height: 100%; }
+          .why-card-desc {
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          .why-grid > *:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+            max-width: calc(50% - 6px);
+            margin: 0 auto;
+          }
+        }
+      `}</style>
+      <div className="why-grid">
         {whyItems.map((item, i) => (
           <WhyCard key={i} item={item} delay={i * 0.07} />
         ))}
@@ -720,27 +772,29 @@ function WhyChooseUs() {
 }
 
 function WhyCard({ item, delay }) {
-  const ref = useRef(null)
+  const wrapRef = useRef(null)
   const [hov, setHov] = useState(false)
 
   useEffect(() => {
-    if (!ref.current) return
-    gsap.fromTo(ref.current,
+    if (!wrapRef.current) return
+    gsap.fromTo(wrapRef.current,
       { opacity: 0, y: 28 },
       {
         opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', delay,
-        scrollTrigger: { trigger: ref.current, start: 'top 90%', once: true }
+        scrollTrigger: { trigger: wrapRef.current, start: 'top 90%', once: true }
       }
     )
   }, [delay])
 
   return (
+    /* Outer wrapper: GSAP target, fills the grid cell completely */
+    <div ref={wrapRef} style={{ opacity: 0, display: 'flex', width: '100%' }}>
     <div
-      ref={ref}
+      className="why-card-inner"
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       style={{
-        opacity: 0,
+        flex: 1,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
@@ -776,7 +830,7 @@ function WhyCard({ item, delay }) {
       }}>
         {item.title}
       </p>
-      <p style={{
+      <p className="why-card-desc" style={{
         fontSize: 13,
         color: hov ? 'rgba(255,255,255,0.60)' : 'rgba(30,31,40,0.55)',
         margin: 0,
@@ -785,6 +839,7 @@ function WhyCard({ item, delay }) {
       }}>
         {item.desc}
       </p>
+    </div>
     </div>
   )
 }
