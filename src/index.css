@@ -3,12 +3,17 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: auto; } /* GSAP handles scroll */
+html, body, #root {
+  color-scheme: light only !important;
+  forced-color-adjust: none;
+}
+
+html { scroll-behavior: auto; }
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: #fff;
-  color: #000000;
+  background: #ffffff !important;
+  color: #000000 !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;

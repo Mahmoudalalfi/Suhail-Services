@@ -125,13 +125,145 @@ const heroImages = [
   { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Sites right', top: 81, left: 88, w: 138, h: 94, rot: 7, delay: 1.10, depth: 1.0 },
 ]
 
-// 4 corner images for mobile — positioned away from the center text
-const mobileHeroImages = [
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png', alt: 'Security team', top: 4, left: -4, w: 150, h: 108, rot: -6, delay: 0.25, depth: 1.0 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png', alt: 'Work 6', top: 3, left: 60, w: 150, h: 108, rot: 7, delay: 0.35, depth: 0.9 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png', alt: 'Janitorial', top: 70, left: -4, w: 150, h: 116, rot: 5, delay: 0.45, depth: 1.1 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', top: 72, left: 60, w: 150, h: 116, rot: -5, delay: 0.55, depth: 1.0 },
+
+const MOBILE_HERO_CARDS = [
+  /* top — left of center, big, tilted left hard */
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', rot: -18,
+    pos: { top: '7%', left: '5%' }, w: 'clamp(110px,31vw,148px)', h: 'clamp(140px,40vw,186px)' },
+  /* top — right, higher up, tilted right, different shape */
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png', alt: 'Work 6', rot: 14,
+    pos: { top: '4%', right: '6%' }, w: 'clamp(118px,34vw,156px)', h: 'clamp(78px,22vw,100px)' },
+  /* bottom — far left, low, tilted opposite */
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor', rot: 11,
+    pos: { bottom: '11%', left: '3%' }, w: 'clamp(100px,28vw,128px)', h: 'clamp(100px,28vw,128px)' },
+  /* bottom — right but not corner, tucked behind button area, sharp tilt */
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', rot: -23,
+    pos: { bottom: '7%', right: '4%' }, w: 'clamp(86px,24vw,110px)', h: 'clamp(114px,32vw,148px)' },
 ]
+
+/* Each card gets a unique parallax depth multiplier */
+const MOBILE_CARD_DEPTHS = [18, 12, 14, 20]
+
+const needsGyroPermission = () =>
+  typeof DeviceOrientationEvent !== 'undefined' &&
+  typeof DeviceOrientationEvent.requestPermission === 'function'
+
+function MobileHeroCards() {
+  const [gyro, setGyro] = useState({ x: 0, y: 0 })
+  const [showPrompt, setShowPrompt] = useState(false)
+  const [granted, setGranted] = useState(false)
+  const baseRef = useRef({ beta: null, gamma: null })
+
+  const attachGyro = () => {
+    const handler = (e) => {
+      const beta  = e.beta  ?? 0
+      const gamma = e.gamma ?? 0
+      if (baseRef.current.beta === null) baseRef.current = { beta, gamma }
+      const dx = (gamma - baseRef.current.gamma) / 30
+      const dy = (beta  - baseRef.current.beta)  / 40
+      setGyro({ x: Math.max(-1, Math.min(1, dx)), y: Math.max(-1, Math.min(1, dy)) })
+    }
+    window.addEventListener('deviceorientation', handler)
+    return () => window.removeEventListener('deviceorientation', handler)
+  }
+
+  useEffect(() => {
+    if (needsGyroPermission()) {
+      /* iOS — show the tap prompt instead of calling requestPermission cold */
+      setShowPrompt(true)
+    } else {
+      /* Android / desktop — attach directly */
+      return attachGyro()
+    }
+  }, [])
+
+  const handlePromptTap = () => {
+    DeviceOrientationEvent.requestPermission()
+      .then(state => {
+        if (state === 'granted') { setGranted(true); attachGyro() }
+        setShowPrompt(false)
+      })
+      .catch(() => setShowPrompt(false))
+  }
+
+  return (
+    <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
+      <FlickerGrid />
+
+      {/* iOS gyro permission prompt */}
+      {showPrompt && (
+        <motion.button
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.4 }}
+          onClick={handlePromptTap}
+          style={{
+            position: 'absolute',
+            bottom: '3%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: 10,
+            pointerEvents: 'auto',
+            background: 'rgba(15,15,18,0.72)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            color: '#fff',
+            border: 'none',
+            borderRadius: 999,
+            padding: '9px 20px',
+            fontSize: 13,
+            fontWeight: 500,
+            letterSpacing: '0.01em',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 7,
+            whiteSpace: 'nowrap',
+          }}
+        >
+          <span style={{ fontSize: 16 }}>📐</span> Tap to enable tilt effect
+        </motion.button>
+      )}
+
+      {MOBILE_HERO_CARDS.map((card, i) => {
+        const depth = MOBILE_CARD_DEPTHS[i]
+        const tx = gyro.x * depth
+        const ty = gyro.y * depth
+        return (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, scale: 0.78, y: i < 2 ? -24 : 24 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              x: tx,
+              y: ty,
+            }}
+            transition={
+              gyro.x === 0 && gyro.y === 0
+                ? { delay: 0.25 + i * 0.12, duration: 0.65, ease: [0.16, 1, 0.3, 1] }
+                : { type: 'spring', stiffness: 60, damping: 18, mass: 0.8 }
+            }
+            style={{
+              position: 'absolute',
+              ...card.pos,
+              transform: `rotate(${card.rot}deg)`,
+              boxShadow: '0 10px 36px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.12)',
+              zIndex: 2,
+              overflow: 'hidden',
+            }}
+          >
+            <img
+              src={card.url}
+              alt={card.alt}
+              style={{ width: card.w, height: card.h, objectFit: 'cover', display: 'block' }}
+            />
+          </motion.div>
+        )
+      })}
+    </div>
+  )
+}
 
 /* ─────────────────────────── HeroFitTwoLines (kept for potential reuse) ─────────────────────────── */
 function HeroFitTwoLines({ text1, text2, style = {}, maxFontPx, lang, line1Ref, line2Ref }) {
@@ -529,63 +661,69 @@ export default function HomePage() {
       <section
         ref={heroRef}
         className="relative w-full overflow-hidden flex flex-col items-center justify-center"
-        style={{ height: '100svh', background: '#f0f3fa', paddingTop: 80, willChange: 'transform' }}
+        style={{
+          height: '100svh',
+          background: '#f0f3fa',
+          paddingTop: 80,
+          willChange: 'transform',
+        }}
       >
-        {/* Flickering grid background */}
-        <FlickerGrid />
+        {/* Mobile: Artemis-style 4-card layout */}
+        {window.innerWidth < 768 && <MobileHeroCards />}
 
-        {/* Floating parallax images */}
-        <Floating sensitivity={-0.4} className="pointer-events-none hero-floating-images">
-          {(window.innerWidth < 768 ? mobileHeroImages : heroImages).map((img, i) => (
-            <FloatingElement
-              key={i}
-              depth={img.depth}
-              className=""
-              style={{
-                top: `${img.top}%`,
-                left: `${img.left}%`,
-                zIndex: img.depth < 0.5 ? 1 : 2,
-              }}
-            >
-              <motion.div
-                className="hero-img-card"
-                initial={{ opacity: 0, scale: 0.82, y: 20 + img.depth * 14 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ delay: img.delay, duration: 0.7 + img.depth * 0.18, ease: [0.16, 1, 0.3, 1] }}
-                style={{
-                  position: 'relative',
-                  transform: `rotate(${img.rot}deg)`,
-                  borderRadius: 20,
-                  padding: 3,
-                  background: 'rgba(255,255,255,0.8)',
-                  boxShadow: `
-                    0 1px 2px rgba(0,0,0,0.04),
-                    0 ${Math.round(4 + img.depth * 12)}px ${Math.round(16 + img.depth * 28)}px rgba(0,0,0,${(0.10 + img.depth * 0.08).toFixed(2)}),
-                    0 ${Math.round(12 + img.depth * 24)}px ${Math.round(40 + img.depth * 36)}px rgba(0,0,0,${(0.07 + img.depth * 0.05).toFixed(2)}),
-                    inset 0 1px 0 rgba(255,255,255,1)
-                  `,
-                  willChange: 'transform',
-                }}
-              >
-                <img
-                  src={img.url}
-                  alt={img.alt}
+        {/* Desktop: flickering grid + floating images */}
+        {window.innerWidth >= 768 && (
+          <>
+            <FlickerGrid />
+            <Floating sensitivity={-0.4} className="pointer-events-none hero-floating-images">
+              {heroImages.map((img, i) => (
+                <FloatingElement
+                  key={i}
+                  depth={img.depth}
+                  className=""
                   style={{
-                    width: img.w,
-                    height: img.h,
-                    objectFit: 'cover',
-                    borderRadius: 18,
-                    display: 'block',
+                    top: `${img.top}%`,
+                    left: `${img.left}%`,
+                    zIndex: img.depth < 0.5 ? 1 : 2,
                   }}
-                />
-              </motion.div>
-            </FloatingElement>
-          ))}
-        </Floating>
+                >
+                  <motion.div
+                    className="hero-img-card"
+                    initial={{ opacity: 0, scale: 0.82, y: 20 + img.depth * 14 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ delay: img.delay, duration: 0.7 + img.depth * 0.18, ease: [0.16, 1, 0.3, 1] }}
+                    style={{
+                      position: 'relative',
+                      transform: `rotate(${img.rot}deg)`,
+                      borderRadius: 14,
+                      overflow: 'hidden',
+                      boxShadow: `
+                        0 ${Math.round(4 + img.depth * 12)}px ${Math.round(16 + img.depth * 28)}px rgba(0,0,0,${(0.14 + img.depth * 0.08).toFixed(2)}),
+                        0 ${Math.round(12 + img.depth * 24)}px ${Math.round(40 + img.depth * 36)}px rgba(0,0,0,${(0.09 + img.depth * 0.05).toFixed(2)})
+                      `,
+                      willChange: 'transform',
+                    }}
+                  >
+                    <img
+                      src={img.url}
+                      alt={img.alt}
+                      style={{
+                        width: img.w,
+                        height: img.h,
+                        objectFit: 'cover',
+                        display: 'block',
+                      }}
+                    />
+                  </motion.div>
+                </FloatingElement>
+              ))}
+            </Floating>
+          </>
+        )}
 
         {/* Center content */}
         <div className="relative flex flex-col items-center justify-center text-center px-4 hero-center-content"
-          style={{ maxWidth: 680, zIndex: 20, marginTop: '-80px' }}>
+          style={{ maxWidth: 680, zIndex: 20, marginTop: window.innerWidth < 768 ? 0 : '-80px' }}>
 
           <motion.div
             className="hero-logo-wrap"
