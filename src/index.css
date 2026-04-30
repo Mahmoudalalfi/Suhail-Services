@@ -977,10 +977,6 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
     padding: 0 20px !important;
     max-width: 100% !important;
   }
-  /* Hide duplicate logo inside hero on mobile — nav pill already has it */
-  .hero-logo-wrap {
-    display: none !important;
-  }
   /* Tighten hero center content on mobile */
   .hero-center-content {
     margin-top: 0 !important;
