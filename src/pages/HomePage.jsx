@@ -670,11 +670,18 @@ export default function HomePage() {
         }}
       >
         {/* Full-bleed background video */}
+        <style>{`
+          @media (max-width: 768px) {
+            .hero-left-gradient { background: linear-gradient(to right, rgba(10,10,15,0.45) 0%, rgba(10,10,15,0.25) 40%, transparent 75%) !important; }
+            .hero-bg-video { object-position: 20% center !important; }
+          }
+        `}</style>
         <video
           autoPlay
           muted
           loop
           playsInline
+          className="hero-bg-video"
           style={{
             position: 'absolute',
             inset: 0,
@@ -689,11 +696,11 @@ export default function HomePage() {
           <source src="https://res.cloudinary.com/dfc0qnh88/video/upload/v1779225480/HeroServices_a6xbnv.mp4" type="video/mp4" />
         </video>
 
-        {/* Left-side black gradient */}
+        {/* Left-side black gradient — desktop only */}
         <div style={{
           position: 'absolute', inset: 0, zIndex: 1,
           background: 'linear-gradient(to right, rgba(10,10,15,0.97) 0%, rgba(10,10,15,0.85) 38%, rgba(10,10,15,0.3) 65%, transparent 100%)',
-        }} />
+        }} className="hero-left-gradient" />
         {/* Top + bottom vignette */}
         <div style={{
           position: 'absolute', inset: 0, zIndex: 1,
@@ -873,7 +880,7 @@ export default function HomePage() {
         @media (max-width: 768px) {
           .cta-dark-headline { font-size: clamp(28px, 9vw, 52px) !important; line-height: 0.9 !important; }
           .cta-dark-buttons { display: none !important; }
-          .cta-dark-section { padding-bottom: 120px !important; }
+          .cta-dark-section { display: none !important; }
         }
       `}</style>
       <section className="cta-dark-section" style={{
@@ -925,32 +932,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════ MOBILE STICKY CTA ════ */}
-      <style>{`
-        .mobile-sticky-cta { display: none; }
-        @media (max-width: 768px) {
-          .mobile-sticky-cta {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            position: fixed;
-            bottom: 20px;
-            left: 16px;
-            right: 16px;
-            z-index: 900;
-            gap: 10px;
-          }
-          footer { padding-bottom: 100px !important; }
-        }
-      `}</style>
-      <div className="mobile-sticky-cta">
-        <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#000000" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
-          {lang === 'de' ? 'Jetzt Angebot anfordern →' : 'Request a Quote →'}
-        </LiquidButton>
-        <LiquidButton as={Link} to="/services" textColor="#fff" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
-          {lang === 'de' ? 'Leistungen ansehen' : 'View Services'}
-        </LiquidButton>
-      </div>
     </div>
   )
 }

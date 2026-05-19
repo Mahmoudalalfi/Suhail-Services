@@ -1,10 +1,11 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import useLenis, { getLenis } from './hooks/useLenis'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
+import LiquidButton from './components/ui/LiquidButton'
 import HomePage from './pages/HomePage'
 import WorkPage from './pages/WorkPage'
 import AboutPage from './pages/AboutPage'
@@ -24,7 +25,7 @@ import SecurityAdvisoryBoardPage from './pages/SecurityAdvisoryBoardPage'
 import AssociationWorkPage from './pages/AssociationWorkPage'
 import OtherCompaniesPage from './pages/OtherCompaniesPage'
 import GalleryPage from './pages/GalleryPage'
-import { LanguageProvider } from './i18n/LanguageContext'
+import { LanguageProvider, useLanguage } from './i18n/LanguageContext'
 
 function PageTransition({ children }) {
   const location = useLocation()
@@ -75,6 +76,7 @@ function AppRoutes() {
     </PageTransition>
   )
 }
+
 
 function AppWithLenis() {
   useLenis()

@@ -1,12 +1,37 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import BrandLogo from './BrandLogo'
+import LiquidButton from './ui/LiquidButton'
 
 export default function Footer() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
 
   return (
-    <footer style={{ background: '#000000', color: '#fff', padding: 'clamp(40px, 8vw, 72px) clamp(20px, 5vw, 40px) clamp(24px, 5vw, 40px)' }}>
+    <footer style={{ background: '#000000', color: '#fff', padding: 'clamp(40px, 8vw, 72px) clamp(20px, 5vw, 40px) clamp(24px, 5vw, 40px)' }} className="site-footer">
+      {/* Mobile CTA block — top of footer, only on mobile */}
+      <div className="footer-mobile-cta">
+        <div style={{
+          fontFamily: "'Barlow Condensed', sans-serif",
+          fontWeight: 900,
+          fontSize: 'clamp(38px, 12vw, 56px)',
+          color: '#fff',
+          letterSpacing: '-0.02em',
+          textTransform: 'uppercase',
+          lineHeight: 0.9,
+          marginBottom: 24,
+        }}>
+          {lang === 'de'
+            ? <><span>IHR PARTNER</span><br /><span>FÜR</span><br /><span>DIENSTLEISTUNGEN</span></>
+            : <><span>YOUR PARTNER</span><br /><span>FOR</span><br /><span>SERVICES</span></>}
+        </div>
+        <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#000000" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
+          {lang === 'de' ? 'Jetzt Angebot anfordern →' : 'Request a Quote →'}
+        </LiquidButton>
+        <LiquidButton as={Link} to="/services" textColor="#fff" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
+          {lang === 'de' ? 'Leistungen ansehen' : 'View Services'}
+        </LiquidButton>
+      </div>
+
       <div className="footer-grid" style={{
         borderBottom: '1px solid rgba(255,255,255,0.07)',
         paddingBottom: 'clamp(32px, 6vw, 56px)',

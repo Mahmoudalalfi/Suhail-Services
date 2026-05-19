@@ -153,7 +153,7 @@ export default function Nav() {
               style={{
                 width: 36, height: 36, borderRadius: 999,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                background: 'rgba(0,0,0,0.08)', border: 'none', cursor: 'pointer', flexShrink: 0,
+                background: 'none', border: 'none', cursor: 'pointer', flexShrink: 0,
               }}
             >
               <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ pointerEvents: 'none' }}>
@@ -167,13 +167,19 @@ export default function Nav() {
 
         <AnimatePresence>
           {menuOpen && (
+            <>
+              {/* outside-click backdrop */}
+              <div
+                onClick={() => setMenuOpen(false)}
+                style={{ position: 'fixed', inset: 0, zIndex: 998 }}
+              />
             <motion.div
               initial={{ opacity: 0, y: -8, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.97 }}
               transition={{ duration: 0.2 }}
               style={{
-                position: 'fixed', top: 70, left: 12, right: 12, zIndex: 999,
+                position: 'fixed', top: 78, left: 12, right: 12, zIndex: 999,
                 background: GLASS,
                 backdropFilter: 'blur(24px) saturate(130%)',
                 WebkitBackdropFilter: 'blur(24px) saturate(130%)',
@@ -217,6 +223,7 @@ export default function Nav() {
                 )
               })}
             </motion.div>
+            </>
           )}
         </AnimatePresence>
       </>

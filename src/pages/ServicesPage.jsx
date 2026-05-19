@@ -401,7 +401,7 @@ export default function ServicesPage() {
       <ServicesTestimonials />
 
       {/* CTA */}
-      <section style={{ background: '#000000', padding: 'clamp(56px, 10vw, 100px) clamp(20px, 5vw, 40px)', display: 'flex', flexDirection: 'column', gap: 36 }}>
+      <section className="services-cta-section" style={{ background: '#000000', padding: 'clamp(56px, 10vw, 100px) clamp(20px, 5vw, 40px)', display: 'flex', flexDirection: 'column', gap: 36 }}>
         <RevealBlock>
           <p style={{ fontSize: 'clamp(32px, 5.5vw, 82px)', fontWeight: 300, color: '#fff', letterSpacing: '-0.035em', lineHeight: 1.05 }}>
             {t('services.cta1')}<br />{t('services.cta2')}
