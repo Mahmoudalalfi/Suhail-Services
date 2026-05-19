@@ -92,37 +92,16 @@ gsap.registerPlugin(ScrollTrigger)
   Center zone (left ~30%–65%) gets images too but smaller/more faded via depth.
 */
 const heroImages = [
-  // top-left cluster
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png', alt: 'Security team', top: 8, left: 1, w: 155, h: 108, rot: -5, delay: 0.30, depth: 0.8 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png', alt: 'Facility hero', top: 5, left: 13, w: 185, h: 125, rot: -11, delay: 0.45, depth: 1.0 },
-  // mid-left
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg', alt: 'About team', top: 32, left: 0, w: 160, h: 118, rot: 7, delay: 0.40, depth: 1.2 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Construction', top: 28, left: 17, w: 158, h: 112, rot: -8, delay: 0.55, depth: 0.9 },
-  // bottom-left cluster
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png', alt: 'Janitorial', top: 62, left: 1, w: 148, h: 148, rot: -4, delay: 0.65, depth: 1.6 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490754/suhail-services/pencil-security-technology.jpg', alt: 'Security tech', top: 60, left: 16, w: 145, h: 112, rot: 9, delay: 0.80, depth: 1.3 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png', alt: 'Work 1', top: 82, left: 2, w: 132, h: 92, rot: 5, delay: 0.95, depth: 0.7 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', alt: 'About 2', top: 80, left: 19, w: 148, h: 102, rot: -6, delay: 1.05, depth: 1.0 },
-
-  // ── TOP CENTER — above the text block ────────────────────────
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg', alt: 'Work 2', top: 4, left: 34, w: 152, h: 108, rot: -6, delay: 0.42, depth: 0.7 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png', alt: 'Maintenance top', top: 3, left: 55, w: 160, h: 112, rot: 7, delay: 0.50, depth: 0.9 },
-
-  // ── BOTTOM CENTER — below the text block ──────────────────────
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580100/pencil-day-service-staff_koskip.jpg', alt: 'Day staff', top: 78, left: 32, w: 148, h: 108, rot: 6, delay: 0.70, depth: 1.0 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png', alt: 'Work bottom', top: 76, left: 56, w: 142, h: 104, rot: -7, delay: 0.75, depth: 1.0 },
-
-  // top-right cluster
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor care', top: 6, left: 68, w: 182, h: 122, rot: -9, delay: 0.38, depth: 1.1 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png', alt: 'Work 6', top: 5, left: 84, w: 148, h: 106, rot: 8, delay: 0.50, depth: 0.9 },
-  // mid-right
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', top: 31, left: 76, w: 152, h: 152, rot: -6, delay: 0.60, depth: 1.5 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png', alt: 'Work 3', top: 30, left: 91, w: 138, h: 104, rot: 12, delay: 0.72, depth: 1.8 },
-  // bottom-right cluster
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', top: 62, left: 68, w: 142, h: 116, rot: -10, delay: 0.78, depth: 1.3 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580142/work-project-05_pwdduz.png', alt: 'Work 5', top: 60, left: 84, w: 155, h: 118, rot: 6, delay: 0.90, depth: 0.8 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg', alt: 'Operations', top: 82, left: 70, w: 132, h: 90, rot: -4, delay: 1.00, depth: 0.6 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Sites right', top: 81, left: 88, w: 138, h: 94, rot: 7, delay: 1.10, depth: 1.0 },
+  // left side — 4 images
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png', alt: 'Facility hero', top: 8, left: 2, w: 170, h: 118, rot: -8, delay: 0.35, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png', alt: 'About team', top: 34, left: 1, w: 155, h: 114, rot: 6, delay: 0.45, depth: 1.2 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png', alt: 'Janitorial', top: 60, left: 3, w: 148, h: 142, rot: -5, delay: 0.60, depth: 1.5 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Construction', top: 78, left: 16, w: 148, h: 100, rot: 8, delay: 0.75, depth: 0.9 },
+  // right side — 4 images
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor care', top: 6, left: 70, w: 172, h: 118, rot: -7, delay: 0.38, depth: 1.1 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', top: 33, left: 76, w: 148, h: 144, rot: -5, delay: 0.55, depth: 1.4 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', top: 60, left: 70, w: 140, h: 112, rot: 9, delay: 0.70, depth: 1.2 },
+  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580142/work-project-05_pwdduz.png', alt: 'Work 5', top: 78, left: 82, w: 148, h: 106, rot: -6, delay: 0.85, depth: 0.8 },
 ]
 
 
@@ -393,6 +372,8 @@ function WorkCard({ project }) {
         src={project.img}
         alt={project.title}
         style={{
+          position: 'absolute',
+          inset: 0,
           width: '100%',
           height: '100%',
           objectFit: 'cover',
@@ -403,17 +384,22 @@ function WorkCard({ project }) {
       />
       <div style={{
         position: 'absolute', inset: 0,
-        background: 'linear-gradient(to top, rgba(10,11,18,0.6) 0%, rgba(10,11,18,0.1) 45%, transparent 70%)',
+        background: 'linear-gradient(to top, rgba(10,11,18,0.75) 0%, rgba(10,11,18,0.15) 40%, transparent 65%)',
         transition: 'opacity 0.4s',
         opacity: hov ? 1 : 0.7,
       }} />
-      <div style={{ position: 'absolute', bottom: 'clamp(12px,3vw,28px)', left: 'clamp(12px,3vw,28px)', color: '#fff' }}>
+      <div style={{ position: 'absolute', bottom: 14, left: 12, right: 52, color: '#fff' }}>
         <p style={{ fontSize: 'clamp(9px,2vw,12px)', fontWeight: 400, opacity: 0.6, letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 4 }}>
           {project.tag}
         </p>
-        <p style={{ fontSize: 'clamp(13px,3vw,24px)', fontWeight: 400, letterSpacing: '-0.025em', lineHeight: 1 }}>
+        <p style={{ fontSize: 'clamp(13px,3vw,24px)', fontWeight: 400, letterSpacing: '-0.025em', lineHeight: 1.1, marginBottom: project.desc ? 8 : 0 }}>
           {project.title}
         </p>
+        {project.desc && (
+          <p style={{ fontSize: 'clamp(11px,1.4vw,14px)', fontWeight: 300, opacity: hov ? 0.8 : 0, color: 'rgba(255,255,255,0.85)', lineHeight: 1.5, transition: 'opacity 0.35s ease', margin: 0 }}>
+            {project.desc}
+          </p>
+        )}
       </div>
       <div style={{
         position: 'absolute', top: 'clamp(10px,2.5vw,22px)', right: 'clamp(10px,2.5vw,22px)',
@@ -467,7 +453,7 @@ function Ticker() {
   )
 }
 
-/* ─────────────────────────── Testimonials (3-D Marquee) ─────────────────────────── */
+/* ─────────────────────────── Testimonials / 3D Marquee ─────────────────────────── */
 const TESTIMONIALS = [
   { name: 'Ava Green', username: '@ava_g', body: 'Absolutely professional team — security on point every single shift.', img: 'https://randomuser.me/api/portraits/women/32.jpg', flag: 'https://flagcdn.com/w40/au.png', country: 'Australia' },
   { name: 'Ana Müller', username: '@ana_m', body: 'The cleaning crew transformed our office completely. Highly recommended.', img: 'https://randomuser.me/api/portraits/women/68.jpg', flag: 'https://flagcdn.com/w40/de.png', country: 'Germany' },
@@ -500,7 +486,6 @@ function TestimonialCard({ img, name, username, body, flag, country }) {
       boxShadow: '0 2px 12px rgba(10,11,18,0.06)',
       flexShrink: 0,
     }}>
-      {/* Avatar row */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
         <img src={img} alt={name} width={36} height={36}
           style={{ borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -513,7 +498,6 @@ function TestimonialCard({ img, name, username, body, flag, country }) {
           <span style={{ fontSize: 11, color: 'rgba(30,31,40,0.45)', display: 'block' }}>{username}</span>
         </div>
       </div>
-      {/* Quote */}
       <p style={{ fontSize: 13, color: 'rgba(30,31,40,0.70)', lineHeight: 1.55, margin: 0 }}>{body}</p>
     </div>
   )
@@ -554,13 +538,14 @@ function Testimonials() {
           to   { transform: translateY(0); }
         }
 
-        /* ── Desktop: centred 3-D block ── */
         .testi-scene {
           position: relative;
           height: 560px;
           overflow: hidden;
           border-radius: 20px;
           perspective: 900px;
+          max-width: 1100px;
+          margin: 0 auto;
         }
         .testi-inner {
           position: absolute;
@@ -571,11 +556,10 @@ function Testimonials() {
           justify-content: center;
           gap: 18px;
           padding: 20px 32px;
-          transform: translateY(20px) rotateX(18deg) rotateY(-8deg) rotateZ(18deg);
+          transform: translateY(20px) rotateX(18deg) rotateY(8deg) rotateZ(-18deg);
           transform-style: preserve-3d;
         }
 
-        /* ── Mobile: keep 3-D tilt, 2 cols, tighter height ── */
         @media (max-width: 600px) {
           .testi-scene {
             height: 420px;
@@ -583,7 +567,7 @@ function Testimonials() {
             border-radius: 14px;
           }
           .testi-inner {
-            transform: translateY(14px) rotateX(16deg) rotateY(-6deg) rotateZ(14deg);
+            transform: translateY(14px) rotateX(16deg) rotateY(6deg) rotateZ(-14deg);
             gap: 10px;
             padding: 14px 10px;
           }
@@ -597,15 +581,24 @@ function Testimonials() {
         letterSpacing: '-0.03em',
         color: '#000000',
         lineHeight: 1.1,
-        marginBottom: 'clamp(32px, 5vw, 56px)',
+        marginBottom: 12,
         textAlign: 'center',
       }}>
         {t('home.testimonialsTitle1')}<br />{t('home.testimonialsTitle2')}
       </p>
+      <p style={{
+        fontSize: 'clamp(13px, 1.3vw, 15px)',
+        fontWeight: 400,
+        color: 'rgba(30,31,40,0.50)',
+        lineHeight: 1.7,
+        maxWidth: 520,
+        margin: '0 auto clamp(32px, 5vw, 56px)',
+        textAlign: 'center',
+      }}>
+        {t('home.trustPara')}
+      </p>
 
-      {/* 3-D container */}
       <div className="testi-scene">
-        {/* inner 3-D transformed frame */}
         <div className="testi-inner">
           <MarqueeCol cls="testi-col" items={COL_A} duration="38s" />
           <MarqueeCol cls="testi-col" items={COL_B} reverse duration="42s" />
@@ -613,7 +606,6 @@ function Testimonials() {
           <MarqueeCol cls="testi-col" items={COL_D} reverse duration="44s" />
         </div>
 
-        {/* Gradient fades */}
         <div style={{ pointerEvents: 'none', position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #fff 0%, transparent 22%, transparent 78%, #fff 100%)', zIndex: 2 }} />
         <div style={{ pointerEvents: 'none', position: 'absolute', inset: 0, background: 'linear-gradient(to right, #fff 0%, transparent 18%, transparent 82%, #fff 100%)', zIndex: 2 }} />
       </div>
@@ -665,79 +657,73 @@ export default function HomePage() {
       {/* ════ HERO ════ */}
       <section
         ref={heroRef}
-        className="relative w-full overflow-hidden flex flex-col items-center justify-center"
+        className="relative w-full overflow-hidden"
         style={{
-          height: heroH,
-          background: '#f0f3fa',
+          height: '100vh',
+          background: '#0a0a0f',
+          boxSizing: 'border-box',
+          display: 'flex',
+          alignItems: 'center',
           paddingTop: 80,
-          willChange: 'transform',
+          paddingBottom: 0,
+          overflow: 'hidden',
         }}
       >
-        {/* Mobile: Artemis-style 4-card layout */}
-        {window.innerWidth < 768 && <MobileHeroCards />}
+        {/* Full-bleed background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center center',
+            opacity: 0.75,
+            zIndex: 0,
+          }}
+        >
+          <source src="https://res.cloudinary.com/dfc0qnh88/video/upload/v1779225480/HeroServices_a6xbnv.mp4" type="video/mp4" />
+        </video>
 
-        {/* Desktop: flickering grid + floating images */}
-        {window.innerWidth >= 768 && (
-          <>
-            <FlickerGrid />
-            <Floating sensitivity={-0.4} className="pointer-events-none hero-floating-images">
-              {heroImages.map((img, i) => (
-                <FloatingElement
-                  key={i}
-                  depth={img.depth}
-                  className=""
-                  style={{
-                    top: `${img.top}%`,
-                    left: `${img.left}%`,
-                    zIndex: img.depth < 0.5 ? 1 : 2,
-                  }}
-                >
-                  <motion.div
-                    className="hero-img-card"
-                    initial={{ opacity: 0, scale: 0.82, y: 20 + img.depth * 14 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ delay: img.delay, duration: 0.7 + img.depth * 0.18, ease: [0.16, 1, 0.3, 1] }}
-                    style={{
-                      position: 'relative',
-                      transform: `rotate(${img.rot}deg)`,
-                      borderRadius: 14,
-                      overflow: 'hidden',
-                      boxShadow: `
-                        0 ${Math.round(4 + img.depth * 12)}px ${Math.round(16 + img.depth * 28)}px rgba(0,0,0,${(0.14 + img.depth * 0.08).toFixed(2)}),
-                        0 ${Math.round(12 + img.depth * 24)}px ${Math.round(40 + img.depth * 36)}px rgba(0,0,0,${(0.09 + img.depth * 0.05).toFixed(2)})
-                      `,
-                      willChange: 'transform',
-                    }}
-                  >
-                    <img
-                      src={img.url}
-                      alt={img.alt}
-                      style={{
-                        width: img.w,
-                        height: img.h,
-                        objectFit: 'cover',
-                        display: 'block',
-                      }}
-                    />
-                  </motion.div>
-                </FloatingElement>
-              ))}
-            </Floating>
-          </>
-        )}
+        {/* Left-side black gradient */}
+        <div style={{
+          position: 'absolute', inset: 0, zIndex: 1,
+          background: 'linear-gradient(to right, rgba(10,10,15,0.97) 0%, rgba(10,10,15,0.85) 38%, rgba(10,10,15,0.3) 65%, transparent 100%)',
+        }} />
+        {/* Top + bottom vignette */}
+        <div style={{
+          position: 'absolute', inset: 0, zIndex: 1,
+          background: 'linear-gradient(to bottom, rgba(10,10,15,0.5) 0%, transparent 25%, transparent 75%, rgba(10,10,15,0.5) 100%)',
+        }} />
 
-        {/* Center content */}
-        <div className="relative flex flex-col items-center justify-center text-center px-4 hero-center-content"
-          style={{ maxWidth: 680, zIndex: 20, marginTop: window.innerWidth < 768 ? 0 : '-80px' }}>
-
+        {/* Content — left on desktop, centered on mobile */}
+        <div
+          className="hero-center-content"
+          style={{
+            position: 'relative',
+            zIndex: 20,
+            maxWidth: 620,
+            width: '100%',
+            padding: '0 clamp(24px, 5vw, 80px)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            textAlign: 'left',
+            margin: 0,
+          }}
+        >
           <motion.div
             className="hero-logo-wrap"
-            style={{ marginBottom: 8, display: 'flex', justifyContent: 'center', height: 90, overflow: 'hidden', alignItems: 'center' }}
+            style={{ marginBottom: 4, display: 'flex', justifyContent: 'flex-start', height: 70, overflow: 'hidden', alignItems: 'center' }}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <div style={{ transform: 'scale(0.52)', transformOrigin: 'center center', flexShrink: 0 }}>
+            <div style={{ transform: 'scale(0.52)', transformOrigin: 'left center', flexShrink: 0 }}>
               <BrandLogo variant="dark" />
             </div>
           </motion.div>
@@ -746,41 +732,47 @@ export default function HomePage() {
             className="font-black leading-none mb-1"
             style={{
               fontFamily: "'Barlow Condensed', sans-serif",
-              fontSize: 'clamp(36px, 6vw, 76px)',
+              fontSize: 'clamp(28px, 4vw, 52px)',
               letterSpacing: '-0.03em',
-              color: '#0f0f12',
+              color: '#ffffff',
             }}
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.55, ease: 'easeOut' }}
           >
-            {lang === 'de' ? 'Ihr Partner für' : 'Your Partner for'}
+            {lang === 'de' ? 'Ihr zuverlässiger Partner für professionelle' : 'Your reliable partner for professional'}
           </motion.h1>
 
-          {/* Rotating service descriptor */}
-          <LayoutGroup>
-            <motion.div
-              className="flex items-center justify-center overflow-hidden"
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontSize: 'clamp(36px, 6vw, 76px)',
-                fontWeight: 900,
-                letterSpacing: '-0.03em',
-                lineHeight: 1.1,
-                minHeight: 'clamp(44px, 8vw, 92px)',
-              }}
-              layout
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.45, duration: 0.55, ease: 'easeOut' }}
-            >
+          {/* Rotating service descriptor — fixed height so layout never shifts */}
+          <motion.div
+            className="hero-rotating-text-wrap"
+            style={{
+              height: 'clamp(44px, 5vw, 72px)',
+              display: 'flex',
+              alignItems: 'center',
+              width: '100%',
+              overflow: 'visible',
+            }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.45, duration: 0.55, ease: 'easeOut' }}
+          >
+            <div className="hero-rotating-text-inner" style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: 'clamp(28px, 4vw, 52px)',
+              fontWeight: 900,
+              letterSpacing: '-0.03em',
+              lineHeight: 1,
+              width: '100%',
+              display: 'flex',
+            }}>
               <TextRotate
                 texts={
                   lang === 'de'
-                    ? ['Sicherheit', 'Gebäudedienste', 'Reinigung', 'Objektschutz', 'Facilitymanagement']
-                    : ['Security', 'Facility Services', 'Cleaning', 'Site Protection', 'Guard Services']
+                    ? ['Gebäudereinigung', 'Facilitymanagement', 'Unterhaltsreinigung', 'Bauendreinigung', 'Gebäudedienste']
+                    : ['Building Cleaning', 'Facility Services', 'Maintenance Cleaning', 'Construction Cleaning', 'Facility Management']
                 }
-                mainClassName="overflow-hidden rounded-xl px-3 py-1"
+                mainClassName="rounded-xl px-3 py-1"
                 elementLevelClassName=""
                 style={{ color: ROTATE_COLORS[rotateColorIdx], transition: 'color 0.3s ease' }}
                 staggerDuration={0.025}
@@ -789,16 +781,16 @@ export default function HomePage() {
                 onNext={handleRotateNext}
                 transition={{ type: 'spring', damping: 28, stiffness: 380 }}
               />
-            </motion.div>
-          </LayoutGroup>
+            </div>
+          </motion.div>
 
           <motion.p
             ref={subRef}
-            className="mt-4 leading-relaxed"
+            className="mt-2 leading-relaxed"
             style={{
-              fontSize: 'clamp(15px, 2.2vw, 20px)',
+              fontSize: 'clamp(13px, 1.6vw, 17px)',
               fontWeight: 300,
-              color: 'rgba(15,15,18,0.65)',
+              color: 'rgba(255,255,255,0.72)',
               letterSpacing: '-0.01em',
               maxWidth: '34rem',
             }}
@@ -810,25 +802,24 @@ export default function HomePage() {
           </motion.p>
 
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-3 mt-6"
+            className="hero-cta-wrap"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5, ease: 'easeOut' }}
+            style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 12, marginTop: 16 }}
           >
-            <LiquidButton as={Link} to="/services" tint="#FACC15" textColor="#0f0f12">
-              {lang === 'de' ? 'Unsere Leistungen' : 'Our Services'} →
+            <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#0f0f12">
+              {lang === 'de' ? 'Jetzt Angebot anfordern' : 'Request a Quote'} →
             </LiquidButton>
-            <LiquidButton as={Link} to="/contact" textColor="#0f0f12">
-              {lang === 'de' ? 'Kontakt aufnehmen' : 'Get in Touch'}
+            <LiquidButton as={Link} to="/services" textColor="#0f0f12">
+              {lang === 'de' ? 'Leistungen entdecken' : 'View Services'}
             </LiquidButton>
           </motion.div>
         </div>
       </section>
 
-      <Ticker />
-
-      {/* ════ SERVICES SLIDESHOW ════ */}
-      <HomeServicesGrid />
+      {/* ════ SERVICES 8-BOX GRID ════ */}
+      <HomeServicesStaticGrid />
 
       {/* ════ WORK PREVIEW ════ */}
       <section ref={workRef} style={{
@@ -863,10 +854,10 @@ export default function HomePage() {
         </div>
 
         <div className="home-work-grid">
-          <div ref={card1Ref} style={{ minWidth: 0 }}>
+          <div ref={card1Ref} style={{ minWidth: 0, alignSelf: 'start' }}>
             <WorkCard project={featured[0]} />
           </div>
-          <div ref={card2Ref} style={{ minWidth: 0 }}>
+          <div ref={card2Ref} style={{ minWidth: 0, alignSelf: 'start' }}>
             <WorkCard project={featured[1]} />
           </div>
         </div>
@@ -878,14 +869,21 @@ export default function HomePage() {
       <Testimonials />
 
       {/* ════ CTA DARK ════ */}
-      <section style={{
+      <style>{`
+        @media (max-width: 768px) {
+          .cta-dark-headline { font-size: clamp(28px, 9vw, 52px) !important; line-height: 0.9 !important; }
+          .cta-dark-buttons { display: none !important; }
+          .cta-dark-section { padding-bottom: 120px !important; }
+        }
+      `}</style>
+      <section className="cta-dark-section" style={{
         background: '#000000',
-        padding: 'clamp(56px, 12vw, 120px) clamp(20px, 5vw, 40px)',
-        display: 'flex', flexDirection: 'column', gap: 44,
+        padding: 'clamp(48px, 10vw, 120px) clamp(20px, 5vw, 40px)',
+        display: 'flex', flexDirection: 'column', gap: 32,
         overflow: 'hidden',
       }}>
         <div
-          className={lang === 'de' ? 'headline-barlow-de' : undefined}
+          className={`cta-dark-headline${lang === 'de' ? ' headline-barlow-de' : ''}`}
           style={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 900,
@@ -900,45 +898,126 @@ export default function HomePage() {
               }
               : {
                 textTransform: 'uppercase',
-                lineHeight: 0.87,
+                lineHeight: 0.9,
               }),
           }}
         >
-          {[t('home.cta1'), t('home.cta2'), t('home.cta3')].map((line, i) => (
+          {[t('home.cta1'), t('home.cta2'), t('home.cta3')].filter(l => l).map((line, i) => (
             <span
               key={i}
               style={{
                 display: 'block',
                 lineHeight: lang === 'de' ? 1.08 : 0.87,
-                marginBottom: lang === 'de' && i < 2 ? '0.04em' : undefined,
+                marginBottom: lang === 'de' && i < 1 ? '0.04em' : undefined,
               }}
             >
               {typeof line === 'string' ? line.normalize('NFC') : line}
             </span>
           ))}
         </div>
-        <div style={{ alignSelf: 'flex-start' }}>
-          <LiquidButton as="a" href="mailto:kontact@suhail.de" tint="#FACC15" textColor="#000000" style={{ fontSize: 15, padding: '10px 24px' }}>
-            {'kontact@suhail.de ↗︎'}
+        <div className="cta-dark-buttons" style={{ alignSelf: 'flex-start', display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+          <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#000000" style={{ fontSize: 15, padding: '10px 24px' }}>
+            {lang === 'de' ? 'Jetzt Angebot anfordern →' : 'Request a Quote →'}
+          </LiquidButton>
+          <LiquidButton as={Link} to="/services" textColor="#fff" style={{ fontSize: 15, padding: '10px 24px' }}>
+            {lang === 'de' ? 'Leistungen ansehen' : 'View Services'}
           </LiquidButton>
         </div>
       </section>
+
+      {/* ════ MOBILE STICKY CTA ════ */}
+      <style>{`
+        .mobile-sticky-cta { display: none; }
+        @media (max-width: 768px) {
+          .mobile-sticky-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            position: fixed;
+            bottom: 20px;
+            left: 16px;
+            right: 16px;
+            z-index: 900;
+            gap: 10px;
+          }
+          footer { padding-bottom: 100px !important; }
+        }
+      `}</style>
+      <div className="mobile-sticky-cta">
+        <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#000000" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
+          {lang === 'de' ? 'Jetzt Angebot anfordern →' : 'Request a Quote →'}
+        </LiquidButton>
+        <LiquidButton as={Link} to="/services" textColor="#fff" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
+          {lang === 'de' ? 'Leistungen ansehen' : 'View Services'}
+        </LiquidButton>
+      </div>
     </div>
   )
 }
 
 /* ─────────────────────────────────────────────
-   HOME SERVICES GRID
+   HOME SERVICES STATIC 8-BOX GRID
+───────────────────────────────────────────── */
+function HomeServicesStaticGrid() {
+  const { t } = useLanguage()
+  const translatedServices = t('home.homeServices') || []
+  const services = HOME_SERVICES.map((svc, i) => ({
+    ...svc,
+    title: translatedServices[i]?.title || svc.title,
+    desc: translatedServices[i]?.desc || svc.desc,
+  }))
+
+  return (
+    <section style={{
+      padding: 'clamp(48px, 8vw, 80px) clamp(20px, 5vw, 40px)',
+      background: '#f5f5f7',
+      borderTop: '1px solid rgba(30,31,40,0.06)',
+      borderBottom: '1px solid rgba(30,31,40,0.07)',
+    }}>
+      <style>{`
+        .services-static-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 18px;
+        }
+        @media (max-width: 900px) {
+          .services-static-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+          .services-static-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        }
+      `}</style>
+      <p style={{
+        fontFamily: "'Barlow Condensed', sans-serif",
+        fontSize: 'clamp(22px, 3vw, 40px)',
+        fontWeight: 700,
+        letterSpacing: '-0.02em',
+        color: '#0f0f12',
+        marginBottom: 'clamp(24px, 4vw, 40px)',
+      }}>
+        {t('common.ourServices')}
+      </p>
+      <div className="services-static-grid">
+        {services.map((svc, i) => (
+          <HomeServiceCard key={i} service={svc} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+/* ─────────────────────────────────────────────
+   HOME SERVICES CAROUSEL (kept for reference)
 ───────────────────────────────────────────── */
 const HOME_SERVICES = [
-  { slug: 'office-cleaning', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l9-9" /><path d="M12.5 5.5l6 6" /><path d="M6 15l3-3 6.5-6.5a2.12 2.12 0 0 1 3 3L12 15l-3 3z" /></svg>, title: 'Cleaning', desc: 'Office, construction, deep & maintenance cleaning.' },
-  { slug: 'warehouse-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20V8l10-5 10 5v12" /><rect x="8" y="14" width="8" height="6" /><line x1="12" y1="14" x2="12" y2="20" /></svg>, title: 'Warehouse Services', desc: 'Picking, sorting, packing & goods inspection.' },
-  { slug: 'cashier-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /><line x1="6" y1="15" x2="6.01" y2="15" /><line x1="10" y1="15" x2="14" y2="15" /></svg>, title: 'Cashier Services', desc: 'Qualified checkout staff for retail & supermarkets.' },
-  { slug: 'transport', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg>, title: 'Transport', desc: 'Moving vans, delivery & logistics support.' },
-  { slug: 'electrical-assistance', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>, title: 'Electrical Assistance', desc: 'Helper services for electrical work on site.' },
-  { slug: 'installation-unpacking', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polyline points="21 8 21 21 3 21 3 8" /><rect x="1" y="3" width="22" height="5" /><line x1="10" y1="12" x2="14" y2="12" /></svg>, title: 'Installation & Unpacking', desc: 'Furniture assembly, installation & packing.' },
-  { slug: 'staffing-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>, title: 'Staffing Services', desc: 'Temporary workers & flexible workforce solutions.' },
-  { slug: 'general-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 0 0-4 0v2" /><line x1="12" y1="12" x2="12" y2="16" /><line x1="10" y1="14" x2="14" y2="14" /></svg>, title: 'General Services', desc: 'Flexible on-demand support for companies & private clients.' },
+  { slug: 'office-cleaning', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l9-9" /><path d="M12.5 5.5l6 6" /><path d="M6 15l3-3 6.5-6.5a2.12 2.12 0 0 1 3 3L12 15l-3 3z" /></svg>, title: 'Gebäudereinigung', desc: 'Büro- & Unterhaltsreinigung, Bau- & Grundreinigung.' },
+  { slug: 'warehouse-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20V8l10-5 10 5v12" /><rect x="8" y="14" width="8" height="6" /><line x1="12" y1="14" x2="12" y2="20" /></svg>, title: 'Lager & Kommissionierung', desc: 'Kommissionierung, Sortierung, Verpackung & Warenprüfung.' },
+  { slug: 'cashier-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /><line x1="6" y1="15" x2="6.01" y2="15" /><line x1="10" y1="15" x2="14" y2="15" /></svg>, title: 'Kassendienste', desc: 'Qualifiziertes Kassenpersonal für Einzelhandel & Supermärkte.' },
+  { slug: 'transport', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg>, title: 'Transport & Logistik', desc: 'Lieferung, Logistikunterstützung & Umzugsservice.' },
+  { slug: 'electrical-assistance', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>, title: 'Elektrohilfsarbeiten', desc: 'Hilfsleistungen für Elektroarbeiten auf Baustellen.' },
+  { slug: 'installation-unpacking', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polyline points="21 8 21 21 3 21 3 8" /><rect x="1" y="3" width="22" height="5" /><line x1="10" y1="12" x2="14" y2="12" /></svg>, title: 'Montage & Installation', desc: 'Möbelmontage, Installationsservice & Auspacken.' },
+  { slug: 'staffing-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>, title: 'Personaldienstleistungen', desc: 'Zeitarbeiter & flexible Personallösungen.' },
+  { slug: 'general-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 0 0-4 0v2" /><line x1="12" y1="12" x2="12" y2="16" /><line x1="10" y1="14" x2="14" y2="14" /></svg>, title: 'Flexible Dienstleistungen', desc: 'Bedarfsgerechte Unterstützung für Unternehmen & Privatkunden.' },
 ]
 
 function HomeServiceCard({ service }) {
@@ -981,7 +1060,6 @@ function HomeServiceCard({ service }) {
         fontSize: 'clamp(15px,1.4vw,18px)', fontWeight: 700,
         color: hov ? '#FACC15' : '#0f0f12',
         letterSpacing: '-0.01em', margin: '0 0 8px',
-        textTransform: 'uppercase',
         transition: 'color 0.25s ease',
       }}>
         {service.title}

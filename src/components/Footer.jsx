@@ -20,12 +20,9 @@ export default function Footer() {
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 18 }}>
             {[
-              'kontact@suhaili.de',
-              'hussein@suhaili.de',
-              'hasan@suhaili.de',
-              'service.plan@suhaili.de',
-              'service@suhaili.de',
-              'buero@suhaili.de',
+              'Services@suhaili.de',
+              'Info.Services@suhaili.de',
+              'Kontakt.Services@suhaili.de',
             ].map(email => (
               <a key={email} href={`mailto:${email}`} style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
                 onMouseEnter={e => e.currentTarget.style.color = '#fff'}
@@ -62,6 +59,7 @@ export default function Footer() {
         <FooterCol title={t('footer.legalTitle')} links={[
           { label: t('footer.impressum'), to: '/imprint' },
           { label: t('footer.dataProtection'), to: '/data-protection' },
+          { label: t('cookie.cookieSettings'), to: '#', onClick: () => { localStorage.removeItem('cookie-consent'); window.location.reload() } },
         ]} />
       </div>
 
@@ -69,15 +67,31 @@ export default function Footer() {
         <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.22)' }}>
           © {new Date().getFullYear()} suhail Services. {t('footer.rightsReserved')}
         </p>
-        <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.22)' }}>
-          {t('footer.location')}
-        </p>
+        <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center' }}>
+          <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.22)', margin: 0 }}>
+            {t('footer.location')}
+          </p>
+          <Link to="/imprint" style={{ fontSize: 13, color: 'rgba(255,255,255,0.22)', textDecoration: 'none' }}
+            onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}
+            onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.22)'}
+          >
+            {t('footer.impressum')}
+          </Link>
+          <span style={{ color: 'rgba(255,255,255,0.15)', fontSize: 13 }}>|</span>
+          <Link to="/data-protection" style={{ fontSize: 13, color: 'rgba(255,255,255,0.22)', textDecoration: 'none' }}
+            onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}
+            onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.22)'}
+          >
+            {t('footer.dataProtection')}
+          </Link>
+        </div>
       </div>
     </footer>
   )
 }
 
 function FooterCol({ title, links }) {
+  const linkStyle = { fontSize: 14, color: 'rgba(255,255,255,0.5)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none', background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontFamily: 'inherit' }
   return (
     <div>
       <p style={{ fontSize: 11, fontWeight: 500, color: 'rgba(255,255,255,0.35)', letterSpacing: '0.04em', textTransform: 'none', marginBottom: 20 }}>
@@ -86,12 +100,21 @@ function FooterCol({ title, links }) {
       <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 13 }}>
         {links.map(l => (
           <li key={l.label}>
-            <Link to={l.to} style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
-              onMouseEnter={e => e.currentTarget.style.color = '#fff'}
-              onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
-            >
-              {l.label}
-            </Link>
+            {l.onClick ? (
+              <button onClick={l.onClick} style={linkStyle}
+                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
+                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
+              >
+                {l.label}
+              </button>
+            ) : (
+              <Link to={l.to} style={linkStyle}
+                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
+                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
+              >
+                {l.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>

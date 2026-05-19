@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import useLenis, { getLenis } from './hooks/useLenis'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import CookieBanner from './components/CookieBanner'
 import HomePage from './pages/HomePage'
 import WorkPage from './pages/WorkPage'
 import AboutPage from './pages/AboutPage'
@@ -82,6 +83,7 @@ function AppWithLenis() {
       <Nav />
       <AppRoutes />
       <Footer />
+      <CookieBanner />
     </>
   )
 }

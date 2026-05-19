@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { useLanguage } from '../i18n/LanguageContext'
 import LiquidButton from '../components/ui/LiquidButton'
@@ -64,12 +65,9 @@ export default function ContactPage() {
       ),
       label: t('contact.infoEmail'),
       content: [
-        'kontact@suhaili.de',
-        'hussein@suhaili.de',
-        'hasan@suhaili.de',
-        'service.plan@suhaili.de',
-        'service@suhaili.de',
-        'buero@suhaili.de',
+        'Services@suhaili.de',
+        'Info.Services@suhaili.de',
+        'Kontakt.Services@suhaili.de',
       ],
       href: null,
     },
@@ -271,6 +269,14 @@ export default function ContactPage() {
                   }}
                 />
               </div>
+
+              <p style={{ fontSize: 12, color: 'rgba(30,31,40,0.45)', lineHeight: 1.6, marginBottom: 20 }}>
+                {t('cookie.contactPrivacy')}{' '}
+                <Link to="/data-protection" style={{ color: '#1d4ed8', textDecoration: 'underline' }}>
+                  {t('cookie.contactPrivacyLink')}
+                </Link>{' '}
+                {t('cookie.contactPrivacyEnd')}
+              </p>
 
               <LiquidButton type="submit" tint="#FACC15" textColor="#000">
                 {t('contact.send')} →

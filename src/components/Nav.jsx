@@ -146,23 +146,21 @@ export default function Nav() {
             <LangButton lang={lang} onToggle={toggleLanguage} />
             <button
               onClick={() => setMenuOpen(o => !o)}
+              aria-expanded={menuOpen}
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              data-open={menuOpen ? 'true' : 'false'}
+              className="mobile-menu-toggle"
               style={{
                 width: 36, height: 36, borderRadius: 999,
-                display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                gap: 4, background: 'rgba(0,0,0,0.08)', border: 'none', cursor: 'pointer', flexShrink: 0,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                background: 'rgba(0,0,0,0.08)', border: 'none', cursor: 'pointer', flexShrink: 0,
               }}
             >
-              {menuOpen ? (
-                <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-                  <path d="M2 2L16 16M16 2L2 16" stroke="#000" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              ) : (
-                <>
-                  <span style={{ width: 16, height: 1.5, background: '#000', borderRadius: 2, display: 'block' }} />
-                  <span style={{ width: 16, height: 1.5, background: '#000', borderRadius: 2, display: 'block' }} />
-                  <span style={{ width: 16, height: 1.5, background: '#000', borderRadius: 2, display: 'block' }} />
-                </>
-              )}
+              <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ pointerEvents: 'none' }}>
+                <path className="menu-bar menu-bar-top" d="M4 12L20 12" />
+                <path className="menu-bar menu-bar-mid" d="M4 12H20" />
+                <path className="menu-bar menu-bar-bot" d="M4 12H20" />
+              </svg>
             </button>
           </div>
         </div>
@@ -190,9 +188,12 @@ export default function Nav() {
                 display: 'flex', alignItems: 'center', gap: 10,
                 padding: '12px 20px', textDecoration: 'none',
                 borderBottom: '1px solid rgba(0,0,0,0.06)',
+                fontSize: 15, fontWeight: pathname === '/' ? 600 : 400, color: '#000',
+                background: pathname === '/' ? 'rgba(0,0,0,0.05)' : 'transparent',
               }}>
                 <HomeIcon />
-                <span style={{ fontSize: 15, fontWeight: 500, color: '#000', letterSpacing: '-0.01em' }}>Home</span>
+                <span>{t('nav.home')}</span>
+                {pathname === '/' && <span style={{ marginLeft: 4, color: '#FACC15' }}>●</span>}
               </Link>
               {NAV_LINKS.map(({ key, to }) => {
                 const active = navLinkIsActive(to, pathname)
@@ -226,16 +227,14 @@ export default function Nav() {
   return (
     <header style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
-      display: 'flex', justifyContent: 'center', alignItems: 'center',
+      display: 'flex', alignItems: 'center',
       padding: '0 28px', height: 80, boxSizing: 'border-box', pointerEvents: 'none',
+      gap: 16,
     }}>
 
       {/* Logo — fades out when minimized OR on home page (logo shown in hero instead) */}
       <motion.div
-        style={{
-          position: 'absolute', left: 28, top: '50%',
-          translateY: '-50%', pointerEvents: 'auto',
-        }}
+        style={{ pointerEvents: 'auto', flexShrink: 0 }}
         animate={{ opacity: (isMinimized || pathname === '/') ? 0 : 1, scale: isMinimized ? 0.9 : 1, pointerEvents: (isMinimized || pathname === '/') ? 'none' : 'auto' }}
         transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
       >
@@ -244,11 +243,14 @@ export default function Nav() {
         </Link>
       </motion.div>
 
+      {/* Spacer to push nav pill to center */}
+      <div style={{ flex: 1 }} />
+
       <motion.div
         ref={pillRef}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        animate={{ maxWidth: isMinimized ? (pathname === '/' ? 60 : Math.max(80, activePageName.length * 11 + 48)) : 700 }}
+        animate={{ maxWidth: isMinimized ? (pathname === '/' ? 60 : Math.max(80, activePageName.length * 11 + 48)) : 900 }}
         transition={{ type: 'spring', damping: 32, stiffness: 300, mass: 0.75 }}
         style={{
           pointerEvents: 'auto',
@@ -270,6 +272,7 @@ export default function Nav() {
           cursor: isMinimized ? 'pointer' : 'default',
           position: 'relative',
           height: 52,
+          flexShrink: 0,
         }}
         onClick={() => { if (isMinimized) setCollapsed(false) }}
       >
@@ -283,12 +286,7 @@ export default function Nav() {
           }}
         >
           {pathname === '/' ? (
-            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-              <path d="M2.5 8.5L10 2.5l7.5 6V17a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V8.5z"
-                stroke="#0f0f12" strokeWidth="1.8" strokeLinejoin="round"/>
-              <path d="M7.5 17.5v-5.25a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V17.5"
-                stroke="#0f0f12" strokeWidth="1.8" strokeLinejoin="round"/>
-            </svg>
+            <HomeIcon />
           ) : (
             <span style={{
               fontFamily: "'DM Sans', sans-serif", fontWeight: 400,
@@ -345,8 +343,8 @@ export default function Nav() {
                 ref={node => { linkRefs.current[i] = node }}
                 to={to}
                 style={{
-                  padding: '8px 18px', borderRadius: 999,
-                  fontSize: 15, fontWeight: 400,
+                  padding: lang === 'de' ? '8px 11px' : '8px 18px', borderRadius: 999,
+                  fontSize: lang === 'de' ? 13 : 15, fontWeight: 400,
                   color: '#000', letterSpacing: '-0.01em',
                   lineHeight: 1, whiteSpace: 'nowrap',
                   background: 'transparent', textTransform: 'uppercase',
@@ -362,14 +360,43 @@ export default function Nav() {
         </motion.nav>
       </motion.div>
 
+      {/* Spacer to push right panel to the right */}
+      <div style={{ flex: 1 }} />
+
       <motion.div
         style={{
-          position: 'absolute', right: 28, top: '50%',
-          translateY: '-50%', pointerEvents: 'auto',
+          pointerEvents: 'auto', flexShrink: 0,
+          display: 'flex', alignItems: 'center', gap: 10,
         }}
         animate={{ opacity: isMinimized ? 0 : 1, scale: isMinimized ? 0.9 : 1 }}
         transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
       >
+        <Link
+          to="/contact"
+          style={{
+            display: 'inline-flex', alignItems: 'center',
+            padding: '7px 18px', borderRadius: 999, height: 52,
+            background: GLASS,
+            backdropFilter: 'blur(28px) saturate(130%) brightness(1.06)',
+            WebkitBackdropFilter: 'blur(28px) saturate(130%) brightness(1.06)',
+            border: '1px solid rgba(255,255,255,0.72)',
+            boxShadow: [
+              '0 4px 24px rgba(30,31,40,0.12)',
+              '0 1px 4px rgba(30,31,40,0.08)',
+              'inset 0 1px 0 rgba(255,255,255,0.95)',
+              'inset 0 -1px 0 rgba(0,0,0,0.05)',
+            ].join(', '),
+            color: '#000', fontSize: 15, fontWeight: 400,
+            letterSpacing: '-0.01em', textTransform: 'uppercase',
+            textDecoration: 'none', whiteSpace: 'nowrap',
+            transition: 'background 0.2s',
+            boxSizing: 'border-box',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,220,40,0.96)' }}
+          onMouseLeave={e => { e.currentTarget.style.background = GLASS }}
+        >
+          {lang === 'de' ? 'Angebot anfordern' : 'Get a Quote'}
+        </Link>
         <LangButton lang={lang} onToggle={toggleLanguage} />
       </motion.div>
     </header>

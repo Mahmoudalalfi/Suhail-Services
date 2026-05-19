@@ -195,52 +195,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Stats "Our Expertise in Numbers" ──────────────────────── */}
-      <section style={{ background: '#1239a8', padding: 'clamp(64px, 9vw, 96px) clamp(24px, 5vw, 40px)' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          {t('about.statsTitle') && (
-            <RevealBlock>
-              <p style={{
-                fontSize: 'clamp(11px, 1.2vw, 13px)',
-                fontWeight: 700,
-                letterSpacing: '0.12em',
-                color: '#FACC15',
-                textTransform: 'uppercase',
-                margin: '0 0 48px',
-              }}>
-                {t('about.statsTitle')}
-              </p>
-            </RevealBlock>
-          )}
-
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
-            gap: 'clamp(32px, 5vw, 56px)',
-          }}>
-            {stats.map((s, i) => (
-              <RevealBlock key={i} delay={i * 0.07}>
-                <CounterStat s={s} delay={i * 0.12} />
-              </RevealBlock>
-            ))}
-          </div>
-
-          {t('about.statsBody') && (
-            <RevealBlock delay={0.25}>
-              <p style={{
-                fontSize: 'clamp(15px, 1.7vw, 18px)',
-                color: 'rgba(255,255,255,0.62)',
-                lineHeight: 1.75,
-                maxWidth: 720,
-                margin: 'clamp(40px, 6vw, 64px) 0 0',
-                letterSpacing: '-0.015em',
-              }}>
-                {t('about.statsBody')}
-              </p>
-            </RevealBlock>
-          )}
-        </div>
-      </section>
 
       {/* ── Tailor-made solutions ──────────────────────────────────── */}
       {(t('about.solutionsTitle') || t('about.solutionsDesc')) && (

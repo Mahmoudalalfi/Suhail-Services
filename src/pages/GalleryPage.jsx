@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 const GALLERY_URLS = [
   'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png',
   'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490337/suhail-services/about_1_1777327649561.jpg',
+  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png',
   'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png',
   'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png',
   'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490754/suhail-services/pencil-security-technology.jpg',
