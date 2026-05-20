@@ -19,6 +19,19 @@ body {
   overflow-x: hidden;
 }
 
+/* Force light mode even if browser/OS is in dark mode (e.g. Samsung Internet) */
+@media (prefers-color-scheme: dark) {
+  html, body, #root {
+    color-scheme: light only !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
+
 img, video { display: block; max-width: 100%; }
 
 /* Why Choose Us grid: 2 cols on mobile, 4 cols on desktop */
