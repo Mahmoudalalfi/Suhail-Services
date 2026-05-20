@@ -14,7 +14,7 @@ const NAV_LINKS = [
   { key: 'nav.contact',  to: '/contact'  },
 ]
 
-const GLASS = 'linear-gradient(160deg, rgba(255,235,100,0.92) 0%, rgba(250,220,50,0.80) 45%, rgba(240,200,20,0.88) 100%)'
+const GLASS = '#FACC15'
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(() => window.innerWidth < 768)
@@ -123,14 +123,12 @@ export default function Nav() {
     return (
       <>
         {/* Pill-shaped floating header */}
-        <div style={{
+        <div className="nav-pill-mobile" style={{
           position: 'fixed', top: 10, left: 12, right: 12, zIndex: 1000,
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           padding: '0 10px 0 10px', height: 60, boxSizing: 'border-box',
           background: GLASS,
-          backdropFilter: 'blur(20px) saturate(130%)',
-          WebkitBackdropFilter: 'blur(20px) saturate(130%)',
-          border: '1px solid rgba(255,255,255,0.72)',
+          border: '1px solid rgba(255,200,0,0.5)',
           borderRadius: 999,
           boxShadow: [
             '0 4px 24px rgba(30,31,40,0.13)',
@@ -178,12 +176,11 @@ export default function Nav() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.97 }}
               transition={{ duration: 0.2 }}
+              className="nav-menu-dropdown"
               style={{
                 position: 'fixed', top: 78, left: 12, right: 12, zIndex: 999,
                 background: GLASS,
-                backdropFilter: 'blur(24px) saturate(130%)',
-                WebkitBackdropFilter: 'blur(24px) saturate(130%)',
-                border: '1px solid rgba(255,255,255,0.72)',
+                border: '1px solid rgba(255,200,0,0.4)',
                 borderRadius: 24,
                 boxShadow: '0 8px 32px rgba(30,31,40,0.14)',
                 padding: '8px 0 12px',
