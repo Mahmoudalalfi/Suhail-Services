@@ -14,7 +14,7 @@ const NAV_LINKS = [
   { key: 'nav.contact',  to: '/contact'  },
 ]
 
-const GLASS = 'linear-gradient(160deg, rgba(255,235,100,0.92) 0%, rgba(250,220,50,0.80) 45%, rgba(240,200,20,0.88) 100%)'
+const GLASS = '#FFD700'
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(() => window.innerWidth < 768)
@@ -128,15 +128,9 @@ export default function Nav() {
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           padding: '0 10px 0 10px', height: 60, boxSizing: 'border-box',
           background: GLASS,
-          backdropFilter: 'blur(20px) saturate(130%)',
-          WebkitBackdropFilter: 'blur(20px) saturate(130%)',
-          border: '1px solid rgba(255,255,255,0.72)',
+          border: '1px solid rgba(255,255,255,0.4)',
           borderRadius: 999,
-          boxShadow: [
-            '0 4px 24px rgba(30,31,40,0.13)',
-            'inset 0 1px 0 rgba(255,255,255,0.95)',
-            'inset 0 -1px 0 rgba(0,0,0,0.05)',
-          ].join(', '),
+          boxShadow: '0 4px 24px rgba(30,31,40,0.15)',
         }}>
           <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
             <BrandLogo variant="dark" mobile />
@@ -181,8 +175,6 @@ export default function Nav() {
               style={{
                 position: 'fixed', top: 78, left: 12, right: 12, zIndex: 999,
                 background: GLASS,
-                backdropFilter: 'blur(24px) saturate(130%)',
-                WebkitBackdropFilter: 'blur(24px) saturate(130%)',
                 border: '1px solid rgba(255,255,255,0.72)',
                 borderRadius: 24,
                 boxShadow: '0 8px 32px rgba(30,31,40,0.14)',
@@ -262,15 +254,8 @@ export default function Nav() {
         style={{
           pointerEvents: 'auto',
           background: GLASS,
-          backdropFilter: 'blur(28px) saturate(130%) brightness(1.06)',
-          WebkitBackdropFilter: 'blur(28px) saturate(130%) brightness(1.06)',
-          border: '1px solid rgba(255,255,255,0.72)',
-          boxShadow: [
-            '0 4px 24px rgba(30,31,40,0.12)',
-            '0 1px 4px rgba(30,31,40,0.08)',
-            'inset 0 1px 0 rgba(255,255,255,0.95)',
-            'inset 0 -1px 0 rgba(0,0,0,0.05)',
-          ].join(', '),
+          border: '1px solid rgba(255,255,255,0.4)',
+          boxShadow: '0 4px 24px rgba(30,31,40,0.15)',
           borderRadius: 999,
           overflow: 'hidden',
           display: 'flex',
@@ -384,15 +369,8 @@ export default function Nav() {
             display: 'inline-flex', alignItems: 'center',
             padding: '7px 18px', borderRadius: 999, height: 52,
             background: GLASS,
-            backdropFilter: 'blur(28px) saturate(130%) brightness(1.06)',
-            WebkitBackdropFilter: 'blur(28px) saturate(130%) brightness(1.06)',
-            border: '1px solid rgba(255,255,255,0.72)',
-            boxShadow: [
-              '0 4px 24px rgba(30,31,40,0.12)',
-              '0 1px 4px rgba(30,31,40,0.08)',
-              'inset 0 1px 0 rgba(255,255,255,0.95)',
-              'inset 0 -1px 0 rgba(0,0,0,0.05)',
-            ].join(', '),
+            border: '1px solid rgba(255,255,255,0.4)',
+            boxShadow: '0 4px 24px rgba(30,31,40,0.15)',
             color: '#000', fontSize: 15, fontWeight: 400,
             letterSpacing: '-0.01em', textTransform: 'uppercase',
             textDecoration: 'none', whiteSpace: 'nowrap',
@@ -433,15 +411,8 @@ function LangButton({ lang, onToggle }) {
         padding: '7px 14px', borderRadius: 999, border: 'none',
         fontSize: 14, fontWeight: 500, letterSpacing: '0.03em',
         whiteSpace: 'nowrap', cursor: 'pointer', color: '#000',
-        background: 'linear-gradient(145deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.45) 100%)',
-        backdropFilter: 'blur(14px) saturate(1.4)',
-        WebkitBackdropFilter: 'blur(14px) saturate(1.4)',
-        boxShadow: [
-          '0 3px 12px rgba(0,0,0,0.10)',
-          'inset 0 1px 0 rgba(255,255,255,0.8)',
-          'inset 0 -1px 0 rgba(0,0,0,0.06)',
-          '0 0 0 1px rgba(255,255,255,0.3)',
-        ].join(', '),
+        background: 'rgba(0,0,0,0.18)',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
         transformOrigin: 'center center', willChange: 'transform',
         transition: 'box-shadow 0.2s',
       }}
