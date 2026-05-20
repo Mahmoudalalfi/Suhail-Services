@@ -14,7 +14,9 @@ const NAV_LINKS = [
   { key: 'nav.contact',  to: '/contact'  },
 ]
 
-const GLASS = '#FACC15'
+/* data URI of a 1x1 #FACC15 pixel — Samsung Internet does NOT recolor background-image */
+const GLASS_IMG = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%23FACC15'/%3E%3C/svg%3E\")"
+const GLASS = `${GLASS_IMG}, #FACC15`
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(() => window.innerWidth < 768)
@@ -127,14 +129,9 @@ export default function Nav() {
           position: 'fixed', top: 10, left: 12, right: 12, zIndex: 1000,
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           padding: '0 10px 0 10px', height: 60, boxSizing: 'border-box',
-          background: GLASS,
-          border: '1px solid rgba(255,200,0,0.5)',
+          background: '#FACC15',
           borderRadius: 999,
-          boxShadow: [
-            '0 4px 24px rgba(30,31,40,0.13)',
-            'inset 0 1px 0 rgba(255,255,255,0.95)',
-            'inset 0 -1px 0 rgba(0,0,0,0.05)',
-          ].join(', '),
+          boxShadow: '0 4px 24px rgba(30,31,40,0.13)',
         }}>
           <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
             <BrandLogo variant="dark" mobile />

@@ -1153,28 +1153,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   .services-cta-section { display: none !important; }
 }
 
-/* ── Samsung Internet dark mode color compensation ────────────────────────
-   Samsung's force-dark applies roughly: brightness(0.85) saturate(0.75) hue-rotate(180deg) invert(1)
-   We pre-compensate yellow (#FACC15) and blue (#1D4ED8) elements so they
-   survive the filter and appear as close to the original as possible.
-   We also use `isolation: isolate` to create a stacking context so the
-   filter doesn't bleed into children unexpectedly.
-─────────────────────────────────────────────────────────────────────── */
-@media (prefers-color-scheme: dark) {
-  /* Navbar pill — stay yellow */
-  .nav-pill, .nav-pill-mobile, .nav-menu-dropdown {
-    background: #FACC15 !important;
-    filter: brightness(1.4) saturate(2) !important;
-    -webkit-filter: brightness(1.4) saturate(2) !important;
-  }
-  /* Yellow accent buttons and elements */
-  [data-accent="yellow"] {
-    filter: brightness(1.5) saturate(2.5) !important;
-    -webkit-filter: brightness(1.5) saturate(2.5) !important;
-  }
-  /* Blue accent elements */
-  [data-accent="blue"] {
-    filter: brightness(1.8) saturate(3) hue-rotate(0deg) !important;
-    -webkit-filter: brightness(1.8) saturate(3) hue-rotate(0deg) !important;
-  }
+/* Samsung Internet: use SVG data URI backgrounds — not recolored by force-dark */
+.nav-pill-mobile, .nav-menu-dropdown {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%23FACC15'/%3E%3C/svg%3E") !important;
+  background-size: cover !important;
+  background-color: #FACC15 !important;
 }
