@@ -7,7 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light only" />
   <meta name="supported-color-schemes" content="light" />
-  <style>html,body{color-scheme:light only!important;background:#fff!important;color:#000!important;}</style>
+  <meta name="theme-color" content="#ffffff" />
+  <style>
+    :root { color-scheme: light only !important; }
+    html { background-color: #ffffff !important; filter: none !important; }
+    body { background: #ffffff !important; color: #000000 !important; filter: none !important; }
+    /* Samsung Internet force-dark override */
+    html[data-darkreader-mode], html[data-darkreader-scheme] { filter: none !important; background: #fff !important; }
+    @media (prefers-color-scheme: dark) {
+      html { background: #ffffff !important; filter: none !important; }
+      body { background: #ffffff !important; color: #000000 !important; }
+    }
+  </style>
   <title>suhaili Services — Service & Facility</title>
   <meta name="description"
     content="suhaili Services GmbH — Professional facility, cleaning, staffing, and construction services across Germany." />

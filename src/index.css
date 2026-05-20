@@ -19,18 +19,24 @@ body {
   overflow-x: hidden;
 }
 
-/* Force light mode even if browser/OS is in dark mode (e.g. Samsung Internet) */
+/* Force light mode — Samsung Internet, Chrome Android force-dark, Dark Reader */
 @media (prefers-color-scheme: dark) {
+  :root { color-scheme: light only !important; }
   html, body, #root {
-    color-scheme: light only !important;
     background: #ffffff !important;
     color: #000000 !important;
-  }
-  body {
-    background: #ffffff !important;
-    color: #000000 !important;
+    filter: none !important;
+    -webkit-filter: none !important;
   }
 }
+/* Dark Reader extension override */
+html[data-darkreader-mode="dynamic"],
+html[data-darkreader-scheme="dark"] {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+/* Samsung Internet "dark web content" setting */
+* { -webkit-text-fill-color: unset; }
 
 img, video { display: block; max-width: 100%; }
 
