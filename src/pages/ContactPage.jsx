@@ -1,8 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
+import emailjs from '@emailjs/browser'
 import { useLanguage } from '../i18n/LanguageContext'
 import LiquidButton from '../components/ui/LiquidButton'
+
+const EMAILJS_SERVICE        = 'service_fl0s50n'
+const EMAILJS_TEMPLATE_NOTIFY = 'template_1vrjxoi'
+const EMAILJS_TEMPLATE_REPLY  = 'template_vou7lwa'
+const EMAILJS_KEY             = 'bdyBuxh07dgPR4mRb'
 
 export default function ContactPage() {
   const { t } = useLanguage()
@@ -10,6 +16,8 @@ export default function ContactPage() {
   const leftRef = useRef(null)
   const rightRef = useRef(null)
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' })
   const [focused, setFocused] = useState({})
 
@@ -25,9 +33,28 @@ export default function ContactPage() {
     tl.to(rightRef.current, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.55')
   }, [])
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    gsap.to(rightRef.current, { opacity: 0, y: -16, duration: 0.3, ease: 'power2.in', onComplete: () => setSent(true) })
+    setLoading(true)
+    setError('')
+    try {
+      const params = {
+        name: form.name,
+        email: form.email,
+        company: form.company || '—',
+        message: form.message,
+        time: new Date().toLocaleString('de-DE', { dateStyle: 'medium', timeStyle: 'short' }),
+      }
+      await Promise.all([
+        emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_NOTIFY, params, EMAILJS_KEY),
+        emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_REPLY,  params, EMAILJS_KEY),
+      ])
+      gsap.to(rightRef.current, { opacity: 0, y: -16, duration: 0.3, ease: 'power2.in', onComplete: () => setSent(true) })
+    } catch {
+      setError('Something went wrong. Please try again or email us directly at services@suhaili.de')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const fields = [
@@ -278,8 +305,13 @@ export default function ContactPage() {
                 {t('cookie.contactPrivacyEnd')}
               </p>
 
-              <LiquidButton type="submit" tint="#FACC15" textColor="#000">
-                {t('contact.send')} →
+              {error && (
+                <p style={{ fontSize: 13, color: '#ef4444', marginBottom: 14, lineHeight: 1.5 }}>{error}</p>
+              )}
+
+              <LiquidButton type="submit" tint="#FACC15" textColor="#000" disabled={loading}
+                style={{ opacity: loading ? 0.6 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}>
+                {loading ? 'Sending…' : `${t('contact.send')} →`}
               </LiquidButton>
             </form>
           )}
