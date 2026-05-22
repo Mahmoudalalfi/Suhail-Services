@@ -50,7 +50,7 @@ export default function ContactPage() {
         emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_NOTIFY, params, EMAILJS_KEY),
         emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_REPLY,  params, EMAILJS_KEY),
       ])
-      gsap.to(rightRef.current, { opacity: 0, y: -16, duration: 0.3, ease: 'power2.in', onComplete: () => setSent(true) })
+      setSent(true)
     } catch {
       setError('Something went wrong. Please try again or email us directly at services@suhaili.de')
     } finally {
