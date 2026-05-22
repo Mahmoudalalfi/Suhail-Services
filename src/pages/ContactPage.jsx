@@ -26,12 +26,11 @@ export default function ContactPage() {
   const companyLabel = t('contact.company')
 
   useEffect(() => {
-    const els = [headRef.current, leftRef.current, rightRef.current].filter(Boolean)
+    const els = [headRef.current, leftRef.current].filter(Boolean)
     gsap.set(els, { opacity: 0, y: 40 })
     const tl = gsap.timeline({ delay: 0.05 })
     tl.to(headRef.current, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
     tl.to(leftRef.current, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
-    tl.to(rightRef.current, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.55')
     return () => { gsap.set(els, { clearProps: 'all' }) }
   }, [])
 
