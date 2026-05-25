@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -145,7 +145,7 @@ export default function OtherCompaniesPage() {
     gsap.fromTo(headRef.current, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power3.out', delay: 0.04 })
   }, [])
 
-  const heroImg = t('otherCompaniesPage.heroImage') || 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490547/suhail-services/other-companies-hero.png'
+  const heroImg = t('otherCompaniesPage.heroImage') || 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490547/suhail-services/other-companies-hero.png'
   const activeBrands = Array.isArray(t('otherCompaniesPage.activeBrands')) ? t('otherCompaniesPage.activeBrands') : []
   const portfolioBrands = Array.isArray(t('otherCompaniesPage.portfolioBrands')) ? t('otherCompaniesPage.portfolioBrands') : []
   const integratedBrands = Array.isArray(t('otherCompaniesPage.integratedBrands')) ? t('otherCompaniesPage.integratedBrands') : []

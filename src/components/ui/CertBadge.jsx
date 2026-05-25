@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+﻿import { useRef, useState, useEffect } from 'react'
 
 const identityMatrix =
   '1, 0, 0, 0, ' +
@@ -156,7 +156,7 @@ export default function CertBadge({ label, title, place = 2, href }) {
           <rect x="3" y="3" width="254" height="54" rx="10" fill="transparent" stroke="rgba(0,0,0,0.15)" strokeWidth="1" />
 
           {/* Wreath icon */}
-          <image href="https://res.cloudinary.com/dfc0qnh88/image/upload/suhail-services/images/platinum.png" x="10" y="10" width="36" height="36" />
+          <image href="https://res.cloudinary.com/df7aiznm6/image/upload/suhail-services/images/platinum.png" x="10" y="10" width="36" height="36" />
 
           {/* Label */}
           <text fontFamily="'DM Sans', sans-serif" fontSize="9" fontWeight="600" fill="rgba(0,0,0,0.5)" letterSpacing="0.06em" x="56" y="24">

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
@@ -8,24 +8,24 @@ import { useLanguage } from '../i18n/LanguageContext'
 gsap.registerPlugin(ScrollTrigger)
 
 const GALLERY_URLS = [
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490754/suhail-services/pencil-security-technology.jpg',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490800/suhail-services/work-project-01.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580100/pencil-day-service-staff_koskip.jpg',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490806/suhail-services/work-project-03.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580142/work-project-05_pwdduz.png',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg',
-  'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490389/suhail-services/imprint-security-team.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490754/suhail-services/pencil-security-technology.jpg',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490800/suhail-services/work-project-01.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580100/pencil-day-service-staff_koskip.jpg',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490816/suhail-services/work-project-06.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490806/suhail-services/work-project-03.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580142/work-project-05_pwdduz.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580123/work-project-02_sg8bni.jpg',
 ]
 
 const CARD_W = 320

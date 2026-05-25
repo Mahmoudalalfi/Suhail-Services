@@ -13,7 +13,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 // ── Config ────────────────────────────────────────────────────────────────────
-const CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME || 'dfc0qnh88'
+const CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME || 'df7aiznm6'
 const API_KEY = process.env.CLOUDINARY_API_KEY || ''
 const API_SECRET = process.env.CLOUDINARY_API_SECRET || ''
 

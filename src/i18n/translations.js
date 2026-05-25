@@ -1,4 +1,4 @@
-import { otherCompaniesPageDE, otherCompaniesPageEN } from './otherCompaniesPageData.js'
+﻿import { otherCompaniesPageDE, otherCompaniesPageEN } from './otherCompaniesPageData.js'
 
 export default {
   de: {
@@ -102,13 +102,13 @@ export default {
           title: 'Kaufhausreinigung',
           tag: 'Gebäudereinigung & Unterhaltsreinigung',
           desc: 'Regelmäßige Unterhaltsreinigung eines großen Berliner Kaufhauses – täglich, diskret und termingerecht.',
-          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg',
+          img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580123/work-project-02_sg8bni.jpg',
         },
         {
           title: 'Unterhaltsreinigung – Bürokomplex Berlin',
           tag: 'Unterhaltsreinigung',
           desc: 'Langfristige Reinigungspartnerschaft für einen modernen Bürokomplex im Berliner Stadtgebiet.',
-          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg',
+          img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg',
         },
       ],
       testimonials: [
@@ -239,7 +239,7 @@ export default {
       hero2: '',
       mission1: '',
       mission2: 'Seit unserer Gründung stehen wir als Unternehmen für Vertrauen, Qualität und Innovation. Mit Hauptsitz in Berlin sind wir ein zuverlässiger Partner für Sicherheits-, Reinigungs- und Gebäudedienstleistungen – mit umfassenden Lösungen aus einer Hand.',
-      aboutImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png',
+      aboutImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png',
       aboutImgAlt: 'Berliner Fernsehturm und Skyline bei Sonnenuntergang',
       learnMoreHref: '/contact',
       learnMoreLabel: 'Mehr erfahren',
@@ -250,7 +250,7 @@ export default {
         'Seit ihrer Gründung 1934 hat sich die KÖTTER-Gruppe von einem regionalen Sicherheitsdienstleister zu einem der führenden Anbieter von Facilityservices in Deutschland entwickelt.\n\nAls unabhängiges Familienunternehmen in der dritten Generation bieten wir maßgeschneiderte Lösungen in den Bereichen Personen- und Cybersicherheit sowie Sicherheitstechnik, Reinigung und Personaldienstleistungen sowie Facility Management.',
       historyBodyText:
         'Als größter familiengeführter Sicherheitsdienstleister Deutschlands und zweitgrößter Anbieter der Branche zählen wir laut Lünendonk-Liste zu den zehn größten Facilityservice-Anbietern in Deutschland. Unabhängigkeit von Anteilseignern und Finanzinvestoren ermöglicht uns nachhaltige Strategien und Entscheidungen zugunsten unserer Kunden und Mitarbeiter. Vertrauen, hohe Qualitätsstandards und verantwortungsvolles Handeln bilden die Grundlage unseres Handelns. Durch langfristige Partnerschaften schaffen wir die Freiheit, damit Sie sich vollständig auf Ihr Kerngeschäft konzentrieren können.',
-      historyBodyImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png',
+      historyBodyImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png',
       historyBodyImageAlt: 'Professioneller Sicherheitsbereich einer modernen Unternehmenslobby',
       historyTimelineHeading: 'Geschichte',
       historyTimeline: [
@@ -299,17 +299,17 @@ export default {
       cta2: '',
       ctaSubtext: 'Gemeinsam zur richtigen Lösung – wir freuen uns auf die Zusammenarbeit mit Ihnen.',
       ctaLink: 'Kontaktformular →',
-      img1: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png',
-      img2: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',
+      img1: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png',
+      img2: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',
       imgAlt1: 'Sicherheitspersonal',
       imgAlt2: 'Gebäudereinigung',
       team: [
-        { name: 'Michael', role: 'Geschäftsführung', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png' },
-        { name: 'Sarah', role: 'Einsatzleitung', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg' },
-        { name: 'Thomas', role: 'Facility Management', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png' },
-        { name: 'Elena', role: 'Gebäudereinigung', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
-        { name: 'Markus', role: 'Personaldienstleistungen', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490822/suhail-services/work-project-08.png' },
-        { name: 'Dennis', role: 'Bauleitung', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
+        { name: 'Michael', role: 'Geschäftsführung', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png' },
+        { name: 'Sarah', role: 'Einsatzleitung', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg' },
+        { name: 'Thomas', role: 'Facility Management', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490810/suhail-services/work-project-04.png' },
+        { name: 'Elena', role: 'Gebäudereinigung', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
+        { name: 'Markus', role: 'Personaldienstleistungen', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490822/suhail-services/work-project-08.png' },
+        { name: 'Dennis', role: 'Bauleitung', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
       ]
     },
     referencesPage: {
@@ -323,26 +323,26 @@ export default {
       closing:
         'Qualität, Verlässlichkeit und passgenaue Leistungsbündel sind die Grundlage dauerhafter Zusammenarbeit — branchenübergreifend und deutschlandweit.',
       clients: [
-        { slug: 'der-gruene-punkt', name: 'Der Grüne Punkt', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490775/suhail-services/ref-clients/der-gruene-punkt.png' },
-        { slug: 'huf', name: 'Huf', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490779/suhail-services/ref-clients/huf.png' },
-        { slug: 'intersport-voswinkel', name: 'Intersport Voswinkel', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490780/suhail-services/ref-clients/intersport-voswinkel.png' },
-        { slug: 'makita', name: 'Makita', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490781/suhail-services/ref-clients/makita.png' },
-        { slug: 'medion', name: 'Medion', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490782/suhail-services/ref-clients/medion.png' },
-        { slug: 'blb-nrw', name: 'BLB NRW', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490772/suhail-services/ref-clients/blb-nrw.png' },
-        { slug: 'currenta', name: 'Currenta', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490773/suhail-services/ref-clients/currenta.png' },
-        { slug: 'funke-medien', name: 'Funke Medien Gruppe', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490778/suhail-services/ref-clients/funke-medien.png' },
-        { slug: 'gasag', name: 'Gasag', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490779/suhail-services/ref-clients/gasag.png' },
-        { slug: 'siemens', name: 'Siemens', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490787/suhail-services/ref-clients/siemens.png' },
-        { slug: 'mkk', name: 'MKK', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490783/suhail-services/ref-clients/mkk.png' },
-        { slug: 'nkg-kala-hamburg', name: 'NKG Kala Hamburg', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490784/suhail-services/ref-clients/nkg-kala-hamburg.png' },
-        { slug: 'rhenus-logistics', name: 'Rhenus Logistics', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490785/suhail-services/ref-clients/rhenus-logistics.png' },
-        { slug: 'sangro-homecare', name: 'Sangro homecare', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490785/suhail-services/ref-clients/sangro-homecare.jpg' },
-        { slug: 'shell', name: 'Shell', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490786/suhail-services/ref-clients/shell.png' },
-        { slug: 'sparkasse-essen', name: 'Sparkasse Essen', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490788/suhail-services/ref-clients/sparkasse-essen.png' },
-        { slug: 'theresia-albers-stiftung', name: 'Theresia Albers Stiftung', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490789/suhail-services/ref-clients/theresia-albers-stiftung.png' },
-        { slug: 'tmd-friction', name: 'TMD Friction', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490790/suhail-services/ref-clients/tmd-friction.png' },
-        { slug: 'uni-duisburg-essen', name: 'Universität Duisburg-Essen', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490791/suhail-services/ref-clients/uni-duisburg-essen.png' },
-        { slug: 'deutsches-historisches-museum', name: 'Deutsches Historisches Museum', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490776/suhail-services/ref-clients/deutsches-historisches-museum.png' },
+        { slug: 'der-gruene-punkt', name: 'Der Grüne Punkt', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490775/suhail-services/ref-clients/der-gruene-punkt.png' },
+        { slug: 'huf', name: 'Huf', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490779/suhail-services/ref-clients/huf.png' },
+        { slug: 'intersport-voswinkel', name: 'Intersport Voswinkel', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490780/suhail-services/ref-clients/intersport-voswinkel.png' },
+        { slug: 'makita', name: 'Makita', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490781/suhail-services/ref-clients/makita.png' },
+        { slug: 'medion', name: 'Medion', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490782/suhail-services/ref-clients/medion.png' },
+        { slug: 'blb-nrw', name: 'BLB NRW', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490772/suhail-services/ref-clients/blb-nrw.png' },
+        { slug: 'currenta', name: 'Currenta', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490773/suhail-services/ref-clients/currenta.png' },
+        { slug: 'funke-medien', name: 'Funke Medien Gruppe', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490778/suhail-services/ref-clients/funke-medien.png' },
+        { slug: 'gasag', name: 'Gasag', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490779/suhail-services/ref-clients/gasag.png' },
+        { slug: 'siemens', name: 'Siemens', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490787/suhail-services/ref-clients/siemens.png' },
+        { slug: 'mkk', name: 'MKK', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490783/suhail-services/ref-clients/mkk.png' },
+        { slug: 'nkg-kala-hamburg', name: 'NKG Kala Hamburg', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490784/suhail-services/ref-clients/nkg-kala-hamburg.png' },
+        { slug: 'rhenus-logistics', name: 'Rhenus Logistics', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490785/suhail-services/ref-clients/rhenus-logistics.png' },
+        { slug: 'sangro-homecare', name: 'Sangro homecare', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490785/suhail-services/ref-clients/sangro-homecare.jpg' },
+        { slug: 'shell', name: 'Shell', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490786/suhail-services/ref-clients/shell.png' },
+        { slug: 'sparkasse-essen', name: 'Sparkasse Essen', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490788/suhail-services/ref-clients/sparkasse-essen.png' },
+        { slug: 'theresia-albers-stiftung', name: 'Theresia Albers Stiftung', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490789/suhail-services/ref-clients/theresia-albers-stiftung.png' },
+        { slug: 'tmd-friction', name: 'TMD Friction', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490790/suhail-services/ref-clients/tmd-friction.png' },
+        { slug: 'uni-duisburg-essen', name: 'Universität Duisburg-Essen', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490791/suhail-services/ref-clients/uni-duisburg-essen.png' },
+        { slug: 'deutsches-historisches-museum', name: 'Deutsches Historisches Museum', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490776/suhail-services/ref-clients/deutsches-historisches-museum.png' },
       ],
     },
     qualityPage: {
@@ -352,7 +352,7 @@ export default {
         'Qualität steht überall im Raum — bei uns wird sie dort konkret, wo Standards anschlagen und messbare Ergebnisse zählen.',
       introP2:
         'Unsere gesamte Prozesskette ist darauf ausgerichtet, Ihre Anforderungen zu erfüllen — nur so entsteht belastbares Vertrauen.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490771/suhail-services/quality-hero-certified.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490771/suhail-services/quality-hero-certified.png',
       heroImageAlt:
         'Qualitätsprozesse und dokumentierte Standards am Arbeitsplatz',
 
@@ -415,7 +415,7 @@ export default {
         'Unsere Unternehmensphilosophie und unser Verhaltenskodex sind die Basis dessen, wie wir bei suhaili Service täglich entscheiden und handeln.',
       introP2:
         'Als inhabergeführter Partner mit klarem Qualitätsanspruch verbinden wir Zuverlässigkeit mit einem offenen Blick auf Märkte, Menschen und Standards — regional verwurzelt, mit einem professionellen Leistungsportfolio aus Service- und Facilitybereichen.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490768/suhail-services/philosophy-hero-collaboration.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490768/suhail-services/philosophy-hero-collaboration.png',
       heroImageAlt:
         'Kolleginnen und Kollegen im Gespräch in einem hellen Büro — Dialog und gemeinsame Standards',
 
@@ -472,7 +472,7 @@ export default {
         'Geschäftsführung und Teams bei suhaili Service verpflichten sich, geltendes Recht einzuhalten und mit Auftraggebern, Lieferanten und Partnern fair zusammenzuarbeiten — gestützt auf klare interne Regeln und überprüfbare Zuständigkeiten.',
       heroP2:
         'Hinweise auf Verstöße gegen Gesetze, Tarif- oder Gleichbehandlungsvorgaben sowie gegen Maßstäbe unseres Verhaltenskodex nehmen wir ernst und bearbeiten sie entlang definierter Prüf- und Eskalationspfade.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490347/suhail-services/compliance-hero-integrity.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490347/suhail-services/compliance-hero-integrity.png',
       heroAlt:
         'Symbolische Darstellung von Integrität — Schutz und dokumentierte Entscheidungen am Arbeitsplatz',
 
@@ -531,7 +531,7 @@ export default {
       title: 'Sicherheitsbeirat',
       heroIntro:
         'Der Sicherheitsbeirat begleitet den strukturierten Dialog zwischen öffentlichem Sektor und privaten Sicherheitsleistungen — mit Fokus auf Qualität, Aus- und Weiterbildung sowie tragfähige Kooperationsmodelle zwischen Auftraggebern und spezialisierten Dienstleistern.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490795/suhail-services/security-advisory-hero.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490795/suhail-services/security-advisory-hero.png',
       heroAlt:
         'Professionelle Silhouetten in einem hellen Bürokorridor — Dialog zwischen Organisationen',
 
@@ -549,7 +549,7 @@ export default {
         {
           slug: 'harald-olschok',
           name: 'Dr. Harald Olschok',
-          photo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490793/suhail-services/security-advisory-harald-olschok.webp',
+          photo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490793/suhail-services/security-advisory-harald-olschok.webp',
           portraitAlt: 'Porträt Dr. Harald Olschok',
           bio:
             'Langjährige Führung in Verbandsstrukturen der privaten Sicherheitswirtschaft prägt seine Einblicke in Governance, Qualitätsstandards und regulatorische Erwartungen — als Sparringspartner für tragfähige Branchenpolitik und partnerschaftliche Auftraggeberkommunikation.',
@@ -557,7 +557,7 @@ export default {
         {
           slug: 'fritz-rudolf-koerper',
           name: 'Fritz Rudolf Körper',
-          photo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490792/suhail-services/security-advisory-fritz-rudolf-koerper.webp',
+          photo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490792/suhail-services/security-advisory-fritz-rudolf-koerper.webp',
           portraitAlt: 'Porträt Fritz Rudolf Körper',
           bio:
             'Politische und parlamentarische Erfahrung auf Bundesebene fließen in die Beratung ein: Schnittstellen zwischen Innerem, öffentlicher Ordnung und privaten Leistungsangeboten werden aus einer Perspektive reflektiert, die nachhaltigen Dialog vor kurzfristigen Effekten stellt.',
@@ -565,7 +565,7 @@ export default {
         {
           slug: 'bernd-juergens',
           name: 'Bernd Jürgens',
-          photo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490792/suhail-services/security-advisory-bernd-juergens.webp',
+          photo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490792/suhail-services/security-advisory-bernd-juergens.webp',
           portraitAlt: 'Porträt Bernd Jürgens',
           bio:
             'Operative und strategische Verantwortung in der Sicherheitsdienstleistung — mit Fokus auf Organisationsentwicklung, Regionalkooperation und professionelle Standards — unterstützt die Bewertung komplexer Ausschreibungen und Vorhaben mit öffentlicher Beteiligung.',
@@ -573,7 +573,7 @@ export default {
         {
           slug: 'wolfgang-bosbach',
           name: 'Wolfgang Bosbach',
-          photo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490796/suhail-services/security-advisory-wolfgang-bosbach.webp',
+          photo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490796/suhail-services/security-advisory-wolfgang-bosbach.webp',
           portraitAlt: 'Porträt Wolfgang Bosbach',
           bio:
             'Parlamentarische Arbeit zu innerer Sicherheit und parlamentarischer Kontrolle ergänzt die Diskussion über Kooperation zwischen staatlichen Stellen und privaten Anbietern — mit Blick auf belastbare Projektgestaltung und klare Rollenerwartungen.',
@@ -591,11 +591,11 @@ export default {
         'Hohe Qualität orientiert sich an gemeinsamen Standards — nicht nur intern. Deshalb engagiert sich suhaili Service in nationalen und internationalen Verbänden: für Austausch, Weiterentwicklung belastbarer Regeln und die nachhaltige Stärkung von Aus- und Weiterbildung.',
       heroP2:
         'Über diese Vernetzung tragen wir zu Orientierung und Qualität in der Branche bei — mit dem Anspruch, Service verlässlich und professionell zu halten.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490344/suhail-services/association-work-hero.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490344/suhail-services/association-work-hero.png',
       heroAlt:
         'Kolleginnen und Kollegen im Gespräch in einem hellen Büroflur mit Glasfronten — Austausch auf Augenhöhe',
 
-      engagementImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490341/suhail-services/association-work-engagement.png',
+      engagementImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490341/suhail-services/association-work-engagement.png',
       engagementAlt:
         'Handschlag über einem Konferenztisch — Partnerschaft und Vertrauen',
 
@@ -651,7 +651,7 @@ export default {
         'Als deutschlandweit aufgestellte Gruppe mit Jahrzehnten Erfahrung und tausenden Kolleginnen und Kollegen tragen wir Verantwortung — für Partner, Teams, Gesellschaft und Umwelt.',
       introP2:
         'Wir nehmen diese Verantwortung bewusst wahr. Nachhaltiges Wirtschaften bildet für uns das wirtschaftliche, ökologische und soziale Fundament für kommende Generationen.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490363/suhail-services/csr-hero-forest.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490363/suhail-services/csr-hero-forest.png',
       heroImageAlt:
         'Waldlichtung von unten — Sonnenlicht fällt durch grünes Blätterdach',
 
@@ -681,7 +681,7 @@ export default {
         'Regelmäßige Überprüfung von Services, Technik und eingesetzten Mitteln auf verbesserbare Umweltwirkungen.',
         'Einbindung von Umweltaspekten in interne Prüfungen und Verbesserungszyklen.',
       ],
-      ecologicalImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490351/suhail-services/csr-ecological-photo.png',
+      ecologicalImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490351/suhail-services/csr-ecological-photo.png',
       ecologicalImageAlt:
         'Team vor moderner Architektur — Zusammenarbeit und Gemeinschaft',
 
@@ -767,13 +767,13 @@ export default {
       title1: 'Arbeit, die',
       title2: 'überzeugt',
       projects: [
-        { title: 'Kaufhaus Reinigung', tag: 'Gebäudereinigung', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg' },
-        { title: 'Bürokomplex Berlin', tag: 'Unterhaltsreinigung', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
-        { title: 'Industriegelände Süd', tag: 'Facility Management', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png' },
-        { title: 'Großbaustelle Mitte', tag: 'Bauschlussreinigung', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
-        { title: 'Einkaufszentrum West', tag: 'Kassendienste', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490819/suhail-services/work-project-07.png' },
-        { title: 'Eventhalle Nord', tag: 'Personaldienstleistungen', year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490822/suhail-services/work-project-08.png' },
-        { title: 'Wohnanlage Ost', tag: 'Unterhaltsreinigung', year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490376/suhail-services/imprint-extra-facility.png' },
+        { title: 'Kaufhaus Reinigung', tag: 'Gebäudereinigung', year: '2024', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580123/work-project-02_sg8bni.jpg' },
+        { title: 'Bürokomplex Berlin', tag: 'Unterhaltsreinigung', year: '2024', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
+        { title: 'Industriegelände Süd', tag: 'Facility Management', year: '2023', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490810/suhail-services/work-project-04.png' },
+        { title: 'Großbaustelle Mitte', tag: 'Bauschlussreinigung', year: '2023', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
+        { title: 'Einkaufszentrum West', tag: 'Kassendienste', year: '2023', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490819/suhail-services/work-project-07.png' },
+        { title: 'Eventhalle Nord', tag: 'Personaldienstleistungen', year: '2022', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490822/suhail-services/work-project-08.png' },
+        { title: 'Wohnanlage Ost', tag: 'Unterhaltsreinigung', year: '2022', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490376/suhail-services/imprint-extra-facility.png' },
       ]
     },
     blog: {
@@ -781,12 +781,12 @@ export default {
       title2: 'aus unserem Alltag',
       readTime: 'Lesezeit',
       posts: [
-        { date: 'April 2024', tag: 'Reinigung', title: "Professionelle Grundreinigung: Was Unternehmen beachten müssen", excerpt: "Eine Grundreinigung ist mehr als Routinereinigung. Rechtliche Vorgaben, Spezialgeräte und Fachpersonal sind entscheidend.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg', read: '5 Min' },
-        { date: 'März 2024', tag: 'Reinigung', title: "Effiziente Baustellenreinigung für reibungslose Abläufe", excerpt: "Warum eine kontinuierliche Reinigung während der Bauphase nicht nur für Ordnung, sondern auch für Arbeitssicherheit sorgt.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
-        { date: 'Februar 2024', tag: 'Baulogistik', title: "Baustellenlogistik: Der unsichtbare Erfolgsfaktor", excerpt: "Ohne präzise Logistik stehen Baustellen still. Erfahren Sie, wie wir Material und Personal auf Großbaustellen optimal steuern.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png', read: '6 Min' },
-        { date: 'Januar 2024', tag: 'Facility', title: "Wie Facility Management Betriebskosten senkt", excerpt: "Professionelles Facility Management hält Gebäude in Top-Zustand und hilft Unternehmen, langfristige Instandhaltungskosten zu reduzieren.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png', read: '4 Min' },
-        { date: 'Dezember 2023', tag: 'Team', title: "Exzellente Mitarbeiter: Unsere Recruiting-Standards", excerpt: "Die Qualifikation unserer Mitarbeiter geht weit über Grundanforderungen hinaus. Ein Blick hinter die Kulissen unserer internen Schulungen.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', read: '7 Min' },
-        { date: 'November 2023', tag: 'Case Study', title: "Komplettpaket Facility Services für das neue Einkaufszentrum West", excerpt: "Ein detaillierter Einblick, wie wir den kompletten Reinigungs- und Personalbedarf für eines der größten neuen Einkaufszentren decken.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg', read: '10 Min' },
+        { date: 'April 2024', tag: 'Reinigung', title: "Professionelle Grundreinigung: Was Unternehmen beachten müssen", excerpt: "Eine Grundreinigung ist mehr als Routinereinigung. Rechtliche Vorgaben, Spezialgeräte und Fachpersonal sind entscheidend.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580123/work-project-02_sg8bni.jpg', read: '5 Min' },
+        { date: 'März 2024', tag: 'Reinigung', title: "Effiziente Baustellenreinigung für reibungslose Abläufe", excerpt: "Warum eine kontinuierliche Reinigung während der Bauphase nicht nur für Ordnung, sondern auch für Arbeitssicherheit sorgt.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
+        { date: 'Februar 2024', tag: 'Baulogistik', title: "Baustellenlogistik: Der unsichtbare Erfolgsfaktor", excerpt: "Ohne präzise Logistik stehen Baustellen still. Erfahren Sie, wie wir Material und Personal auf Großbaustellen optimal steuern.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png', read: '6 Min' },
+        { date: 'Januar 2024', tag: 'Facility', title: "Wie Facility Management Betriebskosten senkt", excerpt: "Professionelles Facility Management hält Gebäude in Top-Zustand und hilft Unternehmen, langfristige Instandhaltungskosten zu reduzieren.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490810/suhail-services/work-project-04.png', read: '4 Min' },
+        { date: 'Dezember 2023', tag: 'Team', title: "Exzellente Mitarbeiter: Unsere Recruiting-Standards", excerpt: "Die Qualifikation unserer Mitarbeiter geht weit über Grundanforderungen hinaus. Ein Blick hinter die Kulissen unserer internen Schulungen.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', read: '7 Min' },
+        { date: 'November 2023', tag: 'Case Study', title: "Komplettpaket Facility Services für das neue Einkaufszentrum West", excerpt: "Ein detaillierter Einblick, wie wir den kompletten Reinigungs- und Personalbedarf für eines der größten neuen Einkaufszentren decken.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg', read: '10 Min' },
       ]
     },
     imprint: {
@@ -808,22 +808,22 @@ export default {
         'Die Inhalte und Werke auf dieser Website, darunter Texte, Bilder, Grafiken sowie Audio-, Video- und Animationsdateien sowie deren Anordnung auf der Website unterliegen dem Urheberrecht und anderen Gesetzen zum Schutz geistigen Eigentums. Eine Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der vorherigen schriftlichen Zustimmung des jeweiligen Rechteinhabers.',
       sideGallery: [
         {
-          image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png',
+          image: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490389/suhail-services/imprint-security-team.png',
           alt: 'Professionelles Sicherheitsteam in einer modernen Berliner Geschäftsumgebung',
           strap: 'Berlin · Gewerblich registriert',
         },
         {
-          image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg',
+          image: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg',
           alt: 'Objektschutz und Sicherheitsdienst an repräsentativer Immobilie',
           strap: 'Objektschutz · Professionelle Standards',
         },
         {
-          image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490376/suhail-services/imprint-extra-facility.png',
+          image: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490376/suhail-services/imprint-extra-facility.png',
           alt: 'Gebäudeservice und Facility-Management in einem modernen Komplex',
           strap: 'Gebäudeservice · Zuverlässige Betreuung',
         },
       ],
-      heroAtmosphereImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490385/suhail-services/imprint-hero-atmosphere.png',
+      heroAtmosphereImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490385/suhail-services/imprint-hero-atmosphere.png',
       dpTeaserTitle: 'Datenschutz',
       dpTeaserBody:
         'Die vollständige Datenschutzerklärung befindet sich auf einer eigenen Unterseite — getrennt vom Impressum.',
@@ -947,13 +947,13 @@ export default {
           title: 'Department Store Cleaning',
           tag: 'Building Cleaning & Maintenance',
           desc: 'Regular maintenance cleaning of a large Berlin department store – daily, discreet, and on schedule.',
-          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg',
+          img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580123/work-project-02_sg8bni.jpg',
         },
         {
           title: 'Berlin Office Complex',
           tag: 'Maintenance Cleaning',
           desc: 'Long-term cleaning partnership for a modern office complex in the Berlin city area.',
-          img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg',
+          img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg',
         },
       ],
       testimonials: [
@@ -1084,7 +1084,7 @@ export default {
       hero2: '',
       mission1: '',
       mission2: 'Since our founding, we have stood for trust, quality, and innovation. With headquarters in Berlin, we are a reliable partner for security, cleaning, and facility services — providing comprehensive solutions from a single source.',
-      aboutImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png',
+      aboutImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png',
       aboutImgAlt: 'Berlin TV Tower and skyline at sunset',
       learnMoreHref: '/contact',
       learnMoreLabel: 'Learn more',
@@ -1095,7 +1095,7 @@ export default {
         'Since its founding in 1934, the KÖTTER Group has developed from a regional security service provider to one of the leading providers of facility services in Germany.\n\nAs an independent, third-generation family business, we offer customized solutions in the areas of personal security, cybersecurity and security technology, cleaning and personnel services, and facility management.',
       historyBodyText:
         "As Germany's largest family-run security service provider and the second-largest provider in the security industry, we are among the top 10 facility services providers in Germany according to the Lünendonk List. Our independence from shareholders and financial investors enables us to pursue sustainable strategies and always make decisions in the best interests of our customers and employees. Trust, high quality standards, and responsible management form the basis of our actions. Through long-term partnerships, we create the freedom for you so you can fully concentrate on your core business.",
-      historyBodyImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png',
+      historyBodyImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png',
       historyBodyImageAlt: 'Professional security reception area of a modern corporate lobby',
       historyTimelineHeading: 'History',
       historyTimeline: [
@@ -1144,17 +1144,17 @@ export default {
       cta2: '',
       ctaSubtext: 'Together towards the right solution — we look forward to working with you.',
       ctaLink: 'Contact form →',
-      img1: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png',
-      img2: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',
+      img1: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png',
+      img2: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',
       imgAlt1: 'Security personnel',
       imgAlt2: 'Building cleaning',
       team: [
-        { name: 'Michael', role: 'Management', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png' },
-        { name: 'Sarah', role: 'Operations', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg' },
-        { name: 'Thomas', role: 'Facility Management', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png' },
-        { name: 'Elena', role: 'Building Cleaning', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
-        { name: 'Markus', role: 'Staffing Services', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490822/suhail-services/work-project-08.png' },
-        { name: 'Dennis', role: 'Site Management', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
+        { name: 'Michael', role: 'Management', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png' },
+        { name: 'Sarah', role: 'Operations', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg' },
+        { name: 'Thomas', role: 'Facility Management', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490810/suhail-services/work-project-04.png' },
+        { name: 'Elena', role: 'Building Cleaning', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
+        { name: 'Markus', role: 'Staffing Services', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490822/suhail-services/work-project-08.png' },
+        { name: 'Dennis', role: 'Site Management', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
       ]
     },
     referencesPage: {
@@ -1168,26 +1168,26 @@ export default {
       closing:
         'Reliability, quality, and tailored service bundles are what sustain partnerships over years—across sectors and throughout Germany.',
       clients: [
-        { slug: 'der-gruene-punkt', name: 'Der Grüne Punkt', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490775/suhail-services/ref-clients/der-gruene-punkt.png' },
-        { slug: 'huf', name: 'Huf', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490779/suhail-services/ref-clients/huf.png' },
-        { slug: 'intersport-voswinkel', name: 'Intersport Voswinkel', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490780/suhail-services/ref-clients/intersport-voswinkel.png' },
-        { slug: 'makita', name: 'Makita', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490781/suhail-services/ref-clients/makita.png' },
-        { slug: 'medion', name: 'Medion', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490782/suhail-services/ref-clients/medion.png' },
-        { slug: 'blb-nrw', name: 'BLB NRW', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490772/suhail-services/ref-clients/blb-nrw.png' },
-        { slug: 'currenta', name: 'Currenta', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490773/suhail-services/ref-clients/currenta.png' },
-        { slug: 'funke-medien', name: 'Funke Medien Gruppe', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490778/suhail-services/ref-clients/funke-medien.png' },
-        { slug: 'gasag', name: 'Gasag', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490779/suhail-services/ref-clients/gasag.png' },
-        { slug: 'siemens', name: 'Siemens', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490787/suhail-services/ref-clients/siemens.png' },
-        { slug: 'mkk', name: 'MKK', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490783/suhail-services/ref-clients/mkk.png' },
-        { slug: 'nkg-kala-hamburg', name: 'NKG Kala Hamburg', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490784/suhail-services/ref-clients/nkg-kala-hamburg.png' },
-        { slug: 'rhenus-logistics', name: 'Rhenus Logistics', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490785/suhail-services/ref-clients/rhenus-logistics.png' },
-        { slug: 'sangro-homecare', name: 'Sangro homecare', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490785/suhail-services/ref-clients/sangro-homecare.jpg' },
-        { slug: 'shell', name: 'Shell', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490786/suhail-services/ref-clients/shell.png' },
-        { slug: 'sparkasse-essen', name: 'Sparkasse Essen', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490788/suhail-services/ref-clients/sparkasse-essen.png' },
-        { slug: 'theresia-albers-stiftung', name: 'Theresia Albers Stiftung', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490789/suhail-services/ref-clients/theresia-albers-stiftung.png' },
-        { slug: 'tmd-friction', name: 'TMD Friction', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490790/suhail-services/ref-clients/tmd-friction.png' },
-        { slug: 'uni-duisburg-essen', name: 'Universität Duisburg-Essen', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490791/suhail-services/ref-clients/uni-duisburg-essen.png' },
-        { slug: 'deutsches-historisches-museum', name: 'Deutsches Historisches Museum', logo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490776/suhail-services/ref-clients/deutsches-historisches-museum.png' },
+        { slug: 'der-gruene-punkt', name: 'Der Grüne Punkt', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490775/suhail-services/ref-clients/der-gruene-punkt.png' },
+        { slug: 'huf', name: 'Huf', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490779/suhail-services/ref-clients/huf.png' },
+        { slug: 'intersport-voswinkel', name: 'Intersport Voswinkel', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490780/suhail-services/ref-clients/intersport-voswinkel.png' },
+        { slug: 'makita', name: 'Makita', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490781/suhail-services/ref-clients/makita.png' },
+        { slug: 'medion', name: 'Medion', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490782/suhail-services/ref-clients/medion.png' },
+        { slug: 'blb-nrw', name: 'BLB NRW', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490772/suhail-services/ref-clients/blb-nrw.png' },
+        { slug: 'currenta', name: 'Currenta', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490773/suhail-services/ref-clients/currenta.png' },
+        { slug: 'funke-medien', name: 'Funke Medien Gruppe', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490778/suhail-services/ref-clients/funke-medien.png' },
+        { slug: 'gasag', name: 'Gasag', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490779/suhail-services/ref-clients/gasag.png' },
+        { slug: 'siemens', name: 'Siemens', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490787/suhail-services/ref-clients/siemens.png' },
+        { slug: 'mkk', name: 'MKK', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490783/suhail-services/ref-clients/mkk.png' },
+        { slug: 'nkg-kala-hamburg', name: 'NKG Kala Hamburg', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490784/suhail-services/ref-clients/nkg-kala-hamburg.png' },
+        { slug: 'rhenus-logistics', name: 'Rhenus Logistics', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490785/suhail-services/ref-clients/rhenus-logistics.png' },
+        { slug: 'sangro-homecare', name: 'Sangro homecare', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490785/suhail-services/ref-clients/sangro-homecare.jpg' },
+        { slug: 'shell', name: 'Shell', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490786/suhail-services/ref-clients/shell.png' },
+        { slug: 'sparkasse-essen', name: 'Sparkasse Essen', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490788/suhail-services/ref-clients/sparkasse-essen.png' },
+        { slug: 'theresia-albers-stiftung', name: 'Theresia Albers Stiftung', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490789/suhail-services/ref-clients/theresia-albers-stiftung.png' },
+        { slug: 'tmd-friction', name: 'TMD Friction', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490790/suhail-services/ref-clients/tmd-friction.png' },
+        { slug: 'uni-duisburg-essen', name: 'Universität Duisburg-Essen', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490791/suhail-services/ref-clients/uni-duisburg-essen.png' },
+        { slug: 'deutsches-historisches-museum', name: 'Deutsches Historisches Museum', logo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490776/suhail-services/ref-clients/deutsches-historisches-museum.png' },
       ],
     },
     qualityPage: {
@@ -1197,7 +1197,7 @@ export default {
         'Everyone talks about quality — we focus where standards bite and outcomes become measurable.',
       introP2:
         'Our entire process chain is geared toward meeting your requirements — that is how lasting trust is earned.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490771/suhail-services/quality-hero-certified.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490771/suhail-services/quality-hero-certified.png',
       heroImageAlt:
         'Quality assurance on the desk — documented checks and professional workflows',
 
@@ -1260,7 +1260,7 @@ export default {
         'Our corporate philosophy and code of conduct underpin how we decide and act every day at suhaili Service.',
       introP2:
         'As an owner-led partner with a clear quality ambition, we combine reliability with an open eye on markets, people, and standards — rooted locally, supported by a professional portfolio across service and facility disciplines.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490768/suhail-services/philosophy-hero-collaboration.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490768/suhail-services/philosophy-hero-collaboration.png',
       heroImageAlt:
         'Colleagues in conversation in a bright office — dialogue and shared standards',
 
@@ -1317,7 +1317,7 @@ export default {
         'At suhaili Service, management and teams commit to complying with applicable law and working fairly with clients, suppliers, and partners — supported by clear internal rules and accountable responsibilities.',
       heroP2:
         'We take seriously any indications of breaches of law, collective-bargaining provisions, equal treatment rules, or expectations anchored in our Code of Conduct — and route them through defined review and escalation paths.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490347/suhail-services/compliance-hero-integrity.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490347/suhail-services/compliance-hero-integrity.png',
       heroAlt:
         'Integrity motif — documented professionalism at the workplace',
 
@@ -1376,7 +1376,7 @@ export default {
       title: 'Security Advisory Board',
       heroIntro:
         'The Security Advisory Board supports structured dialogue between the public sector and private security services — with emphasis on quality, education and training, and workable cooperation models between clients and specialised providers.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490795/suhail-services/security-advisory-hero.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490795/suhail-services/security-advisory-hero.png',
       heroAlt:
         'Professional silhouettes in a bright office corridor — organisational dialogue',
 
@@ -1394,7 +1394,7 @@ export default {
         {
           slug: 'harald-olschok',
           name: 'Dr. Harald Olschok',
-          photo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490793/suhail-services/security-advisory-harald-olschok.webp',
+          photo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490793/suhail-services/security-advisory-harald-olschok.webp',
           portraitAlt: 'Portrait of Dr. Harald Olschok',
           bio:
             'Long-standing leadership in trade associations for private security informs his perspective on governance, quality expectations and regulatory alignment — as a sparring partner for durable sector dialogue and transparent client communication.',
@@ -1402,7 +1402,7 @@ export default {
         {
           slug: 'fritz-rudolf-koerper',
           name: 'Fritz Rudolf Körper',
-          photo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490792/suhail-services/security-advisory-fritz-rudolf-koerper.webp',
+          photo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490792/suhail-services/security-advisory-fritz-rudolf-koerper.webp',
           portraitAlt: 'Portrait of Fritz Rudolf Körper',
           bio:
             'Federal-level parliamentary experience informs how interfaces between interior policy, public order and private-service offerings are assessed — prioritising sustainable dialogue over short-lived optics.',
@@ -1410,7 +1410,7 @@ export default {
         {
           slug: 'bernd-juergens',
           name: 'Bernd Jürgens',
-          photo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490792/suhail-services/security-advisory-bernd-juergens.webp',
+          photo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490792/suhail-services/security-advisory-bernd-juergens.webp',
           portraitAlt: 'Portrait of Bernd Jürgens',
           bio:
             'Operational and strategic responsibility across security services — including organisational development, regional cooperation and professional standards — helps evaluate complex tenders and programmes involving public stakeholders.',
@@ -1418,7 +1418,7 @@ export default {
         {
           slug: 'wolfgang-bosbach',
           name: 'Wolfgang Bosbach',
-          photo: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490796/suhail-services/security-advisory-wolfgang-bosbach.webp',
+          photo: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490796/suhail-services/security-advisory-wolfgang-bosbach.webp',
           portraitAlt: 'Portrait of Wolfgang Bosbach',
           bio:
             'Parliamentary work on internal security and oversight complements discussions on cooperation between state bodies and private providers — with emphasis on deliverable project design and clear role expectations.',
@@ -1436,11 +1436,11 @@ export default {
         'High-calibre service extends beyond our own organisation — which is why suhaili Service participates in national and international associations: to share experience, evolve recognised standards, and strengthen vocational pathways sustainably.',
       heroP2:
         'Through that network we contribute to professional orientation across our sectors — guided by dependable quality and service standards.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490344/suhail-services/association-work-hero.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490344/suhail-services/association-work-hero.png',
       heroAlt:
         'Colleagues conversing in a bright glass-lined office corridor — peer dialogue',
 
-      engagementImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490341/suhail-services/association-work-engagement.png',
+      engagementImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490341/suhail-services/association-work-engagement.png',
       engagementAlt:
         'Partnership handshake across a conference table — trust and cooperation',
 
@@ -1495,7 +1495,7 @@ export default {
         'As a nationwide organisation with decades of experience and thousands of colleagues, we carry responsibility — for clients, teams, society, and the environment.',
       introP2:
         'We embrace that duty deliberately. Sustainable operations underpin the economic, ecological, and social foundations we want to leave for future generations.',
-      heroImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490363/suhail-services/csr-hero-forest.png',
+      heroImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490363/suhail-services/csr-hero-forest.png',
       heroImageAlt:
         'Forest canopy seen from below — sunlight through green leaves',
 
@@ -1525,7 +1525,7 @@ export default {
         'Regular review of services, equipment, and consumables for environmental impact.',
         'Embedding environmental criteria in internal audits and improvement cycles.',
       ],
-      ecologicalImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490351/suhail-services/csr-ecological-photo.png',
+      ecologicalImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490351/suhail-services/csr-ecological-photo.png',
       ecologicalImageAlt:
         'Team outdoors in front of modern architecture — collaboration',
 
@@ -1611,13 +1611,13 @@ export default {
       title1: 'Work that',
       title2: 'Convinces',
       projects: [
-        { title: 'Department Store Cleaning', tag: 'Building Cleaning', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg' },
-        { title: 'Berlin Office Complex', tag: 'Maintenance Cleaning', year: '2024', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
-        { title: 'Industrial Park South', tag: 'Facility Management', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png' },
-        { title: 'Large Construction Mitte', tag: 'Construction Cleaning', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
-        { title: 'Shopping Center West', tag: 'Cashier Services', year: '2023', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490819/suhail-services/work-project-07.png' },
-        { title: 'Event Hall North', tag: 'Staffing Services', year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490822/suhail-services/work-project-08.png' },
-        { title: 'Residential East', tag: 'Maintenance Cleaning', year: '2022', img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490376/suhail-services/imprint-extra-facility.png' },
+        { title: 'Department Store Cleaning', tag: 'Building Cleaning', year: '2024', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580123/work-project-02_sg8bni.jpg' },
+        { title: 'Berlin Office Complex', tag: 'Maintenance Cleaning', year: '2024', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
+        { title: 'Industrial Park South', tag: 'Facility Management', year: '2023', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490810/suhail-services/work-project-04.png' },
+        { title: 'Large Construction Mitte', tag: 'Construction Cleaning', year: '2023', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg' },
+        { title: 'Shopping Center West', tag: 'Cashier Services', year: '2023', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490819/suhail-services/work-project-07.png' },
+        { title: 'Event Hall North', tag: 'Staffing Services', year: '2022', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490822/suhail-services/work-project-08.png' },
+        { title: 'Residential East', tag: 'Maintenance Cleaning', year: '2022', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490376/suhail-services/imprint-extra-facility.png' },
       ]
     },
     blog: {
@@ -1625,12 +1625,12 @@ export default {
       title2: 'from our daily work',
       readTime: 'read',
       posts: [
-        { date: 'April 2024', tag: 'Cleaning', title: "Professional Deep Cleaning: What Businesses Need to Know", excerpt: "A thorough deep clean is more than routine tidying. Legal standards, specialist equipment, and expert staff are the key.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580123/work-project-02_sg8bni.jpg', read: '5 Min' },
-        { date: 'March 2024', tag: 'Cleaning', title: "Efficient Construction Cleaning for Smooth Operations", excerpt: "Why continuous cleaning during the construction phase ensures not only order but also occupational safety.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
-        { date: 'February 2024', tag: 'Logistics', title: "Construction Logistics: The Invisible Success Factor", excerpt: "Without precise logistics, sites stand still. Learn how we optimally control material and personnel on large projects.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png', read: '6 Min' },
-        { date: 'January 2024', tag: 'Facility', title: "How Facility Management Reduces Operational Costs", excerpt: "Smart facility management keeps buildings running smoothly and helps organisations cut long-term maintenance spend.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490810/suhail-services/work-project-04.png', read: '4 Min' },
-        { date: 'December 2023', tag: 'Team', title: "Staffing Excellence: Our Recruitment Standards", excerpt: "Our employees' training goes far beyond basic requirements. A look behind the scenes of our internal onboarding.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', read: '7 Min' },
-        { date: 'November 2023', tag: 'Case Study', title: "Full-Service Facility Package for Shopping Center West", excerpt: "A detailed insight into how we cover the complete cleaning and staffing needs for one of the largest new shopping centers.", img: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg', read: '10 Min' },
+        { date: 'April 2024', tag: 'Cleaning', title: "Professional Deep Cleaning: What Businesses Need to Know", excerpt: "A thorough deep clean is more than routine tidying. Legal standards, specialist equipment, and expert staff are the key.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580123/work-project-02_sg8bni.jpg', read: '5 Min' },
+        { date: 'March 2024', tag: 'Cleaning', title: "Efficient Construction Cleaning for Smooth Operations", excerpt: "Why continuous cleaning during the construction phase ensures not only order but also occupational safety.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
+        { date: 'February 2024', tag: 'Logistics', title: "Construction Logistics: The Invisible Success Factor", excerpt: "Without precise logistics, sites stand still. Learn how we optimally control material and personnel on large projects.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png', read: '6 Min' },
+        { date: 'January 2024', tag: 'Facility', title: "How Facility Management Reduces Operational Costs", excerpt: "Smart facility management keeps buildings running smoothly and helps organisations cut long-term maintenance spend.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490810/suhail-services/work-project-04.png', read: '4 Min' },
+        { date: 'December 2023', tag: 'Team', title: "Staffing Excellence: Our Recruitment Standards", excerpt: "Our employees' training goes far beyond basic requirements. A look behind the scenes of our internal onboarding.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', read: '7 Min' },
+        { date: 'November 2023', tag: 'Case Study', title: "Full-Service Facility Package for Shopping Center West", excerpt: "A detailed insight into how we cover the complete cleaning and staffing needs for one of the largest new shopping centers.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg', read: '10 Min' },
       ]
     },
     imprint: {
@@ -1652,22 +1652,22 @@ export default {
         'The content and works on this website, including texts, images, graphics, audio, video and animation files, as well as their arrangement on the website, are subject to copyright and other laws protecting intellectual property. Reproduction, modification, distribution and any kind of use outside the limits of copyright law require the prior written consent of the respective rights holder.',
       sideGallery: [
         {
-          image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490389/suhail-services/imprint-security-team.png',
+          image: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490389/suhail-services/imprint-security-team.png',
           alt: 'Professional security team in a modern Berlin business setting',
           strap: 'Berlin · commercially registered',
         },
         {
-          image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg',
+          image: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg',
           alt: 'Property protection and security services at a commercial site',
           strap: 'Property protection · Professional standards',
         },
         {
-          image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490376/suhail-services/imprint-extra-facility.png',
+          image: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490376/suhail-services/imprint-extra-facility.png',
           alt: 'Facility management and building services in a modern environment',
           strap: 'Facility services · Reliable coverage',
         },
       ],
-      heroAtmosphereImage: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490385/suhail-services/imprint-hero-atmosphere.png',
+      heroAtmosphereImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490385/suhail-services/imprint-hero-atmosphere.png',
       dpTeaserTitle: 'Data protection',
       dpTeaserBody:
         'The full privacy statement is on its own dedicated page — separate from the legal imprint.',

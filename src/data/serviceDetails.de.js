@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   'video-surveillance': {
     subtitle: 'Prävention, Schutz und Effizienz',
     heroParagraphs: [
@@ -1068,7 +1068,7 @@ export default {
       {
         type: 'zigzag',
         imageLeft: true,
-        image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490750/suhail-services/pencil-psychological-first-aid.png',
+        image: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490750/suhail-services/pencil-psychological-first-aid.png',
         title: 'Psychologische Erste Hilfe: Sofortige Unterstützung in Krisensituationen',
         paragraphs: [
           'Unerwartete Ereignisse wie Übergriffe oder Unfälle können schwere psychische Belastungen auslösen. Unsere psychologische Erste Hilfe leistet schnelle und fachkundige Unterstützung, um Langzeitfolgen zu vermeiden und lange Ausfallzeiten zu reduzieren.',

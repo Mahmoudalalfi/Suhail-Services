@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+﻿import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -184,7 +184,7 @@ export default function QualityCertificatesPage() {
   const pillarsTop = Array.isArray(t('qualityPage.pillarsTop')) ? t('qualityPage.pillarsTop') : []
   const standardsList = Array.isArray(t('qualityPage.standardsList')) ? t('qualityPage.standardsList') : []
 
-  const heroImg = t('qualityPage.heroImage') || 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490771/suhail-services/quality-hero-certified.png'
+  const heroImg = t('qualityPage.heroImage') || 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490771/suhail-services/quality-hero-certified.png'
   const heroAlt = t('qualityPage.heroImageAlt') || ''
 
   return (

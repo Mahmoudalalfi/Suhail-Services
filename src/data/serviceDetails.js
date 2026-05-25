@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   'video-surveillance': {
     subtitle: 'Prevention, protection and efficiency',
     heroParagraphs: [
@@ -1070,7 +1070,7 @@ export default {
       {
         type: 'zigzag',
         imageLeft: true,
-        image: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490750/suhail-services/pencil-psychological-first-aid.png',
+        image: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490750/suhail-services/pencil-psychological-first-aid.png',
         title: 'Psychological First Aid: Immediate Support in Crisis Situations',
         paragraphs: [
           'Unexpected events such as assaults or accidents can cause severe psychological distress. Our psychological first aid provides fast and professional support to help prevent long-term consequences and reduce prolonged absence from work.',

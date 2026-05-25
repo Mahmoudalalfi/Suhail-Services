@@ -108,7 +108,7 @@ export default function ContactPage() {
       <div
         ref={headRef}
         style={{
-          padding: 'clamp(120px,14vw,180px) clamp(20px,5vw,60px) clamp(32px,5vw,56px)',
+          padding: 'clamp(140px,16vw,200px) clamp(20px,5vw,60px) clamp(32px,5vw,56px)',
           background: '#fff',
           borderBottom: '1px solid rgba(30,31,40,0.07)',
         }}

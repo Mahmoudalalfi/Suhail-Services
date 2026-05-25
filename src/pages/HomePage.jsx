@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from 'react'
+﻿import { useEffect, useId, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -93,30 +93,30 @@ gsap.registerPlugin(ScrollTrigger)
 */
 const heroImages = [
   // left side — 4 images
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png', alt: 'Facility hero', top: 8, left: 2, w: 170, h: 118, rot: -8, delay: 0.35, depth: 1.0 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1779230964/NewAbout_rhys19.png', alt: 'About team', top: 34, left: 1, w: 155, h: 114, rot: 6, delay: 0.45, depth: 1.2 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png', alt: 'Janitorial', top: 60, left: 3, w: 148, h: 142, rot: -5, delay: 0.60, depth: 1.5 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Construction', top: 78, left: 16, w: 148, h: 100, rot: 8, delay: 0.75, depth: 0.9 },
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png', alt: 'Facility hero', top: 8, left: 2, w: 170, h: 118, rot: -8, delay: 0.35, depth: 1.0 },
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png', alt: 'About team', top: 34, left: 1, w: 155, h: 114, rot: 6, delay: 0.45, depth: 1.2 },
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png', alt: 'Janitorial', top: 60, left: 3, w: 148, h: 142, rot: -5, delay: 0.60, depth: 1.5 },
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Construction', top: 78, left: 16, w: 148, h: 100, rot: 8, delay: 0.75, depth: 0.9 },
   // right side — 4 images
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor care', top: 6, left: 70, w: 172, h: 118, rot: -7, delay: 0.38, depth: 1.1 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', top: 33, left: 76, w: 148, h: 144, rot: -5, delay: 0.55, depth: 1.4 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', top: 60, left: 70, w: 140, h: 112, rot: 9, delay: 0.70, depth: 1.2 },
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777580142/work-project-05_pwdduz.png', alt: 'Work 5', top: 78, left: 82, w: 148, h: 106, rot: -6, delay: 0.85, depth: 0.8 },
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor care', top: 6, left: 70, w: 172, h: 118, rot: -7, delay: 0.38, depth: 1.1 },
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', top: 33, left: 76, w: 148, h: 144, rot: -5, delay: 0.55, depth: 1.4 },
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', top: 60, left: 70, w: 140, h: 112, rot: 9, delay: 0.70, depth: 1.2 },
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580142/work-project-05_pwdduz.png', alt: 'Work 5', top: 78, left: 82, w: 148, h: 106, rot: -6, delay: 0.85, depth: 0.8 },
 ]
 
 
 const MOBILE_HERO_CARDS = [
   /* top — left of center, big, tilted left hard */
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', rot: -18,
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', rot: -18,
     pos: { top: '7%', left: '5%' }, w: 'clamp(110px,31vw,148px)', h: 'clamp(140px,40vw,186px)' },
   /* top — right, higher up, tilted right, different shape */
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490816/suhail-services/work-project-06.png', alt: 'Work 6', rot: 14,
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490816/suhail-services/work-project-06.png', alt: 'Work 6', rot: 14,
     pos: { top: '4%', right: '6%' }, w: 'clamp(118px,34vw,156px)', h: 'clamp(78px,22vw,100px)' },
   /* bottom — far left, low, tilted opposite */
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor', rot: 11,
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor', rot: 11,
     pos: { bottom: '11%', left: '3%' }, w: 'clamp(100px,28vw,128px)', h: 'clamp(100px,28vw,128px)' },
   /* bottom — right but not corner, tucked behind button area, sharp tilt */
-  { url: 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', rot: -23,
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', rot: -23,
     pos: { bottom: '7%', right: '4%' }, w: 'clamp(86px,24vw,110px)', h: 'clamp(114px,32vw,148px)' },
 ]
 
@@ -693,7 +693,7 @@ export default function HomePage() {
             zIndex: 0,
           }}
         >
-          <source src="https://res.cloudinary.com/dfc0qnh88/video/upload/v1779225480/HeroServices_a6xbnv.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/df7aiznm6/video/upload/v1779704566/HeroServices_a6xbnv.mp4" type="video/mp4" />
         </video>
 
         {/* Left-side black gradient — desktop only */}

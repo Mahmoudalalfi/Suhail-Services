@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -114,7 +114,7 @@ export default function SecurityAdvisoryBoardPage() {
   }, [])
 
   const members = Array.isArray(t('securityAdvisoryPage.members')) ? t('securityAdvisoryPage.members') : []
-  const heroImg = t('securityAdvisoryPage.heroImage') || 'https://res.cloudinary.com/dfc0qnh88/image/upload/v1777490795/suhail-services/security-advisory-hero.png'
+  const heroImg = t('securityAdvisoryPage.heroImage') || 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490795/suhail-services/security-advisory-hero.png'
 
   return (
     <div style={{ background: '#fff' }}>
