@@ -17,7 +17,7 @@ export default function LiquidButton({
   const scale = pressed ? 0.965 : hovered ? 1.025 : 1
 
   const solidStyle = {
-    background: tint,
+    backgroundImage: `linear-gradient(${tint}, ${tint})`,
     backdropFilter: 'blur(12px)',
     WebkitBackdropFilter: 'blur(12px)',
     border: '1px solid rgba(255,255,255,0.18)',
@@ -28,9 +28,9 @@ export default function LiquidButton({
 
   // Glass: gold-tinted frosted — visible gold hue, blurs what's behind
   const glassStyle = {
-    background: hovered
-      ? 'rgba(201,168,76,0.45)'
-      : 'rgba(201,168,76,0.28)',
+    backgroundImage: hovered
+      ? 'linear-gradient(rgba(201,168,76,0.45), rgba(201,168,76,0.45))'
+      : 'linear-gradient(rgba(201,168,76,0.28), rgba(201,168,76,0.28))',
     backdropFilter: 'blur(20px) saturate(1.8)',
     WebkitBackdropFilter: 'blur(20px) saturate(1.8)',
     border: '1px solid rgba(255,255,255,0.22)',
@@ -62,7 +62,7 @@ export default function LiquidButton({
         lineHeight: 1,
         whiteSpace: 'nowrap',
         transform: `scale(${scale})`,
-        transition: 'transform 200ms cubic-bezier(0.1,0.4,0.2,1), box-shadow 200ms cubic-bezier(0.1,0.4,0.2,1), background 200ms',
+        transition: 'transform 200ms cubic-bezier(0.1,0.4,0.2,1), box-shadow 200ms cubic-bezier(0.1,0.4,0.2,1), background-image 200ms',
         ...(isSolid ? solidStyle : glassStyle),
         ...style,
       }}
