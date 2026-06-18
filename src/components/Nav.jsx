@@ -374,25 +374,25 @@ function LangButton({ lang, onToggle }) {
         display: 'inline-flex', alignItems: 'center', gap: 7,
         padding: '7px 14px', borderRadius: 999, border: 'none',
         fontSize: 14, fontWeight: 500, letterSpacing: '0.03em',
-        whiteSpace: 'nowrap', cursor: 'pointer', color: '#000',
-        background: 'linear-gradient(145deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.45) 100%)',
-        backdropFilter: 'blur(14px) saturate(1.4)',
-        WebkitBackdropFilter: 'blur(14px) saturate(1.4)',
+        whiteSpace: 'nowrap', cursor: 'pointer', color: '#fff',
+        background: 'rgba(255,255,255,0.18)',
+        backdropFilter: 'blur(20px) saturate(1.8)',
+        WebkitBackdropFilter: 'blur(20px) saturate(1.8)',
         boxShadow: [
-          '0 3px 12px rgba(0,0,0,0.10)',
-          'inset 0 1px 0 rgba(255,255,255,0.8)',
+          '0 4px 16px rgba(0,0,0,0.14)',
+          'inset 0 1px 0 rgba(255,255,255,0.55)',
           'inset 0 -1px 0 rgba(0,0,0,0.06)',
-          '0 0 0 1px rgba(255,255,255,0.3)',
+          '0 0 0 1px rgba(255,255,255,0.22)',
         ].join(', '),
         transformOrigin: 'center center', willChange: 'transform',
         transition: 'box-shadow 0.2s',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.boxShadow = '0 0 0 2px rgba(27,58,122,0.7), 0 4px 16px rgba(27,58,122,0.2), inset 0 1px 0 rgba(255,255,255,0.8)'
+        e.currentTarget.style.boxShadow = '0 0 0 1.5px rgba(255,255,255,0.45), 0 6px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.55)'
         gsap.to(e.currentTarget, { scale: 1.06, duration: 0.18, ease: 'power2.out' })
       }}
       onMouseLeave={e => {
-        e.currentTarget.style.boxShadow = '0 3px 12px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.8), inset 0 -1px 0 rgba(0,0,0,0.06), 0 0 0 1px rgba(255,255,255,0.3)'
+        e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 0 rgba(0,0,0,0.06), 0 0 0 1px rgba(255,255,255,0.22)'
         gsap.to(e.currentTarget, { scale: 1, duration: 0.22, ease: 'power2.out' })
       }}
     >
@@ -400,7 +400,7 @@ function LangButton({ lang, onToggle }) {
       <span aria-hidden style={{
         position: 'absolute', top: 0, left: '10%', right: '10%', height: '40%',
         borderRadius: '0 0 50% 50%',
-        background: 'linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, transparent 100%)',
+        background: 'linear-gradient(to bottom, rgba(255,255,255,0.28) 0%, transparent 100%)',
         pointerEvents: 'none',
       }} />
       {lang === 'en' ? <FlagUS /> : <FlagDE />}
