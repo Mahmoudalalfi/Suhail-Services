@@ -35,27 +35,40 @@ html[data-darkreader-scheme="dark"] {
   filter: none !important;
   -webkit-filter: none !important;
 }
-/* Samsung Internet "dark web content" setting */
+/* Samsung Internet "dark web content" setting — unset globally but re-lock specific elements below */
 * { -webkit-text-fill-color: unset; }
 
-/* Hero rotating text — force color against Samsung Internet / Chrome force-dark */
-.hero-rotating-color-lock,
+/* Hero rotating text — background-clip:text defeats Samsung force-dark color override */
+.hero-rotating-color-lock {
+  forced-color-adjust: none !important;
+  display: inline !important;
+}
 .hero-rotating-color-lock span,
 .hero-rotating-color-lock div,
 .hero-rotating-color-lock * {
+  background: var(--rc, #1B3A7A) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   color: var(--rc, #1B3A7A) !important;
-  -webkit-text-fill-color: var(--rc, #1B3A7A) !important;
   forced-color-adjust: none !important;
 }
 
-/* Ticker strip — lock colors against Samsung force-dark */
+/* Ticker strip — use background-clip:text so Samsung cannot override text color */
 .ticker-item {
-  color: #1B3A7A !important;
-  -webkit-text-fill-color: #1B3A7A !important;
+  background: #0a1e3d !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #0a1e3d !important;
+  forced-color-adjust: none !important;
 }
 .ticker-dot {
-  color: #1B3A7A !important;
-  -webkit-text-fill-color: #1B3A7A !important;
+  background: #0a1e3d !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  forced-color-adjust: none !important;
 }
 
 img, video { display: block; max-width: 100%; }
