@@ -201,7 +201,7 @@ export default function QualityCertificatesPage() {
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#1B3A7A', marginBottom: 20 }}>
+          <p className="navy-text" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 20 }}>
             {t('qualityPage.eyebrowMuted')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -287,10 +287,9 @@ export default function QualityCertificatesPage() {
       <section style={{ background: '#fff', padding: 'clamp(32px, 6vw, 56px) clamp(22px, 5vw, 40px) clamp(56px, 9vw, 88px)' }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           <RevealBlock y={18}>
-            <h2 style={{
+            <h2 className="dark-text" style={{
               fontSize: 'clamp(22px, 3vw, 30px)',
               fontWeight: 700,
-              color: '#0a1628',
               letterSpacing: '-0.03em',
               margin: '0 0 clamp(28px, 4vw, 40px)',
             }}>
@@ -316,10 +315,9 @@ export default function QualityCertificatesPage() {
       <section style={{ background: '#eef2f7', padding: 'clamp(44px, 7vw, 72px) clamp(22px, 5vw, 40px)' }}>
         <div style={{ maxWidth: 840, margin: '0 auto' }}>
           <RevealBlock>
-            <h2 style={{
+            <h2 className="dark-text" style={{
               fontSize: 'clamp(20px, 2.6vw, 26px)',
               fontWeight: 700,
-              color: '#0a1628',
               letterSpacing: '-0.03em',
               margin: '0 0 16px',
             }}>
@@ -380,10 +378,9 @@ export default function QualityCertificatesPage() {
         <div style={{ maxWidth: 1060, margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
             <BulletRing style={{ marginTop: 3 }} />
-            <h2 style={{
+            <h2 className="dark-text" style={{
               fontSize: 'clamp(22px, 3vw, 32px)',
               fontWeight: 700,
-              color: '#0a1628',
               letterSpacing: '-0.03em',
               margin: 0,
             }}>

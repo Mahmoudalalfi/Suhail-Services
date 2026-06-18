@@ -822,7 +822,7 @@ export default function HomePage() {
             <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
               {lang === 'de' ? 'Jetzt Angebot anfordern' : 'Request a Quote'} →
             </LiquidButton>
-            <LiquidButton as={Link} to="/services" textColor="#0f0f12">
+            <LiquidButton as={Link} to="/services" textColor="#fff">
               {lang === 'de' ? 'Leistungen entdecken' : 'View Services'}
             </LiquidButton>
           </motion.div>

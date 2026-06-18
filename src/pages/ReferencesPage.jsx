@@ -115,7 +115,7 @@ export default function ReferencesPage() {
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#1B3A7A', marginBottom: 20 }}>
+          <p className="navy-text" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 20 }}>
             {t('referencesPage.eyebrow')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -149,10 +149,10 @@ export default function ReferencesPage() {
         <div style={{ maxWidth: 1180, margin: '0 auto' }}>
           <RevealBlock y={22}>
             <h2
+              className="dark-text"
               style={{
                 fontSize: 'clamp(24px, 3.6vw, 40px)',
                 fontWeight: 700,
-                color: '#0a1628',
                 letterSpacing: '-0.03em',
                 lineHeight: 1.15,
                 margin: '0 0 clamp(36px, 5vw, 52px)',

@@ -104,7 +104,7 @@ export default function PhilosophyCodePage() {
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#1B3A7A', marginBottom: 20 }}>
+          <p className="navy-text" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 20 }}>
             {t('philosophyPage.eyebrowMuted')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -178,10 +178,9 @@ export default function PhilosophyCodePage() {
       <section style={{ background: '#fff', padding: 'clamp(36px, 6vw, 72px) clamp(22px, 5vw, 40px) clamp(56px, 9vw, 96px)' }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           <RevealBlock y={18}>
-            <h2 style={{
+            <h2 className="dark-text" style={{
               fontSize: 'clamp(22px, 3vw, 30px)',
               fontWeight: 700,
-              color: '#0a1628',
               letterSpacing: '-0.03em',
               margin: '0 0 clamp(28px, 4vw, 40px)',
             }}>

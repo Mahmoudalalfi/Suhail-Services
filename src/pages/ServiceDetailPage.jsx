@@ -52,7 +52,7 @@ function SubPageCard({ subPage, categoryDisplay }) {
         }
       </div>
       <div style={{ padding: '20px 24px 24px' }}>
-        <p style={{ fontSize: 11, fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#1B3A7A', marginBottom: 8 }}>
+        <p className="navy-text" style={{ fontSize: 11, fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 8 }}>
           {categoryDisplay}
         </p>
         <p style={{ fontSize: 'clamp(15px, 1.5vw, 20px)', fontWeight: 500, color: '#000', letterSpacing: '-0.02em', lineHeight: 1.2, marginBottom: 14 }}>
@@ -260,7 +260,7 @@ export default function ServiceDetailPage() {
                     border: '1px solid rgba(30,31,40,0.06)',
                   }}
                 >
-                  <span style={{ fontSize: 28, fontWeight: 300, color: '#1B3A7A', lineHeight: 1, display: 'block', marginBottom: 14 }}>+</span>
+                  <span className="navy-text" style={{ fontSize: 28, fontWeight: 300, lineHeight: 1, display: 'block', marginBottom: 14 }}>+</span>
                   <p style={{ fontSize: 17, fontWeight: 600, color: '#000', letterSpacing: '-0.02em', marginBottom: 10 }}>{c.title}</p>
                   <p style={{ fontSize: 14, fontWeight: 300, color: 'rgba(30,31,40,0.6)', lineHeight: 1.6, letterSpacing: '-0.01em' }}>{c.text}</p>
                 </div>
@@ -287,7 +287,7 @@ export default function ServiceDetailPage() {
               {section.linkLine && (
                 <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,0.82)', lineHeight: 1.75 }}>
                   {section.linkLine.prefix}
-                  <a href={section.linkLine.href} style={{ color: '#1B3A7A', textDecoration: 'underline', textUnderlineOffset: 3 }}>{section.linkLine.linkText}</a>
+                  <a href={section.linkLine.href} className="navy-text" style={{ textDecoration: 'underline', textUnderlineOffset: 3 }}>{section.linkLine.linkText}</a>
                   {section.linkLine.suffix}
                 </p>
               )}

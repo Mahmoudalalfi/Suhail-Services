@@ -54,6 +54,26 @@ html[data-darkreader-scheme="dark"] {
   forced-color-adjust: none !important;
 }
 
+/* Samsung-resistant text color utilities — background-clip:text so force-dark cannot recolor */
+.navy-text {
+  background: #1B3A7A !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #1B3A7A !important;
+  forced-color-adjust: none !important;
+  display: inline-block;
+}
+.dark-text {
+  background: #0a1628 !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #0a1628 !important;
+  forced-color-adjust: none !important;
+  display: inline-block;
+}
+
 /* Ticker strip — use background-clip:text so Samsung cannot override text color */
 .ticker-item {
   background: #0a1e3d !important;
@@ -287,7 +307,12 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   font-size: clamp(22px, 2.8vw, 28px);
   font-weight: 700;
   letter-spacing: -0.025em;
+  background: #0a1628 !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   color: #0a1628;
+  forced-color-adjust: none !important;
   margin: 40px 0 16px;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(27, 58, 122, 0.28);
@@ -297,7 +322,12 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  background: #1B3A7A !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   color: #1B3A7A;
+  forced-color-adjust: none !important;
   margin: 28px 0 12px;
   border-left: 3px solid #1B3A7A;
   padding-left: 12px;
@@ -312,7 +342,12 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   margin-bottom: 8px;
 }
 .imprint-legal-md a {
+  background: #0a1628 !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   color: #0a1628;
+  forced-color-adjust: none !important;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -357,6 +392,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   font-size: 16px;
   font-weight: 600;
   color: #0a1628;
+  forced-color-adjust: none !important;
   text-decoration: none;
   border: 1px solid rgba(27, 58, 122, 0.4);
   background: rgba(255, 255, 255, 0.82);
@@ -550,6 +586,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   border: 1px solid rgba(27, 58, 122, 0.32);
   background: linear-gradient(180deg, #ffffff 0%, #faf7f2 98%);
   color: #0a1628;
+  forced-color-adjust: none !important;
   text-decoration: none;
   transition:
     border-color 0.22s ease,
@@ -739,9 +776,16 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #1B3A7A;
   margin-bottom: 8px;
   opacity: 0.9;
+  /* Samsung force-dark resistant: color comes from background, not color property */
+  background: #1B3A7A !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #1B3A7A !important;
+  forced-color-adjust: none !important;
+  display: inline-block;
 }
 
 .about-bento-title {
@@ -755,11 +799,16 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
 
 .about-bento-arrow {
   font-size: 18px;
-  color: #1B3A7A;
   opacity: 0;
   transform: translateX(-6px);
   transition: opacity 0.25s ease, transform 0.25s ease;
   display: inline-block;
+  background: #1B3A7A !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #1B3A7A !important;
+  forced-color-adjust: none !important;
 }
 
 .about-bento-cell:hover .about-bento-arrow {

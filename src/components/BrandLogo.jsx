@@ -18,7 +18,7 @@ export default function BrandLogo({ variant = 'dark', compact = false, mobile = 
         objectFit: 'contain',
         objectPosition: 'left center',
         display: 'block',
-        ...(light ? { filter: 'brightness(0) invert(1)' } : {}),
+        ...(light ? { filter: 'brightness(0) invert(1)' } : { filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.55)) drop-shadow(0 1px 2px rgba(0,0,0,0.35))' }),
       }}
     />
   )

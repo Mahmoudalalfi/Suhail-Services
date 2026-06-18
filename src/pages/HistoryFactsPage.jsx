@@ -355,11 +355,10 @@ export default function HistoryFactsPage() {
               ← {t('common.backTo')} {t('nav.about')}
             </Link>
 
-            <p style={{
+            <p className="navy-text" style={{
               fontSize: 12,
               fontWeight: 700,
               letterSpacing: '0.12em',
-              color: '#1B3A7A',
               textTransform: 'uppercase',
               margin: '0 0 16px',
             }}>

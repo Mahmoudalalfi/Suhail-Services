@@ -377,7 +377,7 @@ export default function ServicesPage() {
       {/* PROCESS */}
       <section style={{ padding: 'clamp(56px, 10vw, 100px) clamp(20px, 5vw, 40px)', background: '#fff' }}>
         <RevealBlock style={{ marginBottom: 'clamp(32px, 6vw, 56px)' }}>
-          <p style={{ fontSize: 12, fontWeight: 500, letterSpacing: '0.09em', textTransform: 'uppercase', color: '#1B3A7A' }}>
+          <p className="navy-text" style={{ fontSize: 12, fontWeight: 500, letterSpacing: '0.09em', textTransform: 'uppercase' }}>
             {t('services.processTitle')}
           </p>
         </RevealBlock>

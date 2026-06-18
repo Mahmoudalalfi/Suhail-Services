@@ -618,7 +618,7 @@ function ServiceCard({ service, delay }) {
             gap: 8,
             marginBottom: 5,
           }}>
-            <span style={{ color: '#1B3A7A', fontSize: 12, lineHeight: '20px', flexShrink: 0 }}>✓</span>
+            <span className="navy-text" style={{ fontSize: 12, lineHeight: '20px', flexShrink: 0 }}>✓</span>
             <span style={{
               fontSize: 13,
               color: hov ? 'rgba(255,255,255,0.65)' : 'rgba(30,31,40,0.60)',
