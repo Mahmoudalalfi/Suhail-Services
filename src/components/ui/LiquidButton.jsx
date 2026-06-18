@@ -16,8 +16,13 @@ export default function LiquidButton({
   const resolvedText = textColor ?? '#fff'
   const scale = pressed ? 0.965 : hovered ? 1.025 : 1
 
+  const createSvgBg = (color) => {
+    const encodedColor = encodeURIComponent(color);
+    return `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='${encodedColor}'/%3E%3C/svg%3E")`;
+  };
+
   const solidStyle = {
-    backgroundImage: `linear-gradient(${tint}, ${tint})`,
+    backgroundImage: createSvgBg(tint),
     backdropFilter: 'blur(12px)',
     WebkitBackdropFilter: 'blur(12px)',
     border: '1px solid rgba(255,255,255,0.18)',
@@ -29,8 +34,8 @@ export default function LiquidButton({
   // Glass: gold-tinted frosted — visible gold hue, blurs what's behind
   const glassStyle = {
     backgroundImage: hovered
-      ? 'linear-gradient(rgba(201,168,76,0.45), rgba(201,168,76,0.45))'
-      : 'linear-gradient(rgba(201,168,76,0.28), rgba(201,168,76,0.28))',
+      ? createSvgBg('rgba(201,168,76,0.45)')
+      : createSvgBg('rgba(201,168,76,0.28)'),
     backdropFilter: 'blur(20px) saturate(1.8)',
     WebkitBackdropFilter: 'blur(20px) saturate(1.8)',
     border: '1px solid rgba(255,255,255,0.22)',
