@@ -701,7 +701,7 @@ export default function HomePage() {
             zIndex: 0,
           }}
         >
-          <source src="https://res.cloudinary.com/df7aiznm6/video/upload/v1781803757/Hero_fvfcdf.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/df7aiznm6/video/upload/v1781811082/Hero_Final_dzncbg.mp4" type="video/mp4" />
         </video>
 
         {/* Left-side black gradient — desktop only */}
