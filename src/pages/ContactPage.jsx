@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import emailjs from '@emailjs/browser'
@@ -31,7 +31,7 @@ export default function ContactPage() {
     const tl = gsap.timeline({ delay: 0.05 })
     tl.to(headRef.current, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
     tl.to(leftRef.current, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
-    return () => { gsap.set(els, { clearProps: 'all' }) }
+    return () => { gsap.set(els, { clearProps: 'opacity,y' }) }
   }, [])
 
   const handleSubmit = async (e) => {
@@ -108,15 +108,12 @@ export default function ContactPage() {
       <div
         ref={headRef}
         style={{
-          paddingTop: 'clamp(120px,14vw,160px)',
-          paddingLeft: 'clamp(20px,5vw,60px)',
-          paddingRight: 'clamp(20px,5vw,60px)',
-          paddingBottom: 'clamp(32px,5vw,56px)',
+          padding: 'clamp(140px,16vw,200px) clamp(20px,5vw,60px) clamp(32px,5vw,56px)',
           background: '#fff',
           borderBottom: '1px solid rgba(30,31,40,0.07)',
         }}
       >
-        <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#1d4ed8', marginBottom: 16 }}>
+        <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 16 }}>
           {t('contact.subtitle') || 'Get in touch'}
         </p>
         <h1 style={{
@@ -130,7 +127,7 @@ export default function ContactPage() {
           margin: 0,
         }}>
           {t('contact.title1')}
-          {t('contact.title2') && <><br /><span style={{ color: '#1d4ed8' }}>{t('contact.title2')}</span></>}
+          {t('contact.title2') && <><br /><span style={{ color: '#C9A84C' }}>{t('contact.title2')}</span></>}
         </h1>
       </div>
 
@@ -164,9 +161,9 @@ export default function ContactPage() {
                 <div key={label} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
                   <div style={{
                     width: 38, height: 38, borderRadius: 10, flexShrink: 0,
-                    background: '#f0f4ff',
+                    background: '#fdf8e8',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    color: '#1d4ed8',
+                    color: '#C9A84C',
                   }}>{icon}</div>
                   <div>
                     <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(30,31,40,0.35)', marginBottom: 5 }}>{label}</p>
@@ -174,14 +171,14 @@ export default function ContactPage() {
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                         {content.map(email => (
                           <a key={email} href={`mailto:${email}`} style={{ fontSize: 14, color: '#0a0a0a', textDecoration: 'none', letterSpacing: '-0.01em', lineHeight: 1.5 }}
-                            onMouseEnter={e => e.currentTarget.style.color = '#1d4ed8'}
+                            onMouseEnter={e => e.currentTarget.style.color = '#C9A84C'}
                             onMouseLeave={e => e.currentTarget.style.color = '#0a0a0a'}
                           >{email}</a>
                         ))}
                       </div>
                     ) : href ? (
                       <a href={href} style={{ fontSize: 15, color: '#0a0a0a', textDecoration: 'none', letterSpacing: '-0.01em', lineHeight: 1.5 }}
-                        onMouseEnter={e => e.currentTarget.style.color = '#1d4ed8'}
+                        onMouseEnter={e => e.currentTarget.style.color = '#C9A84C'}
                         onMouseLeave={e => e.currentTarget.style.color = '#0a0a0a'}
                       >{content}</a>
                     ) : (
@@ -206,7 +203,7 @@ export default function ContactPage() {
                     textDecoration: 'none', padding: '7px 14px', borderRadius: 8,
                     border: '1px solid rgba(30,31,40,0.12)', transition: 'all 0.2s',
                   }}
-                    onMouseEnter={e => { e.currentTarget.style.color = '#1d4ed8'; e.currentTarget.style.borderColor = '#1d4ed8' }}
+                    onMouseEnter={e => { e.currentTarget.style.color = '#C9A84C'; e.currentTarget.style.borderColor = '#C9A84C' }}
                     onMouseLeave={e => { e.currentTarget.style.color = 'rgba(30,31,40,0.6)'; e.currentTarget.style.borderColor = 'rgba(30,31,40,0.12)' }}
                   >{s.label}</a>
                 ))}
@@ -248,7 +245,7 @@ export default function ContactPage() {
                   <label htmlFor={f.id} style={{
                     display: 'block', fontSize: 12, fontWeight: 600,
                     letterSpacing: '0.06em', textTransform: 'uppercase',
-                    color: focused[f.id] ? '#1d4ed8' : 'rgba(30,31,40,0.45)',
+                    color: focused[f.id] ? '#C9A84C' : 'rgba(30,31,40,0.45)',
                     marginBottom: 8, transition: 'color 0.2s',
                   }}>
                     {f.label}{f.required && <span style={{ color: '#ef4444', marginLeft: 2 }}>*</span>}
@@ -264,7 +261,7 @@ export default function ContactPage() {
                     style={{
                       width: '100%', padding: '14px 16px', boxSizing: 'border-box',
                       background: focused[f.id] ? '#fff' : '#f8f9fc',
-                      border: `1.5px solid ${focused[f.id] ? '#1d4ed8' : 'rgba(30,31,40,0.12)'}`,
+                      border: `1.5px solid ${focused[f.id] ? '#C9A84C' : 'rgba(30,31,40,0.12)'}`,
                       borderRadius: 10, fontSize: 15, fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 400, color: '#0a0a0a', outline: 'none',
                       transition: 'all 0.2s',
@@ -277,7 +274,7 @@ export default function ContactPage() {
                 <label htmlFor="message" style={{
                   display: 'block', fontSize: 12, fontWeight: 600,
                   letterSpacing: '0.06em', textTransform: 'uppercase',
-                  color: focused.message ? '#1d4ed8' : 'rgba(30,31,40,0.45)',
+                  color: focused.message ? '#C9A84C' : 'rgba(30,31,40,0.45)',
                   marginBottom: 8, transition: 'color 0.2s',
                 }}>
                   {t('contact.message')}<span style={{ color: '#ef4444', marginLeft: 2 }}>*</span>
@@ -293,7 +290,7 @@ export default function ContactPage() {
                   style={{
                     width: '100%', padding: '14px 16px', boxSizing: 'border-box',
                     background: focused.message ? '#fff' : '#f8f9fc',
-                    border: `1.5px solid ${focused.message ? '#1d4ed8' : 'rgba(30,31,40,0.12)'}`,
+                    border: `1.5px solid ${focused.message ? '#C9A84C' : 'rgba(30,31,40,0.12)'}`,
                     borderRadius: 10, fontSize: 15, fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 400, color: '#0a0a0a', outline: 'none',
                     resize: 'vertical', minHeight: 130, transition: 'all 0.2s',
@@ -303,7 +300,7 @@ export default function ContactPage() {
 
               <p style={{ fontSize: 12, color: 'rgba(30,31,40,0.45)', lineHeight: 1.6, marginBottom: 20 }}>
                 {t('cookie.contactPrivacy')}{' '}
-                <Link to="/data-protection" style={{ color: '#1d4ed8', textDecoration: 'underline' }}>
+                <Link to="/data-protection" style={{ color: '#C9A84C', textDecoration: 'underline' }}>
                   {t('cookie.contactPrivacyLink')}
                 </Link>{' '}
                 {t('cookie.contactPrivacyEnd')}
@@ -313,7 +310,7 @@ export default function ContactPage() {
                 <p style={{ fontSize: 13, color: '#ef4444', marginBottom: 14, lineHeight: 1.5 }}>{error}</p>
               )}
 
-              <LiquidButton type="submit" tint="#1B3A7A" textColor="#fff" disabled={loading}
+              <LiquidButton type="submit" tint="#C9A84C" textColor="#000" disabled={loading}
                 style={{ opacity: loading ? 0.6 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}>
                 {loading ? 'Sending…' : `${t('contact.send')} →`}
               </LiquidButton>

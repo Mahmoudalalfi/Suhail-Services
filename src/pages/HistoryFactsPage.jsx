@@ -63,7 +63,7 @@ function AnimatedHeading({ children }) {
       <div ref={lineRef} style={{
         width: 56,
         height: 3,
-        background: '#1B3A7A',
+        background: '#C9A84C',
         transformOrigin: 'left center',
       }} />
     </div>
@@ -122,7 +122,7 @@ function TimelineItem({ item, index, rowRef }) {
           transition: 'box-shadow 0.25s ease, border-color 0.25s ease',
           cursor: 'default',
           border: '1px solid rgba(30,31,40,0.06)',
-          borderLeft: hovered ? '3px solid #1B3A7A' : '3px solid rgba(30,31,40,0.06)',
+          borderLeft: hovered ? '3px solid #C9A84C' : '3px solid rgba(30,31,40,0.06)',
         }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -130,7 +130,7 @@ function TimelineItem({ item, index, rowRef }) {
         <p style={{
           fontSize: 'clamp(44px, 5.5vw, 62px)',
           fontWeight: 700,
-          color: hovered ? '#1B3A7A' : '#0047CC',
+          color: hovered ? '#C9A84C' : '#B8972E',
           lineHeight: 1,
           margin: '0 0 14px',
           letterSpacing: '-0.04em',
@@ -154,7 +154,7 @@ function TimelineItem({ item, index, rowRef }) {
       <div
         ref={dotRef}
         className="timeline-zz-dot"
-        style={{ background: hovered ? '#1B3A7A' : '#0047CC', transition: 'background 0.25s ease' }}
+        style={{ background: hovered ? '#C9A84C' : '#B8972E', transition: 'background 0.25s ease' }}
       />
     </div>
   )
@@ -349,16 +349,17 @@ export default function HistoryFactsPage() {
                 marginBottom: 32,
                 transition: 'color 0.2s',
               }}
-              onMouseEnter={e => { e.currentTarget.style.color = '#1d4ed8' }}
+              onMouseEnter={e => { e.currentTarget.style.color = '#C9A84C' }}
               onMouseLeave={e => { e.currentTarget.style.color = 'rgba(10,10,10,0.4)' }}
             >
               ← {t('common.backTo')} {t('nav.about')}
             </Link>
 
-            <p className="navy-text" style={{
+            <p style={{
               fontSize: 12,
               fontWeight: 700,
               letterSpacing: '0.12em',
+              color: '#C9A84C',
               textTransform: 'uppercase',
               margin: '0 0 16px',
             }}>

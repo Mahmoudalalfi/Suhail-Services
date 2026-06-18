@@ -59,7 +59,7 @@ function ProjectCard({ project, index }) {
         <div style={{
           position: 'absolute', top: 'clamp(10px,2.5vw,22px)', right: 'clamp(10px,2.5vw,22px)',
           width: 'clamp(30px,7vw,44px)', height: 'clamp(30px,7vw,44px)', borderRadius: '50%',
-          background: hov ? '#1B3A7A' : 'rgba(255,255,255,0.92)',
+          background: hov ? '#C9A84C' : 'rgba(255,255,255,0.92)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontSize: 17,
           color: hov ? '#fff' : '#000000',
@@ -127,7 +127,7 @@ export default function WorkPage() {
             height: 4,
             borderRadius: 2,
             margin: '28px auto 0',
-            background: 'linear-gradient(90deg, #1B3A7A 0%, #162E62 100%)',
+            background: 'linear-gradient(90deg, #C9A84C 0%, #B8972E 100%)',
           }} aria-hidden />
         </div>
       </section>

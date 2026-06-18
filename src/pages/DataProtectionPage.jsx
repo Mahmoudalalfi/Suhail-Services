@@ -7,8 +7,8 @@ import { getImprintDatenschutzMarkdown } from '../data/imprintDatenschutzMarkdow
 import { extractMarkdownOutline } from '../utils/legalMarkdownHeadings'
 import { buildTocSections } from '../utils/tocGroups'
 
-const BLUE   = '#1d4ed8'
-const YELLOW = '#1B3A7A'
+const BLUE   = '#C9A84C'
+const YELLOW = '#C9A84C'
 
 export default function DataProtectionPage() {
   const { t, lang } = useLanguage()

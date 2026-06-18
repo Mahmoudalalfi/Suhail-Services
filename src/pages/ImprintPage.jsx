@@ -6,8 +6,8 @@ import { useLanguage } from '../i18n/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const BLUE  = '#1d4ed8'
-const YELLOW = '#1B3A7A'
+const BLUE  = '#C9A84C'
+const YELLOW = '#C9A84C'
 
 const telHref = (display) => display.replace(/\s/g, '')
 

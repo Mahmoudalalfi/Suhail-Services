@@ -69,7 +69,7 @@ function SubItem({ sub }) {
       <span style={{
         fontSize: 'clamp(13px, 1.2vw, 16px)',
         fontWeight: 400,
-        color: hov ? '#1B3A7A' : 'rgba(255,255,255,0.65)',
+        color: hov ? '#C9A84C' : 'rgba(255,255,255,0.65)',
         letterSpacing: '-0.01em',
         transition: 'color 0.25s ease',
         display: 'block',
@@ -162,7 +162,7 @@ function ServicesPanel({ servicesList, openCategoryIndex }) {
                 fontSize: 'clamp(14px, 1.4vw, 20px)',
                 letterSpacing: '0.02em',
                 textTransform: 'none',
-                color: active ? '#1B3A7A' : 'rgba(255,255,255,0.35)',
+                color: active ? '#C9A84C' : 'rgba(255,255,255,0.35)',
                 transition: 'color 0.25s ease',
               }}>
                 {label}
@@ -170,7 +170,7 @@ function ServicesPanel({ servicesList, openCategoryIndex }) {
               {hasChildren && (
                 <span style={{
                   fontSize: 16,
-                  color: active ? '#1B3A7A' : 'rgba(255,255,255,0.15)',
+                  color: active ? '#C9A84C' : 'rgba(255,255,255,0.15)',
                   transition: 'color 0.25s ease, transform 0.25s ease',
                   transform: active ? 'rotate(90deg)' : 'rotate(0deg)',
                   display: 'inline-block',
@@ -377,7 +377,7 @@ export default function ServicesPage() {
       {/* PROCESS */}
       <section style={{ padding: 'clamp(56px, 10vw, 100px) clamp(20px, 5vw, 40px)', background: '#fff' }}>
         <RevealBlock style={{ marginBottom: 'clamp(32px, 6vw, 56px)' }}>
-          <p className="navy-text" style={{ fontSize: 12, fontWeight: 500, letterSpacing: '0.09em', textTransform: 'uppercase' }}>
+          <p style={{ fontSize: 12, fontWeight: 500, letterSpacing: '0.09em', textTransform: 'uppercase', color: '#C9A84C' }}>
             {t('services.processTitle')}
           </p>
         </RevealBlock>
@@ -388,7 +388,7 @@ export default function ServicesPage() {
                 <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: 52, color: 'rgba(30,31,40,0.08)', letterSpacing: '-0.02em', lineHeight: 1 }}>
                   {step.num}
                 </p>
-                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#1B3A7A', flexShrink: 0, marginBottom: 4 }} />
+                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#C9A84C', flexShrink: 0, marginBottom: 4 }} />
               </div>
               <p style={{ fontSize: 20, fontWeight: 500, color: '#000000', marginTop: 10, letterSpacing: '-0.02em' }}>{step.title}</p>
               <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(30,31,40,0.5)', marginTop: 10, lineHeight: 1.65, letterSpacing: '-0.01em' }}>{step.desc}</p>
@@ -408,7 +408,7 @@ export default function ServicesPage() {
           </p>
         </RevealBlock>
         <RevealBlock delay={0.1}>
-          <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
+          <LiquidButton as={Link} to="/contact" tint="#C9A84C" textColor="#000">
             {t('services.ctaLink')}
           </LiquidButton>
         </RevealBlock>

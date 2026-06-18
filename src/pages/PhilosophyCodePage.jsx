@@ -58,7 +58,7 @@ function PillarRow({ title, body, index, isLast }) {
           <h3 style={{
             fontSize: 'clamp(17px, 2vw, 19px)',
             fontWeight: 700,
-            color: '#1d4ed8',
+            color: '#C9A84C',
             letterSpacing: '-0.02em',
             margin: '0 0 12px',
           }}>
@@ -99,12 +99,12 @@ export default function PhilosophyCodePage() {
           <Link
             to="/about"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 500, color: 'rgba(10,26,60,0.4)', textDecoration: 'none', letterSpacing: '0.02em', marginBottom: 28 }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = '#1d4ed8' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = '#C9A84C' }}
             onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(10,26,60,0.4)' }}
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p className="navy-text" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 20 }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 20 }}>
             {t('philosophyPage.eyebrowMuted')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -154,7 +154,7 @@ export default function PhilosophyCodePage() {
               maxWidth: 520,
               margin: '0 auto',
               width: '100%',
-              boxShadow: '0 24px 60px rgba(10, 22, 40, 0.12)',
+              boxShadow: '0 24px 60px rgba(30, 24, 8, 0.12)',
               lineHeight: 0,
               background: '#e8ecf2',
               justifySelf: 'center',
@@ -178,9 +178,10 @@ export default function PhilosophyCodePage() {
       <section style={{ background: '#fff', padding: 'clamp(36px, 6vw, 72px) clamp(22px, 5vw, 40px) clamp(56px, 9vw, 96px)' }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           <RevealBlock y={18}>
-            <h2 className="dark-text" style={{
+            <h2 style={{
               fontSize: 'clamp(22px, 3vw, 30px)',
               fontWeight: 700,
+              color: '#1a1200',
               letterSpacing: '-0.03em',
               margin: '0 0 clamp(28px, 4vw, 40px)',
             }}>
@@ -235,18 +236,18 @@ export default function PhilosophyCodePage() {
                   fontWeight: 600,
                   letterSpacing: '-0.01em',
                   textDecoration: 'none',
-                  border: '2px solid #1d4ed8',
+                  border: '2px solid #C9A84C',
                   color: '#0a0a0a',
                   background: '#fff',
                   transition: 'background 0.2s, color 0.2s',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#1d4ed8'
+                  e.currentTarget.style.background = '#C9A84C'
                   e.currentTarget.style.color = '#fff'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = '#fff'
-                  e.currentTarget.style.color = '#1d4ed8'
+                  e.currentTarget.style.color = '#C9A84C'
                 }}
               >
                 {t('philosophyPage.codePdfLabel')}
@@ -259,7 +260,7 @@ export default function PhilosophyCodePage() {
       <section style={{ background: '#fff', padding: 'clamp(44px, 7vw, 72px) clamp(22px, 5vw, 40px)' }}>
         <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
           <RevealBlock>
-            <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
+            <LiquidButton as={Link} to="/contact" tint="#C9A84C" textColor="#000">
               {t('nav.contact')}
             </LiquidButton>
           </RevealBlock>

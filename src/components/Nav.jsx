@@ -14,9 +14,9 @@ const NAV_LINKS = [
   { key: 'nav.contact',  to: '/contact'  },
 ]
 
-/* data URI of a 1x1 #1B3A7A pixel — Samsung Internet does NOT recolor background-image */
-const GLASS_IMG = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%231B3A7A'/%3E%3C/svg%3E\")"
-const GLASS = `${GLASS_IMG}, #1B3A7A`
+/* data URI of a 1x1 #000000 pixel — Samsung Internet does NOT recolor background-image */
+const GLASS_IMG = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%23111111'/%3E%3C/svg%3E\")"
+const GLASS = `${GLASS_IMG}, #111111`
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(() => window.innerWidth < 768)
@@ -98,9 +98,10 @@ export default function Nav() {
           position: 'fixed', top: 10, left: 12, right: 12, zIndex: 1000,
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           padding: '0 10px 0 10px', height: 60, boxSizing: 'border-box',
-          background: '#1B3A7A',
+          background: '#111111',
+          border: '1px solid rgba(255,255,255,0.10)',
           borderRadius: 999,
-          boxShadow: '0 4px 24px rgba(30,31,40,0.13)',
+          boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
         }}>
           <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
             <BrandLogo variant="dark" mobile />
@@ -145,10 +146,10 @@ export default function Nav() {
               className="nav-menu-dropdown"
               style={{
                 position: 'fixed', top: 78, left: 12, right: 12, zIndex: 999,
-                background: GLASS,
-                border: '1px solid rgba(255,255,255,0.2)',
+                background: '#111111',
+                border: '1px solid rgba(255,255,255,0.10)',
                 borderRadius: 24,
-                boxShadow: '0 8px 32px rgba(30,31,40,0.14)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
                 padding: '8px 0 12px',
                 overflow: 'hidden',
               }}
@@ -209,7 +210,7 @@ export default function Nav() {
         transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
       >
         <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-          <BrandLogo variant="dark" compact />
+          <BrandLogo variant="dark" compact isWhiteMode={pathname !== '/'} />
         </Link>
       </motion.div>
 
@@ -224,9 +225,9 @@ export default function Nav() {
         transition={{ type: 'spring', damping: 32, stiffness: 300, mass: 0.75 }}
         style={{
           pointerEvents: 'auto',
-          background: '#1B3A7A',
-          border: '1px solid rgba(255,255,255,0.18)',
-          boxShadow: '0 4px 24px rgba(10,20,60,0.22)',
+          background: '#111111',
+          border: '1px solid rgba(255,255,255,0.10)',
+          boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
           borderRadius: 999,
           overflow: 'hidden',
           display: 'flex',
@@ -332,17 +333,17 @@ export default function Nav() {
           style={{
             display: 'inline-flex', alignItems: 'center',
             padding: '7px 18px', borderRadius: 999, height: 52,
-            background: '#1B3A7A',
-            border: '1px solid rgba(255,255,255,0.18)',
-            boxShadow: '0 4px 24px rgba(10,20,60,0.22)',
+            background: '#111111',
+            border: '1px solid rgba(255,255,255,0.10)',
+            boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
             color: '#fff', fontSize: 15, fontWeight: 400,
             letterSpacing: '-0.01em', textTransform: 'uppercase',
             textDecoration: 'none', whiteSpace: 'nowrap',
             transition: 'background 0.2s',
             boxSizing: 'border-box',
           }}
-          onMouseEnter={e => { e.currentTarget.style.background = '#142d5e' }}
-          onMouseLeave={e => { e.currentTarget.style.background = '#1B3A7A' }}
+          onMouseEnter={e => { e.currentTarget.style.background = '#2a2a2a' }}
+          onMouseLeave={e => { e.currentTarget.style.background = '#111111' }}
         >
           {lang === 'de' ? 'Angebot anfordern' : 'Get a Quote'}
         </Link>
@@ -374,25 +375,25 @@ function LangButton({ lang, onToggle }) {
         display: 'inline-flex', alignItems: 'center', gap: 7,
         padding: '7px 14px', borderRadius: 999, border: 'none',
         fontSize: 14, fontWeight: 500, letterSpacing: '0.03em',
-        whiteSpace: 'nowrap', cursor: 'pointer', color: '#fff',
-        background: 'rgba(255,255,255,0.12)',
-        backdropFilter: 'blur(20px) saturate(1.8)',
-        WebkitBackdropFilter: 'blur(20px) saturate(1.8)',
-        border: '1px solid rgba(255,255,255,0.22)',
+        whiteSpace: 'nowrap', cursor: 'pointer', color: '#000',
+        background: 'linear-gradient(145deg, rgba(201,168,76,0.55) 0%, rgba(184,151,46,0.35) 100%)',
+        backdropFilter: 'blur(14px) saturate(1.6)',
+        WebkitBackdropFilter: 'blur(14px) saturate(1.6)',
         boxShadow: [
-          '0 4px 16px rgba(0,0,0,0.14)',
-          'inset 0 1px 0 rgba(255,255,255,0.35)',
-          'inset 0 -1px 0 rgba(0,0,0,0.05)',
+          '0 3px 12px rgba(201,168,76,0.18)',
+          'inset 0 1px 0 rgba(255,220,100,0.5)',
+          'inset 0 -1px 0 rgba(140,100,0,0.15)',
+          '0 0 0 1px rgba(201,168,76,0.4)',
         ].join(', '),
         transformOrigin: 'center center', willChange: 'transform',
         transition: 'box-shadow 0.2s',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -1px 0 rgba(0,0,0,0.06)'
+        e.currentTarget.style.boxShadow = '0 0 0 2px rgba(201,168,76,0.7), 0 4px 16px rgba(201,168,76,0.2), inset 0 1px 0 rgba(255,255,255,0.8)'
         gsap.to(e.currentTarget, { scale: 1.06, duration: 0.18, ease: 'power2.out' })
       }}
       onMouseLeave={e => {
-        e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -1px 0 rgba(0,0,0,0.05)'
+        e.currentTarget.style.boxShadow = '0 3px 12px rgba(201,168,76,0.18), inset 0 1px 0 rgba(255,220,100,0.5), inset 0 -1px 0 rgba(140,100,0,0.15), 0 0 0 1px rgba(201,168,76,0.4)'
         gsap.to(e.currentTarget, { scale: 1, duration: 0.22, ease: 'power2.out' })
       }}
     >
@@ -400,7 +401,7 @@ function LangButton({ lang, onToggle }) {
       <span aria-hidden style={{
         position: 'absolute', top: 0, left: '10%', right: '10%', height: '40%',
         borderRadius: '0 0 50% 50%',
-        background: 'linear-gradient(to bottom, rgba(255,255,255,0.28) 0%, transparent 100%)',
+        background: 'linear-gradient(to bottom, rgba(255,220,100,0.35) 0%, transparent 100%)',
         pointerEvents: 'none',
       }} />
       {lang === 'en' ? <FlagUS /> : <FlagDE />}
@@ -426,7 +427,7 @@ function FlagUS() {
       {Array.from({ length: 13 }, (_, i) => (
         <rect key={i} x={0} y={i*(15/13)} width={22} height={15/13+0.15} fill={i%2===0?'#B22234':'#FFFFFF'} />
       ))}
-      <rect x={0} y={0} width={9} height={15*7/13} fill="#3C3B6E" />
+      <rect x={0} y={0} width={9} height={15*7/13} fill="#1a1200" />
       {[0,1,2,3,4,5,6,7,8].map(r =>
         Array.from({ length: r%2===0?6:5 }, (_,c) => (
           <circle key={`${r}-${c}`} cx={(r%2===0?0.65:1.3)+c*1.4} cy={0.65+r*0.85} r={0.28} fill="white" />

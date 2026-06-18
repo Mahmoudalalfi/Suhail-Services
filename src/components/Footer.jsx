@@ -24,7 +24,7 @@ export default function Footer() {
             ? <><span>IHR PARTNER</span><br /><span>FÜR</span><br /><span>DIENSTLEISTUNGEN</span></>
             : <><span>YOUR PARTNER</span><br /><span>FOR</span><br /><span>SERVICES</span></>}
         </div>
-        <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
+        <LiquidButton as={Link} to="/contact" tint="#C9A84C" textColor="#000" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
           {lang === 'de' ? 'Jetzt Angebot anfordern →' : 'Request a Quote →'}
         </LiquidButton>
         <LiquidButton as={Link} to="/services" textColor="#fff" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
@@ -43,21 +43,20 @@ export default function Footer() {
           <p style={{ marginTop: 20, fontSize: 14, color: 'rgba(255,255,255,0.38)', lineHeight: 1.65, maxWidth: 280, letterSpacing: '-0.01em' }}>
             {t('footer.brandTagline')}
           </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 5, marginTop: 18 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 18 }}>
             {[
               'Services@suhaili.de',
               'Info.Services@suhaili.de',
               'Kontakt.Services@suhaili.de',
             ].map(email => (
-              <a key={email} href={`mailto:${email}`} style={{ fontSize: 13, color: 'rgba(255,255,255,0.42)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
+              <a key={email} href={`mailto:${email}`} style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', transition: 'color 0.2s', textDecoration: 'none' }}
                 onMouseEnter={e => e.currentTarget.style.color = '#fff'}
-                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.42)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}
               >
                 {email}
               </a>
             ))}
-
-            {/* Phone — prominent call row */}
+            {/* Phone — prominent */}
             <a
               href="tel:+4917641180455"
               style={{
@@ -76,7 +75,7 @@ export default function Footer() {
               +49 176 41180455
             </a>
 
-            {/* WhatsApp — full pill button */}
+            {/* WhatsApp — green pill */}
             <a
               href="https://wa.me/4917641180455"
               target="_blank"

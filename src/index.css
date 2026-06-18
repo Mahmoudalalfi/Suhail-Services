@@ -35,61 +35,8 @@ html[data-darkreader-scheme="dark"] {
   filter: none !important;
   -webkit-filter: none !important;
 }
-/* Samsung Internet "dark web content" setting — unset globally but re-lock specific elements below */
+/* Samsung Internet "dark web content" setting */
 * { -webkit-text-fill-color: unset; }
-
-/* Hero rotating text — background-clip:text defeats Samsung force-dark color override */
-.hero-rotating-color-lock {
-  forced-color-adjust: none !important;
-  display: inline !important;
-}
-.hero-rotating-color-lock span,
-.hero-rotating-color-lock div,
-.hero-rotating-color-lock * {
-  background: var(--rc, #1B3A7A) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: var(--rc, #1B3A7A) !important;
-  forced-color-adjust: none !important;
-}
-
-/* Samsung-resistant text color utilities — background-clip:text so force-dark cannot recolor */
-.navy-text {
-  background: #1B3A7A !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: #1B3A7A !important;
-  forced-color-adjust: none !important;
-  display: inline-block;
-}
-.dark-text {
-  background: #0a1628 !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: #0a1628 !important;
-  forced-color-adjust: none !important;
-  display: inline-block;
-}
-
-/* Ticker strip — use background-clip:text so Samsung cannot override text color */
-.ticker-item {
-  background: #0a1e3d !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: #0a1e3d !important;
-  forced-color-adjust: none !important;
-}
-.ticker-dot {
-  background: #0a1e3d !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  forced-color-adjust: none !important;
-}
 
 img, video { display: block; max-width: 100%; }
 
@@ -144,7 +91,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   will-change: opacity, transform;
 }
 
-/* Clip reveal for hero text — bleed so Ä/Ö/Ü aren’t clipped vs. the line above/below */
+/* Clip reveal for hero text — bleed so Ä/Ö/Ü aren't clipped vs. the line above/below */
 .clip-wrap {
   overflow: hidden;
   display: block;
@@ -193,14 +140,14 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   overflow: hidden;
   background: #111;
   cursor: pointer;
-  box-shadow: inset 0 0 0 1px rgba(30,31,40, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(30,24,8, 0.12);
   transition: box-shadow 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .work-feature-card:hover {
   transform: translateY(-2px);
   box-shadow:
-    inset 0 0 0 1px rgba(27, 58, 122, 0.28),
-    0 10px 32px rgba(30, 31, 40, 0.1);
+    inset 0 0 0 1px rgba(201, 168, 76, 0.28),
+    0 10px 32px rgba(30, 24, 8, 0.1);
 }
 @media (min-width: 768px) {
   .work-feature-card {
@@ -237,15 +184,15 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   background: #111;
   cursor: pointer;
   box-shadow:
-    inset 0 0 0 1px rgba(30, 31, 40, 0.12),
-    0 2px 16px rgba(30, 31, 40, 0.06);
+    inset 0 0 0 1px rgba(30, 24, 8, 0.12),
+    0 2px 16px rgba(30, 24, 8, 0.06);
   transition: box-shadow 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .work-project-card:hover {
   transform: translateY(-2px);
   box-shadow:
-    inset 0 0 0 1px rgba(27, 58, 122, 0.35),
-    0 12px 36px rgba(30, 31, 40, 0.12);
+    inset 0 0 0 1px rgba(201, 168, 76, 0.35),
+    0 12px 36px rgba(30, 24, 8, 0.12);
 }
 @media (min-width: 768px) {
   .work-project-card {
@@ -269,7 +216,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
 .ticker-track:hover { animation-play-state: paused; }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-thumb { background: rgba(30,31,40,0.12); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: rgba(30,24,8,0.12); border-radius: 2px; }
 
 /* ── Flag animations ─────────────────────────────────────── */
 .flag-wave-body {
@@ -299,7 +246,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
 .imprint-legal-md {
   font-size: 16px;
   line-height: 1.78;
-  color: rgba(30,31,40,0.88);
+  color: rgba(30,24,8,0.88);
   letter-spacing: -0.01em;
   max-width: 640px;
 }
@@ -307,29 +254,19 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   font-size: clamp(22px, 2.8vw, 28px);
   font-weight: 700;
   letter-spacing: -0.025em;
-  background: #0a1628 !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: #0a1628;
-  forced-color-adjust: none !important;
+  color: #1a1200;
   margin: 40px 0 16px;
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(27, 58, 122, 0.28);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.28);
 }
 .imprint-legal-md h3 {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  background: #1B3A7A !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: #1B3A7A;
-  forced-color-adjust: none !important;
+  color: #C9A84C;
   margin: 28px 0 12px;
-  border-left: 3px solid #1B3A7A;
+  border-left: 3px solid #C9A84C;
   padding-left: 12px;
 }
 .imprint-legal-md p {
@@ -342,18 +279,13 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   margin-bottom: 8px;
 }
 .imprint-legal-md a {
-  background: #0a1628 !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: #0a1628;
-  forced-color-adjust: none !important;
+  color: #1a1200;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 .imprint-legal-md hr {
   border: none;
-  border-top: 1px solid rgba(30,31,40,0.12);
+  border-top: 1px solid rgba(30,24,8,0.12);
   margin: 36px 0;
 }
 .imprint-legal-md strong {
@@ -391,18 +323,17 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   border-radius: 4px;
   font-size: 16px;
   font-weight: 600;
-  color: #0a1628;
-  forced-color-adjust: none !important;
+  color: #1a1200;
   text-decoration: none;
-  border: 1px solid rgba(27, 58, 122, 0.4);
+  border: 1px solid rgba(201, 168, 76, 0.4);
   background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 10px 32px rgba(10, 22, 40, 0.07);
+  box-shadow: 0 10px 32px rgba(30, 24, 8, 0.07);
   transition: border-color 0.2s ease, box-shadow 0.25s ease, transform 0.2s ease;
   white-space: nowrap;
 }
 .dp-imprint-pill:hover {
-  border-color: rgba(27, 58, 122, 0.55);
-  box-shadow: 0 14px 40px rgba(10, 22, 40, 0.1);
+  border-color: rgba(201, 168, 76, 0.55);
+  box-shadow: 0 14px 40px rgba(30, 24, 8, 0.1);
   transform: translateY(-1px);
 }
 .dp-legal-grid {
@@ -422,17 +353,17 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   overflow: hidden;
   padding: 0;
   border-radius: 8px;
-  border: 1px solid rgba(27, 58, 122, 0.32);
-  background: linear-gradient(168deg, #121d32 0%, #0a1628 42%, #0c1422 100%);
+  border: 1px solid rgba(201, 168, 76, 0.32);
+  background: linear-gradient(168deg, #1a1300 0%, #0f0c00 42%, #120f00 100%);
   box-shadow:
-    0 28px 64px rgba(5, 10, 24, 0.48),
-    inset 0 1px 0 rgba(27, 58, 122, 0.1);
+    0 28px 64px rgba(15, 10, 0, 0.48),
+    inset 0 1px 0 rgba(201, 168, 76, 0.1);
 }
 .dp-toc-desktop-head {
   flex-shrink: 0;
   padding: 22px 22px 18px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  background: linear-gradient(180deg, rgba(27, 58, 122, 0.07) 0%, transparent 96%);
+  background: linear-gradient(180deg, rgba(201, 168, 76, 0.07) 0%, transparent 96%);
 }
 .dp-toc-desktop-eyebrow {
   display: block;
@@ -440,7 +371,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(27, 58, 122, 0.58);
+  color: rgba(201, 168, 76, 0.58);
   margin-bottom: 8px;
 }
 .dp-toc-desktop--lux .dp-toc-desktop-title {
@@ -460,13 +391,13 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   overscroll-behavior: contain;
   padding: 18px 14px 22px 16px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(27, 58, 122, 0.35) transparent;
+  scrollbar-color: rgba(201, 168, 76, 0.35) transparent;
 }
 .dp-toc-desktop-scroll::-webkit-scrollbar {
   width: 5px;
 }
 .dp-toc-desktop-scroll::-webkit-scrollbar-thumb {
-  background: rgba(250, 204, 21, 0.32);
+  background: rgba(201, 168, 76, 0.32);
   border-radius: 4px;
 }
 .dp-toc-cluster {
@@ -481,10 +412,10 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(27, 58, 122, 0.72);
+  color: rgba(201, 168, 76, 0.72);
   margin: 0 0 8px;
   padding: 6px 0 6px 10px;
-  border-left: 2px solid rgba(27, 58, 122, 0.45);
+  border-left: 2px solid rgba(201, 168, 76, 0.45);
   line-height: 1.25;
 }
 .dp-toc-cluster-links {
@@ -523,9 +454,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
 }
 .dp-toc-link:hover,
 .dp-toc-link:focus-visible {
-  background: rgba(27, 58, 122, 0.12);
-  border-left-color: #1B3A7A;
-  color: #e8eef8;
+  background: rgba(201, 168, 76, 0.12);
+  border-left-color: #C9A84C;
+  color: #fff5d6;
   outline: none;
   transform: translateX(2px);
 }
@@ -539,7 +470,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   color: rgba(255, 255, 255, 0.88);
 }
 .dp-legal-main {
-  border-left: 3px solid #1B3A7A;
+  border-left: 3px solid #C9A84C;
   padding-left: clamp(18px, 3vw, 34px);
   margin-left: -2px;
   min-width: 0;
@@ -559,7 +490,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(30, 31, 40, 0.42);
+  color: rgba(30, 24, 8, 0.42);
   margin: 0 0 10px;
 }
 .dp-toc-mobile-scroll {
@@ -583,21 +514,20 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 1px solid rgba(27, 58, 122, 0.32);
-  background: linear-gradient(180deg, #ffffff 0%, #faf7f2 98%);
-  color: #0a1628;
-  forced-color-adjust: none !important;
+  border: 1px solid rgba(201, 168, 76, 0.32);
+  background: linear-gradient(180deg, #ffffff 0%, #faf8f0 98%);
+  color: #1a1200;
   text-decoration: none;
   transition:
     border-color 0.22s ease,
     box-shadow 0.25s ease,
     transform 0.2s ease;
-  box-shadow: 0 8px 24px rgba(10, 22, 40, 0.07);
+  box-shadow: 0 8px 24px rgba(30, 24, 8, 0.07);
 }
 .dp-toc-chip:hover {
-  border-color: rgba(27, 58, 122, 0.55);
-  background: linear-gradient(180deg, #ffffff 0%, #fdfcfa 98%);
-  box-shadow: 0 12px 32px rgba(10, 22, 40, 0.1);
+  border-color: rgba(201, 168, 76, 0.55);
+  background: linear-gradient(180deg, #ffffff 0%, #fdfcf5 98%);
+  box-shadow: 0 12px 32px rgba(30, 24, 8, 0.1);
   transform: translateY(-1px);
 }
 
@@ -648,16 +578,16 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   padding: 20px 20px 22px 22px;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(27, 58, 122, 0.2);
+  border: 1px solid rgba(201, 168, 76, 0.2);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.75),
-    0 10px 36px rgba(10, 22, 40, 0.05);
+    0 10px 36px rgba(30, 24, 8, 0.05);
 }
 .imprint-legalese-card:hover {
-  border-color: rgba(27, 58, 122, 0.32);
+  border-color: rgba(201, 168, 76, 0.32);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.85),
-    0 14px 42px rgba(10, 22, 40, 0.07);
+    0 14px 42px rgba(30, 24, 8, 0.07);
   transition:
     border-color 0.3s ease,
     box-shadow 0.35s ease;
@@ -680,7 +610,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   }
 }
 .about-topic-cell {
-  border-bottom: 1px solid rgba(10, 30, 60, 0.12);
+  border-bottom: 1px solid rgba(30, 24, 8, 0.12);
 }
 .about-topic-placeholder {
   min-height: 12px;
@@ -776,16 +706,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
+  color: #C9A84C;
   margin-bottom: 8px;
   opacity: 0.9;
-  /* Samsung force-dark resistant: color comes from background, not color property */
-  background: #1B3A7A !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: #1B3A7A !important;
-  forced-color-adjust: none !important;
-  display: inline-block;
 }
 
 .about-bento-title {
@@ -799,16 +722,11 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
 
 .about-bento-arrow {
   font-size: 18px;
+  color: #C9A84C;
   opacity: 0;
   transform: translateX(-6px);
   transition: opacity 0.25s ease, transform 0.25s ease;
   display: inline-block;
-  background: #1B3A7A !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: #1B3A7A !important;
-  forced-color-adjust: none !important;
 }
 
 .about-bento-cell:hover .about-bento-arrow {
@@ -824,7 +742,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
 }
 @media (min-width: 960px) {
   .about-topic-cell:not(:nth-child(3n)) {
-    border-right: 1px solid rgba(10, 30, 60, 0.1);
+    border-right: 1px solid rgba(30, 24, 8, 0.1);
   }
 }
 
@@ -852,7 +770,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   margin-top: 14px;
   position: relative;
   z-index: 3;
-  box-shadow: 0 0 0 4px #f0f3f8, 0 0 0 5.5px rgba(10,26,60,0.12);
+  box-shadow: 0 0 0 4px #f8f4e8, 0 0 0 5.5px rgba(30,24,8,0.12);
 }
 .timeline-zz-card {
   flex: 1;
@@ -873,8 +791,8 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(10, 26, 60, 0.15) 8%,
-    rgba(10, 26, 60, 0.15) 92%,
+    rgba(30, 24, 8, 0.15) 8%,
+    rgba(30, 24, 8, 0.15) 92%,
     transparent
   );
   z-index: 1;
@@ -900,8 +818,8 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
     background: linear-gradient(
       to bottom,
       transparent,
-      rgba(10, 26, 60, 0.13) 8%,
-      rgba(10, 26, 60, 0.13) 92%,
+      rgba(30, 24, 8, 0.13) 8%,
+      rgba(30, 24, 8, 0.13) 92%,
       transparent
     );
     transform: translateX(-50%);
@@ -916,7 +834,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
     margin-bottom: clamp(28px, 3vw, 48px);
     padding-left: 0;
   }
-  .timeline-zz-dot { order: 0; margin: 0 auto; width: 12px; height: 12px; box-shadow: 0 0 0 4px #f0f3f8, 0 0 0 5.5px rgba(10,26,60,0.12); }
+  .timeline-zz-dot { order: 0; margin: 0 auto; width: 12px; height: 12px; box-shadow: 0 0 0 4px #f8f4e8, 0 0 0 5.5px rgba(30,24,8,0.12); }
   .timeline-zz-card { flex: unset; }
   .timeline-zz-row--left  .timeline-zz-card { grid-column: 1; grid-row: 1; }
   .timeline-zz-row--left  .timeline-zz-dot  { grid-column: 2; grid-row: 1; }
@@ -954,12 +872,12 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
 }
 
 .references-logo-placeholder-text {
-  color: rgba(10, 26, 60, 0.42);
+  color: rgba(30, 24, 8, 0.42);
   transition: color 0.25s ease;
 }
 
 .references-logo-cell:hover .references-logo-placeholder-text {
-  color: rgba(10, 26, 60, 0.52);
+  color: rgba(30, 24, 8, 0.52);
 }
 
 /* Quality / Certificates — hollow gold ring bullets + split illustration bands */
@@ -968,7 +886,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 2.5px solid #1B3A7A;
+  border: 2.5px solid #C9A84C;
   box-sizing: border-box;
 }
 
@@ -1236,8 +1154,4 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
 }
 
 /* Samsung Internet: use SVG data URI backgrounds — not recolored by force-dark */
-.nav-pill-mobile, .nav-menu-dropdown {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%231B3A7A'/%3E%3C/svg%3E") !important;
-  background-size: cover !important;
-  background-color: #1B3A7A !important;
-}
+/* nav-pill-mobile and nav-menu-dropdown use inline styles for frosted glass — no override needed */

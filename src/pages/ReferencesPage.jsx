@@ -110,12 +110,12 @@ export default function ReferencesPage() {
           <Link
             to="/about"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 500, color: 'rgba(10,26,60,0.4)', textDecoration: 'none', letterSpacing: '0.02em', marginBottom: 28 }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = '#1d4ed8' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = '#C9A84C' }}
             onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(10,26,60,0.4)' }}
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p className="navy-text" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 20 }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 20 }}>
             {t('referencesPage.eyebrow')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -149,10 +149,10 @@ export default function ReferencesPage() {
         <div style={{ maxWidth: 1180, margin: '0 auto' }}>
           <RevealBlock y={22}>
             <h2
-              className="dark-text"
               style={{
                 fontSize: 'clamp(24px, 3.6vw, 40px)',
                 fontWeight: 700,
+                color: '#1a1200',
                 letterSpacing: '-0.03em',
                 lineHeight: 1.15,
                 margin: '0 0 clamp(36px, 5vw, 52px)',
@@ -191,7 +191,7 @@ export default function ReferencesPage() {
             >
               {t('referencesPage.closing')}
             </p>
-            <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
+            <LiquidButton as={Link} to="/contact" tint="#C9A84C" textColor="#000">
               {t('nav.contact')}
             </LiquidButton>
           </RevealBlock>

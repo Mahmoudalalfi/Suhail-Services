@@ -44,7 +44,7 @@ function BulletRing({ style = {} }) {
         flexShrink: 0,
         width: 14,
         height: 14,
-        border: '2px solid #1B3A7A',
+        border: '2px solid #C9A84C',
         borderRadius: '50%',
         marginTop: 5,
         ...style,
@@ -80,12 +80,12 @@ export default function AssociationWorkPage() {
           <Link
             to="/about"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 500, color: 'rgba(10,26,60,0.4)', textDecoration: 'none', letterSpacing: '0.02em', marginBottom: 28 }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = '#1d4ed8' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = '#C9A84C' }}
             onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(10,26,60,0.4)' }}
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p className="navy-text" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 20 }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 20 }}>
             {t('associationWorkPage.eyebrowMuted')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -135,7 +135,7 @@ export default function AssociationWorkPage() {
             maxWidth: 560,
             margin: '0 auto',
             width: '100%',
-            boxShadow: '0 24px 60px rgba(10, 22, 40, 0.12)',
+            boxShadow: '0 24px 60px rgba(30, 24, 8, 0.12)',
             justifySelf: 'center',
             background: '#e8eef6',
           }}>
@@ -181,7 +181,7 @@ export default function AssociationWorkPage() {
               overflow: 'hidden',
               maxWidth: 400,
               margin: '0 auto',
-              boxShadow: '0 18px 44px rgba(10, 22, 40, 0.1)',
+              boxShadow: '0 18px 44px rgba(30, 24, 8, 0.1)',
               aspectRatio: '1 / 1',
               background: '#f4f6f9',
             }}>
@@ -313,7 +313,7 @@ export default function AssociationWorkPage() {
       <section style={{ background: '#fff', padding: 'clamp(44px, 7vw, 72px) clamp(22px, 5vw, 40px)' }}>
         <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
           <RevealBlock>
-            <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
+            <LiquidButton as={Link} to="/contact" tint="#C9A84C" textColor="#000">
               {t('nav.contact')}
             </LiquidButton>
           </RevealBlock>

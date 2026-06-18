@@ -80,7 +80,7 @@ export default function CookieBanner() {
                 onClick={() => setAnalytics(v => !v)}
                 style={{
                   width: 36, height: 20, borderRadius: 10, border: 'none', cursor: 'pointer',
-                  background: analytics ? '#1B3A7A' : 'rgba(255,255,255,0.18)',
+                  background: analytics ? '#C9A84C' : 'rgba(255,255,255,0.18)',
                   position: 'relative', transition: 'background 0.2s', flexShrink: 0, marginLeft: 12,
                 }}
               >
@@ -117,7 +117,7 @@ const ghostBtn = {
 const primaryBtn = {
   fontSize: 12, fontWeight: 600, cursor: 'pointer',
   padding: '7px 14px', borderRadius: 7,
-  background: '#1B3A7A', border: '1px solid #1B3A7A',
+  background: '#C9A84C', border: '1px solid #C9A84C',
   color: '#fff', transition: 'all 0.18s',
   whiteSpace: 'nowrap',
 }

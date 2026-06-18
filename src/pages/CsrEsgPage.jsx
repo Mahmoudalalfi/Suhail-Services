@@ -75,30 +75,30 @@ function GraphicSocial() {
       {/* Ground */}
       <ellipse cx="110" cy="148" rx="90" ry="8" fill="#eef2f8" />
       {/* Person left */}
-      <circle cx="58" cy="52" r="16" fill="#1d4ed8" opacity="0.15" />
-      <circle cx="58" cy="46" r="11" fill="#1d4ed8" />
-      <path d="M40 100 Q58 82 76 100" fill="#1d4ed8" opacity="0.85" />
-      <line x1="58" y1="100" x2="58" y2="135" stroke="#1d4ed8" strokeWidth="4" strokeLinecap="round" />
-      <line x1="58" y1="108" x2="44" y2="122" stroke="#1d4ed8" strokeWidth="3" strokeLinecap="round" />
-      <line x1="58" y1="108" x2="72" y2="118" stroke="#1d4ed8" strokeWidth="3" strokeLinecap="round" />
+      <circle cx="58" cy="52" r="16" fill="#C9A84C" opacity="0.15" />
+      <circle cx="58" cy="46" r="11" fill="#C9A84C" />
+      <path d="M40 100 Q58 82 76 100" fill="#C9A84C" opacity="0.85" />
+      <line x1="58" y1="100" x2="58" y2="135" stroke="#C9A84C" strokeWidth="4" strokeLinecap="round" />
+      <line x1="58" y1="108" x2="44" y2="122" stroke="#C9A84C" strokeWidth="3" strokeLinecap="round" />
+      <line x1="58" y1="108" x2="72" y2="118" stroke="#C9A84C" strokeWidth="3" strokeLinecap="round" />
       {/* Person center */}
-      <circle cx="110" cy="44" r="13" fill="#1B3A7A" />
-      <path d="M90 96 Q110 76 130 96" fill="#1B3A7A" opacity="0.9" />
-      <line x1="110" y1="96" x2="110" y2="135" stroke="#1B3A7A" strokeWidth="4.5" strokeLinecap="round" />
-      <line x1="110" y1="106" x2="93" y2="118" stroke="#1B3A7A" strokeWidth="3.5" strokeLinecap="round" />
-      <line x1="110" y1="106" x2="127" y2="118" stroke="#1B3A7A" strokeWidth="3.5" strokeLinecap="round" />
+      <circle cx="110" cy="44" r="13" fill="#C9A84C" />
+      <path d="M90 96 Q110 76 130 96" fill="#C9A84C" opacity="0.9" />
+      <line x1="110" y1="96" x2="110" y2="135" stroke="#C9A84C" strokeWidth="4.5" strokeLinecap="round" />
+      <line x1="110" y1="106" x2="93" y2="118" stroke="#C9A84C" strokeWidth="3.5" strokeLinecap="round" />
+      <line x1="110" y1="106" x2="127" y2="118" stroke="#C9A84C" strokeWidth="3.5" strokeLinecap="round" />
       {/* Person right */}
-      <circle cx="162" cy="52" r="16" fill="#1d4ed8" opacity="0.15" />
-      <circle cx="162" cy="46" r="11" fill="#1d4ed8" />
-      <path d="M144 100 Q162 82 180 100" fill="#1d4ed8" opacity="0.85" />
-      <line x1="162" y1="100" x2="162" y2="135" stroke="#1d4ed8" strokeWidth="4" strokeLinecap="round" />
-      <line x1="162" y1="108" x2="148" y2="118" stroke="#1d4ed8" strokeWidth="3" strokeLinecap="round" />
-      <line x1="162" y1="108" x2="176" y2="122" stroke="#1d4ed8" strokeWidth="3" strokeLinecap="round" />
+      <circle cx="162" cy="52" r="16" fill="#C9A84C" opacity="0.15" />
+      <circle cx="162" cy="46" r="11" fill="#C9A84C" />
+      <path d="M144 100 Q162 82 180 100" fill="#C9A84C" opacity="0.85" />
+      <line x1="162" y1="100" x2="162" y2="135" stroke="#C9A84C" strokeWidth="4" strokeLinecap="round" />
+      <line x1="162" y1="108" x2="148" y2="118" stroke="#C9A84C" strokeWidth="3" strokeLinecap="round" />
+      <line x1="162" y1="108" x2="176" y2="122" stroke="#C9A84C" strokeWidth="3" strokeLinecap="round" />
       {/* Connecting hands */}
-      <path d="M72 118 Q91 126 93 118" fill="none" stroke="#1d4ed8" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M127 118 Q146 126 148 118" fill="none" stroke="#1d4ed8" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M72 118 Q91 126 93 118" fill="none" stroke="#C9A84C" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M127 118 Q146 126 148 118" fill="none" stroke="#C9A84C" strokeWidth="2.5" strokeLinecap="round" />
       {/* Heart above center */}
-      <path d="M104 22 C104 18 110 14 110 20 C110 14 116 18 116 22 C116 27 110 32 110 32 C110 32 104 27 104 22Z" fill="#1B3A7A" opacity="0.9" />
+      <path d="M104 22 C104 18 110 14 110 20 C110 14 116 18 116 22 C116 27 110 32 110 32 C110 32 104 27 104 22Z" fill="#C9A84C" opacity="0.9" />
     </svg>
   )
 }
@@ -108,14 +108,14 @@ function GraphicCivicAbstract() {
   return (
     <svg width={200} height={160} viewBox="0 0 200 160" aria-hidden className="quality-graphic-svg">
       {/* Shield */}
-      <path d="M100 18 L162 42 L162 88 C162 118 100 148 100 148 C100 148 38 118 38 88 L38 42 Z" fill="#1d4ed8" opacity="0.12" />
-      <path d="M100 26 L154 46 L154 88 C154 114 100 140 100 140 C100 140 46 114 46 88 L46 46 Z" fill="#1d4ed8" opacity="0.18" />
-      <path d="M100 36 L146 52 L146 88 C146 110 100 132 100 132 C100 132 54 110 54 88 L54 52 Z" fill="#1d4ed8" />
+      <path d="M100 18 L162 42 L162 88 C162 118 100 148 100 148 C100 148 38 118 38 88 L38 42 Z" fill="#C9A84C" opacity="0.12" />
+      <path d="M100 26 L154 46 L154 88 C154 114 100 140 100 140 C100 140 46 114 46 88 L46 46 Z" fill="#C9A84C" opacity="0.18" />
+      <path d="M100 36 L146 52 L146 88 C146 110 100 132 100 132 C100 132 54 110 54 88 L54 52 Z" fill="#C9A84C" />
       {/* Checkmark */}
       <path d="M74 88 L92 106 L126 70" fill="none" stroke="#fff" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
       {/* Accent star */}
-      <circle cx="152" cy="32" r="5" fill="#1B3A7A" />
-      <circle cx="48" cy="28" r="3.5" fill="#1B3A7A" opacity="0.6" />
+      <circle cx="152" cy="32" r="5" fill="#C9A84C" />
+      <circle cx="48" cy="28" r="3.5" fill="#C9A84C" opacity="0.6" />
     </svg>
   )
 }
@@ -127,20 +127,20 @@ function GraphicYouthAbstract() {
       {/* Floor */}
       <ellipse cx="100" cy="148" rx="80" ry="7" fill="#eef2f8" />
       {/* Door frame */}
-      <rect x="60" y="30" width="80" height="110" rx="6" fill="#e8edf5" stroke="#1d4ed8" strokeWidth="2.5" opacity="0.5" />
+      <rect x="60" y="30" width="80" height="110" rx="6" fill="#e8edf5" stroke="#C9A84C" strokeWidth="2.5" opacity="0.5" />
       {/* Open door panel */}
-      <path d="M68 38 L68 132 Q68 136 72 136 L116 124 L116 46 Z" fill="#fff" stroke="#1d4ed8" strokeWidth="2" />
+      <path d="M68 38 L68 132 Q68 136 72 136 L116 124 L116 46 Z" fill="#fff" stroke="#C9A84C" strokeWidth="2" />
       {/* Door shine */}
       <line x1="78" y1="55" x2="78" y2="115" stroke="#dbe4f0" strokeWidth="3" strokeLinecap="round" />
       {/* Knob */}
-      <circle cx="110" cy="88" r="5" fill="#1B3A7A" />
+      <circle cx="110" cy="88" r="5" fill="#C9A84C" />
       {/* Path / road ahead */}
-      <path d="M130 140 Q155 110 168 80" fill="none" stroke="#1B3A7A" strokeWidth="3" strokeDasharray="5 4" strokeLinecap="round" />
-      <circle cx="168" cy="78" r="6" fill="#1B3A7A" />
+      <path d="M130 140 Q155 110 168 80" fill="none" stroke="#C9A84C" strokeWidth="3" strokeDasharray="5 4" strokeLinecap="round" />
+      <circle cx="168" cy="78" r="6" fill="#C9A84C" />
       <path d="M165 75 L168 72 L171 75" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       {/* Stars */}
-      <circle cx="46" cy="50" r="3" fill="#1d4ed8" opacity="0.25" />
-      <circle cx="170" cy="40" r="4" fill="#1d4ed8" opacity="0.18" />
+      <circle cx="46" cy="50" r="3" fill="#C9A84C" opacity="0.25" />
+      <circle cx="170" cy="40" r="4" fill="#C9A84C" opacity="0.18" />
     </svg>
   )
 }
@@ -157,8 +157,8 @@ function GraphicHealthAbstract() {
       {/* Heartbeat line over cross */}
       <path d="M46 70 L68 70 L76 52 L86 88 L96 70 L124 70 L134 52 L144 88 L154 70 L174 70" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.7" />
       {/* Accent dots */}
-      <circle cx="174" cy="70" r="5" fill="#1B3A7A" />
-      <circle cx="46" cy="70" r="4" fill="#1B3A7A" opacity="0.6" />
+      <circle cx="174" cy="70" r="5" fill="#C9A84C" />
+      <circle cx="46" cy="70" r="4" fill="#C9A84C" opacity="0.6" />
     </svg>
   )
 }
@@ -174,7 +174,7 @@ function SplitSpotlight({ graphic, title, body }) {
           <h3 style={{
             fontSize: 'clamp(18px, 2.2vw, 22px)',
             fontWeight: 700,
-            color: '#1d4ed8',
+            color: '#C9A84C',
             letterSpacing: '-0.02em',
             margin: '0 0 14px',
           }}>
@@ -242,12 +242,12 @@ export default function CsrEsgPage() {
           <Link
             to="/about"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 500, color: 'rgba(10,26,60,0.4)', textDecoration: 'none', letterSpacing: '0.02em', marginBottom: 28 }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = '#1d4ed8' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = '#C9A84C' }}
             onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(10,26,60,0.4)' }}
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p className="navy-text" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 20 }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 20 }}>
             {t('csrPage.eyebrowMuted')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -296,7 +296,7 @@ export default function CsrEsgPage() {
               width: '100%',
               margin: '0 auto',
               aspectRatio: '1 / 1',
-              boxShadow: '0 24px 60px rgba(10, 22, 40, 0.12)',
+              boxShadow: '0 24px 60px rgba(30, 24, 8, 0.12)',
               lineHeight: 0,
               justifySelf: 'center',
               background: '#183220',
@@ -332,9 +332,10 @@ export default function CsrEsgPage() {
       <section style={{ background: '#fff', padding: 'clamp(28px, 5vw, 48px) clamp(22px, 5vw, 40px) clamp(56px, 9vw, 88px)' }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           <RevealBlock y={18}>
-            <h2 className="dark-text" style={{
+            <h2 style={{
               fontSize: 'clamp(22px, 3vw, 30px)',
               fontWeight: 700,
+              color: '#1a1200',
               letterSpacing: '-0.03em',
               margin: '0 0 clamp(24px, 4vw, 36px)',
             }}>
@@ -350,7 +351,7 @@ export default function CsrEsgPage() {
       </section>
 
       <section className="csr-report-banner" style={{
-        background: 'linear-gradient(135deg, #071a36 0%, #0a2644 50%, #0d3058 100%)',
+        background: 'linear-gradient(135deg, #1a1200 0%, #2a1e00 50%, #1a1200 100%)',
         padding: 'clamp(44px, 8vw, 72px) clamp(22px, 5vw, 40px)',
       }}>
         <RevealBlock>
@@ -396,9 +397,10 @@ export default function CsrEsgPage() {
       <section style={{ background: '#fff', padding: 'clamp(52px, 9vw, 96px) clamp(22px, 5vw, 40px)' }}>
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <RevealBlock>
-            <h2 className="dark-text" style={{
+            <h2 style={{
               fontSize: 'clamp(22px, 3vw, 30px)',
               fontWeight: 700,
+              color: '#1a1200',
               letterSpacing: '-0.03em',
               margin: '0 0 14px',
             }}>
@@ -432,7 +434,7 @@ export default function CsrEsgPage() {
                   width: '100%',
                   aspectRatio: '1 / 1',
                   margin: '0 auto',
-                  boxShadow: '0 18px 48px rgba(10, 22, 40, 0.1)',
+                  boxShadow: '0 18px 48px rgba(30, 24, 8, 0.1)',
                   lineHeight: 0,
                   background: '#243628',
                 }}
@@ -467,7 +469,7 @@ export default function CsrEsgPage() {
                 <h2 style={{
                   fontSize: 'clamp(20px, 2.6vw, 26px)',
                   fontWeight: 700,
-                  color: '#1d4ed8',
+                  color: '#C9A84C',
                   letterSpacing: '-0.025em',
                   margin: '0 0 14px',
                 }}>
@@ -518,7 +520,7 @@ export default function CsrEsgPage() {
             }}>
               {t('csrPage.closing')}
             </p>
-            <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
+            <LiquidButton as={Link} to="/contact" tint="#C9A84C" textColor="#000">
               {t('nav.contact')}
             </LiquidButton>
           </RevealBlock>

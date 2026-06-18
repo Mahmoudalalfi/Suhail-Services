@@ -188,7 +188,7 @@ export default function AboutPage() {
               </p>
             )}
 
-            <LiquidButton as={Link} to={learnMorePath} tint="#1B3A7A" textColor="#fff">
+            <LiquidButton as={Link} to={learnMorePath} tint="#C9A84C" textColor="#000">
               {t('about.learnMoreLabel')}
             </LiquidButton>
           </div>

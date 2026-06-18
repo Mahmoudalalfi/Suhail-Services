@@ -159,7 +159,7 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
               position: 'relative',
               cursor: 'pointer',
               boxShadow: '0 4px 24px rgba(10,11,18,0.10)',
-              border: '1.5px solid rgba(27,58,122,0.2)',
+              border: '1.5px solid rgba(201,168,76,0.2)',
               background: '#0f0f12',
             }}
           >
@@ -346,7 +346,7 @@ export default function GalleryPage() {
           <div style={{
             width: 48, height: 4, borderRadius: 2,
             margin: '28px auto 0',
-            background: 'linear-gradient(90deg, #1B3A7A 0%, #162E62 100%)',
+            background: 'linear-gradient(90deg, #C9A84C 0%, #B8972E 100%)',
           }} aria-hidden />
         </div>
       </section>
@@ -569,12 +569,12 @@ function ServiceCard({ service, delay }) {
         display: 'flex',
         flexDirection: 'column',
         background: hov ? '#0f0f12' : '#fff',
-        border: `1.5px solid ${hov ? '#1B3A7A' : 'rgba(30,31,40,0.09)'}`,
+        border: `1.5px solid ${hov ? '#C9A84C' : 'rgba(30,31,40,0.09)'}`,
         borderRadius: 16,
         padding: 'clamp(18px,2.5vw,28px)',
         textDecoration: 'none',
         transition: 'background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease',
-        boxShadow: hov ? '0 12px 40px rgba(27,58,122,0.18)' : '0 2px 12px rgba(10,11,18,0.06)',
+        boxShadow: hov ? '0 12px 40px rgba(201,168,76,0.18)' : '0 2px 12px rgba(10,11,18,0.06)',
         transform: hov ? 'translateY(-4px)' : 'translateY(0)',
         cursor: 'pointer',
       }}
@@ -584,12 +584,12 @@ function ServiceCard({ service, delay }) {
         width: 52,
         height: 52,
         borderRadius: 12,
-        background: hov ? 'rgba(27,58,122,0.1)' : 'rgba(30,31,40,0.05)',
+        background: hov ? 'rgba(201,168,76,0.1)' : 'rgba(30,31,40,0.05)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: 16,
-        color: hov ? '#1B3A7A' : '#0f0f12',
+        color: hov ? '#C9A84C' : '#0f0f12',
         transition: 'background 0.28s ease, color 0.28s ease',
       }}>
         {SERVICE_ICON[service.category] || SERVICE_ICON['General Services']}
@@ -600,7 +600,7 @@ function ServiceCard({ service, delay }) {
         fontFamily: "'Barlow Condensed', sans-serif",
         fontSize: 'clamp(15px,1.4vw,18px)',
         fontWeight: 700,
-        color: hov ? '#1B3A7A' : '#0f0f12',
+        color: hov ? '#C9A84C' : '#0f0f12',
         letterSpacing: '-0.01em',
         margin: '0 0 8px',
         textTransform: 'uppercase',
@@ -618,7 +618,7 @@ function ServiceCard({ service, delay }) {
             gap: 8,
             marginBottom: 5,
           }}>
-            <span className="navy-text" style={{ fontSize: 12, lineHeight: '20px', flexShrink: 0 }}>✓</span>
+            <span style={{ color: '#C9A84C', fontSize: 12, lineHeight: '20px', flexShrink: 0 }}>✓</span>
             <span style={{
               fontSize: 13,
               color: hov ? 'rgba(255,255,255,0.65)' : 'rgba(30,31,40,0.60)',
@@ -678,7 +678,7 @@ function ServicesSection() {
         </h2>
         <div style={{
           width: 44, height: 4, borderRadius: 2,
-          background: 'linear-gradient(90deg,#1B3A7A,#162E62)',
+          background: 'linear-gradient(90deg,#C9A84C,#B8972E)',
           margin: '0 auto',
         }} />
       </div>
@@ -763,7 +763,7 @@ function WhyChooseUs() {
         </h2>
         <div style={{
           width: 44, height: 4, borderRadius: 2,
-          background: 'linear-gradient(90deg,#1B3A7A,#162E62)',
+          background: 'linear-gradient(90deg,#C9A84C,#B8972E)',
           margin: '0 auto',
         }} />
       </div>
@@ -835,17 +835,17 @@ function WhyCard({ item, delay }) {
         padding: 'clamp(20px,2.5vw,28px)',
         borderRadius: 16,
         background: hov ? '#0f0f12' : '#fff',
-        border: `1.5px solid ${hov ? '#1B3A7A' : 'rgba(30,31,40,0.09)'}`,
-        boxShadow: hov ? '0 12px 40px rgba(27,58,122,0.18)' : '0 2px 12px rgba(10,11,18,0.06)',
+        border: `1.5px solid ${hov ? '#C9A84C' : 'rgba(30,31,40,0.09)'}`,
+        boxShadow: hov ? '0 12px 40px rgba(201,168,76,0.18)' : '0 2px 12px rgba(10,11,18,0.06)',
         transform: hov ? 'translateY(-4px)' : 'translateY(0)',
         transition: 'background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease',
       }}
     >
       <div style={{
         width: 52, height: 52, borderRadius: 12,
-        background: hov ? 'rgba(27,58,122,0.1)' : 'rgba(30,31,40,0.05)',
+        background: hov ? 'rgba(201,168,76,0.1)' : 'rgba(30,31,40,0.05)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        color: hov ? '#1B3A7A' : '#0f0f12',
+        color: hov ? '#C9A84C' : '#0f0f12',
         marginBottom: 16,
         transition: 'background 0.28s ease, color 0.28s ease',
       }}>
@@ -855,7 +855,7 @@ function WhyCard({ item, delay }) {
         fontFamily: "'Barlow Condensed', sans-serif",
         fontSize: 'clamp(14px,1.3vw,17px)',
         fontWeight: 700,
-        color: hov ? '#1B3A7A' : '#0f0f12',
+        color: hov ? '#C9A84C' : '#0f0f12',
         letterSpacing: '-0.01em',
         textTransform: 'uppercase',
         margin: '0 0 8px',
