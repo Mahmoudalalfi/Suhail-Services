@@ -775,7 +775,7 @@ export default function HomePage() {
             }}>
               <span
                 className="hero-rotating-color-lock"
-                style={{ '--rc': ROTATE_COLORS[rotateColorIdx], transition: 'color 0.3s ease' }}
+                style={{ '--rc': ROTATE_COLORS[rotateColorIdx], color: ROTATE_COLORS[rotateColorIdx], WebkitTextFillColor: ROTATE_COLORS[rotateColorIdx] }}
               >
                 <TextRotate
                   texts={

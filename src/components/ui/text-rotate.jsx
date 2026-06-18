@@ -163,6 +163,7 @@ const TextRotate = forwardRef(
                         ),
                       }}
                       className={cn('inline-block', elementLevelClassName)}
+                      style={{ color: 'inherit', WebkitTextFillColor: 'inherit' }}
                     >
                       {char}
                     </motion.span>

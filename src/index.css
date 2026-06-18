@@ -40,9 +40,12 @@ html[data-darkreader-scheme="dark"] {
 
 /* Hero rotating text — force color against Samsung Internet / Chrome force-dark */
 .hero-rotating-color-lock,
+.hero-rotating-color-lock span,
+.hero-rotating-color-lock div,
 .hero-rotating-color-lock * {
-  color: var(--rc) !important;
-  -webkit-text-fill-color: var(--rc) !important;
+  color: var(--rc, #1B3A7A) !important;
+  -webkit-text-fill-color: var(--rc, #1B3A7A) !important;
+  forced-color-adjust: none !important;
 }
 
 /* Ticker strip — lock colors against Samsung force-dark */
