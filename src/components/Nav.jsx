@@ -375,24 +375,24 @@ function LangButton({ lang, onToggle }) {
         padding: '7px 14px', borderRadius: 999, border: 'none',
         fontSize: 14, fontWeight: 500, letterSpacing: '0.03em',
         whiteSpace: 'nowrap', cursor: 'pointer', color: '#fff',
-        background: 'rgba(255,255,255,0.18)',
+        background: 'rgba(255,255,255,0.12)',
         backdropFilter: 'blur(20px) saturate(1.8)',
         WebkitBackdropFilter: 'blur(20px) saturate(1.8)',
+        border: '1px solid rgba(255,255,255,0.22)',
         boxShadow: [
           '0 4px 16px rgba(0,0,0,0.14)',
-          'inset 0 1px 0 rgba(255,255,255,0.55)',
-          'inset 0 -1px 0 rgba(0,0,0,0.06)',
-          '0 0 0 1px rgba(255,255,255,0.22)',
+          'inset 0 1px 0 rgba(255,255,255,0.35)',
+          'inset 0 -1px 0 rgba(0,0,0,0.05)',
         ].join(', '),
         transformOrigin: 'center center', willChange: 'transform',
         transition: 'box-shadow 0.2s',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.boxShadow = '0 0 0 1.5px rgba(255,255,255,0.45), 0 6px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.55)'
+        e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -1px 0 rgba(0,0,0,0.06)'
         gsap.to(e.currentTarget, { scale: 1.06, duration: 0.18, ease: 'power2.out' })
       }}
       onMouseLeave={e => {
-        e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 0 rgba(0,0,0,0.06), 0 0 0 1px rgba(255,255,255,0.22)'
+        e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -1px 0 rgba(0,0,0,0.05)'
         gsap.to(e.currentTarget, { scale: 1, duration: 0.22, ease: 'power2.out' })
       }}
     >
