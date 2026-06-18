@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 const GALLERY_URLS = [
   'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490389/suhail-services/imprint-security-team.png',
   'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png',
   'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png',
   'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png',
   'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490754/suhail-services/pencil-security-technology.jpg',

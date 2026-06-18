@@ -1,4 +1,4 @@
-﻿import { otherCompaniesPageDE, otherCompaniesPageEN } from './otherCompaniesPageData.js'
+import { otherCompaniesPageDE, otherCompaniesPageEN } from './otherCompaniesPageData.js'
 
 export default {
   de: {
@@ -239,7 +239,7 @@ export default {
       hero2: '',
       mission1: '',
       mission2: 'Seit unserer Gründung stehen wir als Unternehmen für Vertrauen, Qualität und Innovation. Mit Hauptsitz in Berlin sind wir ein zuverlässiger Partner für Sicherheits-, Reinigungs- und Gebäudedienstleistungen – mit umfassenden Lösungen aus einer Hand.',
-      aboutImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png',
+      aboutImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png',
       aboutImgAlt: 'Berliner Fernsehturm und Skyline bei Sonnenuntergang',
       learnMoreHref: '/contact',
       learnMoreLabel: 'Mehr erfahren',
@@ -299,12 +299,12 @@ export default {
       cta2: '',
       ctaSubtext: 'Gemeinsam zur richtigen Lösung – wir freuen uns auf die Zusammenarbeit mit Ihnen.',
       ctaLink: 'Kontaktformular →',
-      img1: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png',
+      img1: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png',
       img2: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',
       imgAlt1: 'Sicherheitspersonal',
       imgAlt2: 'Gebäudereinigung',
       team: [
-        { name: 'Michael', role: 'Geschäftsführung', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png' },
+        { name: 'Michael', role: 'Geschäftsführung', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png' },
         { name: 'Sarah', role: 'Einsatzleitung', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg' },
         { name: 'Thomas', role: 'Facility Management', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490810/suhail-services/work-project-04.png' },
         { name: 'Elena', role: 'Gebäudereinigung', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
@@ -783,7 +783,7 @@ export default {
       posts: [
         { date: 'April 2024', tag: 'Reinigung', title: "Professionelle Grundreinigung: Was Unternehmen beachten müssen", excerpt: "Eine Grundreinigung ist mehr als Routinereinigung. Rechtliche Vorgaben, Spezialgeräte und Fachpersonal sind entscheidend.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580123/work-project-02_sg8bni.jpg', read: '5 Min' },
         { date: 'März 2024', tag: 'Reinigung', title: "Effiziente Baustellenreinigung für reibungslose Abläufe", excerpt: "Warum eine kontinuierliche Reinigung während der Bauphase nicht nur für Ordnung, sondern auch für Arbeitssicherheit sorgt.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
-        { date: 'Februar 2024', tag: 'Baulogistik', title: "Baustellenlogistik: Der unsichtbare Erfolgsfaktor", excerpt: "Ohne präzise Logistik stehen Baustellen still. Erfahren Sie, wie wir Material und Personal auf Großbaustellen optimal steuern.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png', read: '6 Min' },
+        { date: 'Februar 2024', tag: 'Baulogistik', title: "Baustellenlogistik: Der unsichtbare Erfolgsfaktor", excerpt: "Ohne präzise Logistik stehen Baustellen still. Erfahren Sie, wie wir Material und Personal auf Großbaustellen optimal steuern.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png', read: '6 Min' },
         { date: 'Januar 2024', tag: 'Facility', title: "Wie Facility Management Betriebskosten senkt", excerpt: "Professionelles Facility Management hält Gebäude in Top-Zustand und hilft Unternehmen, langfristige Instandhaltungskosten zu reduzieren.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490810/suhail-services/work-project-04.png', read: '4 Min' },
         { date: 'Dezember 2023', tag: 'Team', title: "Exzellente Mitarbeiter: Unsere Recruiting-Standards", excerpt: "Die Qualifikation unserer Mitarbeiter geht weit über Grundanforderungen hinaus. Ein Blick hinter die Kulissen unserer internen Schulungen.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', read: '7 Min' },
         { date: 'November 2023', tag: 'Case Study', title: "Komplettpaket Facility Services für das neue Einkaufszentrum West", excerpt: "Ein detaillierter Einblick, wie wir den kompletten Reinigungs- und Personalbedarf für eines der größten neuen Einkaufszentren decken.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg', read: '10 Min' },
@@ -1084,7 +1084,7 @@ export default {
       hero2: '',
       mission1: '',
       mission2: 'Since our founding, we have stood for trust, quality, and innovation. With headquarters in Berlin, we are a reliable partner for security, cleaning, and facility services — providing comprehensive solutions from a single source.',
-      aboutImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png',
+      aboutImage: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png',
       aboutImgAlt: 'Berlin TV Tower and skyline at sunset',
       learnMoreHref: '/contact',
       learnMoreLabel: 'Learn more',
@@ -1144,12 +1144,12 @@ export default {
       cta2: '',
       ctaSubtext: 'Together towards the right solution — we look forward to working with you.',
       ctaLink: 'Contact form →',
-      img1: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png',
+      img1: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png',
       img2: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',
       imgAlt1: 'Security personnel',
       imgAlt2: 'Building cleaning',
       team: [
-        { name: 'Michael', role: 'Management', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png' },
+        { name: 'Michael', role: 'Management', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png' },
         { name: 'Sarah', role: 'Operations', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg' },
         { name: 'Thomas', role: 'Facility Management', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490810/suhail-services/work-project-04.png' },
         { name: 'Elena', role: 'Building Cleaning', img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg' },
@@ -1627,7 +1627,7 @@ export default {
       posts: [
         { date: 'April 2024', tag: 'Cleaning', title: "Professional Deep Cleaning: What Businesses Need to Know", excerpt: "A thorough deep clean is more than routine tidying. Legal standards, specialist equipment, and expert staff are the key.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580123/work-project-02_sg8bni.jpg', read: '5 Min' },
         { date: 'March 2024', tag: 'Cleaning', title: "Efficient Construction Cleaning for Smooth Operations", excerpt: "Why continuous cleaning during the construction phase ensures not only order but also occupational safety.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490826/suhail-services/work_2_1777327709233.jpg', read: '8 Min' },
-        { date: 'February 2024', tag: 'Logistics', title: "Construction Logistics: The Invisible Success Factor", excerpt: "Without precise logistics, sites stand still. Learn how we optimally control material and personnel on large projects.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png', read: '6 Min' },
+        { date: 'February 2024', tag: 'Logistics', title: "Construction Logistics: The Invisible Success Factor", excerpt: "Without precise logistics, sites stand still. Learn how we optimally control material and personnel on large projects.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png', read: '6 Min' },
         { date: 'January 2024', tag: 'Facility', title: "How Facility Management Reduces Operational Costs", excerpt: "Smart facility management keeps buildings running smoothly and helps organisations cut long-term maintenance spend.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490810/suhail-services/work-project-04.png', read: '4 Min' },
         { date: 'December 2023', tag: 'Team', title: "Staffing Excellence: Our Recruitment Standards", excerpt: "Our employees' training goes far beyond basic requirements. A look behind the scenes of our internal onboarding.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg', read: '7 Min' },
         { date: 'November 2023', tag: 'Case Study', title: "Full-Service Facility Package for Shopping Center West", excerpt: "A detailed insight into how we cover the complete cleaning and staffing needs for one of the largest new shopping centers.", img: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490371/suhail-services/home_featured_2_1777327634216.jpg', read: '10 Min' },

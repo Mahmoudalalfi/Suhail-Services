@@ -1,4 +1,4 @@
-﻿import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -94,7 +94,7 @@ gsap.registerPlugin(ScrollTrigger)
 const heroImages = [
   // left side — 4 images
   { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png', alt: 'Facility hero', top: 8, left: 2, w: 170, h: 118, rot: -8, delay: 0.35, depth: 1.0 },
-  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1779230964/NewAbout_rhys19.png', alt: 'About team', top: 34, left: 1, w: 155, h: 114, rot: 6, delay: 0.45, depth: 1.2 },
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png', alt: 'About team', top: 34, left: 1, w: 155, h: 114, rot: 6, delay: 0.45, depth: 1.2 },
   { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png', alt: 'Janitorial', top: 60, left: 3, w: 148, h: 142, rot: -5, delay: 0.60, depth: 1.5 },
   { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Construction', top: 78, left: 16, w: 148, h: 100, rot: 8, delay: 0.75, depth: 0.9 },
   // right side — 4 images
