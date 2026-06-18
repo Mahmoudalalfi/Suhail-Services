@@ -38,6 +38,23 @@ html[data-darkreader-scheme="dark"] {
 /* Samsung Internet "dark web content" setting */
 * { -webkit-text-fill-color: unset; }
 
+/* Hero rotating text — force color against Samsung Internet / Chrome force-dark */
+.hero-rotating-color-lock,
+.hero-rotating-color-lock * {
+  color: var(--rc) !important;
+  -webkit-text-fill-color: var(--rc) !important;
+}
+
+/* Ticker strip — lock colors against Samsung force-dark */
+.ticker-item {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+}
+.ticker-dot {
+  color: #1B3A7A !important;
+  -webkit-text-fill-color: #1B3A7A !important;
+}
+
 img, video { display: block; max-width: 100%; }
 
 /* Why Choose Us grid: 2 cols on mobile, 4 cols on desktop */

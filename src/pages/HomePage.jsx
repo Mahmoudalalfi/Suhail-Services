@@ -434,7 +434,7 @@ function Ticker() {
     }}>
       <div className="ticker-track">
         {items.map((w, i) => (
-          <span key={i} style={{
+          <span key={i} className="ticker-item" style={{
             display: 'inline-flex', alignItems: 'center', gap: 0,
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
@@ -445,7 +445,7 @@ function Ticker() {
             padding: '0 28px',
           }}>
             {w}
-            <span style={{ marginLeft: 28, color: '#1B3A7A' }}>✦</span>
+            <span className="ticker-dot" style={{ marginLeft: 28, color: '#1B3A7A' }}>✦</span>
           </span>
         ))}
       </div>
@@ -773,21 +773,26 @@ export default function HomePage() {
               width: '100%',
               display: 'flex',
             }}>
-              <TextRotate
-                texts={
-                  lang === 'de'
-                    ? ['Gebäudereinigung', 'Facilitymanagement', 'Unterhaltsreinigung', 'Bauendreinigung', 'Gebäudedienste']
-                    : ['Building Cleaning', 'Facility Services', 'Maintenance Cleaning', 'Construction Cleaning', 'Facility Management']
-                }
-                mainClassName="rounded-xl px-3 py-1"
-                elementLevelClassName=""
-                style={{ color: ROTATE_COLORS[rotateColorIdx], transition: 'color 0.3s ease' }}
-                staggerDuration={0.025}
-                staggerFrom="last"
-                rotationInterval={2800}
-                onNext={handleRotateNext}
-                transition={{ type: 'spring', damping: 28, stiffness: 380 }}
-              />
+              <span
+                className="hero-rotating-color-lock"
+                style={{ '--rc': ROTATE_COLORS[rotateColorIdx], transition: 'color 0.3s ease' }}
+              >
+                <TextRotate
+                  texts={
+                    lang === 'de'
+                      ? ['Gebäudereinigung', 'Facilitymanagement', 'Unterhaltsreinigung', 'Bauendreinigung', 'Gebäudedienste']
+                      : ['Building Cleaning', 'Facility Services', 'Maintenance Cleaning', 'Construction Cleaning', 'Facility Management']
+                  }
+                  mainClassName="rounded-xl px-3 py-1"
+                  elementLevelClassName=""
+                  style={{ color: ROTATE_COLORS[rotateColorIdx], transition: 'color 0.3s ease' }}
+                  staggerDuration={0.025}
+                  staggerFrom="last"
+                  rotationInterval={2800}
+                  onNext={handleRotateNext}
+                  transition={{ type: 'spring', damping: 28, stiffness: 380 }}
+                />
+              </span>
             </div>
           </motion.div>
 
