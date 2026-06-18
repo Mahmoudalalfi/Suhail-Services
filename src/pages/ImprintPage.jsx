@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react'
+﻿import { useLayoutEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -7,7 +7,7 @@ import { useLanguage } from '../i18n/LanguageContext'
 gsap.registerPlugin(ScrollTrigger)
 
 const BLUE  = '#1d4ed8'
-const YELLOW = '#FACC15'
+const YELLOW = '#1B3A7A'
 
 const telHref = (display) => display.replace(/\s/g, '')
 

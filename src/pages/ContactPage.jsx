@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import emailjs from '@emailjs/browser'
@@ -108,7 +108,10 @@ export default function ContactPage() {
       <div
         ref={headRef}
         style={{
-          padding: 'clamp(140px,16vw,200px) clamp(20px,5vw,60px) clamp(32px,5vw,56px)',
+          paddingTop: 'clamp(120px,14vw,160px)',
+          paddingLeft: 'clamp(20px,5vw,60px)',
+          paddingRight: 'clamp(20px,5vw,60px)',
+          paddingBottom: 'clamp(32px,5vw,56px)',
           background: '#fff',
           borderBottom: '1px solid rgba(30,31,40,0.07)',
         }}
@@ -310,7 +313,7 @@ export default function ContactPage() {
                 <p style={{ fontSize: 13, color: '#ef4444', marginBottom: 14, lineHeight: 1.5 }}>{error}</p>
               )}
 
-              <LiquidButton type="submit" tint="#FACC15" textColor="#000" disabled={loading}
+              <LiquidButton type="submit" tint="#1B3A7A" textColor="#fff" disabled={loading}
                 style={{ opacity: loading ? 0.6 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}>
                 {loading ? 'Sending…' : `${t('contact.send')} →`}
               </LiquidButton>

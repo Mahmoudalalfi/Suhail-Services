@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -59,10 +59,10 @@ function ProjectCard({ project, index }) {
         <div style={{
           position: 'absolute', top: 'clamp(10px,2.5vw,22px)', right: 'clamp(10px,2.5vw,22px)',
           width: 'clamp(30px,7vw,44px)', height: 'clamp(30px,7vw,44px)', borderRadius: '50%',
-          background: hov ? '#FACC15' : 'rgba(255,255,255,0.92)',
+          background: hov ? '#1B3A7A' : 'rgba(255,255,255,0.92)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontSize: 17,
-          color: hov ? '#0f0f12' : '#000000',
+          color: hov ? '#fff' : '#000000',
           transition: 'background 0.25s, color 0.25s',
           backdropFilter: 'blur(6px)',
           boxShadow: '0 2px 12px rgba(30,31,40,0.12)',
@@ -127,7 +127,7 @@ export default function WorkPage() {
             height: 4,
             borderRadius: 2,
             margin: '28px auto 0',
-            background: 'linear-gradient(90deg, #FACC15 0%, #EAB308 100%)',
+            background: 'linear-gradient(90deg, #1B3A7A 0%, #162E62 100%)',
           }} aria-hidden />
         </div>
       </section>

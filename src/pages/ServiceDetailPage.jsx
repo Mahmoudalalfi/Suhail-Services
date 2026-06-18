@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -38,7 +38,7 @@ function SubPageCard({ subPage, categoryDisplay }) {
         display: 'block', textDecoration: 'none',
         borderRadius: 14, overflow: 'hidden',
         background: '#fafafa',
-        border: `1px solid ${hov ? 'rgba(250,204,21,0.5)' : 'rgba(30,31,40,0.08)'}`,
+        border: `1px solid ${hov ? 'rgba(27,58,122,0.4)' : 'rgba(30,31,40,0.08)'}`,
         transition: 'border-color 0.25s, box-shadow 0.25s',
         boxShadow: hov ? '0 8px 32px rgba(0,0,0,0.08)' : '0 2px 8px rgba(0,0,0,0.03)',
       }}
@@ -52,7 +52,7 @@ function SubPageCard({ subPage, categoryDisplay }) {
         }
       </div>
       <div style={{ padding: '20px 24px 24px' }}>
-        <p style={{ fontSize: 11, fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#FACC15', marginBottom: 8 }}>
+        <p style={{ fontSize: 11, fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#1B3A7A', marginBottom: 8 }}>
           {categoryDisplay}
         </p>
         <p style={{ fontSize: 'clamp(15px, 1.5vw, 20px)', fontWeight: 500, color: '#000', letterSpacing: '-0.02em', lineHeight: 1.2, marginBottom: 14 }}>
@@ -260,7 +260,7 @@ export default function ServiceDetailPage() {
                     border: '1px solid rgba(30,31,40,0.06)',
                   }}
                 >
-                  <span style={{ fontSize: 28, fontWeight: 300, color: '#FACC15', lineHeight: 1, display: 'block', marginBottom: 14 }}>+</span>
+                  <span style={{ fontSize: 28, fontWeight: 300, color: '#1B3A7A', lineHeight: 1, display: 'block', marginBottom: 14 }}>+</span>
                   <p style={{ fontSize: 17, fontWeight: 600, color: '#000', letterSpacing: '-0.02em', marginBottom: 10 }}>{c.title}</p>
                   <p style={{ fontSize: 14, fontWeight: 300, color: 'rgba(30,31,40,0.6)', lineHeight: 1.6, letterSpacing: '-0.01em' }}>{c.text}</p>
                 </div>
@@ -287,7 +287,7 @@ export default function ServiceDetailPage() {
               {section.linkLine && (
                 <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,0.82)', lineHeight: 1.75 }}>
                   {section.linkLine.prefix}
-                  <a href={section.linkLine.href} style={{ color: '#FACC15', textDecoration: 'underline', textUnderlineOffset: 3 }}>{section.linkLine.linkText}</a>
+                  <a href={section.linkLine.href} style={{ color: '#1B3A7A', textDecoration: 'underline', textUnderlineOffset: 3 }}>{section.linkLine.linkText}</a>
                   {section.linkLine.suffix}
                 </p>
               )}
@@ -302,7 +302,7 @@ export default function ServiceDetailPage() {
                 <h2 style={{ fontSize: 'clamp(24px, 3vw, 48px)', fontWeight: 300, letterSpacing: '-0.03em', color: '#000', lineHeight: 1.1, marginBottom: 16 }}>
                   {section.title}
                 </h2>
-                <div style={{ width: 48, height: 3, background: '#FACC15' }} />
+                <div style={{ width: 48, height: 3, background: '#1B3A7A' }} />
               </div>
               <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(30,31,40,0.65)', lineHeight: 1.75, letterSpacing: '-0.01em', paddingTop: 8 }}>
                 {section.description}
@@ -322,7 +322,7 @@ export default function ServiceDetailPage() {
                       display: 'flex', flexDirection: 'column', gap: 28,
                       transition: 'border-color 0.2s, box-shadow 0.2s',
                     }}
-                      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(250,204,21,0.6)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.07)' }}
+                      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(27,58,122,0.5)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.07)' }}
                       onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(30,31,40,0.1)'; e.currentTarget.style.boxShadow = 'none' }}
                     >
                       <span style={{ fontSize: 15, fontWeight: 500, color: '#000', lineHeight: 1.3 }}>{ind.label}</span>
@@ -354,7 +354,7 @@ export default function ServiceDetailPage() {
               <ul style={{ listStyle: 'none', padding: 0, marginTop: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
                 {section.bullets.map((b, bi) => (
                   <li key={bi} style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
-                    <span style={{ width: 18, height: 18, borderRadius: '50%', border: '1.5px solid #FACC15', flexShrink: 0, marginTop: 2 }} />
+                    <span style={{ width: 18, height: 18, borderRadius: '50%', border: '1.5px solid #1B3A7A', flexShrink: 0, marginTop: 2 }} />
                     <span style={{ fontSize: 15, fontWeight: 300, color: 'rgba(30,31,40,0.7)', lineHeight: 1.6, letterSpacing: '-0.01em' }}>
                       {b.label && <strong style={{ fontWeight: 600, color: '#000' }}>{b.label}{b.text ? ': ' : ''}</strong>}
                       {b.text}
@@ -369,7 +369,7 @@ export default function ServiceDetailPage() {
 
       {/* BACK LINK */}
       <section style={{ padding: '60px 44px', background: '#000' }}>
-        <LiquidButton as={Link} to={parentSlug ? `/services/${parentSlug}` : '/services'} tint="#FACC15" textColor="#000">
+        <LiquidButton as={Link} to={parentSlug ? `/services/${parentSlug}` : '/services'} tint="#1B3A7A" textColor="#fff">
           {parentSlug
             ? `← ${t('common.backTo')} ${serviceCatalog[parentSlug]?.title || t('common.overview')}`
             : t('common.backToServices')}

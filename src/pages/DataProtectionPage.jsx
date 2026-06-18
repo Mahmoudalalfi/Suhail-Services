@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useMemo } from 'react'
+﻿import { useLayoutEffect, useRef, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -8,7 +8,7 @@ import { extractMarkdownOutline } from '../utils/legalMarkdownHeadings'
 import { buildTocSections } from '../utils/tocGroups'
 
 const BLUE   = '#1d4ed8'
-const YELLOW = '#FACC15'
+const YELLOW = '#1B3A7A'
 
 export default function DataProtectionPage() {
   const { t, lang } = useLanguage()

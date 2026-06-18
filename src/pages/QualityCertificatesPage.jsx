@@ -47,11 +47,11 @@ function GraphicCommunication() {
     <svg width={220} height={176} viewBox="0 0 220 176" aria-hidden className="quality-graphic-svg">
       <rect x="12" y="22" width="96" height="122" rx="12" fill="#e4e9ef" transform="rotate(-8 60 83)" />
       <rect x="44" y="38" width="104" height="128" rx="12" fill="#ffffff" stroke="rgba(10,26,60,0.09)" strokeWidth="1" transform="rotate(-4 96 102)" />
-      <rect x="58" y="54" width="22" height="22" rx="4" fill="#FACC15" />
+      <rect x="58" y="54" width="22" height="22" rx="4" fill="#1B3A7A" />
       <rect x="88" y="58" width="48" height="5" rx="2" fill="#d6dce6" />
       <rect x="88" y="70" width="40" height="5" rx="2" fill="#d6dce6" />
       <rect x="88" y="82" width="52" height="5" rx="2" fill="#d6dce6" />
-      <circle cx="188" cy="138" r="26" fill="#FACC15" />
+      <circle cx="188" cy="138" r="26" fill="#1B3A7A" />
       <path d="M188 125v26M175 138h26" stroke="#fff" strokeWidth="4" strokeLinecap="round" />
     </svg>
   )
@@ -65,11 +65,11 @@ function GraphicIdeas() {
       <path d="M98 84q10 14 20 0" fill="none" stroke="#b8c4d4" strokeWidth="3" strokeLinecap="round" />
       <rect x="28" y="38" width="68" height="88" rx="10" fill="#fff" stroke="rgba(10,26,60,0.08)" />
       <rect x="124" y="48" width="68" height="88" rx="10" fill="#ffffff" stroke="rgba(10,26,60,0.08)" />
-      <circle cx="44" cy="58" r="7" fill="#FACC15" />
+      <circle cx="44" cy="58" r="7" fill="#1B3A7A" />
       <path d="M40 58l3 3 7-7" stroke="#fff" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="140" cy="66" r="7" fill="#FACC15" />
+      <circle cx="140" cy="66" r="7" fill="#1B3A7A" />
       <path d="M136 66l3 3 7-7" stroke="#fff" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="156" cy="96" r="7" fill="#FACC15" />
+      <circle cx="156" cy="96" r="7" fill="#1B3A7A" />
       <path d="M152 96l3 3 7-7" stroke="#fff" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
       <rect x="42" y="76" width="40" height="4" rx="1" fill="#d6dce6" />
       <rect x="42" y="88" width="32" height="4" rx="1" fill="#d6dce6" />
@@ -201,7 +201,7 @@ export default function QualityCertificatesPage() {
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#FACC15', marginBottom: 20 }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#1B3A7A', marginBottom: 20 }}>
             {t('qualityPage.eyebrowMuted')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -450,7 +450,7 @@ export default function QualityCertificatesPage() {
           }}>
             {t('qualityPage.closing')}
           </p>
-          <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#000">
+          <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
             {t('nav.contact')}
           </LiquidButton>
         </div>

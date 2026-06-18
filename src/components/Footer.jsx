@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import BrandLogo from './BrandLogo'
 import LiquidButton from './ui/LiquidButton'
@@ -24,7 +24,7 @@ export default function Footer() {
             ? <><span>IHR PARTNER</span><br /><span>FÜR</span><br /><span>DIENSTLEISTUNGEN</span></>
             : <><span>YOUR PARTNER</span><br /><span>FOR</span><br /><span>SERVICES</span></>}
         </div>
-        <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#000000" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
+        <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
           {lang === 'de' ? 'Jetzt Angebot anfordern →' : 'Request a Quote →'}
         </LiquidButton>
         <LiquidButton as={Link} to="/services" textColor="#fff" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>

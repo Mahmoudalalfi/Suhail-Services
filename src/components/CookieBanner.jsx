@@ -43,7 +43,7 @@ export default function CookieBanner() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', lineHeight: 1.5, margin: 0 }}>
               {t('cookie.bannerText')}{' '}
-              <Link to="/data-protection" style={{ color: '#FACC15', textDecoration: 'underline' }}>
+              <Link to="/data-protection" style={{ color: '#7EAADC', textDecoration: 'underline' }}>
                 {t('cookie.privacyLink')}
               </Link>
             </p>
@@ -80,14 +80,14 @@ export default function CookieBanner() {
                 onClick={() => setAnalytics(v => !v)}
                 style={{
                   width: 36, height: 20, borderRadius: 10, border: 'none', cursor: 'pointer',
-                  background: analytics ? '#FACC15' : 'rgba(255,255,255,0.18)',
+                  background: analytics ? '#1B3A7A' : 'rgba(255,255,255,0.18)',
                   position: 'relative', transition: 'background 0.2s', flexShrink: 0, marginLeft: 12,
                 }}
               >
                 <span style={{
                   position: 'absolute', top: 2, left: analytics ? 17 : 2,
                   width: 16, height: 16, borderRadius: '50%',
-                  background: analytics ? '#000' : '#fff',
+                  background: analytics ? '#fff' : '#fff',
                   transition: 'left 0.2s',
                 }} />
               </button>
@@ -117,7 +117,7 @@ const ghostBtn = {
 const primaryBtn = {
   fontSize: 12, fontWeight: 600, cursor: 'pointer',
   padding: '7px 14px', borderRadius: 7,
-  background: '#FACC15', border: '1px solid #FACC15',
-  color: '#000', transition: 'all 0.18s',
+  background: '#1B3A7A', border: '1px solid #1B3A7A',
+  color: '#fff', transition: 'all 0.18s',
   whiteSpace: 'nowrap',
 }

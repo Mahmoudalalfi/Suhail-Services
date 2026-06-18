@@ -82,11 +82,11 @@ function GraphicSocial() {
       <line x1="58" y1="108" x2="44" y2="122" stroke="#1d4ed8" strokeWidth="3" strokeLinecap="round" />
       <line x1="58" y1="108" x2="72" y2="118" stroke="#1d4ed8" strokeWidth="3" strokeLinecap="round" />
       {/* Person center */}
-      <circle cx="110" cy="44" r="13" fill="#FACC15" />
-      <path d="M90 96 Q110 76 130 96" fill="#FACC15" opacity="0.9" />
-      <line x1="110" y1="96" x2="110" y2="135" stroke="#FACC15" strokeWidth="4.5" strokeLinecap="round" />
-      <line x1="110" y1="106" x2="93" y2="118" stroke="#FACC15" strokeWidth="3.5" strokeLinecap="round" />
-      <line x1="110" y1="106" x2="127" y2="118" stroke="#FACC15" strokeWidth="3.5" strokeLinecap="round" />
+      <circle cx="110" cy="44" r="13" fill="#1B3A7A" />
+      <path d="M90 96 Q110 76 130 96" fill="#1B3A7A" opacity="0.9" />
+      <line x1="110" y1="96" x2="110" y2="135" stroke="#1B3A7A" strokeWidth="4.5" strokeLinecap="round" />
+      <line x1="110" y1="106" x2="93" y2="118" stroke="#1B3A7A" strokeWidth="3.5" strokeLinecap="round" />
+      <line x1="110" y1="106" x2="127" y2="118" stroke="#1B3A7A" strokeWidth="3.5" strokeLinecap="round" />
       {/* Person right */}
       <circle cx="162" cy="52" r="16" fill="#1d4ed8" opacity="0.15" />
       <circle cx="162" cy="46" r="11" fill="#1d4ed8" />
@@ -98,7 +98,7 @@ function GraphicSocial() {
       <path d="M72 118 Q91 126 93 118" fill="none" stroke="#1d4ed8" strokeWidth="2.5" strokeLinecap="round" />
       <path d="M127 118 Q146 126 148 118" fill="none" stroke="#1d4ed8" strokeWidth="2.5" strokeLinecap="round" />
       {/* Heart above center */}
-      <path d="M104 22 C104 18 110 14 110 20 C110 14 116 18 116 22 C116 27 110 32 110 32 C110 32 104 27 104 22Z" fill="#FACC15" opacity="0.9" />
+      <path d="M104 22 C104 18 110 14 110 20 C110 14 116 18 116 22 C116 27 110 32 110 32 C110 32 104 27 104 22Z" fill="#1B3A7A" opacity="0.9" />
     </svg>
   )
 }
@@ -114,8 +114,8 @@ function GraphicCivicAbstract() {
       {/* Checkmark */}
       <path d="M74 88 L92 106 L126 70" fill="none" stroke="#fff" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
       {/* Accent star */}
-      <circle cx="152" cy="32" r="5" fill="#FACC15" />
-      <circle cx="48" cy="28" r="3.5" fill="#FACC15" opacity="0.6" />
+      <circle cx="152" cy="32" r="5" fill="#1B3A7A" />
+      <circle cx="48" cy="28" r="3.5" fill="#1B3A7A" opacity="0.6" />
     </svg>
   )
 }
@@ -133,10 +133,10 @@ function GraphicYouthAbstract() {
       {/* Door shine */}
       <line x1="78" y1="55" x2="78" y2="115" stroke="#dbe4f0" strokeWidth="3" strokeLinecap="round" />
       {/* Knob */}
-      <circle cx="110" cy="88" r="5" fill="#FACC15" />
+      <circle cx="110" cy="88" r="5" fill="#1B3A7A" />
       {/* Path / road ahead */}
-      <path d="M130 140 Q155 110 168 80" fill="none" stroke="#FACC15" strokeWidth="3" strokeDasharray="5 4" strokeLinecap="round" />
-      <circle cx="168" cy="78" r="6" fill="#FACC15" />
+      <path d="M130 140 Q155 110 168 80" fill="none" stroke="#1B3A7A" strokeWidth="3" strokeDasharray="5 4" strokeLinecap="round" />
+      <circle cx="168" cy="78" r="6" fill="#1B3A7A" />
       <path d="M165 75 L168 72 L171 75" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       {/* Stars */}
       <circle cx="46" cy="50" r="3" fill="#1d4ed8" opacity="0.25" />
@@ -157,8 +157,8 @@ function GraphicHealthAbstract() {
       {/* Heartbeat line over cross */}
       <path d="M46 70 L68 70 L76 52 L86 88 L96 70 L124 70 L134 52 L144 88 L154 70 L174 70" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.7" />
       {/* Accent dots */}
-      <circle cx="174" cy="70" r="5" fill="#FACC15" />
-      <circle cx="46" cy="70" r="4" fill="#FACC15" opacity="0.6" />
+      <circle cx="174" cy="70" r="5" fill="#1B3A7A" />
+      <circle cx="46" cy="70" r="4" fill="#1B3A7A" opacity="0.6" />
     </svg>
   )
 }
@@ -247,7 +247,7 @@ export default function CsrEsgPage() {
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#FACC15', marginBottom: 20 }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#1B3A7A', marginBottom: 20 }}>
             {t('csrPage.eyebrowMuted')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -520,7 +520,7 @@ export default function CsrEsgPage() {
             }}>
               {t('csrPage.closing')}
             </p>
-            <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#000">
+            <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
               {t('nav.contact')}
             </LiquidButton>
           </RevealBlock>

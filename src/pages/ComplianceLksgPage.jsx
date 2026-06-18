@@ -43,7 +43,7 @@ function SvgComplianceFlow() {
       <circle cx={138} cy={118} r={62} fill="#ffffff" stroke="rgba(10,26,60,0.06)" strokeWidth={1} />
       <circle cx={88} cy={92} r={26} fill="#fff" stroke="rgba(10,26,60,0.12)" strokeWidth={2} />
       <rect x={114} y={102} width={48} height={34} rx={8} fill="#2563eb" opacity={0.85} />
-      <circle cx={188} cy={76} r={22} fill="#FACC15" />
+      <circle cx={188} cy={76} r={22} fill="#1B3A7A" />
       <path d="M188 68v16M180 76h16" stroke="#fff" strokeWidth={3} strokeLinecap="round" />
       <circle cx={62} cy={148} r={20} fill="#fff" stroke="rgba(10,26,60,0.12)" strokeWidth={2} />
       <circle cx={218} cy={156} r={20} fill="#fff" stroke="rgba(10,26,60,0.12)" strokeWidth={2} />
@@ -59,10 +59,10 @@ function SvgDocsPlus() {
     <svg width={260} height={200} viewBox="0 0 260 200" aria-hidden className="quality-graphic-svg">
       <rect x={28} y={44} width={112} height={132} rx={14} fill="#fff" stroke="rgba(10,26,60,0.12)" strokeWidth={2} transform="rotate(-6 84 110)" />
       <rect x={108} y={32} width={118} height={138} rx={14} fill="#ffffff" stroke="rgba(10,26,60,0.1)" strokeWidth={2} />
-      <rect x={124} y={52} width={36} height={36} rx={6} fill="#FACC15" />
+      <rect x={124} y={52} width={36} height={36} rx={6} fill="#1B3A7A" />
       <rect x={132} y={104} width={72} height={8} rx={3} fill="#d6dce6" />
       <rect x={132} y={122} width={56} height={8} rx={3} fill="#d6dce6" />
-      <circle cx={208} cy={146} r={36} fill="#FACC15" />
+      <circle cx={208} cy={146} r={36} fill="#1B3A7A" />
       <path d="M208 132v28M194 146h28" stroke="#fff" strokeWidth={4} strokeLinecap="round" />
     </svg>
   )
@@ -75,10 +75,10 @@ function SvgLksgChecks() {
       <rect x={92} y={54} width={72} height={108} rx={12} fill="#fff" stroke="rgba(10,26,60,0.1)" strokeWidth={2} />
       <rect x={156} y={68} width={84} height={96} rx={12} fill="#ffffff" stroke="rgba(10,26,60,0.1)" strokeWidth={2} />
       <rect x={178} y={44} width={72} height={88} rx={12} fill="#fff" stroke="rgba(10,26,60,0.1)" strokeWidth={2} />
-      <rect x={188} y={56} width={26} height={18} rx={4} fill="#FACC15" opacity={0.85} />
+      <rect x={188} y={56} width={26} height={18} rx={4} fill="#1B3A7A" opacity={0.85} />
       {[[104, 42], [154, 58], [204, 38]].map(([cx, cy], i) => (
         <g key={i}>
-          <circle cx={cx} cy={cy} r={16} fill="#FACC15" />
+          <circle cx={cx} cy={cy} r={16} fill="#1B3A7A" />
           <path d={`M${cx - 6} ${cy} l4 4 10-12`} fill="none" stroke="#fff" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" />
         </g>
       ))}
@@ -168,7 +168,7 @@ export default function ComplianceLksgPage() {
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#FACC15', marginBottom: 20 }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#1B3A7A', marginBottom: 20 }}>
             {t('complianceLksgPage.eyebrowMuted')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -480,7 +480,7 @@ export default function ComplianceLksgPage() {
       <section style={{ background: '#fff', padding: 'clamp(44px, 7vw, 72px) clamp(22px, 5vw, 40px)' }}>
         <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
           <RevealBlock>
-            <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#000">
+            <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
               {t('nav.contact')}
             </LiquidButton>
           </RevealBlock>

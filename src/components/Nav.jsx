@@ -14,9 +14,9 @@ const NAV_LINKS = [
   { key: 'nav.contact',  to: '/contact'  },
 ]
 
-/* data URI of a 1x1 #FACC15 pixel — Samsung Internet does NOT recolor background-image */
-const GLASS_IMG = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%23FACC15'/%3E%3C/svg%3E\")"
-const GLASS = `${GLASS_IMG}, #FACC15`
+/* data URI of a 1x1 #1B3A7A pixel — Samsung Internet does NOT recolor background-image */
+const GLASS_IMG = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%231B3A7A'/%3E%3C/svg%3E\")"
+const GLASS = `${GLASS_IMG}, #1B3A7A`
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(() => window.innerWidth < 768)
@@ -50,10 +50,8 @@ export default function Nav() {
 
   const pillRef      = useRef(null)
   const navRailRef   = useRef(null)
-  const highlightRef = useRef(null)
   const homeLinkRef  = useRef(null)
   const linkRefs     = useRef([])
-  const highlightGeomRef = useRef(null)
 
   const lastY  = useRef(0)
   const raf    = useRef(null)
@@ -87,36 +85,7 @@ export default function Nav() {
     }
   }, [])
 
-  /* Active tab highlight slide — only when full pill is visible */
-  function moveActiveHighlight() {
-    const nav = navRailRef.current
-    const hi  = highlightRef.current
-    if (!nav || !hi) return
-    let el = pathname === '/' ? homeLinkRef.current : null
-    if (!el) {
-      const ix = NAV_LINKS.findIndex(({ to }) => navLinkIsActive(to, pathname))
-      if (ix >= 0) el = linkRefs.current[ix]
-    }
-    gsap.killTweensOf(hi)
-    if (!el) {
-      gsap.to(hi, { opacity: 0, duration: 0.16, ease: 'power2.in' })
-      highlightGeomRef.current = null
-      return
-    }
-    const nr = nav.getBoundingClientRect()
-    const er = el.getBoundingClientRect()
-    const next = { left: er.left - nr.left, top: er.top - nr.top, width: er.width, height: er.height }
-    gsap.set(hi, { opacity: 0 })
-    highlightGeomRef.current = next
-    gsap.to(hi, { ...next, opacity: 1, duration: 0.35, ease: 'power2.out' })
-  }
-
-  useLayoutEffect(() => {
-    if (!isMinimized && !isMobile) {
-      const id = setTimeout(moveActiveHighlight, 120)
-      return () => clearTimeout(id)
-    }
-  }, [pathname, lang, isMinimized, isMobile])
+  /* Active tab highlight — handled via CSS background on the active link directly */
 
   const activePageName = getActivePageName(pathname, t)
 
@@ -129,7 +98,7 @@ export default function Nav() {
           position: 'fixed', top: 10, left: 12, right: 12, zIndex: 1000,
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           padding: '0 10px 0 10px', height: 60, boxSizing: 'border-box',
-          background: '#FACC15',
+          background: '#1B3A7A',
           borderRadius: 999,
           boxShadow: '0 4px 24px rgba(30,31,40,0.13)',
         }}>
@@ -151,7 +120,7 @@ export default function Nav() {
                 background: 'none', border: 'none', cursor: 'pointer', flexShrink: 0,
               }}
             >
-              <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ pointerEvents: 'none' }}>
+              <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ pointerEvents: 'none' }}>
                 <path className="menu-bar menu-bar-top" d="M4 12L20 12" />
                 <path className="menu-bar menu-bar-mid" d="M4 12H20" />
                 <path className="menu-bar menu-bar-bot" d="M4 12H20" />
@@ -177,7 +146,7 @@ export default function Nav() {
               style={{
                 position: 'fixed', top: 78, left: 12, right: 12, zIndex: 999,
                 background: GLASS,
-                border: '1px solid rgba(255,200,0,0.4)',
+                border: '1px solid rgba(255,255,255,0.2)',
                 borderRadius: 24,
                 boxShadow: '0 8px 32px rgba(30,31,40,0.14)',
                 padding: '8px 0 12px',
@@ -187,13 +156,13 @@ export default function Nav() {
               <Link to="/" onClick={() => setMenuOpen(false)} style={{
                 display: 'flex', alignItems: 'center', gap: 10,
                 padding: '12px 20px', textDecoration: 'none',
-                borderBottom: '1px solid rgba(0,0,0,0.06)',
-                fontSize: 15, fontWeight: pathname === '/' ? 600 : 400, color: '#000',
-                background: pathname === '/' ? 'rgba(0,0,0,0.05)' : 'transparent',
+                borderBottom: '1px solid rgba(255,255,255,0.12)',
+                fontSize: 15, fontWeight: pathname === '/' ? 600 : 400, color: '#fff',
+                background: pathname === '/' ? 'rgba(255,255,255,0.12)' : 'transparent',
               }}>
                 <HomeIcon />
                 <span>{t('nav.home')}</span>
-                {pathname === '/' && <span style={{ marginLeft: 4, color: '#FACC15' }}>●</span>}
+                {pathname === '/' && <span style={{ marginLeft: 4, color: '#fff' }}>●</span>}
               </Link>
               {NAV_LINKS.map(({ key, to }) => {
                 const active = navLinkIsActive(to, pathname)
@@ -205,14 +174,14 @@ export default function Nav() {
                     style={{
                       display: 'block', padding: '12px 20px',
                       fontSize: 15, fontWeight: active ? 600 : 400,
-                      color: '#000', textDecoration: 'none',
+                      color: '#fff', textDecoration: 'none',
                       letterSpacing: '-0.01em',
-                      borderBottom: '1px solid rgba(0,0,0,0.06)',
-                      background: active ? 'rgba(0,0,0,0.05)' : 'transparent',
+                      borderBottom: '1px solid rgba(255,255,255,0.12)',
+                      background: active ? 'rgba(255,255,255,0.12)' : 'transparent',
                     }}
                   >
                     {t(key)}
-                    {active && <span style={{ marginLeft: 8, color: '#FACC15' }}>●</span>}
+                    {active && <span style={{ marginLeft: 8, color: '#fff' }}>●</span>}
                   </Link>
                 )
               })}
@@ -255,16 +224,9 @@ export default function Nav() {
         transition={{ type: 'spring', damping: 32, stiffness: 300, mass: 0.75 }}
         style={{
           pointerEvents: 'auto',
-          background: GLASS,
-          backdropFilter: 'blur(28px) saturate(130%) brightness(1.06)',
-          WebkitBackdropFilter: 'blur(28px) saturate(130%) brightness(1.06)',
-          border: '1px solid rgba(255,255,255,0.72)',
-          boxShadow: [
-            '0 4px 24px rgba(30,31,40,0.12)',
-            '0 1px 4px rgba(30,31,40,0.08)',
-            'inset 0 1px 0 rgba(255,255,255,0.95)',
-            'inset 0 -1px 0 rgba(0,0,0,0.05)',
-          ].join(', '),
+          background: '#1B3A7A',
+          border: '1px solid rgba(255,255,255,0.18)',
+          boxShadow: '0 4px 24px rgba(10,20,60,0.22)',
           borderRadius: 999,
           overflow: 'hidden',
           display: 'flex',
@@ -291,7 +253,7 @@ export default function Nav() {
           ) : (
             <span style={{
               fontFamily: "'DM Sans', sans-serif", fontWeight: 400,
-              fontSize: 15, letterSpacing: '-0.01em', color: '#000',
+              fontSize: 15, letterSpacing: '-0.01em', color: '#fff',
               textTransform: 'uppercase', whiteSpace: 'nowrap',
             }}>
               {activePageName}
@@ -311,27 +273,18 @@ export default function Nav() {
             zIndex: 1,
           }}
         >
-          <div
-            ref={highlightRef}
-            aria-hidden
-            style={{
-              position: 'absolute', left: 0, top: 0,
-              width: 0, height: 0, opacity: 0,
-              borderRadius: 999,
-              background: 'rgba(255,255,255,0.55)',
-              pointerEvents: 'none', zIndex: 0, boxSizing: 'border-box',
-            }}
-          />
           <Link
             ref={homeLinkRef}
             to="/"
             style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               width: 36, height: 36, borderRadius: 999,
-              background: 'transparent', textDecoration: 'none',
+              background: pathname === '/' ? 'rgba(255,255,255,0.18)' : 'transparent',
+              textDecoration: 'none',
               position: 'relative', zIndex: 1, flexShrink: 0,
+              transition: 'background 0.2s',
             }}
-            onMouseEnter={e => { if (pathname !== '/') e.currentTarget.style.background = 'rgba(0,0,0,0.07)' }}
+            onMouseEnter={e => { if (pathname !== '/') e.currentTarget.style.background = 'rgba(255,255,255,0.1)' }}
             onMouseLeave={e => { if (pathname !== '/') e.currentTarget.style.background = 'transparent' }}
           >
             <HomeIcon />
@@ -345,14 +298,16 @@ export default function Nav() {
                 to={to}
                 style={{
                   padding: lang === 'de' ? '8px 11px' : '8px 18px', borderRadius: 999,
-                  fontSize: lang === 'de' ? 13 : 15, fontWeight: 400,
-                  color: '#000', letterSpacing: '-0.01em',
+                  fontSize: lang === 'de' ? 13 : 15, fontWeight: active ? 600 : 400,
+                  color: '#fff', letterSpacing: '-0.01em',
                   lineHeight: 1, whiteSpace: 'nowrap',
-                  background: 'transparent', textTransform: 'uppercase',
+                  background: active ? 'rgba(255,255,255,0.18)' : 'transparent',
+                  textTransform: 'uppercase',
                   textDecoration: 'none', position: 'relative', zIndex: 1,
+                  transition: 'background 0.2s',
                 }}
-                onMouseEnter={e => { if (!active) e.currentTarget.style.background = 'rgba(0,0,0,0.07)' }}
-                onMouseLeave={e => { if (!active) e.currentTarget.style.background = 'transparent' }}
+                onMouseEnter={e => { if (!active) e.currentTarget.style.background = 'rgba(255,255,255,0.1)' }}
+                onMouseLeave={e => { if (!active) e.currentTarget.style.background = active ? 'rgba(255,255,255,0.18)' : 'transparent' }}
               >
                 {t(key)}
               </Link>
@@ -377,24 +332,17 @@ export default function Nav() {
           style={{
             display: 'inline-flex', alignItems: 'center',
             padding: '7px 18px', borderRadius: 999, height: 52,
-            background: GLASS,
-            backdropFilter: 'blur(28px) saturate(130%) brightness(1.06)',
-            WebkitBackdropFilter: 'blur(28px) saturate(130%) brightness(1.06)',
-            border: '1px solid rgba(255,255,255,0.72)',
-            boxShadow: [
-              '0 4px 24px rgba(30,31,40,0.12)',
-              '0 1px 4px rgba(30,31,40,0.08)',
-              'inset 0 1px 0 rgba(255,255,255,0.95)',
-              'inset 0 -1px 0 rgba(0,0,0,0.05)',
-            ].join(', '),
-            color: '#000', fontSize: 15, fontWeight: 400,
+            background: '#1B3A7A',
+            border: '1px solid rgba(255,255,255,0.18)',
+            boxShadow: '0 4px 24px rgba(10,20,60,0.22)',
+            color: '#fff', fontSize: 15, fontWeight: 400,
             letterSpacing: '-0.01em', textTransform: 'uppercase',
             textDecoration: 'none', whiteSpace: 'nowrap',
             transition: 'background 0.2s',
             boxSizing: 'border-box',
           }}
-          onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,220,40,0.96)' }}
-          onMouseLeave={e => { e.currentTarget.style.background = GLASS }}
+          onMouseEnter={e => { e.currentTarget.style.background = '#142d5e' }}
+          onMouseLeave={e => { e.currentTarget.style.background = '#1B3A7A' }}
         >
           {lang === 'de' ? 'Angebot anfordern' : 'Get a Quote'}
         </Link>
@@ -440,7 +388,7 @@ function LangButton({ lang, onToggle }) {
         transition: 'box-shadow 0.2s',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.boxShadow = '0 0 0 2px rgba(250,204,21,0.7), 0 4px 16px rgba(250,204,21,0.2), inset 0 1px 0 rgba(255,255,255,0.8)'
+        e.currentTarget.style.boxShadow = '0 0 0 2px rgba(27,58,122,0.7), 0 4px 16px rgba(27,58,122,0.2), inset 0 1px 0 rgba(255,255,255,0.8)'
         gsap.to(e.currentTarget, { scale: 1.06, duration: 0.18, ease: 'power2.out' })
       }}
       onMouseLeave={e => {
@@ -515,9 +463,9 @@ function HomeIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
       <path d="M2.5 8.5L10 2.5l7.5 6V17a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V8.5z"
-        stroke="#000" strokeWidth="1.6" strokeLinejoin="round" />
+        stroke="#fff" strokeWidth="1.6" strokeLinejoin="round" />
       <path d="M7.5 17.5v-5.25a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V17.5"
-        stroke="#000" strokeWidth="1.6" strokeLinejoin="round" />
+        stroke="#fff" strokeWidth="1.6" strokeLinejoin="round" />
     </svg>
   )
 }

@@ -130,7 +130,7 @@ export default function SecurityAdvisoryBoardPage() {
           >
             ← {t('common.backTo')} {t('nav.about')}
           </Link>
-          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#FACC15', marginBottom: 20 }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#1B3A7A', marginBottom: 20 }}>
             {t('securityAdvisoryPage.eyebrowMuted')}
           </p>
           <h1 style={{ fontSize: 'clamp(48px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.0, margin: '0 0 24px' }}>
@@ -301,7 +301,7 @@ export default function SecurityAdvisoryBoardPage() {
       <section style={{ background: '#fff', padding: 'clamp(44px, 7vw, 72px) clamp(22px, 5vw, 40px)' }}>
         <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
           <RevealBlock>
-            <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#000">
+            <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
               {t('nav.contact')}
             </LiquidButton>
           </RevealBlock>

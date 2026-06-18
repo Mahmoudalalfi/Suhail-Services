@@ -404,10 +404,10 @@ function WorkCard({ project }) {
       <div style={{
         position: 'absolute', top: 'clamp(10px,2.5vw,22px)', right: 'clamp(10px,2.5vw,22px)',
         width: 'clamp(32px,8vw,44px)', height: 'clamp(32px,8vw,44px)', borderRadius: '50%',
-        background: hov ? '#FACC15' : 'rgba(255,255,255,0.92)',
+        background: hov ? '#1B3A7A' : 'rgba(255,255,255,0.92)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         fontSize: 18,
-        color: hov ? '#0f0f12' : '#000000',
+        color: hov ? '#fff' : '#000000',
         transition: 'background 0.25s, color 0.25s',
         backdropFilter: 'blur(6px)',
         boxShadow: '0 2px 12px rgba(30,31,40,0.12)',
@@ -445,7 +445,7 @@ function Ticker() {
             padding: '0 28px',
           }}>
             {w}
-            <span style={{ marginLeft: 28, color: '#FACC15' }}>✦</span>
+            <span style={{ marginLeft: 28, color: '#1B3A7A' }}>✦</span>
           </span>
         ))}
       </div>
@@ -623,8 +623,8 @@ export default function HomePage() {
   const workRef = useRef(null)
   const card1Ref = useRef(null)
   const card2Ref = useRef(null)
-  /* Alternates #FACC15 (yellow) and #1D4ED8 (blue) on each text rotation */
-  const ROTATE_COLORS = ['#FACC15', '#1D4ED8']
+  /* Alternates #1B3A7A (yellow) and #1D4ED8 (blue) on each text rotation */
+  const ROTATE_COLORS = ['#1B3A7A', '#1D4ED8']
   const [rotateColorIdx, setRotateColorIdx] = useState(0)
   const handleRotateNext = (idx) => setRotateColorIdx(idx % ROTATE_COLORS.length)
 
@@ -815,7 +815,7 @@ export default function HomePage() {
             transition={{ delay: 0.8, duration: 0.5, ease: 'easeOut' }}
             style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 12, marginTop: 16 }}
           >
-            <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#0f0f12">
+            <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff">
               {lang === 'de' ? 'Jetzt Angebot anfordern' : 'Request a Quote'} →
             </LiquidButton>
             <LiquidButton as={Link} to="/services" textColor="#0f0f12">
@@ -923,7 +923,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className="cta-dark-buttons" style={{ alignSelf: 'flex-start', display: 'flex', flexWrap: 'wrap', gap: 16 }}>
-          <LiquidButton as={Link} to="/contact" tint="#FACC15" textColor="#000000" style={{ fontSize: 15, padding: '10px 24px' }}>
+          <LiquidButton as={Link} to="/contact" tint="#1B3A7A" textColor="#fff" style={{ fontSize: 15, padding: '10px 24px' }}>
             {lang === 'de' ? 'Jetzt Angebot anfordern →' : 'Request a Quote →'}
           </LiquidButton>
           <LiquidButton as={Link} to="/services" textColor="#fff" style={{ fontSize: 15, padding: '10px 24px' }}>
@@ -1016,22 +1016,22 @@ function HomeServiceCard({ service }) {
         width: '100%',
         height: '100%',
         background: hov ? '#0f0f12' : '#fff',
-        border: `1.5px solid ${hov ? '#FACC15' : 'rgba(30,31,40,0.09)'}`,
+        border: `1.5px solid ${hov ? '#1B3A7A' : 'rgba(30,31,40,0.09)'}`,
         borderRadius: 16,
         padding: 'clamp(18px,2.5vw,28px)',
         textDecoration: 'none',
         transition: 'background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease',
-        boxShadow: hov ? '0 12px 40px rgba(250,204,21,0.12)' : '0 2px 12px rgba(10,11,18,0.06)',
+        boxShadow: hov ? '0 12px 40px rgba(27,58,122,0.18)' : '0 2px 12px rgba(10,11,18,0.06)',
         transform: hov ? 'translateY(-4px)' : 'translateY(0)',
         cursor: 'pointer',
       }}
     >
       <div style={{
         width: 52, height: 52, borderRadius: 12,
-        background: hov ? 'rgba(250,204,21,0.15)' : 'rgba(30,31,40,0.05)',
+        background: hov ? 'rgba(27,58,122,0.1)' : 'rgba(30,31,40,0.05)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         marginBottom: 16,
-        color: hov ? '#FACC15' : '#0f0f12',
+        color: hov ? '#1B3A7A' : '#0f0f12',
         transition: 'background 0.28s ease, color 0.28s ease',
       }}>
         {service.icon}
@@ -1039,7 +1039,7 @@ function HomeServiceCard({ service }) {
       <p style={{
         fontFamily: "'Barlow Condensed', sans-serif",
         fontSize: 'clamp(15px,1.4vw,18px)', fontWeight: 700,
-        color: hov ? '#FACC15' : '#0f0f12',
+        color: hov ? '#1B3A7A' : '#0f0f12',
         letterSpacing: '-0.01em', margin: '0 0 8px',
         transition: 'color 0.25s ease',
       }}>

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+﻿import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -188,7 +188,7 @@ export default function AboutPage() {
               </p>
             )}
 
-            <LiquidButton as={Link} to={learnMorePath} tint="#FACC15" textColor="#000">
+            <LiquidButton as={Link} to={learnMorePath} tint="#1B3A7A" textColor="#fff">
               {t('about.learnMoreLabel')}
             </LiquidButton>
           </div>
