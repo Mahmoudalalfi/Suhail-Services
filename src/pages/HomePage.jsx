@@ -441,7 +441,7 @@ function Ticker() {
             fontSize: 15,
             letterSpacing: '0.04em',
             textTransform: 'none',
-            color: '#1d4ed8',
+            color: '#1B3A7A',
             padding: '0 28px',
           }}>
             {w}
@@ -623,8 +623,7 @@ export default function HomePage() {
   const workRef = useRef(null)
   const card1Ref = useRef(null)
   const card2Ref = useRef(null)
-  /* Alternates #1B3A7A (yellow) and #1D4ED8 (blue) on each text rotation */
-  const ROTATE_COLORS = ['#1B3A7A', '#1D4ED8']
+  const ROTATE_COLORS = ['#1B3A7A', '#162E62']
   const [rotateColorIdx, setRotateColorIdx] = useState(0)
   const handleRotateNext = (idx) => setRotateColorIdx(idx % ROTATE_COLORS.length)
 

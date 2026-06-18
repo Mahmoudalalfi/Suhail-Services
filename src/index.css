@@ -50,8 +50,8 @@ html[data-darkreader-scheme="dark"] {
 
 /* Ticker strip — lock colors against Samsung force-dark */
 .ticker-item {
-  color: #1d4ed8 !important;
-  -webkit-text-fill-color: #1d4ed8 !important;
+  color: #1B3A7A !important;
+  -webkit-text-fill-color: #1B3A7A !important;
 }
 .ticker-dot {
   color: #1B3A7A !important;
