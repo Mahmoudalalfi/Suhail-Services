@@ -107,17 +107,25 @@ const heroImages = [
 
 const MOBILE_HERO_CARDS = [
   /* top — left of center, big, tilted left hard */
-  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', rot: -18,
-    pos: { top: '7%', left: '5%' }, w: 'clamp(110px,31vw,148px)', h: 'clamp(140px,40vw,186px)' },
+  {
+    url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', rot: -18,
+    pos: { top: '7%', left: '5%' }, w: 'clamp(110px,31vw,148px)', h: 'clamp(140px,40vw,186px)'
+  },
   /* top — right, higher up, tilted right, different shape */
-  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490816/suhail-services/work-project-06.png', alt: 'Work 6', rot: 14,
-    pos: { top: '4%', right: '6%' }, w: 'clamp(118px,34vw,156px)', h: 'clamp(78px,22vw,100px)' },
+  {
+    url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490816/suhail-services/work-project-06.png', alt: 'Work 6', rot: 14,
+    pos: { top: '4%', right: '6%' }, w: 'clamp(118px,34vw,156px)', h: 'clamp(78px,22vw,100px)'
+  },
   /* bottom — far left, low, tilted opposite */
-  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor', rot: 11,
-    pos: { bottom: '11%', left: '3%' }, w: 'clamp(100px,28vw,128px)', h: 'clamp(100px,28vw,128px)' },
+  {
+    url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor', rot: 11,
+    pos: { bottom: '11%', left: '3%' }, w: 'clamp(100px,28vw,128px)', h: 'clamp(100px,28vw,128px)'
+  },
   /* bottom — right but not corner, tucked behind button area, sharp tilt */
-  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', rot: -23,
-    pos: { bottom: '7%', right: '4%' }, w: 'clamp(86px,24vw,110px)', h: 'clamp(114px,32vw,148px)' },
+  {
+    url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png', alt: 'Glass cleaning', rot: -23,
+    pos: { bottom: '7%', right: '4%' }, w: 'clamp(86px,24vw,110px)', h: 'clamp(114px,32vw,148px)'
+  },
 ]
 
 /* Each card gets a unique parallax depth multiplier */
@@ -135,11 +143,11 @@ function MobileHeroCards() {
 
   const attachGyro = () => {
     const handler = (e) => {
-      const beta  = e.beta  ?? 0
+      const beta = e.beta ?? 0
       const gamma = e.gamma ?? 0
       if (baseRef.current.beta === null) baseRef.current = { beta, gamma }
       const dx = (gamma - baseRef.current.gamma) / 12
-      const dy = (beta  - baseRef.current.beta)  / 16
+      const dy = (beta - baseRef.current.beta) / 16
       setGyro({ x: Math.max(-1, Math.min(1, dx)), y: Math.max(-1, Math.min(1, dy)) })
     }
     window.addEventListener('deviceorientation', handler)
@@ -673,7 +681,7 @@ export default function HomePage() {
         <style>{`
           @media (max-width: 768px) {
             .hero-left-gradient { background: linear-gradient(to right, rgba(10,10,15,0.45) 0%, rgba(10,10,15,0.25) 40%, transparent 75%) !important; }
-            .hero-bg-video { object-position: 20% center !important; }
+            .hero-bg-video { object-position: center center !important; }
           }
         `}</style>
         <video
@@ -693,7 +701,7 @@ export default function HomePage() {
             zIndex: 0,
           }}
         >
-          <source src="https://res.cloudinary.com/df7aiznm6/video/upload/v1779704566/HeroServices_a6xbnv.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/df7aiznm6/video/upload/v1781803757/Hero_fvfcdf.mp4" type="video/mp4" />
         </video>
 
         {/* Left-side black gradient — desktop only */}
