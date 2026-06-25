@@ -459,9 +459,6 @@ export default function AboutPage() {
                     height: 120,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     marginBottom: 28,
-                    background: `${bc}08`,
-                    borderRadius: 16,
-                    border: `1px solid ${bc}18`,
                   }}>
                     <img src={client.logo} alt={client.name} style={{ maxWidth: '80%', maxHeight: 100, objectFit: 'contain' }} />
                   </div>
