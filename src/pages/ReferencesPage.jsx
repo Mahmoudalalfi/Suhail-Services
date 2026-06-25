@@ -36,53 +36,99 @@ function RevealBlock({ children, y = 30, delay = 0, style = {} }) {
   )
 }
 
-function LogoTile({ client, index }) {
+const GOLD = '#C9A84C'
+
+function LogoTile({ client, index, learnMore }) {
   const logoSrc = typeof client.logo === 'string' && client.logo.trim().length > 0 ? client.logo.trim() : null
   const [imgBroken, setImgBroken] = useState(false)
-  const showPlaceholder = !logoSrc || imgBroken
 
   return (
-    <RevealBlock delay={index * 0.022} style={{ height: '100%' }}>
+    <RevealBlock delay={index * 0.08} style={{ height: '100%' }}>
       <div
         className="references-logo-cell"
         style={{
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          minHeight: 'clamp(76px, 12vw, 104px)',
-          padding: 'clamp(20px, 4vw, 36px) clamp(12px, 2.5vw, 28px)',
+          flexDirection: 'column',
+          background: '#0f0f12',
+          borderRadius: 20,
+          padding: 'clamp(28px, 4vw, 40px)',
           boxSizing: 'border-box',
+          height: '100%',
         }}
       >
-        {!showPlaceholder ? (
-          <img
-            src={logoSrc}
-            alt={client.name}
-            draggable={false}
-            onError={() => setImgBroken(true)}
-            className="references-logo-img"
-            style={{
-              maxWidth: 'min(280px, 100%)',
-              width: 'auto',
-              height: 'auto',
-              maxHeight: 'clamp(68px, 10vmin, 102px)',
-              objectFit: 'contain',
-            }}
-          />
-        ) : (
-          <span
-            className="references-logo-placeholder-text"
-            style={{
-              fontSize: 'clamp(13px, 1.65vw, 15px)',
-              fontWeight: 600,
-              textAlign: 'center',
-              lineHeight: 1.45,
-              letterSpacing: '-0.02em',
-            }}
-          >
-            {client.name}
-          </span>
+        {/* Logo */}
+        <div style={{ height: 120, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 24 }}>
+          {logoSrc && !imgBroken ? (
+            <img
+              src={logoSrc}
+              alt={client.name}
+              draggable={false}
+              onError={() => setImgBroken(true)}
+              style={{ maxWidth: '100%', maxHeight: 110, objectFit: 'contain' }}
+            />
+          ) : (
+            <span style={{ fontSize: 15, fontWeight: 700, color: '#fff', textAlign: 'center' }}>{client.name}</span>
+          )}
+        </div>
+
+        {/* Divider */}
+        <div style={{ width: 40, height: 2, background: GOLD, marginBottom: 20, flexShrink: 0 }} />
+
+        {/* Title */}
+        <h3 style={{ fontSize: 'clamp(18px, 2vw, 22px)', fontWeight: 700, color: '#fff', lineHeight: 1.25, margin: '0 0 14px' }}>
+          {client.name}
+        </h3>
+
+        {/* Body */}
+        {client.body && (
+          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, margin: '0 0 24px', flexGrow: 1 }}>
+            {client.body}
+          </p>
         )}
+
+        {/* Website */}
+        {client.website && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <div>
+              <p style={{ fontSize: 11, fontWeight: 600, color: GOLD, margin: '0 0 1px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Website:</p>
+              <a
+                href={client.websiteHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontSize: 13, color: '#fff', textDecoration: 'none' }}
+              >
+                {client.website}
+              </a>
+            </div>
+          </div>
+        )}
+
+        {/* Button */}
+        <a
+          href={client.websiteHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 12,
+            background: GOLD,
+            color: '#000',
+            fontWeight: 700,
+            fontSize: 14,
+            padding: '13px 20px',
+            borderRadius: 10,
+            textDecoration: 'none',
+            letterSpacing: '0.01em',
+          }}
+        >
+          <span>{learnMore}</span>
+          <span>→</span>
+        </a>
       </div>
     </RevealBlock>
   )
@@ -168,15 +214,15 @@ export default function ReferencesPage() {
             className="references-logo-grid"
             style={{
               display: 'grid',
-              gap: 'clamp(28px, 5vw, 48px) clamp(20px, 4vw, 40px)',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(min(160px, 100%), 1fr))',
-              alignItems: 'center',
+              gap: 'clamp(20px, 3vw, 32px)',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              alignItems: 'stretch',
             }}
             onMouseEnter={handleGridEnter}
             onMouseLeave={handleGridLeave}
           >
             {clients.map((c, i) => (
-              <LogoTile key={c.slug || c.name || i} client={c} index={i} />
+              <LogoTile key={c.slug || c.name || i} client={c} index={i} learnMore={t('referencesPage.learnMore')} />
             ))}
           </div>
 

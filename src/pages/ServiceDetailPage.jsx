@@ -4,7 +4,7 @@ import { gsap } from 'gsap'
 import { useLanguage } from '../i18n/LanguageContext'
 import serviceDetailsEn from '../data/serviceDetails'
 import serviceDetailsDe from '../data/serviceDetails.de'
-import { getServiceHeroImage } from '../data/serviceHeroImages'
+import { getServiceHeroImage, getServiceHeroPosition } from '../data/serviceHeroImages'
 import LiquidButton from '../components/ui/LiquidButton'
 
 function findService(servicesList, slug) {
@@ -128,7 +128,7 @@ export default function ServiceDetailPage() {
             marginBottom: 'clamp(24px, 4vw, 40px)',
           }}>
             {heroImg
-              ? <img src={heroImg} alt={serviceName} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              ? <img src={heroImg} alt={serviceName} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: getServiceHeroPosition(slug) }} />
               : <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: 'clamp(20px, 3vw, 40px)', color: 'rgba(255,255,255,0.08)', letterSpacing: '0.05em', textTransform: 'uppercase', textAlign: 'center', padding: '0 24px' }}>{serviceName}</span>
                 </div>

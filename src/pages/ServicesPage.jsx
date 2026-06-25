@@ -1,4 +1,5 @@
 ﻿import { useEffect, useLayoutEffect, useRef, useState, useMemo } from 'react'
+import useSEO from '../hooks/useSEO'
 import { Link, useLocation } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -10,14 +11,21 @@ gsap.registerPlugin(ScrollTrigger)
 
 /** Footer / deep links → index in `services.servicesList` */
 const SERVICES_HASH_INDEX = {
-  'general-services':       0,
-  'cleaning':               1,
-  'cashier-services':       2,
-  'warehouse-services':     3,
-  'installation-unpacking': 4,
-  'electrical-assistance':  5,
-  'transport':              6,
-  'staffing-services':      7,
+  'retail-supermarket-service':     0,
+  'cleaning-building-services':     1,
+  'driver-services-staffing':       2,
+  'construction-trades':            3,
+  'electrical-technical-services':  4,
+  'facility-management':            5,
+  'inventory-control':              6,
+  'garden-outdoor-services':        7,
+  'assembly-disassembly':           8,
+  'food-service-events':            9,
+  'staffing-services':              10,
+  'hotel-services':                 11,
+  'transportation-moving-services': 12,
+  'property-management-services':   13,
+  'kitchen-dishwashing-services':   14,
 }
 
 function hashToServicesPanelIndex(hash) {
@@ -312,6 +320,11 @@ function ServicesTestimonials() {
 
 export default function ServicesPage() {
   const { t } = useLanguage()
+  useSEO({
+    title: 'Leistungen — Suhaili Service GmbH',
+    description: 'Alle Dienstleistungen von Suhaili Service GmbH: Gebäudereinigung, Facility Management, Sicherheitsdienst, technische Wartung und mehr in Berlin.',
+    canonical: 'https://www.suhaili-services.de/services',
+  })
   const { hash } = useLocation()
   const headRef = useRef(null)
   const darkPanelRef = useRef(null)

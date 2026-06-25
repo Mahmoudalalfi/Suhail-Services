@@ -1594,265 +1594,767 @@
     ],
   },
 
-  'general-services': {
-    subtitle: 'Flexible Unterstuetzung fuer Unternehmen und Privatkunden',
+  'retail-supermarket-service': {
+    subtitle: 'Ihr zuverlässiger Partner für Einzelhandel & Supermarkt Service',
     heroParagraphs: [
-      'Wir bieten massgeschneiderte allgemeine Dienstleistungen, die sich flexibel an Ihre Beduerfnisse anpassen.',
-      'Von einfachen Hilfstaetigkeiten bis hin zu koordinierten Serviceeinsaetzen decken wir ein breites Spektrum ab.',
+      'Seit 2018 unterstützt Suhaili Service GmbH Supermärkte, Discounter, Einzelhandelsketten und Großmärkte mit professionellen Personal- und Serviceleistungen. Dank unserer langjährigen Erfahrung kennen wir die Anforderungen des Einzelhandels und bieten flexible, zuverlässige und effiziente Lösungen für jeden Bedarf.',
+      'Unsere qualifizierten Mitarbeiter sind täglich in verschiedenen Märkten im Einsatz und übernehmen alle Aufgaben rund um Warenpflege, Regalservice und Bestandskontrolle.',
     ],
     sections: [
       {
-        title: 'Unser Leistungsversprechen',
-        paragraphs: [
-          'Zuverlaessigkeit, Flexibilitaet und Qualitaet stehen im Mittelpunkt unserer allgemeinen Dienstleistungen.',
-        ],
+        title: 'Unsere Leistungen',
+        paragraphs: [],
         bullets: [
+          { label: '', text: 'Warenverräumung und Regalpflege' },
+          { label: '', text: 'Kassierer- und Kassenservice' },
+          { label: '', text: 'Inventurservice und Bestandsaufnahmen' },
+          { label: '', text: 'MHD-Kontrolle und Qualitätsprüfung' },
+          { label: '', text: 'Warenannahme und Warensortierung' },
+          { label: '', text: 'Umbauten und Marktneueröffnungen' },
+          { label: '', text: 'Auffüllservice und Regaloptimierung' },
+          { label: '', text: 'Bestandskontrolle und Warenpräsentation' },
+          { label: '', text: 'Unterstützung bei Aktions- und Saisonware' },
+          { label: '', text: 'Personalbereitstellung für kurzfristige Einsätze' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Geschulte und motivierte Mitarbeiter' },
+          { label: '', text: 'Eigene Teamleiter und Objektverantwortliche' },
+          { label: '', text: 'Schnelle Einsatzbereitschaft' },
+          { label: '', text: 'Flexible Personalplanung' },
+          { label: '', text: 'Hohe Qualitätsstandards' },
+          { label: '', text: 'Zuverlässige und termingerechte Ausführung' },
+          { label: '', text: 'Deutschlandweite Einsätze möglich' },
+        ],
+      },
+      {
+        title: 'Unser Ziel',
+        paragraphs: [
+          'Unser Ziel ist es, unsere Kunden durch professionelle Dienstleistungen, hohe Flexibilität und zuverlässiges Personal langfristig zu unterstützen und einen reibungslosen Ablauf im täglichen Marktbetrieb sicherzustellen.',
+          'Suhaili Service GmbH – Ihr zuverlässiger Partner für Warenverräumung, Kassierservice, Inventuren und Supermarktservice in ganz Deutschland.',
+        ],
+        bullets: [],
+      },
+    ],
+  },
+
+  'cleaning-building-services': {
+    subtitle: 'Professionelle Reinigung und Gebäudeservice in ganz Deutschland',
+    heroParagraphs: [
+      'Seit 2018 bietet Suhaili Service GmbH professionelle Reinigungsdienstleistungen für Unternehmen, Bürogebäude, Hotels, Wohnanlagen, Baustellen und öffentliche Einrichtungen in ganz Deutschland an.',
+      'Mit unserem geschulten Personal und modernen Reinigungsmethoden sorgen wir täglich für Sauberkeit, Hygiene und Werterhalt Ihrer Immobilien.',
+    ],
+    sections: [
+      {
+        title: 'Unsere Leistungen',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Gebäudereinigung' },
+          { label: '', text: 'Unterhaltsreinigung' },
+          { label: '', text: 'Glas- und Fensterreinigung' },
+          { label: '', text: 'Büroreinigung' },
+          { label: '', text: 'Hotelreinigung & Housekeeping' },
+          { label: '', text: 'Treppenhausreinigung' },
+          { label: '', text: 'Baustellenreinigung' },
+          { label: '', text: 'Grundreinigung' },
+          { label: '', text: 'Sanitärreinigung' },
+          { label: '', text: 'Reinigung von Gewerbe- und Industrieflächen' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Zuverlässiges Fachpersonal' },
           { label: '', text: 'Flexible Einsatzzeiten' },
-          { label: '', text: 'Geschultes und geprueftes Personal' },
-          { label: '', text: 'Individuelle Bedarfsanalyse' },
-          { label: '', text: 'Kurzfristige Verfuegbarkeit' },
+          { label: '', text: 'Moderne Reinigungsverfahren' },
+          { label: '', text: 'Hohe Hygienestandards' },
+          { label: '', text: 'Individuelle Reinigungskonzepte' },
+          { label: '', text: 'Kurzfristige Einsatzbereitschaft' },
+          { label: '', text: 'Deutschlandweite Verfügbarkeit' },
+        ],
+      },
+      {
+        title: 'Unser Ziel',
+        paragraphs: [
+          'Unser Ziel ist es, für unsere Kunden ein sauberes, hygienisches und professionelles Umfeld zu schaffen. Qualität, Zuverlässigkeit und Kundenzufriedenheit stehen bei uns an erster Stelle.',
+          'Suhaili Service GmbH – Ihr zuverlässiger Partner für professionelle Reinigung und Gebäudeservice.',
+        ],
+        bullets: [],
+      },
+    ],
+  },
+
+  'driver-services-staffing': {
+    subtitle: 'Qualifiziertes Fahrpersonal und Personalgestellung in ganz Deutschland',
+    heroParagraphs: [
+      'Seit 2018 unterstützt Suhaili Service GmbH Unternehmen, Logistikzentren, Industrieunternehmen, Kurierdienste, Großhändler und Handelsketten mit qualifiziertem Fahrpersonal in ganz Deutschland.',
+      'Wir stellen unseren Kunden professionelle Fahrer für kurz-, mittel- und langfristige Einsätze zur Verfügung. Dabei konzentrieren wir uns ausschließlich auf die Bereitstellung von erfahrenem Personal und nicht auf die Vermietung von Fahrzeugen.',
+    ],
+    sections: [
+      {
+        title: 'Unsere Leistungen',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Bereitstellung von Fahrern für Unternehmen' },
+          { label: '', text: 'Kurierfahrer und Lieferfahrer' },
+          { label: '', text: 'Sprinterfahrer und Transportfahrer' },
+          { label: '', text: 'Fahrer für Logistik- und Lagerunternehmen' },
+          { label: '', text: 'Werksfahrer und Betriebsfahrer' },
+          { label: '', text: 'Vertretungsfahrer bei Urlaub oder Krankheit' },
+          { label: '', text: 'Fahrer für Tag- und Nachtschichten' },
+          { label: '', text: 'Unterstützung bei saisonalen Auftragsspitzen' },
+          { label: '', text: 'Personalgestellung für langfristige Projekte' },
+          { label: '', text: 'Flexible Fahrer für kurzfristige Einsätze' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Zuverlässige und motivierte Mitarbeiter' },
+          { label: '', text: 'Schnelle Verfügbarkeit von Personal' },
+          { label: '', text: 'Deutschlandweite Einsatzmöglichkeiten' },
+          { label: '', text: 'Flexible Personalplanung nach Kundenbedarf' },
+          { label: '', text: 'Hohe Qualitäts- und Sicherheitsstandards' },
+          { label: '', text: 'Persönliche Betreuung durch Teamleiter' },
+          { label: '', text: 'Faire und transparente Zusammenarbeit' },
+        ],
+      },
+      {
+        title: 'Unser Ziel',
+        paragraphs: [
+          'Unser Ziel ist es, unseren Kunden qualifiziertes und einsatzbereites Fahrpersonal bereitzustellen, damit betriebliche Abläufe reibungslos funktionieren und Liefertermine zuverlässig eingehalten werden können.',
+          'Suhaili Service GmbH – Ihr zuverlässiger Partner für Fahrerservice, Personalgestellung und flexible Personallösungen in ganz Deutschland.',
+        ],
+        bullets: [],
+      },
+    ],
+  },
+
+  'construction-trades': {
+    subtitle: 'Qualifiziertes Fach- und Hilfspersonal für Bau und Handwerk',
+    heroParagraphs: [
+      'Seit 2018 unterstützt Suhaili Service GmbH Bauunternehmen, Generalunternehmer, Handwerksbetriebe, Immobiliengesellschaften und private Kunden mit qualifiziertem Fach- und Hilfspersonal für Bau-, Renovierungs- und Montagearbeiten in ganz Deutschland.',
+      'Durch unsere langjährige Erfahrung im Bau- und Handwerksbereich bieten wir flexible und zuverlässige Lösungen für Projekte jeder Größe.',
+    ],
+    sections: [
+      {
+        title: 'Unsere Leistungen',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Bauhelfer für Baustellen aller Art' },
+          { label: '', text: 'Trockenbauarbeiten und Innenausbau' },
+          { label: '', text: 'Renovierungs- und Sanierungsarbeiten' },
+          { label: '', text: 'Maler- und Spachtelarbeiten' },
+          { label: '', text: 'Bodenverlegung (Laminat, Vinyl, Parkett)' },
+          { label: '', text: 'Montage- und Demontagearbeiten' },
+          { label: '', text: 'Unterstützung bei Neubauprojekten' },
+          { label: '', text: 'Baustellenvorbereitung und Baustellenservice' },
+          { label: '', text: 'Abbruch- und Entkernungsarbeiten' },
+          { label: '', text: 'Materialtransport auf Baustellen' },
+          { label: '', text: 'Unterstützung von Handwerksbetrieben' },
+          { label: '', text: 'Unterstützung bei Großprojekten und Gewerbeobjekten' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Qualifizierte und motivierte Mitarbeiter' },
+          { label: '', text: 'Schnelle Einsatzbereitschaft' },
+          { label: '', text: 'Flexible Personalplanung' },
+          { label: '', text: 'Hohe Qualitätsstandards' },
+          { label: '', text: 'Zuverlässige und termingerechte Ausführung' },
+          { label: '', text: 'Professionelle Teamleiter vor Ort' },
+          { label: '', text: 'Deutschlandweite Einsätze möglich' },
+        ],
+      },
+      {
+        title: 'Unsere Kunden',
+        paragraphs: ['Von kleinen Renovierungsarbeiten bis hin zu großen Bauprojekten stehen wir unseren Kunden als zuverlässiger Partner zur Seite.'],
+        bullets: [
+          { label: '', text: 'Bauunternehmen und Generalunternehmer' },
+          { label: '', text: 'Handwerksbetriebe und Immobiliengesellschaften' },
+          { label: '', text: 'Hausverwaltungen und Gewerbekunden' },
+          { label: '', text: 'Private Auftraggeber' },
         ],
       },
     ],
   },
 
-  'office-cleaning': {
-    subtitle: 'Saubere Arbeitsumgebung fuer mehr Produktivitaet',
+  'electrical-technical-services': {
+    subtitle: 'Zuverlässige Personalgestellung für Elektro- und Technikprojekte',
     heroParagraphs: [
-      'Ein sauberes Buero foerdert die Gesundheit und Produktivitaet Ihrer Mitarbeiter.',
-      'Wir reinigen regelmaessig und gruendlich alle Bueroflaechen, Sanitaerbereiche und Gemeinschaftsraeume.',
+      'Seit 2018 unterstützt Suhaili Service GmbH Unternehmen, Industrieanlagen, Produktionsbetriebe, Baustellen und Handwerksunternehmen mit zuverlässigen Personal- und Unterstützungsleistungen im Bereich Elektro und Technik.',
+      'Unsere Teams verfügen über praktische Erfahrung in der Unterstützung von Elektroprojekten und technischen Arbeiten. Wir stellen qualifizierte Mitarbeiter für Montage-, Installations- und Wartungsarbeiten zur Verfügung.',
     ],
     sections: [
       {
-        title: 'Unsere Bueroreinigungsleistungen',
-        paragraphs: [
-          'Unsere erfahrenen Reinigungskraefte sind auf Bueroreinigung spezialisiert.',
-        ],
+        title: 'Unsere Leistungen',
+        paragraphs: [],
         bullets: [
-          { label: '', text: 'Taeglche Unterhaltsreinigung' },
-          { label: '', text: 'Sanitaer- und WC-Reinigung' },
-          { label: '', text: 'Kuechen- und Pausenraumbereiche' },
-          { label: '', text: 'Fenster- und Glasflaechenreinigung' },
+          { label: '', text: 'Kabelverlegung und Kabelzugarbeiten' },
+          { label: '', text: 'Schaltschrankmontage und Schaltschrankbau' },
+          { label: '', text: 'Elektrohilfsarbeiten auf Baustellen und Industrieanlagen' },
+          { label: '', text: 'Montage von Kabeltrassen und Kabelkanälen' },
+          { label: '', text: 'Unterstützung bei Elektroinstallationen' },
+          { label: '', text: 'Wartungs- und Servicearbeiten' },
+          { label: '', text: 'Unterstützung bei Industrie- und Produktionsanlagen' },
+          { label: '', text: 'Demontage und Rückbau technischer Anlagen' },
+          { label: '', text: 'Baustellenunterstützung für Elektrofirmen' },
+          { label: '', text: 'Materialtransport und Baustellenlogistik' },
+          { label: '', text: 'Unterstützung bei Modernisierungsprojekten' },
+          { label: '', text: 'Technische Hilfsarbeiten im gewerblichen Bereich' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Qualifizierte und motivierte Mitarbeiter' },
+          { label: '', text: 'Schnelle Einsatzbereitschaft' },
+          { label: '', text: 'Flexible Personalplanung' },
+          { label: '', text: 'Zuverlässige Ausführung aller Arbeiten' },
+          { label: '', text: 'Hohe Qualitäts- und Sicherheitsstandards' },
+          { label: '', text: 'Eigene Teamleiter zur Projektkoordination' },
+          { label: '', text: 'Deutschlandweite Einsätze' },
+        ],
+      },
+      {
+        title: 'Unsere Kunden',
+        paragraphs: ['Unser Ziel ist es, unsere Kunden mit zuverlässigem Personal und professioneller Unterstützung bei Elektro- und Technikprojekten zu entlasten.'],
+        bullets: [
+          { label: '', text: 'Elektroinstallationsbetriebe' },
+          { label: '', text: 'Industrieunternehmen und Produktionsbetriebe' },
+          { label: '', text: 'Anlagenbauer und Generalunternehmer' },
+          { label: '', text: 'Facility-Management-Unternehmen' },
+          { label: '', text: 'Bauunternehmen' },
         ],
       },
     ],
   },
 
-  'construction-cleaning': {
-    subtitle: 'Professionelle Reinigung nach Baumassnahmen',
+  'facility-management': {
+    subtitle: 'Professionelles Facility Management aus einer Hand',
     heroParagraphs: [
-      'Nach Bau- oder Renovierungsarbeiten hinterlassen wir besenreine Flaechen.',
-      'Wir arbeiten eng mit Baufirmen zusammen, um termingerechte Uebergaben zu gewaehrleisten.',
+      'Seit 2018 bietet Suhaili Service GmbH professionelle Facility-Management-Dienstleistungen für Unternehmen, Wohnanlagen, Bürogebäude, Industrieobjekte, Hotels und Gewerbeimmobilien in ganz Deutschland an.',
+      'Wir verstehen Facility Management als eine ganzheitliche Dienstleistung, die Sauberkeit, Sicherheit, Funktionalität und Werterhalt Ihrer Immobilie langfristig sicherstellt.',
     ],
     sections: [
       {
-        title: 'Leistungsumfang Bauendreinigung',
-        paragraphs: [
-          'Unsere spezialisierten Teams verfuegen ueber das notige Equipment fuer anspruchsvolle Baureinigungen.',
-        ],
+        title: 'Unsere Leistungen',
+        paragraphs: [],
         bullets: [
-          { label: '', text: 'Entfernung von Baustaub und Schmutz' },
-          { label: '', text: 'Reinigung von Fenstern und Rahmen' },
-          { label: '', text: 'Bodenreinigung und Erstpflege' },
-          { label: '', text: 'Sanitaerersteinigung' },
+          { label: '', text: 'Hausmeisterservice' },
+          { label: '', text: 'Objektbetreuung und Objektkontrolle' },
+          { label: '', text: 'Technischer Gebäudeservice' },
+          { label: '', text: 'Kleinreparaturen und Instandhaltungsarbeiten' },
+          { label: '', text: 'Winterdienst und Schneeräumung' },
+          { label: '', text: 'Gartenpflege und Grünanlagenservice' },
+          { label: '', text: 'Reinigung und Pflege von Außenanlagen' },
+          { label: '', text: 'Kontrollgänge und Dokumentation' },
+          { label: '', text: 'Unterstützung bei Umzügen und Objektübergaben' },
+          { label: '', text: 'Koordination externer Dienstleister' },
+          { label: '', text: 'Wartungs- und Servicearbeiten' },
+          { label: '', text: 'Betreuung von Wohnanlagen und Gewerbeobjekten' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Qualifizierte und motivierte Mitarbeiter' },
+          { label: '', text: 'Schnelle Reaktionszeiten' },
+          { label: '', text: 'Flexible Einsatzplanung' },
+          { label: '', text: 'Regelmäßige Objektkontrollen' },
+          { label: '', text: 'Persönliche Betreuung durch Teamleiter' },
+          { label: '', text: 'Deutschlandweite Einsatzmöglichkeiten' },
+          { label: '', text: 'Hohe Qualitäts- und Sicherheitsstandards' },
+        ],
+      },
+      {
+        title: 'Für wen wir arbeiten',
+        paragraphs: ['Unser Ziel ist es, den Wert Ihrer Immobilie langfristig zu erhalten und für einen professionellen und gepflegten Gesamteindruck Ihrer Objekte zu sorgen.'],
+        bullets: [
+          { label: '', text: 'Hausverwaltungen und Wohnungsbaugesellschaften' },
+          { label: '', text: 'Hotels und Ferienanlagen' },
+          { label: '', text: 'Büro- und Verwaltungsgebäude' },
+          { label: '', text: 'Industrie- und Gewerbebetriebe' },
+          { label: '', text: 'Einkaufszentren, Logistikzentren und öffentliche Einrichtungen' },
         ],
       },
     ],
   },
 
-  'deep-cleaning': {
-    subtitle: 'Intensive Grundreinigung fuer hoechste Hygienestandards',
+  'inventory-control': {
+    subtitle: 'Präzise Inventur und zuverlässige Bestandskontrolle in ganz Deutschland',
     heroParagraphs: [
-      'Unsere Grundreinigung geht tiefer als die taegliche Unterhaltsreinigung.',
-      'Ideal fuer saisonale Tiefenreinigungen, Objektuebernahmen oder besondere Hygieneanforderungen.',
+      'Seit 2018 unterstützt Suhaili Service GmbH Unternehmen, Supermärkte, Lagerhäuser, Logistikzentren und Handelsketten mit professionellen Inventur- und Kontrolldienstleistungen in ganz Deutschland.',
+      'Durch moderne Arbeitsmethoden, geschulte Mitarbeiter und strukturierte Abläufe garantieren wir höchste Genauigkeit, Transparenz und Zuverlässigkeit bei jeder Inventur.',
     ],
     sections: [
       {
-        title: 'Grundreinigung im Detail',
-        paragraphs: [
-          'Mit professionellen Reinigungsmitteln erzielen wir Ergebnisse, die mit normaler Unterhaltsreinigung nicht erreichbar sind.',
-        ],
+        title: 'Unsere Leistungen',
+        paragraphs: [],
         bullets: [
-          { label: '', text: 'Intensive Bodenreinigung' },
-          { label: '', text: 'Desinfektion von Kontaktflaechen' },
-          { label: '', text: 'Reinigung schwer zugaenglicher Bereiche' },
-          { label: '', text: 'Dokumentierte Qualitaetskontrolle' },
+          { label: '', text: 'Inventurservice für Supermärkte und Einzelhandel' },
+          { label: '', text: 'Bestandsaufnahme und Lagerzählungen' },
+          { label: '', text: 'Qualitätskontrolle von Waren und Produkten' },
+          { label: '', text: 'MHD-Kontrollen und Warenprüfung' },
+          { label: '', text: 'Regal- und Bestandskontrolle' },
+          { label: '', text: 'Wareneingangskontrollen' },
+          { label: '', text: 'Erfassung von Fehlbeständen und Differenzen' },
+          { label: '', text: 'Dokumentation und Berichterstellung' },
+          { label: '', text: 'Unterstützung bei Jahresinventuren' },
+          { label: '', text: 'Personalgestellung für Inventurprojekte' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Geschulte Inventurteams' },
+          { label: '', text: 'Hohe Genauigkeit und Zuverlässigkeit' },
+          { label: '', text: 'Flexible Einsatzzeiten – auch nachts und am Wochenende' },
+          { label: '', text: 'Schnelle Verfügbarkeit von Personal' },
+          { label: '', text: 'Deutschlandweite Einsätze' },
+          { label: '', text: 'Professionelle Projektkoordination' },
+          { label: '', text: 'Transparente Arbeitsabläufe und Dokumentation' },
+        ],
+      },
+      {
+        title: 'Für wen wir arbeiten',
+        paragraphs: ['Unser Ziel ist es, unseren Kunden jederzeit einen genauen Überblick über ihre Warenbestände zu ermöglichen und Fehlerquoten zu minimieren.'],
+        bullets: [
+          { label: '', text: 'Supermärkte, Discounter und Einzelhandelsketten' },
+          { label: '', text: 'Großhändler und Logistikzentren' },
+          { label: '', text: 'Lagerhäuser und Baumärkte' },
+          { label: '', text: 'Industrieunternehmen und Einkaufszentren' },
         ],
       },
     ],
   },
 
-  'maintenance-cleaning': {
-    subtitle: 'Regelmaessige Pflege fuer dauerhaft saubere Raeume',
+  'garden-outdoor-services': {
+    subtitle: 'Professionelle Gartenpflege und Außenanlagenservice in ganz Deutschland',
     heroParagraphs: [
-      'Unsere Unterhaltsreinigung sorgt dafuer, dass Ihre Raeume dauerhaft sauber und gepflegt bleiben.',
-      'Ob taeglich, woechentlich oder nach Bedarf - wir sind zuverlaessig da.',
+      'Seit 2018 bietet Suhaili Service GmbH professionelle Dienstleistungen im Bereich Gartenpflege, Grünanlagenpflege und Außenanlagenservice für Unternehmen, Wohnanlagen, Hotels, Bürogebäude, Industrieobjekte und private Auftraggeber in ganz Deutschland an.',
+      'Ein gepflegter Außenbereich ist die Visitenkarte jeder Immobilie. Unsere erfahrenen Mitarbeiter sorgen dafür, dass Grünflächen, Gärten und Außenanlagen jederzeit sauber, ordentlich und repräsentativ aussehen.',
     ],
     sections: [
       {
-        title: 'Regelmaessige Reinigungsservices',
-        paragraphs: [
-          'Kontinuitaet und Zuverlaessigkeit sind unsere Staerken.',
-        ],
+        title: 'Unsere Leistungen',
+        paragraphs: [],
         bullets: [
-          { label: '', text: 'Flexible Reinigungsintervalle' },
-          { label: '', text: 'Feste Ansprechpartner vor Ort' },
-          { label: '', text: 'Digitale Dokumentation' },
-          { label: '', text: 'Schnelle Reaktion bei Sonderbedarf' },
+          { label: '', text: 'Gartenpflege und Grünflächenservice' },
+          { label: '', text: 'Rasenmähen und Rasenkantenpflege' },
+          { label: '', text: 'Heckenschnitt und Formschnitt' },
+          { label: '', text: 'Pflege von Grünanlagen und Parkflächen' },
+          { label: '', text: 'Unkrautentfernung und Beetpflege' },
+          { label: '', text: 'Laubservice und Laubbeseitigung' },
+          { label: '', text: 'Reinigung von Gehwegen und Außenflächen' },
+          { label: '', text: 'Saisonale Pflegearbeiten' },
+          { label: '', text: 'Bewässerungsservice' },
+          { label: '', text: 'Pflege von Wohnanlagen und Gewerbeobjekten' },
+          { label: '', text: 'Außenanlagenservice für Hotels und Unternehmen' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Geschulte und zuverlässige Mitarbeiter' },
+          { label: '', text: 'Flexible Einsatzplanung' },
+          { label: '', text: 'Moderne Arbeitsgeräte' },
+          { label: '', text: 'Saubere und professionelle Ausführung' },
+          { label: '', text: 'Schnelle Verfügbarkeit' },
+          { label: '', text: 'Deutschlandweite Einsätze möglich' },
+          { label: '', text: 'Faire Preise und transparente Zusammenarbeit' },
+        ],
+      },
+      {
+        title: 'Für wen wir arbeiten',
+        paragraphs: ['Unser Ziel ist es, Außenanlagen professionell zu pflegen und jederzeit einen gepflegten und positiven Eindruck für Bewohner, Mitarbeiter und Besucher zu schaffen.'],
+        bullets: [
+          { label: '', text: 'Hausverwaltungen und Wohnanlagen' },
+          { label: '', text: 'Hotels und Bürogebäude' },
+          { label: '', text: 'Industrie- und Gewerbeobjekte' },
+          { label: '', text: 'Einkaufszentren und öffentliche Einrichtungen' },
+          { label: '', text: 'Private Auftraggeber' },
         ],
       },
     ],
   },
 
-  'cashier-services': {
-    subtitle: 'Professionelles Kassenpersonal fuer den Einzelhandel',
+  'assembly-disassembly': {
+    subtitle: 'Professionelle Montage- und Demontagearbeiten in ganz Deutschland',
     heroParagraphs: [
-      'Wir stellen qualifiziertes Kassenpersonal fuer Einzelhandel, Maerkte und Veranstaltungen.',
-      'Flexibel einsetzbar - ob als Ergaenzung Ihres Teams oder als vollstaendige Kassenbesetzung.',
+      'Seit 2018 bietet Suhaili Service GmbH professionelle Montage- und Demontagedienstleistungen für Unternehmen, Industrie, Logistikzentren, Hotels, Bürogebäude, Einzelhandel und Privatkunden in ganz Deutschland an.',
+      'Dank unserer flexiblen Personalstruktur können wir sowohl kurzfristige Einsätze als auch langfristige Projekte jeder Größe übernehmen.',
     ],
     sections: [
       {
-        title: 'Kassenservices im Ueberblick',
-        paragraphs: [
-          'Unser Kassenpersonal ist zuverlaessig, freundlich und mit gaengigen POS-Systemen vertraut.',
-        ],
+        title: 'Unsere Leistungen',
+        paragraphs: [],
         bullets: [
-          { label: '', text: 'Geschultes Kassenpersonal' },
-          { label: '', text: 'Erfahrung mit gaengigen POS-Systemen' },
-          { label: '', text: 'Flexibler Einsatz zu Peak-Zeiten' },
-          { label: '', text: 'Freundlicher Kundenkontakt' },
+          { label: '', text: 'Montagearbeiten aller Art' },
+          { label: '', text: 'Demontagearbeiten und Rückbauarbeiten' },
+          { label: '', text: 'Möbelmontage und Möbelaufbau' },
+          { label: '', text: 'Küchenmontage und Einbauarbeiten' },
+          { label: '', text: 'Industrie- und Anlagenmontagen' },
+          { label: '', text: 'Regal- und Lagersystemmontage' },
+          { label: '', text: 'Ladenbau und Geschäftseinrichtungen' },
+          { label: '', text: 'Büroeinrichtungen und Arbeitsplatzsysteme' },
+          { label: '', text: 'Maschinenumzüge und Betriebsverlagerungen' },
+          { label: '', text: 'Verpackung und Transportsicherung' },
+          { label: '', text: 'Unterstützung bei Umbauten und Renovierungen' },
+          { label: '', text: 'Fachgerechte Entsorgung und Räumungsarbeiten' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Qualifizierte und motivierte Mitarbeiter' },
+          { label: '', text: 'Professionelle Arbeitsausführung' },
+          { label: '', text: 'Termingerechte Projektabwicklung' },
+          { label: '', text: 'Flexible Personalplanung' },
+          { label: '', text: 'Deutschlandweite Einsätze' },
+          { label: '', text: 'Hohe Qualitätsstandards' },
+          { label: '', text: 'Faire Preise und transparente Kommunikation' },
+        ],
+      },
+      {
+        title: 'Für wen wir arbeiten',
+        paragraphs: ['Unser Ziel ist es, Montage- und Demontagearbeiten effizient, sicher und professionell umzusetzen.'],
+        bullets: [
+          { label: '', text: 'Industrieunternehmen und Logistikzentren' },
+          { label: '', text: 'Hotels und Einkaufszentren' },
+          { label: '', text: 'Möbelhäuser und Einzelhandelsketten' },
+          { label: '', text: 'Bürogebäude und Hausverwaltungen' },
+          { label: '', text: 'Bauunternehmen und Privatkunden' },
         ],
       },
     ],
   },
 
-  'warehouse-services': {
-    subtitle: 'Effiziente Lagerhaltung und Logistikdienstleistungen',
+  'food-service-events': {
+    subtitle: 'Qualifiziertes Personal für Gastronomie, Catering und Events',
     heroParagraphs: [
-      'Unsere Lagerdienstleistungen decken den gesamten Bereich der Intralogistik ab.',
-      'Mit erfahrenen Fachkraeften sorgen wir fuer Effizienz in Ihrem Lager.',
+      'Seit 2018 unterstützt Suhaili Service GmbH Hotels, Restaurants, Cateringunternehmen, Eventveranstalter, Messegesellschaften und Großküchen mit qualifiziertem Personal in ganz Deutschland.',
+      'Unser Personal unterstützt Sie bei Veranstaltungen, Messen, Firmenfeiern, Hotels, Restaurants und Großevents und sorgt für einen reibungslosen Ablauf sowie einen professionellen Eindruck gegenüber Ihren Gästen.',
     ],
     sections: [
       {
-        title: 'Lagerdienstleistungen',
-        paragraphs: [
-          'Ob Kommissionierung, FIFO-Verwaltung oder Inventur - unser Team beherrscht alle Lagerprozesse.',
-        ],
+        title: 'Unsere Leistungen',
+        paragraphs: [],
         bullets: [
-          { label: '', text: 'Warenannahme und -kontrolle' },
-          { label: '', text: 'Einlagerung und Bestandsverwaltung' },
-          { label: '', text: 'Kommissionierung und Verpackung' },
-          { label: '', text: 'Versandvorbereitung' },
+          { label: '', text: 'Servicekräfte für Restaurants und Hotels' },
+          { label: '', text: 'Küchenhelfer und Küchenpersonal' },
+          { label: '', text: 'Eventpersonal für Veranstaltungen' },
+          { label: '', text: 'Catering-Unterstützung' },
+          { label: '', text: 'Messepersonal und Promotionpersonal' },
+          { label: '', text: 'Frühstücksservice für Hotels' },
+          { label: '', text: 'Spülkräfte und Küchenreinigung' },
+          { label: '', text: 'Aufbau- und Abbauhelfer für Events' },
+          { label: '', text: 'Unterstützung bei Firmenveranstaltungen' },
+          { label: '', text: 'Personal für Großveranstaltungen und Festivals' },
+          { label: '', text: 'Hostessen und Empfangspersonal' },
+          { label: '', text: 'Flexible Personalgestellung nach Bedarf' },
         ],
       },
-    ],
-  },
-
-  'construction-interior': {
-    subtitle: 'Innenausbau und Renovierungsarbeiten aus einer Hand',
-    heroParagraphs: [
-      'Wir realisieren Innenausbauprojekte von der Planung bis zur Uebergabe.',
-      'Unser Handwerkerteam arbeitet zuverlaessig und termingerecht.',
-    ],
-    sections: [
       {
-        title: 'Innenausbau-Leistungen',
-        paragraphs: [
-          'Von kleinen Renovierungen bis zu grossen Umbaumassnahmen.',
-        ],
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
         bullets: [
-          { label: '', text: 'Trockenbau und Abhaengdecken' },
-          { label: '', text: 'Malerarbeiten und Tapezieren' },
-          { label: '', text: 'Bodenbelaege verlegen' },
-          { label: '', text: 'Fliesenlegerarbeiten' },
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Freundliches und gepflegtes Personal' },
+          { label: '', text: 'Flexible Einsatzplanung' },
+          { label: '', text: 'Kurzfristige Personalbereitstellung' },
+          { label: '', text: 'Hohe Servicequalität' },
+          { label: '', text: 'Deutschlandweite Einsätze' },
+          { label: '', text: 'Professionelle Betreuung durch Teamleiter' },
+          { label: '', text: 'Zuverlässige und pünktliche Mitarbeiter' },
         ],
       },
-    ],
-  },
-
-  'installation-unpacking': {
-    subtitle: 'Aufbau, Montage und Auspacken professionell erledigt',
-    heroParagraphs: [
-      'Ob Moebelaufbau oder Warenauspacken - unser Team uebernimmt die Arbeiten schnell und sorgfaeltig.',
-      'Besonders gefragt bei Umzuegen und der Einrichtung neuer Geschaeftsraeume.',
-    ],
-    sections: [
       {
-        title: 'Installations- und Auspackerservices',
-        paragraphs: [
-          'Wir entlasten Sie beim Aufbau von Moebeln, Maschinen und Ausruestung.',
-        ],
+        title: 'Für wen wir arbeiten',
+        paragraphs: ['Unser Ziel ist es, unseren Kunden qualifiziertes Personal bereitzustellen, das Gäste professionell betreut und zu einem erfolgreichen Event beiträgt.'],
         bullets: [
-          { label: '', text: 'Moebelaufbau und -montage' },
-          { label: '', text: 'Warenauspacken und -einsortieren' },
-          { label: '', text: 'Geraete- und Maschinenaufstellung' },
-          { label: '', text: 'Entsorgung von Verpackungsmaterialien' },
-        ],
-      },
-    ],
-  },
-
-  'electrical-assistance': {
-    subtitle: 'Elektrohilfsdienste und Kabelverlegearbeiten',
-    heroParagraphs: [
-      'Wir unterstuetzen Elektrounternehmen mit qualifizierten Hilfskraeften fuer Kabelverlegung und Installation.',
-      'Unsere Mitarbeiter sind sicherheitsbewusst und mit Elektrobaustellen vertraut.',
-    ],
-    sections: [
-      {
-        title: 'Elektrohilfsdienste im Detail',
-        paragraphs: [
-          'Als flexible Unterstuetzung entlasten wir Elektrofachbetriebe von zeitaufwaendigen Hilfsarbeiten.',
-        ],
-        bullets: [
-          { label: '', text: 'Kabelverlegung und -fuehrung' },
-          { label: '', text: 'Installationsvorbereitung' },
-          { label: '', text: 'Material- und Werkzeugtransport' },
-          { label: '', text: 'Sicherheitsorientiertes Arbeiten' },
-        ],
-      },
-    ],
-  },
-
-  'transport': {
-    subtitle: 'Zuverlaessige Transport- und Lieferdienstleistungen',
-    heroParagraphs: [
-      'Wir bieten flexible Transportloesungen fuer Unternehmen und Privatkunden.',
-      'Mit erfahrenen Fahrern erledigen wir Ihre Transportaufgaben termingerecht und sicher.',
-    ],
-    sections: [
-      {
-        title: 'Transportservices',
-        paragraphs: [
-          'Ob Kurier, Moebelfahrt oder regelmaessige Touren - wir finden die passende Loesung.',
-        ],
-        bullets: [
-          { label: '', text: 'Lokale und regionale Transporte' },
-          { label: '', text: 'Moebelumzuege' },
-          { label: '', text: 'Same-Day-Delivery' },
-          { label: '', text: 'Regelmaessige Belieferungstouren' },
+          { label: '', text: 'Hotels, Restaurants und Cafés' },
+          { label: '', text: 'Cateringunternehmen und Messeveranstalter' },
+          { label: '', text: 'Eventagenturen und Kongresszentren' },
+          { label: '', text: 'Firmenveranstaltungen, Hochzeiten und private Events' },
+          { label: '', text: 'Großküchen' },
         ],
       },
     ],
   },
 
   'staffing-services': {
-    subtitle: 'Qualifiziertes Personal fuer jeden Bedarf',
+    subtitle: 'Ihr Partner für Personalservice und flexible Personallösungen',
     heroParagraphs: [
-      'Unsere Personaldienstleistungen verbinden Unternehmen mit den richtigen Fachkraeften.',
-      'Von Hilfskraeften bis Facharbeitern - unser Pool umfasst erfahrene Mitarbeiter aus verschiedenen Branchen.',
+      'Seit 2018 ist Suhaili Service GmbH Ihr zuverlässiger Partner für Personalservice, Arbeitnehmerüberlassung und flexible Personallösungen in ganz Deutschland.',
+      'Wir unterstützen Unternehmen aus den Bereichen Logistik, Industrie, Handel, Gastronomie, Hotellerie, Facility Management, Bau und Dienstleistungen mit qualifiziertem Personal für kurz- und langfristige Einsätze.',
     ],
     sections: [
       {
-        title: 'Personaldienstleistungen',
-        paragraphs: [
-          'Wir bieten massgeschneiderte Personloesungen, die zu Ihrem Unternehmen passen.',
-        ],
+        title: 'Unsere Leistungen',
+        paragraphs: [],
         bullets: [
-          { label: '', text: 'Zeitarbeit und Arbeitnehmerueberlassung' },
-          { label: '', text: 'Direktvermittlung von Fachkraeften' },
-          { label: '', text: 'Saisonale Personalverstaerkung' },
-          { label: '', text: 'Schnelle Verfuegbarkeit bei Engpaessen' },
+          { label: '', text: 'Arbeitnehmerüberlassung (AÜ)' },
+          { label: '', text: 'Zeitarbeit und Personalleasing' },
+          { label: '', text: 'Fachkräftevermittlung' },
+          { label: '', text: 'Helferpersonal für Industrie und Logistik' },
+          { label: '', text: 'Projektpersonal für Großprojekte' },
+          { label: '', text: 'Lager- und Logistikmitarbeiter' },
+          { label: '', text: 'Warenverräumung und Supermarktpersonal' },
+          { label: '', text: 'Reinigungskräfte und Facility Service Mitarbeiter' },
+          { label: '', text: 'Küchenhelfer, Servicekräfte und Hotelpersonal' },
+          { label: '', text: 'Bauhelfer und Montagepersonal' },
+          { label: '', text: 'Fahrerpersonal und Kurierfahrer' },
+          { label: '', text: 'Kurzfristige und langfristige Personalgestellung' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Schnelle Personalbereitstellung' },
+          { label: '', text: 'Qualifizierte und motivierte Mitarbeiter' },
+          { label: '', text: 'Flexible Einsatzmodelle' },
+          { label: '', text: 'Persönliche Betreuung durch feste Ansprechpartner' },
+          { label: '', text: 'Deutschlandweite Einsätze' },
+          { label: '', text: 'Zuverlässige und professionelle Arbeitsweise' },
+          { label: '', text: 'Hohe Qualitäts- und Sicherheitsstandards' },
+        ],
+      },
+      {
+        title: 'Branchen, die wir unterstützen',
+        paragraphs: ['Wir legen großen Wert auf Zuverlässigkeit, Flexibilität und Kundenzufriedenheit. Unsere Mitarbeiter werden sorgfältig ausgewählt und entsprechend den Anforderungen unserer Kunden eingesetzt.'],
+        bullets: [
+          { label: '', text: 'Logistik & Lager und Industrie & Produktion' },
+          { label: '', text: 'Einzelhandel & Supermärkte' },
+          { label: '', text: 'Hotels & Gastronomie' },
+          { label: '', text: 'Facility Management und Reinigungsunternehmen' },
+          { label: '', text: 'Bauunternehmen, Messen & Veranstaltungen' },
+        ],
+      },
+    ],
+  },
+
+  'hotel-services': {
+    subtitle: 'Qualifiziertes Hotelpersonal und professionelle Hoteldienstleistungen',
+    heroParagraphs: [
+      'Seit 2018 unterstützt Suhaili Service GmbH Hotels, Aparthotels, Resorts, Pensionen und Ferienanlagen mit qualifiziertem Personal und professionellen Hoteldienstleistungen in ganz Deutschland.',
+      'Unser geschultes Personal arbeitet zuverlässig, diskret und serviceorientiert und unterstützt Hotels sowohl bei kurzfristigen Personalengpässen als auch bei langfristigen Projekten.',
+    ],
+    sections: [
+      {
+        title: 'Unsere Leistungen',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Housekeeping Service' },
+          { label: '', text: 'Zimmerreinigung und Zimmerpflege' },
+          { label: '', text: 'Hotelreinigung und öffentliche Bereiche' },
+          { label: '', text: 'Frühstücksservice und Gästebetreuung' },
+          { label: '', text: 'Küchenhilfe und Küchenpersonal' },
+          { label: '', text: 'Spülkräfte und Stewarding-Service' },
+          { label: '', text: 'Empfangsunterstützung und Rezeption' },
+          { label: '', text: 'Hotelpersonal für verschiedene Bereiche' },
+          { label: '', text: 'Unterstützung bei Veranstaltungen im Hotel' },
+          { label: '', text: 'Wäsche- und Reinigungsservice' },
+          { label: '', text: 'Unterstützung bei hoher Auslastung' },
+          { label: '', text: 'Flexible Personalgestellung' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Freundliches und professionelles Personal' },
+          { label: '', text: 'Hohe Qualitätsstandards' },
+          { label: '', text: 'Flexible Einsatzplanung' },
+          { label: '', text: 'Kurzfristige Personalbereitstellung' },
+          { label: '', text: 'Zuverlässige und pünktliche Mitarbeiter' },
+          { label: '', text: 'Deutschlandweite Einsätze' },
+          { label: '', text: 'Persönliche Betreuung durch Teamleiter' },
+        ],
+      },
+      {
+        title: 'Für wen wir arbeiten',
+        paragraphs: ['Wir unterstützen Hotels dabei, höchste Servicestandards einzuhalten und einen reibungslosen Ablauf in allen Hotelbereichen sicherzustellen.'],
+        bullets: [
+          { label: '', text: 'Hotels und Aparthotels' },
+          { label: '', text: 'Business Hotels und Ferienanlagen' },
+          { label: '', text: 'Resorts und Pensionen' },
+          { label: '', text: 'Hostels und Tagungs- & Konferenzhotels' },
+        ],
+      },
+    ],
+  },
+
+  'transportation-moving-services': {
+    subtitle: 'Zuverlässige Transport-, Umzugs- und Logistikpersonallösungen in ganz Deutschland',
+    heroParagraphs: [
+      'Seit 2018 unterstützt Suhaili Service GmbH Unternehmen, Logistikzentren, Möbelhäuser, Lagerbetriebe und Privatkunden mit professionellen Transport-, Umzugs- und Trageservices in ganz Deutschland.',
+      'Wir stellen zuverlässige Mitarbeiter für Be- und Entladearbeiten, Umzugshilfe, Möbelmontage sowie allgemeine Transportunterstützung zur Verfügung. Hinweis: Wir bieten qualifiziertes Personal und Umzugshelfer an und arbeiten gemeinsam mit der vorhandenen Transportlösung unserer Kunden.',
+    ],
+    sections: [
+      {
+        title: 'Unsere Leistungen',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Umzugshelfer für private und gewerbliche Umzüge' },
+          { label: '', text: 'Be- und Entladung von Fahrzeugen und Containern' },
+          { label: '', text: 'Möbelmontage und Möbeldemontage' },
+          { label: '', text: 'Tragearbeiten und Transportunterstützung' },
+          { label: '', text: 'Verpackungs- und Sortierarbeiten' },
+          { label: '', text: 'Unterstützung bei Firmenumzügen' },
+          { label: '', text: 'Lagerumzüge und Betriebsverlagerungen' },
+          { label: '', text: 'Einrichtung und Montage von Büroarbeitsplätzen' },
+          { label: '', text: 'Unterstützung bei Messe- und Eventaufbauten' },
+          { label: '', text: 'Flexible Personalgestellung für Transportprojekte' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Motivierte und zuverlässige Mitarbeiter' },
+          { label: '', text: 'Flexible Einsatzzeiten' },
+          { label: '', text: 'Kurzfristige Personalbereitstellung' },
+          { label: '', text: 'Saubere und professionelle Arbeitsweise' },
+          { label: '', text: 'Deutschlandweite Einsätze' },
+          { label: '', text: 'Persönliche Projektbetreuung' },
+          { label: '', text: 'Faire und transparente Zusammenarbeit' },
+        ],
+      },
+      {
+        title: 'Für wen wir arbeiten',
+        paragraphs: ['Unser Team arbeitet effizient, sorgfältig und verantwortungsbewusst, damit Projekte termingerecht und professionell abgeschlossen werden.'],
+        bullets: [
+          { label: '', text: 'Logistikunternehmen und Möbelhäuser' },
+          { label: '', text: 'Lagerbetriebe und Industrieunternehmen' },
+          { label: '', text: 'Hotels und Einzelhändler' },
+          { label: '', text: 'Büro- und Gewerbekunden' },
+          { label: '', text: 'Privatkunden' },
+        ],
+      },
+    ],
+  },
+
+  'property-management-services': {
+    subtitle: 'Professioneller Hausmeisterservice und Objektbetreuung in ganz Deutschland',
+    heroParagraphs: [
+      'Seit 2018 bietet Suhaili Service GmbH zuverlässige Hausmeister- und Hausverwaltungsdienstleistungen für Wohnanlagen, Bürogebäude, Gewerbeobjekte und private Auftraggeber in ganz Deutschland an.',
+      'Unsere erfahrenen Hausmeisterteams sorgen für die professionelle Pflege, Instandhaltung und tägliche Betreuung Ihrer Objekte und erhalten deren Wert langfristig.',
+    ],
+    sections: [
+      {
+        title: 'Unsere Leistungen',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Hausmeister- und Objektbetreuung' },
+          { label: '', text: 'Objektkontrollen und Dokumentation' },
+          { label: '', text: 'Kleinreparaturen und Instandhaltungsarbeiten' },
+          { label: '', text: 'Winterdienst und Schneeräumung' },
+          { label: '', text: 'Reinigung von Gemeinschaftsflächen und Treppenhäusern' },
+          { label: '', text: 'Garten- und Außenanlagenpflege' },
+          { label: '', text: 'Müll- und Wertstoffentsorgung' },
+          { label: '', text: 'Unterstützung bei Ein- und Auszügen' },
+          { label: '', text: 'Koordination von Handwerkern und Dienstleistern' },
+          { label: '', text: 'Notfalldienste und Rufbereitschaft' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Zuverlässiges und geschultes Hausmeisterpersonal' },
+          { label: '', text: 'Flexible Einsatzplanung und schnelle Reaktion' },
+          { label: '', text: 'Regelmäßige Objektkontrollen' },
+          { label: '', text: 'Persönlicher Ansprechpartner für jedes Objekt' },
+          { label: '', text: 'Deutschlandweite Verfügbarkeit' },
+          { label: '', text: 'Hohe Qualitäts- und Sicherheitsstandards' },
+          { label: '', text: 'Transparente Berichterstattung und Dokumentation' },
+        ],
+      },
+      {
+        title: 'Für wen wir arbeiten',
+        paragraphs: ['Unser Ziel ist es, den Wert Ihrer Immobilie langfristig zu erhalten und jederzeit ein gepflegtes und professionelles Erscheinungsbild sicherzustellen.'],
+        bullets: [
+          { label: '', text: 'Hausverwaltungen und Wohnungsbaugesellschaften' },
+          { label: '', text: 'Gewerbeimmobilieneigentümer' },
+          { label: '', text: 'Büro- und Industriegebäude' },
+          { label: '', text: 'Private Vermieter und Investoren' },
+        ],
+      },
+    ],
+  },
+
+  'kitchen-dishwashing-services': {
+    subtitle: 'Erfahrenes Küchen- und Spülpersonal für Gastronomie und Betriebe',
+    heroParagraphs: [
+      'Seit 2018 stellt Suhaili Service GmbH Restaurants, Hotels, Kantinen, Cateringunternehmen und Großküchen in ganz Deutschland qualifizierte Küchenhelfer und Spülkräfte zur Verfügung.',
+      'In jeder professionellen Küche ist zuverlässiges und erfahrenes Hilfspersonal unerlässlich. Unsere Teams arbeiten effizient, hygienisch und nach HACCP-Standards, damit Ihr Küchenbetrieb reibungslos läuft.',
+    ],
+    sections: [
+      {
+        title: 'Unsere Leistungen',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Küchenhelfer und Küchenhilfen' },
+          { label: '', text: 'Spülkräfte und Stewarding-Personal' },
+          { label: '', text: 'Küchenreinigung und Hygienepflege' },
+          { label: '', text: 'Mise-en-place und Vorbereitungsarbeiten' },
+          { label: '', text: 'Frühstücks- und Bufettservice' },
+          { label: '', text: 'Unterstützung bei Stoßzeiten' },
+          { label: '', text: 'Personal für Catering und Events' },
+          { label: '', text: 'Flexible Personalgestellung für kurz- und langfristige Einsätze' },
+          { label: '', text: 'Unterstützung in allen Küchenbereichen' },
+        ],
+      },
+      {
+        title: 'Warum Suhaili Service GmbH?',
+        paragraphs: [],
+        bullets: [
+          { label: '', text: 'Erfahrung seit 2018' },
+          { label: '', text: 'Zuverlässiges und hygienebewusstes Personal' },
+          { label: '', text: 'Flexible Einsatzzeiten auch abends und am Wochenende' },
+          { label: '', text: 'Kurzfristige Einsatzbereitschaft' },
+          { label: '', text: 'Deutschlandweite Einsätze' },
+          { label: '', text: 'Professionelle Betreuung durch Teamleiter' },
+          { label: '', text: 'Hohe Hygiene- und Qualitätsstandards' },
+          { label: '', text: 'Faire und transparente Zusammenarbeit' },
+        ],
+      },
+      {
+        title: 'Für wen wir arbeiten',
+        paragraphs: ['Unser Ziel ist es, Ihren Küchenbetrieb reibungslos zu halten, damit sich Ihr Team auf das Wesentliche konzentrieren kann.'],
+        bullets: [
+          { label: '', text: 'Restaurants und Hotels' },
+          { label: '', text: 'Kantinen und Betriebsgastronomie' },
+          { label: '', text: 'Cateringunternehmen' },
+          { label: '', text: 'Großküchen und Eventcatering' },
+          { label: '', text: 'Krankenhäuser, Pflegeheime und institutionelle Küchen' },
         ],
       },
     ],

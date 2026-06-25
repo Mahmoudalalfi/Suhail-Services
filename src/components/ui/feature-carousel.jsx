@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -15,20 +15,22 @@ function useCarouselMobile() {
 }
 import { useLanguage } from "../../i18n/LanguageContext";
 
-const CATEGORY_KEYS = ["general", "cleaning", "cashier", "warehouse", "construction", "installation", "electrical", "transport", "staffing"];
-
 const SUB_IMAGES = {
-  "general-services":       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1400",
-  "office-cleaning":        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1400",
-  "construction-cleaning":  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1400",
-  "deep-cleaning":          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1400",
-  "maintenance-cleaning":   "https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=1400",
-  "cashier-services":       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1400",
-  "warehouse-services":     "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1400",
-  "installation-unpacking": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1400",
-  "electrical-assistance":  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1400",
-  "transport":              "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1400",
-  "staffing-services":      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1400",
+  "retail-supermarket-service":     "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1400",
+  "cleaning-building-services":     "https://res.cloudinary.com/df7aiznm6/image/upload/v1782331386/Cleaning_and_Building_services_sktlvm.jpg",
+  "driver-services-staffing":       "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Driver_Services_Staffing_xibcaw.png",
+  "construction-trades":            "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Construction_Trades_p2wisz.png",
+  "electrical-technical-services":  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1400",
+  "facility-management":            "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329252/Facility_Management_cuor3m.png",
+  "inventory-control":              "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1400",
+  "garden-outdoor-services":        "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Garden_Outdoor_Services_gxgsrb.png",
+  "assembly-disassembly":           "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1400",
+  "food-service-events":            "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Food_Service_Events_a2mryf.jpg",
+  "staffing-services":              "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1400",
+  "hotel-services":                 "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329213/Hotel_Services_ur9iqp.jpg",
+  "transportation-moving-services": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1400",
+  "property-management-services":   "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329212/Property_Management_Services_nlwmvv.jpg",
+  "kitchen-dishwashing-services":   "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329212/Kitchen_Dishwashing_Services_kmmv1f.jpg",
 };
 
 const FALLBACKS = [
@@ -38,23 +40,137 @@ const FALLBACKS = [
   "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1400",
 ];
 
-const CAT_COLORS = ["#FACC15", "#38bdf8", "#34d399", "#fb923c", "#a78bfa", "#f472b6", "#22d3ee", "#FACC15", "#38bdf8"];
+const CAT_COLORS = ["#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C"];
 const AUTO_MS = 3800;
+
+function TabBar({ categories, catIdx, accent, isMobile, onSelect }) {
+  const scrollRef = useRef(null)
+  const [canScrollLeft, setCanScrollLeft]   = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  const updateArrows = useCallback(() => {
+    const el = scrollRef.current
+    if (!el) return
+    setCanScrollLeft(el.scrollLeft > 4)
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 4)
+  }, [])
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    updateArrows()
+    el.addEventListener("scroll", updateArrows, { passive: true })
+    window.addEventListener("resize", updateArrows)
+    return () => {
+      el.removeEventListener("scroll", updateArrows)
+      window.removeEventListener("resize", updateArrows)
+    }
+  }, [updateArrows])
+
+  const scroll = (dir) => {
+    const el = scrollRef.current
+    if (!el) return
+    el.scrollBy({ left: dir * 240, behavior: "smooth" })
+  }
+
+  const arrowStyle = (visible) => ({
+    position: "absolute", top: 0, bottom: 0,
+    width: 36, zIndex: 3,
+    display: "flex", alignItems: "center", justifyContent: "center",
+    background: "rgba(255,255,255,0.95)",
+    border: "none", cursor: visible ? "pointer" : "default",
+    opacity: visible ? 1 : 0,
+    pointerEvents: visible ? "auto" : "none",
+    transition: "opacity 0.2s",
+    fontSize: 16, fontWeight: 700, color: "#333",
+  })
+
+  return (
+    <div style={{ position: "relative", borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
+      {/* Left arrow */}
+      <button style={{ ...arrowStyle(canScrollLeft), left: 0 }} onClick={() => scroll(-1)}>‹</button>
+
+      {/* Scrollable tab strip */}
+      <div
+        ref={scrollRef}
+        style={{
+          display: "flex",
+          overflowX: "auto",
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          WebkitOverflowScrolling: "touch",
+          paddingLeft: canScrollLeft ? 36 : 0,
+          paddingRight: canScrollRight ? 36 : 0,
+          transition: "padding 0.2s",
+        }}
+      >
+        {categories.map((c, i) => {
+          const active = i === catIdx
+          return (
+            <button
+              key={c.key}
+              onClick={() => onSelect(i)}
+              style={{
+                flex: "0 0 auto",
+                padding: isMobile ? "14px 16px" : "18px 20px",
+                border: "none", background: "transparent",
+                cursor: "pointer", position: "relative",
+                transition: "background 0.2s",
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={e => { if (!active) e.currentTarget.style.background = "rgba(0,0,0,0.03)" }}
+              onMouseLeave={e => { e.currentTarget.style.background = "transparent" }}
+            >
+              <span style={{
+                display: "block",
+                fontSize: isMobile ? 11 : "clamp(10px, 1.1vw, 12px)",
+                fontWeight: active ? 700 : 500,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: active ? "#0a0a0a" : "rgba(0,0,0,0.35)",
+                transition: "color 0.2s",
+              }}>
+                {c.label}
+              </span>
+              {active && (
+                <motion.div
+                  layoutId="tab-underline"
+                  style={{
+                    position: "absolute", bottom: -1, left: 0, right: 0,
+                    height: 3, background: accent, borderRadius: "3px 3px 0 0",
+                    pointerEvents: "none",
+                  }}
+                  transition={{ type: "spring", stiffness: 480, damping: 34 }}
+                />
+              )}
+            </button>
+          )
+        })}
+      </div>
+
+      {/* Right arrow */}
+      <button style={{ ...arrowStyle(canScrollRight), right: 0 }} onClick={() => scroll(1)}>›</button>
+    </div>
+  )
+}
 
 export function FeatureCarousel({ servicesList, openCategoryIndex }) {
   const { t } = useLanguage();
 
-  const categories = (servicesList || []).map((s, i) => ({
-    key:      CATEGORY_KEYS[i] || `cat-${i}`,
-    label:    (s.category || s.name || "").replace("\n", " "),
-    desc:     s.desc || "",
-    color:    CAT_COLORS[i] || CAT_COLORS[0],
-    fallback: FALLBACKS[i] || FALLBACKS[0],
-    items:    (s.items || []).map(item => ({
-      ...item,
-      image: SUB_IMAGES[item.slug] || FALLBACKS[i] || FALLBACKS[0],
-    })),
-  }));
+  const categories = (servicesList || []).map((s, i) => {
+    const firstSlug = s.items?.[0]?.slug || "";
+    return {
+      key:      firstSlug || `cat-${i}`,
+      label:    (s.category || s.name || "").replace("\n", " "),
+      desc:     s.desc || "",
+      color:    CAT_COLORS[i % CAT_COLORS.length],
+      fallback: FALLBACKS[i % FALLBACKS.length],
+      items:    (s.items || []).map(item => ({
+        ...item,
+        image: SUB_IMAGES[item.slug] || FALLBACKS[i % FALLBACKS.length],
+      })),
+    };
+  });
 
   const isMobile = useCarouselMobile();
   const [catIdx, setCatIdx] = useState(() => typeof openCategoryIndex === "number" ? openCategoryIndex : 0);
@@ -87,96 +203,13 @@ export function FeatureCarousel({ servicesList, openCategoryIndex }) {
       onMouseLeave={() => { setPaused(false); setHovItem(null); }}
     >
       {/* ── Category tab bar ── */}
-      {isMobile && (
-        <div style={{
-          display: "flex", alignItems: "center", justifyContent: "space-between",
-          padding: "8px clamp(4px, 2vw, 12px) 6px",
-          borderBottom: "none",
-        }}>
-          <span style={{
-            fontSize: 10, fontWeight: 700, letterSpacing: "0.12em",
-            textTransform: "uppercase", color: "rgba(0,0,0,0.35)",
-          }}>
-            {catIdx + 1} / {categories.length}
-          </span>
-          <span style={{
-            fontSize: 10, fontWeight: 600, letterSpacing: "0.08em",
-            textTransform: "uppercase", color: "rgba(0,0,0,0.35)",
-            display: "flex", alignItems: "center", gap: 4,
-          }}>
-            Scroll for more &nbsp;›
-          </span>
-        </div>
-      )}
-      <div style={{
-        position: isMobile ? "relative" : "static",
-      }}>
-      <div style={{
-        display: "flex", gap: 0,
-        marginBottom: 0,
-        borderBottom: "1px solid rgba(0,0,0,0.08)",
-        overflowX: isMobile ? "auto" : "visible",
-        WebkitOverflowScrolling: "touch",
-        scrollbarWidth: "none",
-        msOverflowStyle: "none",
-      }}>
-        {categories.map((c, i) => {
-          const active = i === catIdx;
-          return (
-            <button
-              key={c.key}
-              onClick={() => { setCatIdx(i); setPaused(false); }}
-              style={{
-                flex: isMobile ? "0 0 auto" : 1,
-                padding: isMobile ? "14px 16px" : "18px 12px",
-                border: "none", background: "transparent",
-                cursor: "pointer", position: "relative",
-                transition: "background 0.2s",
-                whiteSpace: "nowrap",
-              }}
-              onMouseEnter={e => { if (!active) e.currentTarget.style.background = "rgba(0,0,0,0.03)"; }}
-              onMouseLeave={e => { e.currentTarget.style.background = "transparent"; }}
-            >
-              <span style={{
-                display: "block",
-                fontSize: isMobile ? 11 : "clamp(10px, 1.1vw, 12px)",
-                fontWeight: active ? 700 : 500,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: active ? "#0a0a0a" : "rgba(0,0,0,0.35)",
-                transition: "color 0.2s",
-              }}>
-                {c.label}
-              </span>
-              {active && (
-                <motion.div
-                  layoutId="tab-underline"
-                  style={{
-                    position: "absolute", bottom: -1, left: 0, right: 0,
-                    height: 3, background: accent, borderRadius: "3px 3px 0 0",
-                  }}
-                  transition={{ type: "spring", stiffness: 480, damping: 34 }}
-                />
-              )}
-            </button>
-          );
-        })}
-      </div>
-      {/* Right fade + arrow indicator — only on mobile */}
-      {isMobile && (
-        <div style={{
-          position: "absolute", top: 0, right: 0, bottom: 0,
-          width: 48,
-          background: "linear-gradient(to right, transparent, rgba(255,255,255,0.96))",
-          pointerEvents: "none",
-          display: "flex", alignItems: "center", justifyContent: "flex-end",
-          paddingRight: 8,
-          zIndex: 2,
-        }}>
-          <span style={{ fontSize: 16, color: "rgba(0,0,0,0.4)", fontWeight: 700 }}>›</span>
-        </div>
-      )}
-      </div>
+      <TabBar
+        categories={categories}
+        catIdx={catIdx}
+        accent={accent}
+        isMobile={isMobile}
+        onSelect={(i) => { setCatIdx(i); setPaused(false); }}
+      />
 
       {/* ── Main stage ── */}
       <AnimatePresence mode="wait">

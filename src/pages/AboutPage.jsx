@@ -1,77 +1,79 @@
 ﻿import { useEffect, useRef } from 'react'
+import useSEO from '../hooks/useSEO'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '../i18n/LanguageContext'
 import LiquidButton from '../components/ui/LiquidButton'
 
-function CounterStat({ s, delay }) {
-  const numRef = useRef(null)
-  useEffect(() => {
-    const el = numRef.current
-    if (!el) return
-    // Parse numeric value, preserving suffix (e.g. "16.400" → 16400, suffix "")
-    const raw = String(s.num).replace(/\s/g, '')
-    const match = raw.match(/^([\d.,]+)(.*)$/)
-    if (!match) return
-    // Detect decimal separator: if last dot/comma has ≤3 digits after it treat as thousands sep
-    const numStr = match[1]
-    const suffix = match[2] || ''
-    // Normalise: European thousands dots → remove, comma decimal → dot
-    const normalised = numStr.replace(/\./g, '').replace(',', '.')
-    const target = parseFloat(normalised)
-    if (isNaN(target)) return
+gsap.registerPlugin(ScrollTrigger)
 
-    // Format back the same way the original used (dots as thousands separators)
-    const fmt = (v) => {
-      const rounded = Math.round(v)
-      return rounded.toLocaleString('de-DE').replace(/,.*/, '') + suffix
-    }
+const GOLD = '#C9A84C'
 
-    const obj = { val: 0 }
-    ScrollTrigger.create({
-      trigger: el,
-      start: 'top 85%',
-      once: true,
-      onEnter: () => {
-        gsap.to(obj, {
-          val: target,
-          duration: 1.8,
-          delay,
-          ease: 'power2.out',
-          onUpdate: () => { el.textContent = fmt(obj.val) },
-          onComplete: () => { el.textContent = fmt(target) },
-        })
-      },
-    })
-  }, [])
-
-  return (
-    <div style={{ borderTop: '2px solid rgba(255,255,255,0.35)', paddingTop: 22 }}>
-      <p ref={numRef} style={{
-        fontSize: 'clamp(38px, 4.5vw, 58px)',
-        fontWeight: 700,
-        color: '#fff',
-        letterSpacing: '-0.04em',
-        lineHeight: 1,
-        margin: '0 0 12px',
-      }}>
-        0
-      </p>
-      <p style={{
-        fontSize: 13,
-        color: 'rgba(255,255,255,0.5)',
-        letterSpacing: '0.01em',
-        lineHeight: 1.45,
-        margin: 0,
-      }}>
-        {s.label}
-      </p>
-    </div>
-  )
+const PILLAR_ICONS = {
+  cleaning: (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21h18" />
+      <path d="M5 21V10l7-7 7 7v11" />
+      <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4" />
+      <path d="M12 3v4" />
+      <path d="M15 6H9" />
+    </svg>
+  ),
+  facility: (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="7" width="20" height="14" rx="2" />
+      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+      <line x1="12" y1="12" x2="12" y2="16" />
+      <line x1="10" y1="14" x2="14" y2="14" />
+    </svg>
+  ),
+  logistics: (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3" />
+      <rect x="9" y="11" width="14" height="10" rx="1" />
+      <circle cx="12" cy="21" r="1" />
+      <circle cx="20" cy="21" r="1" />
+    </svg>
+  ),
+  construction: (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M2 22h20" />
+      <path d="M6.87 2h10.26L20 7H4L6.87 2z" />
+      <path d="M4 7v15" />
+      <path d="M20 7v15" />
+      <path d="M4 12h16" />
+      <path d="M4 17h16" />
+    </svg>
+  ),
 }
 
-gsap.registerPlugin(ScrollTrigger)
+const VALUE_ICONS = {
+  reliable: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="m9 12 2 2 4-4"/>
+    </svg>
+  ),
+  personal: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+    </svg>
+  ),
+  trust: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+    </svg>
+  ),
+  quality: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </svg>
+  ),
+}
 
 function useScrollReveal(ref, opts = {}) {
   useEffect(() => {
@@ -98,182 +100,411 @@ function RevealBlock({ children, y = 40, delay = 0, style = {} }) {
 
 export default function AboutPage() {
   const { t } = useLanguage()
+  useSEO({
+    title: 'Über uns — Suhaili Service GmbH',
+    description: 'Erfahren Sie mehr über Suhaili Service GmbH: unsere Geschichte, Werte und unser Team in Berlin.',
+    canonical: 'https://www.suhaili-services.de/about',
+  })
+  const heroRef = useRef(null)
 
-  const headRef = useRef(null)
-  const imgRef  = useRef(null)
+  const pillars = Array.isArray(t('about.pillars')) ? t('about.pillars') : []
+  const values = Array.isArray(t('about.values')) ? t('about.values') : []
 
   useEffect(() => {
-    gsap.fromTo(headRef.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.05 }
+    if (!heroRef.current) return
+    gsap.fromTo(heroRef.current,
+      { opacity: 0, y: 36 },
+      { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.1 }
     )
   }, [])
 
-  useEffect(() => {
-    if (!imgRef.current) return
-    gsap.to(imgRef.current, {
-      yPercent: -8,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: imgRef.current.parentElement,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1.5,
-      },
-    })
-  }, [])
-
-  const learnMorePath = t('about.learnMoreHref') || '/contact'
-  const stats         = Array.isArray(t('about.stats'))         ? t('about.stats')         : []
-  const aboutSections = Array.isArray(t('about.aboutSections')) ? t('about.aboutSections') : []
-
   return (
-    <div>
+    <div style={{ background: '#fff' }}>
 
-      {/* ── Hero ──────────────────────────────────────────────────── */}
-      <section style={{ padding: 'clamp(100px, 14vw, 160px) clamp(20px, 5vw, 40px) clamp(56px, 10vw, 100px)', background: '#fff' }}>
-        <div
+      {/* ── Hero ── */}
+      <section className="about-page-hero" style={{
+        position: 'relative',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'flex-end',
+        overflow: 'hidden',
+      }}>
+        <img
+          src={t('about.heroImage')}
+          alt={t('about.heroImageAlt')}
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: 'clamp(32px, 5vw, 56px)',
-            alignItems: 'center',
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+          className="about-hero-img"
+        />
+        <style>{`
+          @media (max-width: 768px) {
+            .about-hero-img { object-position: 75% center !important; }
+          }
+        `}</style>
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(180deg, rgba(8,8,12,0.15) 0%, rgba(8,8,12,0.55) 55%, rgba(8,8,12,0.82) 100%)',
+        }} />
+        <div
+          ref={heroRef}
+          style={{
+            position: 'relative',
+            zIndex: 1,
+            opacity: 0,
+            width: '100%',
             maxWidth: 1200,
             margin: '0 auto',
+            padding: 'clamp(100px, 14vw, 140px) clamp(20px, 5vw, 40px) clamp(56px, 8vw, 80px)',
           }}
         >
-          <div className="about-hero-image-wrap" style={{ overflow: 'hidden', minHeight: 420, maxHeight: 720 }}>
-            <img
-              ref={imgRef}
-              src={t('about.aboutImage')}
-              alt={t('about.aboutImgAlt')}
-              style={{
-                width: '100%',
-                height: '100%',
-                minHeight: 420,
-                objectFit: 'cover',
-                objectPosition: 'center top',
-                willChange: 'transform',
-              }}
-            />
-          </div>
+          <h1 style={{
+            fontSize: 'clamp(34px, 5.8vw, 68px)',
+            fontWeight: 700,
+            letterSpacing: '-0.03em',
+            color: '#fff',
+            lineHeight: 1.08,
+            margin: '0 0 20px',
+            maxWidth: 900,
+          }}>
+            {t('about.heroTitleLead')}{' '}
+            <span style={{ color: GOLD }}>{t('about.heroTitleAccent')}</span>
+          </h1>
+          <p style={{
+            fontSize: 'clamp(15px, 1.7vw, 19px)',
+            color: 'rgba(255,255,255,0.82)',
+            lineHeight: 1.65,
+            maxWidth: 640,
+            margin: '0 0 32px',
+          }}>
+            {t('about.heroSub')}
+          </p>
+          <LiquidButton as={Link} to={t('about.learnMoreHref') || '/contact'} tint={GOLD} textColor="#000">
+            {t('about.learnMoreLabel')} →
+          </LiquidButton>
+        </div>
+      </section>
 
-          <div ref={headRef} style={{ opacity: 0 }}>
-            <h1
-              style={{
-                fontSize: 'clamp(36px, 5vw, 56px)',
-                fontWeight: 700,
-                letterSpacing: '-0.02em',
-                color: '#0a0a0a',
-                lineHeight: 1.15,
-                margin: '0 0 28px',
-              }}
-            >
-              {t('about.hero1')}
-              {t('about.hero2') ? <><br />{t('about.hero2')}</> : null}
-            </h1>
+      {/* ── Intro ── */}
+      <section style={{ padding: 'clamp(64px, 9vw, 96px) clamp(20px, 5vw, 40px)' }}>
+        <div style={{
+          maxWidth: 1200,
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: 'clamp(28px, 4vw, 64px)',
+          alignItems: 'start',
+        }}>
+          <RevealBlock>
+            <p style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: 12,
+              fontWeight: 700,
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: GOLD,
+              marginBottom: 16,
+            }}>
+              {t('about.aboutEyebrow')}
+            </p>
+            <h2 style={{
+              fontSize: 'clamp(26px, 3.8vw, 44px)',
+              fontWeight: 700,
+              color: '#0a0a0a',
+              letterSpacing: '-0.03em',
+              lineHeight: 1.15,
+              margin: 0,
+            }}>
+              {t('about.aboutHeading')}
+            </h2>
+          </RevealBlock>
+          <RevealBlock delay={0.1}>
+            <p style={{
+              fontSize: 'clamp(15px, 1.6vw, 17px)',
+              color: 'rgba(30,31,40,0.62)',
+              lineHeight: 1.75,
+              margin: 0,
+            }}>
+              {t('about.aboutIntro')}
+            </p>
+          </RevealBlock>
+        </div>
+      </section>
 
-            {t('about.mission2') && (
-              <p
-                style={{
-                  fontSize: 17,
-                  color: 'rgba(30,31,40,0.62)',
-                  lineHeight: 1.75,
-                  maxWidth: 560,
-                  letterSpacing: '-0.01em',
-                  margin: '0 0 36px',
-                }}
-              >
-                {t('about.mission2')}
-              </p>
-            )}
+      {/* ── Service pillars ── */}
+      <section style={{ padding: '0 clamp(20px, 5vw, 40px) clamp(72px, 10vw, 96px)' }}>
+        <div className="about-pillars-grid" style={{
+          maxWidth: 1200,
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+          gap: 'clamp(20px, 3vw, 32px)',
+        }}>
+          {pillars.map((pillar, i) => (
+            <RevealBlock key={pillar.id || i} delay={i * 0.06}>
+              <div style={{ textAlign: 'center', padding: '0 8px' }}>
+                <div style={{
+                  width: 64,
+                  height: 64,
+                  borderRadius: '50%',
+                  border: `2px solid ${GOLD}`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 18px',
+                  color: GOLD,
+                }}>
+                  {PILLAR_ICONS[pillar.icon] || PILLAR_ICONS.cleaning}
+                </div>
+                <p style={{
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: 'clamp(15px, 1.4vw, 17px)',
+                  fontWeight: 700,
+                  color: '#0a0a0a',
+                  letterSpacing: '0.02em',
+                  textTransform: 'uppercase',
+                  margin: '0 0 10px',
+                }}>
+                  {pillar.title}
+                </p>
+                <p style={{
+                  fontSize: 13,
+                  color: 'rgba(30,31,40,0.58)',
+                  lineHeight: 1.65,
+                  margin: 0,
+                }}>
+                  {pillar.desc}
+                </p>
+              </div>
+            </RevealBlock>
+          ))}
+        </div>
+      </section>
 
-            <LiquidButton as={Link} to={learnMorePath} tint="#C9A84C" textColor="#000">
-              {t('about.learnMoreLabel')}
-            </LiquidButton>
-          </div>
+      {/* ── Quality section ── */}
+      <section className="about-quality-section" style={{
+        background: '#0f0f12',
+        borderRadius: 0,
+        padding: 'clamp(56px, 10vw, 230px) clamp(20px, 8vw, 120px)',
+        marginTop: 8,
+      }}>
+        <div style={{
+          maxWidth: 1200,
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: 'clamp(32px, 5vw, 56px)',
+          alignItems: 'center',
+        }}>
+          <RevealBlock>
+            <h2 style={{
+              fontSize: 'clamp(26px, 3.5vw, 40px)',
+              fontWeight: 700,
+              color: GOLD,
+              letterSpacing: '-0.02em',
+              lineHeight: 1.15,
+              margin: '0 0 24px',
+            }}>
+              {t('about.qualityTitle')}
+            </h2>
+            <p style={{
+              fontSize: 'clamp(14px, 1.5vw, 16px)',
+              color: 'rgba(255,255,255,0.72)',
+              lineHeight: 1.75,
+              margin: '0 0 16px',
+            }}>
+              {t('about.qualityP1')}
+            </p>
+            <p style={{
+              fontSize: 'clamp(14px, 1.5vw, 16px)',
+              color: 'rgba(255,255,255,0.72)',
+              lineHeight: 1.75,
+              margin: '0 0 32px',
+            }}>
+              {t('about.qualityP2')}
+            </p>
+            <div className="about-values-row" style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              gap: 16,
+            }}>
+              {values.map((v, i) => (
+                <div key={i} style={{ textAlign: 'center' }}>
+                  <div style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: '50%',
+                    border: `1.5px solid ${GOLD}`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 10px',
+                    color: GOLD,
+                  }}>
+                    {VALUE_ICONS[v.icon] || VALUE_ICONS.reliable}
+                  </div>
+                  <p style={{
+                    fontSize: 12,
+                    fontWeight: 600,
+                    color: 'rgba(255,255,255,0.85)',
+                    margin: 0,
+                    letterSpacing: '0.01em',
+                  }}>
+                    {v.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </RevealBlock>
+
+          <RevealBlock delay={0.12}>
+            <div style={{
+              borderRadius: 20,
+              overflow: 'hidden',
+              boxShadow: '0 24px 64px rgba(0,0,0,0.45)',
+            }}>
+              <img
+                src={t('https://res.cloudinary.com/df7aiznm6/image/upload/v1782403795/Companys_Board_slij2w.png')}
+                alt={t('about.qualityImageAlt')}
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+              />
+            </div>
+          </RevealBlock>
         </div>
       </section>
 
 
-      {/* ── Tailor-made solutions ──────────────────────────────────── */}
-      {(t('about.solutionsTitle') || t('about.solutionsDesc')) && (
-        <section style={{ background: '#fff', padding: 'clamp(64px, 9vw, 96px) clamp(24px, 5vw, 40px)' }}>
-          <div style={{
-            maxWidth: 1200,
-            margin: '0 auto',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: 'clamp(24px, 4vw, 64px)',
-            alignItems: 'start',
-          }}>
-            <RevealBlock>
-              <h2 style={{
-                fontSize: 'clamp(26px, 3.5vw, 42px)',
-                fontWeight: 700,
-                color: '#0a0a0a',
-                letterSpacing: '-0.03em',
-                lineHeight: 1.15,
-                margin: 0,
-              }}>
-                {t('about.solutionsTitle')}
-              </h2>
-            </RevealBlock>
-            <RevealBlock delay={0.1}>
-              <p style={{
-                fontSize: 'clamp(15px, 1.6vw, 17px)',
-                color: 'rgba(30,31,40,0.62)',
-                lineHeight: 1.75,
-                letterSpacing: '-0.01em',
-                margin: 0,
-              }}>
-                {t('about.solutionsDesc')}
-              </p>
-            </RevealBlock>
-          </div>
-        </section>
-      )}
-
-      {/* ── About bento collage ───────────────────────────────────── */}
+      {/* ── Partner companies ── */}
       <section style={{ background: '#fff', padding: 'clamp(56px, 10vw, 96px) clamp(24px, 5vw, 40px)' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <RevealBlock>
-            <div className="about-bento-grid">
-              {aboutSections.map((item, i) => {
-                const href = `/about/${item.id}`
-                const imgs = {
-                  'history-facts':           'https://images.unsplash.com/photo-1580983218765-f663bec07b37?w=800&q=80',
-                  'references':              'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
-                  'quality-certificates':    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
-                  'csr-esg':                 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80',
-                  'philosophy-code':         'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
-                  'compliance-lksg':         'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
-                  'security-advisory-board': 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=80',
-                  'association-work':        'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
-                  'other-companies':         'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-                }
-                return (
-                  <Link
-                    key={item.id}
-                    to={href}
-                    className={`about-bento-cell about-bento-cell--${i}`}
-                    style={{ textDecoration: 'none' }}
-                  >
-                    <div
-                      className="about-bento-bg"
-                      style={{ backgroundImage: `url(${imgs[item.id] || ''})` }}
-                    />
-                    <div className="about-bento-overlay" />
-                    <div className="about-bento-content">
-                      <span className="about-bento-index">0{i + 1}</span>
-                      <h2 className="about-bento-title">{item.title}</h2>
-                      <span className="about-bento-arrow">→</span>
-                    </div>
-                  </Link>
-                )
-              })}
-            </div>
+            <h2 style={{
+              fontSize: 'clamp(24px, 3.6vw, 40px)',
+              fontWeight: 700,
+              color: '#1a1200',
+              letterSpacing: '-0.03em',
+              lineHeight: 1.15,
+              margin: '0 0 clamp(36px, 5vw, 52px)',
+              maxWidth: 720,
+            }}>
+              {t('referencesPage.logosHeading')}
+            </h2>
           </RevealBlock>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: 'clamp(20px, 3vw, 32px)',
+            alignItems: 'stretch',
+          }}
+            className="about-partner-cards"
+          >
+            {(Array.isArray(t('referencesPage.clients')) ? t('referencesPage.clients') : []).map((client, i) => {
+              const BRAND_COLOR = {
+                'suhaili-security': '#e03535',
+                'crystal-dbc':      '#3b8beb',
+                'aufsteig':         '#a8b8c8',
+              }[client.slug] || GOLD
+              const bc = BRAND_COLOR
+
+              return (
+              <RevealBlock key={client.slug || i} delay={i * 0.08} style={{ height: '100%' }}>
+                <a
+                  href={client.websiteHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="partner-card"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    background: 'linear-gradient(160deg, #1a1a1f 0%, #0d0d10 100%)',
+                    borderRadius: 24,
+                    border: `1px solid ${bc}30`,
+                    boxShadow: `0 2px 0 0 ${bc}18 inset, 0 24px 48px rgba(0,0,0,0.45)`,
+                    padding: 'clamp(28px, 4vw, 40px)',
+                    boxSizing: 'border-box',
+                    height: '100%',
+                    textDecoration: 'none',
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
+                    cursor: 'pointer',
+                    position: 'relative',
+                    overflow: 'hidden',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px)'
+                    e.currentTarget.style.boxShadow = `0 2px 0 0 ${bc}40 inset, 0 32px 64px rgba(0,0,0,0.55), 0 0 0 1px ${bc}55`
+                    e.currentTarget.style.borderColor = `${bc}70`
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'translateY(0)'
+                    e.currentTarget.style.boxShadow = `0 2px 0 0 ${bc}18 inset, 0 24px 48px rgba(0,0,0,0.45)`
+                    e.currentTarget.style.borderColor = `${bc}30`
+                  }}
+                >
+                  {/* brand radial glow */}
+                  <div style={{
+                    position: 'absolute', top: -40, right: -40, width: 180, height: 180,
+                    borderRadius: '50%',
+                    background: `radial-gradient(circle, ${bc}14 0%, transparent 70%)`,
+                    pointerEvents: 'none',
+                  }} />
+
+                  {/* logo area */}
+                  <div style={{
+                    height: 120,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    marginBottom: 28,
+                    background: `${bc}08`,
+                    borderRadius: 16,
+                    border: `1px solid ${bc}18`,
+                  }}>
+                    <img src={client.logo} alt={client.name} style={{ maxWidth: '80%', maxHeight: 100, objectFit: 'contain' }} />
+                  </div>
+
+
+                  <h3 style={{ fontSize: 'clamp(17px, 1.8vw, 21px)', fontWeight: 700, color: '#fff', lineHeight: 1.25, margin: '0 0 12px', letterSpacing: '-0.01em' }}>
+                    {client.name}
+                  </h3>
+
+                  {client.body && (
+                    <p style={{ fontSize: 13.5, color: 'rgba(255,255,255,0.52)', lineHeight: 1.75, margin: '0 0 auto', paddingBottom: 24, flexGrow: 1 }}>
+                      {client.body}
+                    </p>
+                  )}
+
+                  {/* footer row */}
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 20, borderTop: '1px solid rgba(255,255,255,0.07)', marginTop: 4 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke={bc} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                      </svg>
+                      <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>{client.website}</span>
+                    </div>
+                    <div style={{
+                      display: 'flex', alignItems: 'center', gap: 6,
+                      background: `${bc}18`,
+                      border: `1px solid ${bc}40`,
+                      borderRadius: 999,
+                      padding: '5px 14px',
+                      fontSize: 12, fontWeight: 600, color: bc,
+                      letterSpacing: '0.02em',
+                    }}>
+                      {t('referencesPage.learnMore')}
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke={bc} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </RevealBlock>
+              )
+            })}
+          </div>
         </div>
       </section>
 

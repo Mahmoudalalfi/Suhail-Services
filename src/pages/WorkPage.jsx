@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '../i18n/LanguageContext'
+import useSEO from '../hooks/useSEO'
+import LiquidButton from '../components/ui/LiquidButton'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function ProjectCard({ project, index }) {
+function ProjectCard({ project, index, wide = false }) {
   const ref = useRef(null)
   const [hov, setHov] = useState(false)
 
@@ -24,7 +26,7 @@ function ProjectCard({ project, index }) {
   }, [])
 
   return (
-    <div ref={ref} style={{ opacity: 0, minWidth: 0 }}>
+    <div ref={ref} style={{ opacity: 0, minWidth: 0 }} className={wide ? 'work-project-wide' : undefined}>
       <Link
         className="work-project-card"
         to="#"
@@ -74,6 +76,11 @@ function ProjectCard({ project, index }) {
 
 export default function WorkPage() {
   const { t } = useLanguage()
+  useSEO({
+    title: 'Projekte — Suhaili Service GmbH',
+    description: 'Unsere abgeschlossenen Projekte im Bereich Facility Management, Reinigung und technische Dienstleistungen in Berlin und Deutschland.',
+    canonical: 'https://www.suhaili-services.de/work',
+  })
   const headRef = useRef(null)
 
   useEffect(() => {
@@ -139,10 +146,101 @@ export default function WorkPage() {
       }}>
         <div className="work-page-grid">
           {t('work.projects').map((p, i) => (
-            <ProjectCard key={p.title} project={p} index={i} />
+            <ProjectCard key={p.title} project={p} index={i} wide={i >= 6} />
           ))}
         </div>
       </section>
+
+      {/* CTA */}
+      <section className="work-cta-section" style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        height: 'clamp(320px, 38vw, 480px)',
+        background: '#0f0f12',
+        overflow: 'hidden',
+      }}>
+        <div className="cta-text-side" style={{
+          padding: 'clamp(20px, 3vw, 36px) clamp(24px, 5vw, 48px)',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          gap: 12,
+        }}>
+          <p style={{
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontSize: 12,
+            fontWeight: 700,
+            letterSpacing: '0.14em',
+            textTransform: 'uppercase',
+            color: '#C9A84C',
+            margin: 0,
+          }}>
+            {t('work.ctaEyebrow')}
+          </p>
+          <h2 style={{
+            fontSize: 'clamp(18px, 2.2vw, 26px)',
+            fontWeight: 700,
+            color: '#fff',
+            letterSpacing: '-0.02em',
+            lineHeight: 1.15,
+            margin: 0,
+            maxWidth: 420,
+          }}>
+            {t('work.ctaTitle')}
+          </h2>
+          <LiquidButton as={Link} to="/contact" tint="#C9A84C" textColor="#000" style={{ alignSelf: 'flex-start' }}>
+            {t('work.ctaButton')} →
+          </LiquidButton>
+        </div>
+        <div className="cta-image-side" style={{ position: 'relative', overflow: 'hidden' }}>
+          <img
+            src={t('https://res.cloudinary.com/df7aiznm6/image/upload/v1782409749/Van_yd6gnc.png')}
+            alt={t('work.ctaImageAlt')}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block' }}
+          />
+        </div>
+      </section>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .work-cta-section {
+            display: block !important;
+            position: relative !important;
+            height: 420px !important;
+            overflow: hidden !important;
+          }
+          .work-cta-section .cta-image-side {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+          }
+          .work-cta-section .cta-image-side img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center center !important;
+          }
+          .work-cta-section .cta-image-side::after {
+            content: '' !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.4) 50%, rgba(10,10,10,0.15) 100%) !important;
+          }
+          .work-cta-section .cta-text-side {
+            position: relative !important;
+            z-index: 2 !important;
+            height: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: flex-end !important;
+            text-align: center !important;
+            padding: 0 24px 48px !important;
+            gap: 12px !important;
+          }
+        }
+      `}</style>
     </div>
   )
 }

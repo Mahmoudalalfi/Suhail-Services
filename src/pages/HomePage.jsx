@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from 'react'
+import useSEO from '../hooks/useSEO'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -624,6 +625,11 @@ function Testimonials() {
 /* ─────────────────────────── HomePage ─────────────────────────── */
 export default function HomePage() {
   const { t, lang } = useLanguage()
+  useSEO({
+    title: 'Suhaili Service GmbH — Facility Management & Services Berlin',
+    description: 'Ihr professioneller Partner für Facility Management, Gebäudereinigung, Sicherheitsdienst und technische Dienstleistungen in Berlin und Deutschland.',
+    canonical: 'https://www.suhaili-services.de/',
+  })
   const featured = t('home.featured')
 
   const heroRef = useRef(null)
@@ -665,7 +671,7 @@ export default function HomePage() {
       {/* ════ HERO ════ */}
       <section
         ref={heroRef}
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden hero-section"
         style={{
           height: '100vh',
           background: '#0a0a0f',
@@ -680,8 +686,10 @@ export default function HomePage() {
         {/* Full-bleed background video */}
         <style>{`
           @media (max-width: 768px) {
-            .hero-left-gradient { background: linear-gradient(to right, rgba(10,10,15,0.45) 0%, rgba(10,10,15,0.25) 40%, transparent 75%) !important; }
-            .hero-bg-video { object-position: center center !important; }
+            .hero-left-gradient { background: linear-gradient(to bottom, transparent 35%, rgba(10,10,15,0.7) 65%, rgba(10,10,15,0.92) 100%) !important; }
+            .hero-bg-video { object-position: 80% 20% !important; }
+            .hero-section { align-items: flex-end !important; padding-bottom: 48px !important; }
+            .hero-center-content { max-width: 100% !important; }
           }
         `}</style>
         <video
@@ -968,12 +976,19 @@ function HomeServicesStaticGrid() {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           gap: 18px;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .services-static-grid > * {
+          min-width: 0;
+          width: 100%;
+          box-sizing: border-box;
         }
         @media (max-width: 900px) {
-          .services-static-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 480px) {
-          .services-static-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+          .services-static-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+          }
         }
       `}</style>
       <p style={{
@@ -999,69 +1014,59 @@ function HomeServicesStaticGrid() {
    HOME SERVICES CAROUSEL (kept for reference)
 ───────────────────────────────────────────── */
 const HOME_SERVICES = [
-  { slug: 'office-cleaning', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l9-9" /><path d="M12.5 5.5l6 6" /><path d="M6 15l3-3 6.5-6.5a2.12 2.12 0 0 1 3 3L12 15l-3 3z" /></svg>, title: 'Gebäudereinigung', desc: 'Büro- & Unterhaltsreinigung, Bau- & Grundreinigung.' },
-  { slug: 'warehouse-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20V8l10-5 10 5v12" /><rect x="8" y="14" width="8" height="6" /><line x1="12" y1="14" x2="12" y2="20" /></svg>, title: 'Lager & Kommissionierung', desc: 'Kommissionierung, Sortierung, Verpackung & Warenprüfung.' },
-  { slug: 'cashier-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /><line x1="6" y1="15" x2="6.01" y2="15" /><line x1="10" y1="15" x2="14" y2="15" /></svg>, title: 'Kassendienste', desc: 'Qualifiziertes Kassenpersonal für Einzelhandel & Supermärkte.' },
-  { slug: 'transport', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg>, title: 'Transport & Logistik', desc: 'Lieferung, Logistikunterstützung & Umzugsservice.' },
-  { slug: 'electrical-assistance', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>, title: 'Elektrohilfsarbeiten', desc: 'Hilfsleistungen für Elektroarbeiten auf Baustellen.' },
-  { slug: 'installation-unpacking', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polyline points="21 8 21 21 3 21 3 8" /><rect x="1" y="3" width="22" height="5" /><line x1="10" y1="12" x2="14" y2="12" /></svg>, title: 'Montage & Installation', desc: 'Möbelmontage, Installationsservice & Auspacken.' },
-  { slug: 'staffing-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>, title: 'Personaldienstleistungen', desc: 'Zeitarbeiter & flexible Personallösungen.' },
-  { slug: 'general-services', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 0 0-4 0v2" /><line x1="12" y1="12" x2="12" y2="16" /><line x1="10" y1="14" x2="14" y2="14" /></svg>, title: 'Flexible Dienstleistungen', desc: 'Bedarfsgerechte Unterstützung für Unternehmen & Privatkunden.' },
+  { slug: 'reliability', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>, title: 'Bewährte Zuverlässigkeit', desc: 'Jahre vertrauensvoller Zusammenarbeit mit hunderten Kunden.' },
+  { slug: 'fast-response', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>, title: 'Schnelle Reaktion', desc: 'Kurzfristige Anfragen, Notfälle, Last-Minute-Einsätze – wir sind bereit.' },
+  { slug: 'transparent-pricing', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>, title: 'Transparente Preise', desc: 'Keine versteckten Kosten. Klare, faire Preise für Ihren Projektumfang.' },
+  { slug: 'expert-team', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>, title: 'Expertteam', desc: 'Geschulte, geprüfte Fachkräfte – kompetent, motiviert und professionell.' },
+  { slug: 'one-source', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>, title: 'Alles aus einer Hand', desc: 'Alle Leistungen unter einem Dach, ein Ansprechpartner.' },
+  { slug: 'nationwide', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, title: 'Deutschlandweite Abdeckung', desc: 'In allen großen Städten aktiv – schnell und zuverlässig vor Ort.' },
+  { slug: 'quality', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>, title: 'Qualität garantiert', desc: 'Jeder Auftrag nach höchstem Standard. Wir übernehmen Verantwortung.' },
+  { slug: 'customer-first', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>, title: 'Kunde an erster Stelle', desc: 'Langfristige Partnerschaften auf Basis von Vertrauen und offener Kommunikation.' },
 ]
 
 function HomeServiceCard({ service }) {
-  const [hov, setHov] = useState(false)
-
   return (
-    <Link
-      to={`/services/${service.slug}`}
-      onMouseEnter={() => setHov(true)}
-      onMouseLeave={() => setHov(false)}
+    <div
       style={{
         opacity: 1,
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
         height: '100%',
-        background: hov ? '#0f0f12' : '#fff',
-        border: `1.5px solid ${hov ? '#C9A84C' : 'rgba(30,31,40,0.09)'}`,
+        boxSizing: 'border-box',
+        background: '#fff',
+        border: '1.5px solid rgba(30,31,40,0.09)',
         borderRadius: 16,
         padding: 'clamp(18px,2.5vw,28px)',
-        textDecoration: 'none',
-        transition: 'background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease',
-        boxShadow: hov ? '0 12px 40px rgba(201,168,76,0.18)' : '0 2px 12px rgba(10,11,18,0.06)',
-        transform: hov ? 'translateY(-4px)' : 'translateY(0)',
-        cursor: 'pointer',
+        boxShadow: '0 2px 12px rgba(10,11,18,0.06)',
+        cursor: 'default',
       }}
     >
       <div style={{
         width: 52, height: 52, borderRadius: 12,
-        background: hov ? 'rgba(201,168,76,0.1)' : 'rgba(30,31,40,0.05)',
+        background: 'rgba(30,31,40,0.05)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         marginBottom: 16,
-        color: hov ? '#C9A84C' : '#0f0f12',
-        transition: 'background 0.28s ease, color 0.28s ease',
+        color: '#0f0f12',
       }}>
         {service.icon}
       </div>
       <p style={{
         fontFamily: "'Barlow Condensed', sans-serif",
         fontSize: 'clamp(15px,1.4vw,18px)', fontWeight: 700,
-        color: hov ? '#C9A84C' : '#0f0f12',
+        color: '#0f0f12',
         letterSpacing: '-0.01em', margin: '0 0 8px',
-        transition: 'color 0.25s ease',
       }}>
         {service.title}
       </p>
       <p style={{
         fontSize: 13,
-        color: hov ? 'rgba(255,255,255,0.65)' : 'rgba(30,31,40,0.55)',
+        color: 'rgba(30,31,40,0.55)',
         margin: 0, lineHeight: 1.6,
-        transition: 'color 0.25s ease',
       }}>
         {service.desc}
       </p>
-    </Link>
+    </div>
   )
 }
 

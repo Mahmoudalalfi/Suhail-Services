@@ -1,33 +1,60 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
+import {
+  getCookieConsent,
+  setCookieConsent,
+  OPEN_COOKIE_SETTINGS_EVENT,
+} from '../utils/cookieConsent'
 
 export default function CookieBanner() {
   const { t } = useLanguage()
-  const [visible, setVisible] = useState(false)
-  const [showSettings, setShowSettings] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [mode, setMode] = useState('banner')
   const [analytics, setAnalytics] = useState(false)
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent')
-    if (!consent) setVisible(true)
+    const consent = getCookieConsent()
+    if (!consent) {
+      setOpen(true)
+      setMode('banner')
+    }
   }, [])
 
-  if (!visible) return null
+  useEffect(() => {
+    const onOpenSettings = () => {
+      const consent = getCookieConsent()
+      setAnalytics(consent?.analytics ?? false)
+      setOpen(true)
+      setMode('settings')
+    }
+
+    window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, onOpenSettings)
+    return () => window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, onOpenSettings)
+  }, [])
+
+  if (!open) return null
+
+  const close = () => setOpen(false)
 
   const accept = () => {
-    localStorage.setItem('cookie-consent', JSON.stringify({ essential: true, analytics: true }))
-    setVisible(false)
+    setCookieConsent({ essential: true, analytics: true })
+    close()
   }
 
   const reject = () => {
-    localStorage.setItem('cookie-consent', JSON.stringify({ essential: true, analytics: false }))
-    setVisible(false)
+    setCookieConsent({ essential: true, analytics: false })
+    close()
   }
 
   const saveSettings = () => {
-    localStorage.setItem('cookie-consent', JSON.stringify({ essential: true, analytics }))
-    setVisible(false)
+    setCookieConsent({ essential: true, analytics })
+    close()
+  }
+
+  const backFromSettings = () => {
+    if (getCookieConsent()) close()
+    else setMode('banner')
   }
 
   return (
@@ -39,7 +66,7 @@ export default function CookieBanner() {
       borderTop: '1px solid rgba(255,255,255,0.08)',
     }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        {!showSettings ? (
+        {mode === 'banner' ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', lineHeight: 1.5, margin: 0 }}>
               {t('cookie.bannerText')}{' '}
@@ -48,7 +75,7 @@ export default function CookieBanner() {
               </Link>
             </p>
             <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-              <button onClick={() => setShowSettings(true)} style={ghostBtn}>
+              <button onClick={() => setMode('settings')} style={ghostBtn}>
                 {t('cookie.settings')}
               </button>
               <button onClick={reject} style={ghostBtn}>
@@ -78,6 +105,7 @@ export default function CookieBanner() {
               </div>
               <button
                 onClick={() => setAnalytics(v => !v)}
+                aria-pressed={analytics}
                 style={{
                   width: 36, height: 20, borderRadius: 10, border: 'none', cursor: 'pointer',
                   background: analytics ? '#C9A84C' : 'rgba(255,255,255,0.18)',
@@ -87,14 +115,14 @@ export default function CookieBanner() {
                 <span style={{
                   position: 'absolute', top: 2, left: analytics ? 17 : 2,
                   width: 16, height: 16, borderRadius: '50%',
-                  background: analytics ? '#fff' : '#fff',
+                  background: '#fff',
                   transition: 'left 0.2s',
                 }} />
               </button>
             </div>
 
             <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
-              <button onClick={() => setShowSettings(false)} style={ghostBtn}>{t('cookie.back')}</button>
+              <button onClick={backFromSettings} style={ghostBtn}>{t('cookie.back')}</button>
               <button onClick={saveSettings} style={primaryBtn}>{t('cookie.saveSettings')}</button>
             </div>
           </div>

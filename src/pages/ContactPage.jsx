@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import emailjs from '@emailjs/browser'
 import { useLanguage } from '../i18n/LanguageContext'
+import useSEO from '../hooks/useSEO'
 import LiquidButton from '../components/ui/LiquidButton'
 
 const EMAILJS_SERVICE        = 'service_fl0s50n'
@@ -12,6 +13,11 @@ const EMAILJS_KEY             = 'bdyBuxh07dgPR4mRb'
 
 export default function ContactPage() {
   const { t } = useLanguage()
+  useSEO({
+    title: 'Kontakt — Suhaili Service GmbH',
+    description: 'Kontaktieren Sie Suhaili Service GmbH in Berlin. Wir beraten Sie gerne zu Facility Management, Reinigung und allen weiteren Dienstleistungen.',
+    canonical: 'https://www.suhaili-services.de/contact',
+  })
   const headRef = useRef(null)
   const leftRef = useRef(null)
   const rightRef = useRef(null)

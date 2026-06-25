@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import BrandLogo from './BrandLogo'
 import LiquidButton from './ui/LiquidButton'
+import { openCookieSettings } from '../utils/cookieConsent'
 
 export default function Footer() {
   const { t, lang } = useLanguage()
@@ -139,10 +140,65 @@ export default function Footer() {
 
         {/* Social & Legal */}
         <FooterCol title={t('footer.legalTitle')} links={[
-          { label: t('footer.impressum'), to: '/imprint' },
-          { label: t('footer.dataProtection'), to: '/data-protection' },
-          { label: t('cookie.cookieSettings'), to: '#', onClick: () => { localStorage.removeItem('cookie-consent'); window.location.reload() } },
+          { label: t('cookie.cookieSettings'), onClick: openCookieSettings },
         ]} />
+      </div>
+
+      {/* ── Banner strip ── */}
+      <div style={{
+        position: 'relative',
+        borderRadius: 20,
+        overflow: 'hidden',
+        margin: 'clamp(40px, 7vw, 64px) 0',
+        height: 'clamp(160px, 22vw, 240px)',
+        display: 'flex',
+        alignItems: 'center',
+      }}>
+        <img
+          src="https://res.cloudinary.com/df7aiznm6/image/upload/v1782405756/56de228c-1649-4cf3-9181-3b50fb7fb0c6_nim5hy.png"
+          alt=""
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center 40%',
+          }}
+        />
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(90deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.82) 100%)',
+        }} />
+        <div style={{
+          position: 'relative',
+          zIndex: 1,
+          marginLeft: 'auto',
+          padding: 'clamp(24px, 4vw, 44px) clamp(28px, 5vw, 56px)',
+          maxWidth: 480,
+          textAlign: 'right',
+        }}>
+          <div style={{ width: 36, height: 2, background: '#C9A84C', marginBottom: 14, marginLeft: 'auto' }} />
+          <h2 style={{
+            fontSize: 'clamp(17px, 2.2vw, 24px)',
+            fontWeight: 700,
+            color: '#fff',
+            lineHeight: 1.25,
+            margin: '0 0 10px',
+            letterSpacing: '-0.02em',
+          }}>
+            {lang === 'de'
+              ? <><span>Ein starkes Netzwerk für </span><span style={{ color: '#C9A84C' }}>starke Ergebnisse.</span></>
+              : <><span>A strong network for </span><span style={{ color: '#C9A84C' }}>strong results.</span></>}
+          </h2>
+          <p style={{ fontSize: 'clamp(12px, 1.2vw, 14px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.65, margin: 0 }}>
+            {lang === 'de'
+              ? 'Gemeinsam schaffen wir Werte, Sicherheit und nachhaltige Lösungen für unsere Kunden.'
+              : 'Together we create value, security and sustainable solutions for our clients.'}
+          </p>
+        </div>
       </div>
 
       <div className="footer-bottom">
@@ -158,13 +214,6 @@ export default function Footer() {
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.22)'}
           >
             {t('footer.impressum')}
-          </Link>
-          <span style={{ color: 'rgba(255,255,255,0.15)', fontSize: 13 }}>|</span>
-          <Link to="/data-protection" style={{ fontSize: 13, color: 'rgba(255,255,255,0.22)', textDecoration: 'none' }}
-            onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}
-            onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.22)'}
-          >
-            {t('footer.dataProtection')}
           </Link>
         </div>
       </div>

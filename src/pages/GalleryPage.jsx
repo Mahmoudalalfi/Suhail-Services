@@ -470,76 +470,91 @@ const SERVICES_DATA = [
 
 const WHY_ITEMS = [
   {
+    color: '#4f8ef7',
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="m9 12 2 2 4-4"/>
       </svg>
     ),
     title: 'Proven Reliability',
     desc: 'Years of trusted service across hundreds of clients — we deliver on every commitment, every time.',
   },
   {
+    color: '#f7a034',
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
       </svg>
     ),
     title: 'Fast Response',
-    desc: 'We mobilise quickly. Short notice, urgent requests, last-minute staffing — we are ready when you need us.',
+    desc: 'We mobilise quickly. Short notice, urgent requests, last-minute deployments — we are ready.',
   },
   {
+    color: '#34c98a',
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        <circle cx="12" cy="12" r="4"/>
       </svg>
     ),
     title: 'Transparent Pricing',
     desc: 'No hidden fees, no surprises. Clear, fair pricing tailored to the scope of your project.',
   },
   {
+    color: '#a259f7',
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
       </svg>
     ),
     title: 'Expert Team',
-    desc: 'Trained, vetted professionals across all disciplines — from cleaning crews to warehouse specialists.',
+    desc: 'Trained, vetted professionals across all disciplines — competent, motivated and professional.',
   },
   {
+    color: '#f75c7e',
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 9h6M9 12h6M9 15h4" />
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="3"/>
+        <path d="M9 9h6M9 12h6M9 15h4"/>
       </svg>
     ),
     title: 'One-Stop Solution',
-    desc: 'From staffing to construction support — all services under one roof, one contact, zero hassle.',
+    desc: 'From staffing to construction support — all services under one roof, one contact.',
   },
   {
+    color: '#34b8f7',
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
       </svg>
     ),
     title: 'Germany-Wide Coverage',
-    desc: 'Operating across all major cities and regions — we come to your location, wherever you are.',
+    desc: 'Operating across all major cities and regions — we come to your location, quickly and reliably.',
   },
   {
+    color: '#f7d034',
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
       </svg>
     ),
     title: 'Quality Guaranteed',
-    desc: 'Every job is completed to the highest standard. We hold ourselves accountable so you never have to chase results.',
+    desc: 'Every job is completed to the highest standard. We hold ourselves accountable so you can stay focused.',
   },
   {
+    color: '#f7607a',
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
       </svg>
     ),
     title: 'Client-First Mindset',
-    desc: 'Long-term relationships built on trust, open communication, and genuine care for your business.',
+    desc: 'Long-term relationships built on trust, open communication, and genuine partnership.',
   },
 ]
 
@@ -717,7 +732,6 @@ function WhyChooseUs() {
   const { t } = useLanguage()
   const headRef = useRef(null)
   const translatedWhyItems = t('gallery.whyItems') || []
-  // Merge translated text with icons from the hardcoded WHY_ITEMS
   const whyItems = translatedWhyItems.map((item, i) => ({
     ...item,
     icon: WHY_ITEMS[i]?.icon || null,
@@ -739,60 +753,61 @@ function WhyChooseUs() {
       padding: 'clamp(64px,9vw,100px) clamp(20px,6vw,80px)',
       background: '#f5f5f7',
     }}>
-      <div ref={headRef} style={{ opacity: 0, textAlign: 'center', marginBottom: 'clamp(36px,5vw,56px)' }}>
+      <div ref={headRef} style={{ opacity: 0, textAlign: 'center', marginBottom: 'clamp(40px,5vw,60px)' }}>
         <p style={{
           fontFamily: "'Barlow Condensed', sans-serif",
           fontSize: 12,
           fontWeight: 700,
           letterSpacing: '0.14em',
           textTransform: 'uppercase',
-          color: 'rgba(30,31,40,0.42)',
-          marginBottom: 14,
+          color: '#C9A84C',
+          marginBottom: 16,
         }}>
           {t('gallery.whyEyebrow')}
         </p>
         <h2 style={{
-          fontSize: 'clamp(28px,4.5vw,58px)',
-          fontWeight: 300,
+          fontSize: 'clamp(32px,5vw,64px)',
+          fontWeight: 700,
           letterSpacing: '-0.03em',
           color: '#0f0f12',
           lineHeight: 1.08,
-          margin: '0 auto 20px',
+          margin: '0 auto 18px',
         }}>
-          {t('gallery.whyTitle')}
+          {t('gallery.whyTitleLead')}{' '}
+          <span style={{ color: '#C9A84C' }}>{t('gallery.whyTitleAccent')}</span>
         </h2>
-        <div style={{
-          width: 44, height: 4, borderRadius: 2,
-          background: 'linear-gradient(90deg,#C9A84C,#B8972E)',
-          margin: '0 auto',
-        }} />
+        <p style={{
+          fontSize: 'clamp(15px,1.6vw,18px)',
+          color: '#0f0f12',
+          margin: '0 0 6px',
+          lineHeight: 1.5,
+        }}>
+          {t('gallery.whySubtitle1')}
+        </p>
+        <p style={{
+          fontSize: 'clamp(15px,1.6vw,18px)',
+          fontWeight: 700,
+          color: '#0f0f12',
+          margin: 0,
+          lineHeight: 1.5,
+        }}>
+          {t('gallery.whySubtitle2')}
+        </p>
       </div>
 
       <style>{`
         .why-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: clamp(12px,2vw,22px);
-          max-width: 1200px;
+          grid-template-columns: 1fr;
+          gap: clamp(14px,2vw,20px);
+          max-width: 1160px;
           margin: 0 auto;
         }
-        @media (max-width: 640px) {
-          .why-grid {
-            grid-template-columns: 1fr 1fr !important;
-          }
-          .why-grid > * { height: 100%; }
-          .why-card-inner { height: 100%; }
-          .why-card-desc {
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-          }
-          .why-grid > *:last-child:nth-child(odd) {
-            grid-column: 1 / -1;
-            max-width: calc(50% - 6px);
-            margin: 0 auto;
-          }
+        @media (min-width: 560px) {
+          .why-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 900px) {
+          .why-grid { grid-template-columns: repeat(4, 1fr); }
         }
       `}</style>
       <div className="why-grid">
@@ -819,60 +834,74 @@ function WhyCard({ item, delay }) {
     )
   }, [delay])
 
+  const color = item.color || '#C9A84C'
+
   return (
-    /* Outer wrapper: GSAP target, fills the grid cell completely */
-    <div ref={wrapRef} style={{ opacity: 0, display: 'flex', width: '100%' }}>
-    <div
-      className="why-card-inner"
-      onMouseEnter={() => setHov(true)}
-      onMouseLeave={() => setHov(false)}
-      style={{
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        textAlign: 'left',
-        padding: 'clamp(20px,2.5vw,28px)',
-        borderRadius: 16,
-        background: hov ? '#0f0f12' : '#fff',
-        border: `1.5px solid ${hov ? '#C9A84C' : 'rgba(30,31,40,0.09)'}`,
-        boxShadow: hov ? '0 12px 40px rgba(201,168,76,0.18)' : '0 2px 12px rgba(10,11,18,0.06)',
-        transform: hov ? 'translateY(-4px)' : 'translateY(0)',
-        transition: 'background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease',
-      }}
-    >
-      <div style={{
-        width: 52, height: 52, borderRadius: 12,
-        background: hov ? 'rgba(201,168,76,0.1)' : 'rgba(30,31,40,0.05)',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        color: hov ? '#C9A84C' : '#0f0f12',
-        marginBottom: 16,
-        transition: 'background 0.28s ease, color 0.28s ease',
-      }}>
-        {item.icon}
+    <div ref={wrapRef} style={{ opacity: 0, width: '100%' }}>
+      <div
+        className="why-card-inner"
+        onMouseEnter={() => setHov(true)}
+        onMouseLeave={() => setHov(false)}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          textAlign: 'center',
+          gap: 0,
+          height: '100%',
+          padding: 'clamp(24px,2.5vw,32px) clamp(16px,2vw,24px)',
+          borderRadius: 20,
+          background: hov ? '#0f0f12' : '#fff',
+          border: `1.5px solid ${hov ? color : 'rgba(30,31,40,0.07)'}`,
+          boxShadow: hov ? `0 16px 40px ${color}22` : '0 2px 16px rgba(10,11,18,0.06)',
+          transform: hov ? 'translateY(-5px)' : 'translateY(0)',
+          transition: 'background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease',
+          cursor: 'default',
+          boxSizing: 'border-box',
+        }}
+      >
+        {/* colored icon badge */}
+        <div style={{
+          width: 60,
+          height: 60,
+          borderRadius: 16,
+          background: `${color}18`,
+          border: `1.5px solid ${color}35`,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginBottom: 18,
+          color: color,
+          flexShrink: 0,
+          transition: 'background 0.28s ease, border-color 0.28s ease',
+        }}>
+          {item.icon}
+        </div>
+        {/* thin color bar */}
+        <div style={{ width: 28, height: 2, borderRadius: 2, background: color, marginBottom: 14, opacity: 0.7 }} />
+        <p style={{
+          fontFamily: "'Barlow Condensed', sans-serif",
+          fontSize: 'clamp(14px,1.3vw,16px)',
+          fontWeight: 700,
+          color: hov ? '#fff' : '#0f0f12',
+          letterSpacing: '0.04em',
+          textTransform: 'uppercase',
+          margin: '0 0 10px',
+          transition: 'color 0.25s ease',
+          lineHeight: 1.2,
+        }}>
+          {item.title}
+        </p>
+        <p style={{
+          fontSize: 13,
+          color: hov ? 'rgba(255,255,255,0.55)' : 'rgba(30,31,40,0.58)',
+          margin: 0,
+          lineHeight: 1.65,
+          transition: 'color 0.25s ease',
+        }}>
+          {item.desc}
+        </p>
       </div>
-      <p style={{
-        fontFamily: "'Barlow Condensed', sans-serif",
-        fontSize: 'clamp(14px,1.3vw,17px)',
-        fontWeight: 700,
-        color: hov ? '#C9A84C' : '#0f0f12',
-        letterSpacing: '-0.01em',
-        textTransform: 'uppercase',
-        margin: '0 0 8px',
-        transition: 'color 0.25s ease',
-      }}>
-        {item.title}
-      </p>
-      <p className="why-card-desc" style={{
-        fontSize: 13,
-        color: hov ? 'rgba(255,255,255,0.60)' : 'rgba(30,31,40,0.55)',
-        margin: 0,
-        lineHeight: 1.6,
-        transition: 'color 0.25s ease',
-      }}>
-        {item.desc}
-      </p>
-    </div>
     </div>
   )
 }
