@@ -4,7 +4,7 @@ export default function BrandLogo({ variant = 'dark', compact = false, mobile = 
   return (
     <img
       src={isWhiteMode ? "/new-logo-dark.png" : "/new-logo.png"}
-      alt="suhail Services"
+      alt="Suhaili Services"
       style={{
         height: h,
         width: 'auto',

@@ -49,6 +49,16 @@ const INFO_ITEMS = (lang) => [
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+      </svg>
+    ),
+    label: lang === 'de' ? 'Umsatzsteuer-Identifikationsnummer' : 'VAT Identification Number',
+    value: '11 30 202 51939',
+    bold: true,
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.07 3.4 2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/>
       </svg>
     ),
@@ -198,7 +208,7 @@ export default function ImprintPage() {
                             onMouseEnter={e => e.currentTarget.style.color = GOLD}
                             onMouseLeave={e => e.currentTarget.style.color = 'rgba(30,31,40,0.85)'}
                           >{line}</a>
-                        : <p key={j} style={{ fontSize: 14, color: 'rgba(30,31,40,0.85)', lineHeight: 1.6, margin: 0 }}>{line}</p>
+                        : <p key={j} style={{ fontSize: 14, color: 'rgba(30,31,40,0.85)', lineHeight: 1.6, margin: 0, fontWeight: item.bold ? 700 : 400 }}>{line}</p>
                     ))}
                   </div>
                 </div>

@@ -114,13 +114,13 @@ export default {
       testimonials: [
         {
           company: 'Einzelhandel GmbH',
-          quote: '"suhail Services sorgt für makellose Sauberkeit unserer Filialen. Professionelle Reinigungskräfte und kompetentes Kassenpersonal, auf das wir uns voll und ganz verlassen können."',
+          quote: '"Suhaili Services sorgt für makellose Sauberkeit unserer Filialen. Professionelle Reinigungskräfte und kompetentes Kassenpersonal, auf das wir uns voll und ganz verlassen können."',
           author: 'Filialleiter',
           role: 'Berlin',
         },
         {
           company: 'Bauprojekt Mitte',
-          quote: '"Die Baustellenreinigung und Logistik lief dank suhail Services reibungslos ab. Effiziente und schnelle Arbeit, die unsere Erwartungen übertroffen hat. Wir planen bereits das nächste Projekt gemeinsam."',
+          quote: '"Die Baustellenreinigung und Logistik lief dank Suhaili Services reibungslos ab. Effiziente und schnelle Arbeit, die unsere Erwartungen übertroffen hat. Wir planen bereits das nächste Projekt gemeinsam."',
           author: 'Bauleitung',
           role: '',
         },
@@ -270,12 +270,12 @@ export default {
       testimonials: [
         {
           company: 'Einzelhandel GmbH',
-          quote: '"suhail Services sorgt für makellose Sauberkeit unserer Filialen. Professionelle Reinigungskräfte und kompetentes Kassenpersonal, auf das wir uns voll und ganz verlassen können."',
+          quote: '"Suhaili Services sorgt für makellose Sauberkeit unserer Filialen. Professionelle Reinigungskräfte und kompetentes Kassenpersonal, auf das wir uns voll und ganz verlassen können."',
           author: 'Filialleiter — Berlin',
         },
         {
           company: 'Bauprojekt Mitte',
-          quote: 'Die Baustellenreinigung und Logistik lief dank suhail Services reibungslos ab. Effiziente und schnelle Arbeit, die unsere Erwartungen übertroffen hat. Wir planen bereits das nächste Projekt gemeinsam.',
+          quote: 'Die Baustellenreinigung und Logistik lief dank Suhaili Services reibungslos ab. Effiziente und schnelle Arbeit, die unsere Erwartungen übertroffen hat. Wir planen bereits das nächste Projekt gemeinsam.',
           author: 'Bauleitung',
         },
       ]
@@ -1025,13 +1025,13 @@ export default {
       testimonials: [
         {
           company: 'Retail GmbH',
-          quote: '"suhail Services keeps our stores spotlessly clean. Professional cleaning crews and competent checkout staff we can fully rely on."',
+          quote: '"Suhaili Services keeps our stores spotlessly clean. Professional cleaning crews and competent checkout staff we can fully rely on."',
           author: 'Store Manager',
           role: 'Berlin',
         },
         {
           company: 'Mitte Construction',
-          quote: '"Construction site cleaning and logistics ran smoothly thanks to suhail Services. Efficient and fast work that exceeded our expectations. We are already planning the next project together."',
+          quote: '"Construction site cleaning and logistics ran smoothly thanks to Suhaili Services. Efficient and fast work that exceeded our expectations. We are already planning the next project together."',
           author: 'Site Management',
           role: '',
         },
@@ -1181,12 +1181,12 @@ export default {
       testimonials: [
         {
           company: 'Retail GmbH',
-          quote: '"suhail Services keeps our stores spotlessly clean. Professional cleaning crews and competent checkout staff we can fully rely on."',
+          quote: '"Suhaili Services keeps our stores spotlessly clean. Professional cleaning crews and competent checkout staff we can fully rely on."',
           author: 'Store Manager — Berlin',
         },
         {
           company: 'Mitte Construction',
-          quote: 'Construction site cleaning and logistics ran smoothly thanks to suhail Services. Efficient and fast work that exceeded our expectations. We are already planning the next project together.',
+          quote: 'Construction site cleaning and logistics ran smoothly thanks to Suhaili Services. Efficient and fast work that exceeded our expectations. We are already planning the next project together.',
           author: 'Site Management',
         },
       ]

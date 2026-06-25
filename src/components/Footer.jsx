@@ -203,7 +203,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.22)' }}>
-          © {new Date().getFullYear()} suhail Services. {t('footer.rightsReserved')}
+          © {new Date().getFullYear()} Suhaili Services. {t('footer.rightsReserved')}
         </p>
         <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center' }}>
           <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.22)', margin: 0 }}>

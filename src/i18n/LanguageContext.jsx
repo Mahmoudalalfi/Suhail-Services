@@ -17,8 +17,8 @@ export const LanguageProvider = ({ children }) => {
     document.documentElement.lang = lang === 'de' ? 'de' : 'en';
     document.title =
       lang === 'de'
-        ? 'suhail Services — Service & Facility'
-        : 'suhail Services — Facility Services';
+        ? 'suhaili Services — Service & Facility'
+        : 'suhaili Services — Facility Services';
   }, [lang]);
 
   const toggleLanguage = () => {
