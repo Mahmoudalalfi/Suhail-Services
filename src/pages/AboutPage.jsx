@@ -521,6 +521,7 @@ export default function AboutPage() {
                       padding: '5px 14px',
                       fontSize: 12, fontWeight: 600, color: bc,
                       letterSpacing: '0.02em',
+                      whiteSpace: 'nowrap', flexShrink: 0,
                     }}>
                       {t('referencesPage.learnMore')}
                       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke={bc} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

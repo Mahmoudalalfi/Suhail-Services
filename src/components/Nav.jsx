@@ -101,7 +101,7 @@ export default function Nav() {
           background: '#111111',
           border: '1px solid rgba(255,255,255,0.10)',
           borderRadius: 999,
-          boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
+          boxShadow: '0 2px 16px rgba(0,0,0,0.18)',
         }}>
           <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
             <BrandLogo variant="dark" mobile />
@@ -227,7 +227,7 @@ export default function Nav() {
           pointerEvents: 'auto',
           background: '#111111',
           border: '1px solid rgba(255,255,255,0.10)',
-          boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
+          boxShadow: '0 2px 16px rgba(0,0,0,0.18)',
           borderRadius: 999,
           overflow: 'hidden',
           display: 'flex',
@@ -335,7 +335,7 @@ export default function Nav() {
             padding: '7px 18px', borderRadius: 999, height: 52,
             background: '#111111',
             border: '1px solid rgba(255,255,255,0.10)',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
+            boxShadow: '0 2px 16px rgba(0,0,0,0.18)',
             color: '#fff', fontSize: 15, fontWeight: 400,
             letterSpacing: '-0.01em', textTransform: 'uppercase',
             textDecoration: 'none', whiteSpace: 'nowrap',
