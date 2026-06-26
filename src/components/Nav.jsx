@@ -97,7 +97,7 @@ export default function Nav() {
         <div className="nav-pill-mobile" style={{
           position: 'fixed', top: 10, left: 12, right: 12, zIndex: 1000,
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          padding: '0 10px 0 10px', height: 60, boxSizing: 'border-box',
+          padding: '0 12px 0 12px', height: 70, boxSizing: 'border-box',
           background: '#111111',
           border: '1px solid rgba(255,255,255,0.10)',
           borderRadius: 999,

@@ -297,8 +297,8 @@ export default {
         { id: 'construction', icon: 'construction', title: 'Baustellenservice', desc: 'Unterstützung auf Baustellen durch zuverlässige und fachkundige Serviceleistungen.' },
       ],
       qualityTitle: 'Qualität, auf die Sie sich verlassen können',
-      qualityP1: 'Klare Prozesse, moderne Technik und geschulte Teams sorgen dafür, dass unsere Leistungen jederzeit planbar und nachvollziehbar bleiben.',
-      qualityP2: 'Diskretion, Pünktlichkeit und Transparenz stehen bei uns im Mittelpunkt – damit Sie sich auf das Wesentliche konzentrieren können.',
+      qualityP1: 'Wir arbeiten mit klaren Prozessen, modernster Technik und einem hohen Qualitätsanspruch. Diskretion, Pünktlichkeit und Transparenz sind für uns selbstverständlich.',
+      qualityP2: 'Jeder Auftrag ist für uns eine neue Verantwortung, die wir mit Engagement und Sorgfalt erfüllen.',
       qualityImage: '/images/about/quality-building-sign.png',
       qualityImageAlt: 'Modernes Gebäude mit beleuchtetem Suhaili Service GmbH Firmenschild bei Nacht',
       values: [

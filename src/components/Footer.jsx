@@ -33,13 +33,14 @@ export default function Footer() {
           style={{
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             width: '100%', fontSize: 14, padding: '12px 20px',
-            borderRadius: 999, border: '1px solid rgba(255,255,255,0.3)',
-            color: '#fff', textDecoration: 'none', fontWeight: 500,
-            letterSpacing: '-0.01em', transition: 'border-color 0.2s, background 0.2s',
+            borderRadius: 999, border: '1.5px solid #C9A84C',
+            background: 'transparent',
+            color: '#C9A84C', textDecoration: 'none', fontWeight: 600,
+            letterSpacing: '0.01em', transition: 'background 0.2s, color 0.2s',
             boxSizing: 'border-box',
           }}
-          onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.7)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
-          onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'; e.currentTarget.style.background = 'transparent' }}
+          onMouseEnter={e => { e.currentTarget.style.background = 'rgba(201,168,76,0.1)' }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
         >
           {lang === 'de' ? 'Leistungen ansehen' : 'View Services'}
         </Link>

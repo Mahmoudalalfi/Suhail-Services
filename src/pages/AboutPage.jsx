@@ -50,12 +50,12 @@ const PILLAR_ICONS = {
 
 const VALUE_ICONS = {
   reliable: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="20 6 9 17 4 12"/>
     </svg>
   ),
   personal: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
       <circle cx="9" cy="7" r="4"/>
       <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
@@ -63,12 +63,12 @@ const VALUE_ICONS = {
     </svg>
   ),
   trust: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
     </svg>
   ),
   quality: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
     </svg>
   ),
@@ -98,7 +98,7 @@ function RevealBlock({ children, y = 40, delay = 0, style = {} }) {
 }
 
 export default function AboutPage() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   useSEO({
     title: 'Über uns — Suhaili Service GmbH',
     description: 'Erfahren Sie mehr über Suhaili Service GmbH: unsere Geschichte, Werte und unser Team in Berlin.',
@@ -289,8 +289,7 @@ export default function AboutPage() {
       {/* ── Quality section ── */}
       <section className="about-quality-section" style={{
         background: '#0f0f12',
-        borderRadius: 0,
-        padding: 'clamp(56px, 10vw, 230px) clamp(20px, 8vw, 120px)',
+        padding: 'clamp(48px, 7vw, 80px) clamp(20px, 6vw, 80px)',
         marginTop: 8,
       }}>
         <div style={{
@@ -298,59 +297,56 @@ export default function AboutPage() {
           margin: '0 auto',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: 'clamp(32px, 5vw, 56px)',
+          gap: 'clamp(32px, 5vw, 64px)',
           alignItems: 'center',
         }}>
           <RevealBlock>
             <h2 style={{
-              fontSize: 'clamp(26px, 3.5vw, 40px)',
+              fontSize: 'clamp(22px, 3vw, 36px)',
               fontWeight: 700,
               color: GOLD,
               letterSpacing: '-0.02em',
-              lineHeight: 1.15,
-              margin: '0 0 24px',
+              lineHeight: 1.2,
+              margin: '0 0 12px',
             }}>
               {t('about.qualityTitle')}
             </h2>
+            {/* gold underline */}
+            <div style={{ width: 36, height: 3, borderRadius: 2, background: GOLD, margin: '0 0 20px' }} />
             <p style={{
-              fontSize: 'clamp(14px, 1.5vw, 16px)',
+              fontSize: 'clamp(14px, 1.4vw, 15px)',
               color: 'rgba(255,255,255,0.72)',
-              lineHeight: 1.75,
-              margin: '0 0 16px',
+              lineHeight: 1.7,
+              margin: '0 0 14px',
             }}>
               {t('about.qualityP1')}
             </p>
             <p style={{
-              fontSize: 'clamp(14px, 1.5vw, 16px)',
+              fontSize: 'clamp(14px, 1.4vw, 15px)',
               color: 'rgba(255,255,255,0.72)',
-              lineHeight: 1.75,
-              margin: '0 0 32px',
+              lineHeight: 1.7,
+              margin: '0 0 28px',
             }}>
               {t('about.qualityP2')}
             </p>
             <div className="about-values-row" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: 16,
+              gap: 12,
             }}>
               {values.map((v, i) => (
                 <div key={i} style={{ textAlign: 'center' }}>
                   <div style={{
-                    width: 52,
-                    height: 52,
-                    borderRadius: 14,
-                    background: 'rgba(201,168,76,0.10)',
-                    border: `1px solid rgba(201,168,76,0.25)`,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    margin: '0 auto 12px',
+                    margin: '0 auto 10px',
                     color: GOLD,
                   }}>
                     {VALUE_ICONS[v.icon] || VALUE_ICONS.reliable}
                   </div>
                   <p style={{
-                    fontSize: 12,
+                    fontSize: 11,
                     fontWeight: 700,
                     color: 'rgba(255,255,255,0.9)',
                     margin: 0,
@@ -366,9 +362,9 @@ export default function AboutPage() {
 
           <RevealBlock delay={0.12}>
             <div style={{
-              borderRadius: 20,
+              borderRadius: 16,
               overflow: 'hidden',
-              boxShadow: '0 24px 64px rgba(0,0,0,0.45)',
+              boxShadow: '0 24px 64px rgba(0,0,0,0.55)',
             }}>
               <img
                 src={t('https://res.cloudinary.com/df7aiznm6/image/upload/v1782403795/Companys_Board_slij2w.png')}
@@ -380,6 +376,40 @@ export default function AboutPage() {
         </div>
       </section>
 
+
+      {/* ── Service ticker ── */}
+      <div style={{
+        background: `linear-gradient(90deg, #b8860b 0%, #e8c84a 35%, #f5d76e 55%, #c9a020 100%)`,
+        overflow: 'hidden',
+        position: 'relative',
+        height: 56,
+        display: 'flex',
+        alignItems: 'center',
+      }}>
+        {/* fade edges */}
+        <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 80, background: 'linear-gradient(to right, #b8860b, transparent)', zIndex: 2 }} />
+        <div style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: 80, background: 'linear-gradient(to left, #c9a020, transparent)', zIndex: 2 }} />
+        <div className="ticker-track">
+          {[1, 2].map(copy => (
+            <div key={copy} className="ticker-set" aria-hidden={copy === 2}>
+              {[
+                { icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>, label: lang === 'de' ? 'Sicherheit' : 'Security' },
+                { icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>, label: lang === 'de' ? 'Reinigung' : 'Cleaning' },
+                { icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-5h6v5"/></svg>, label: lang === 'de' ? 'Gebäudeservice' : 'Facility Service' },
+                { icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>, label: lang === 'de' ? 'Lager & Logistik' : 'Warehouse & Logistics' },
+                { icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><path d="M14 6a6 6 0 0 1 6 6v3"/></svg>, label: lang === 'de' ? 'Baustellenservice' : 'Construction Service' },
+              ].map((item, i, arr) => (
+                <span key={i} className="ticker-item">
+                  <span className="ticker-item-icon">{item.icon}</span>
+                  <span className="ticker-item-label">{item.label}</span>
+                  {i < arr.length - 1 && <span className="ticker-dot">◆</span>}
+                </span>
+              ))}
+              <span className="ticker-dot" style={{ marginRight: 28 }}>◆</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* ── Partner companies ── */}
       <section style={{ background: '#fff', padding: 'clamp(56px, 10vw, 96px) clamp(24px, 5vw, 40px)' }}>
