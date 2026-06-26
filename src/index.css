@@ -962,6 +962,11 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   .blog-card-featured {
     grid-column: span 2;
   }
+  .blog-grid > article:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
 }
 
 /* ── Footer responsive ────────────────────────────────────── */
@@ -1080,6 +1085,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; padding
   }
   .about-pillars-grid {
     grid-template-columns: 1fr 1fr !important;
+  }
+  .about-pillars-grid > *:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
   .about-service-bar {
     border-radius: 20px !important;

@@ -31,7 +31,7 @@ function PostCard({ post, index, featured }) {
       onMouseLeave={() => setHov(false)}
     >
       <Link to="#" style={{ display: 'block', textDecoration: 'none' }}>
-        <div style={{ borderRadius: 16, overflow: 'hidden', aspectRatio: featured ? '21/9' : '16/10', marginBottom: 20 }}>
+        <div style={{ borderRadius: 16, overflow: 'hidden', aspectRatio: '16/10', marginBottom: 20 }}>
           <img
             src={post.img}
             alt={post.title}

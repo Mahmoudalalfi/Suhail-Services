@@ -11,52 +11,51 @@ gsap.registerPlugin(ScrollTrigger)
 const GOLD = '#C9A84C'
 
 const PILLAR_ICONS = {
+  security: (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="m9 12 2 2 4-4"/>
+    </svg>
+  ),
   cleaning: (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 21h18" />
-      <path d="M5 21V10l7-7 7 7v11" />
-      <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4" />
-      <path d="M12 3v4" />
-      <path d="M15 6H9" />
+      <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
+      <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>
     </svg>
   ),
   facility: (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="7" width="20" height="14" rx="2" />
-      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-      <line x1="12" y1="12" x2="12" y2="16" />
-      <line x1="10" y1="14" x2="14" y2="14" />
+      <path d="M2 20h20"/>
+      <path d="M5 20V8l7-5 7 5v12"/>
+      <path d="M9 20v-5h6v5"/>
+      <path d="M9 9h1v1H9zM14 9h1v1h-1zM9 13h1v1H9zM14 13h1v1h-1z"/>
     </svg>
   ),
   logistics: (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3" />
-      <rect x="9" y="11" width="14" height="10" rx="1" />
-      <circle cx="12" cy="21" r="1" />
-      <circle cx="20" cy="21" r="1" />
+      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <path d="M16 10a4 4 0 0 1-8 0"/>
     </svg>
   ),
   construction: (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M2 22h20" />
-      <path d="M6.87 2h10.26L20 7H4L6.87 2z" />
-      <path d="M4 7v15" />
-      <path d="M20 7v15" />
-      <path d="M4 12h16" />
-      <path d="M4 17h16" />
+      <path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/>
+      <path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/>
+      <path d="M4 15v-3a6 6 0 0 1 6-6"/>
+      <path d="M14 6a6 6 0 0 1 6 6v3"/>
     </svg>
   ),
 }
 
 const VALUE_ICONS = {
   reliable: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-      <path d="m9 12 2 2 4-4"/>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
     </svg>
   ),
   personal: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
       <circle cx="9" cy="7" r="4"/>
       <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
@@ -64,12 +63,12 @@ const VALUE_ICONS = {
     </svg>
   ),
   trust: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
     </svg>
   ),
   quality: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
     </svg>
   ),
@@ -337,24 +336,26 @@ export default function AboutPage() {
               {values.map((v, i) => (
                 <div key={i} style={{ textAlign: 'center' }}>
                   <div style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: '50%',
-                    border: `1.5px solid ${GOLD}`,
+                    width: 52,
+                    height: 52,
+                    borderRadius: 14,
+                    background: 'rgba(201,168,76,0.10)',
+                    border: `1px solid rgba(201,168,76,0.25)`,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    margin: '0 auto 10px',
+                    margin: '0 auto 12px',
                     color: GOLD,
                   }}>
                     {VALUE_ICONS[v.icon] || VALUE_ICONS.reliable}
                   </div>
                   <p style={{
                     fontSize: 12,
-                    fontWeight: 600,
-                    color: 'rgba(255,255,255,0.85)',
+                    fontWeight: 700,
+                    color: 'rgba(255,255,255,0.9)',
                     margin: 0,
-                    letterSpacing: '0.01em',
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
                   }}>
                     {v.label}
                   </p>

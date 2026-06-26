@@ -16,21 +16,21 @@ function useCarouselMobile() {
 import { useLanguage } from "../../i18n/LanguageContext";
 
 const SUB_IMAGES = {
-  "retail-supermarket-service":     "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1400",
-  "cleaning-building-services":     "https://res.cloudinary.com/df7aiznm6/image/upload/v1782331386/Cleaning_and_Building_services_sktlvm.jpg",
-  "driver-services-staffing":       "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Driver_Services_Staffing_xibcaw.png",
-  "construction-trades":            "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Construction_Trades_p2wisz.png",
-  "electrical-technical-services":  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1400",
-  "facility-management":            "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329252/Facility_Management_cuor3m.png",
-  "inventory-control":              "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1400",
-  "garden-outdoor-services":        "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Garden_Outdoor_Services_gxgsrb.png",
-  "assembly-disassembly":           "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1400",
-  "food-service-events":            "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Food_Service_Events_a2mryf.jpg",
-  "staffing-services":              "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1400",
-  "hotel-services":                 "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329213/Hotel_Services_ur9iqp.jpg",
-  "transportation-moving-services": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1400",
-  "property-management-services":   "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329212/Property_Management_Services_nlwmvv.jpg",
-  "kitchen-dishwashing-services":   "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329212/Kitchen_Dishwashing_Services_kmmv1f.jpg",
+  "retail-supermarket-service": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782512227/SupermarketEmployee_goteeo.jpg",
+  "cleaning-building-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782331386/Cleaning_and_Building_services_sktlvm.jpg",
+  "driver-services-staffing": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Driver_Services_Staffing_xibcaw.png",
+  "construction-trades": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Construction_Trades_p2wisz.png",
+  "electrical-technical-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782509228/FacilityManagment_tiavdj.jpg",
+  "facility-management": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782512014/FacilityManagment1_ksqjgj.png",
+  "inventory-control": "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1400",
+  "garden-outdoor-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Garden_Outdoor_Services_gxgsrb.png",
+  "assembly-disassembly": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1400",
+  "food-service-events": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Food_Service_Events_a2mryf.jpg",
+  "staffing-services": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1400",
+  "hotel-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329213/Hotel_Services_ur9iqp.jpg",
+  "transportation-moving-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782513136/VanCorrection_ywi7uk.png",
+  "property-management-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329212/Property_Management_Services_nlwmvv.jpg",
+  "kitchen-dishwashing-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329212/Kitchen_Dishwashing_Services_kmmv1f.jpg",
 };
 
 const FALLBACKS = [
@@ -45,7 +45,7 @@ const AUTO_MS = 3800;
 
 function TabBar({ categories, catIdx, accent, isMobile, onSelect }) {
   const scrollRef = useRef(null)
-  const [canScrollLeft, setCanScrollLeft]   = useState(false)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
 
   const updateArrows = useCallback(() => {
@@ -160,12 +160,12 @@ export function FeatureCarousel({ servicesList, openCategoryIndex }) {
   const categories = (servicesList || []).map((s, i) => {
     const firstSlug = s.items?.[0]?.slug || "";
     return {
-      key:      firstSlug || `cat-${i}`,
-      label:    (s.category || s.name || "").replace("\n", " "),
-      desc:     s.desc || "",
-      color:    CAT_COLORS[i % CAT_COLORS.length],
+      key: firstSlug || `cat-${i}`,
+      label: (s.category || s.name || "").replace("\n", " "),
+      desc: s.desc || "",
+      color: CAT_COLORS[i % CAT_COLORS.length],
       fallback: FALLBACKS[i % FALLBACKS.length],
-      items:    (s.items || []).map(item => ({
+      items: (s.items || []).map(item => ({
         ...item,
         image: SUB_IMAGES[item.slug] || FALLBACKS[i % FALLBACKS.length],
       })),
@@ -174,13 +174,13 @@ export function FeatureCarousel({ servicesList, openCategoryIndex }) {
 
   const isMobile = useCarouselMobile();
   const [catIdx, setCatIdx] = useState(() => typeof openCategoryIndex === "number" ? openCategoryIndex : 0);
-  const [cur, setCur]       = useState(0);
+  const [cur, setCur] = useState(0);
   const [paused, setPaused] = useState(false);
   const [hovItem, setHovItem] = useState(null);
 
-  const cat   = categories[catIdx] || categories[0];
+  const cat = categories[catIdx] || categories[0];
   const items = cat?.items || [];
-  const len   = items.length;
+  const len = items.length;
   const accent = cat.color;
   const displayItem = hovItem !== null ? items[hovItem] : items[cur];
 
@@ -359,72 +359,72 @@ export function FeatureCarousel({ servicesList, openCategoryIndex }) {
             height: isMobile ? "auto" : "100%",
           }}>
             <div style={{ flex: 1, overflowY: isMobile ? "visible" : "auto", display: "flex", flexDirection: "column" }}>
-            {items.map((item, idx) => {
-              const isActive = hovItem === idx || (hovItem === null && cur === idx);
-              return (
-                <MotionLink
-                  key={item.slug}
-                  to={`/services/${item.slug}`}
-                  onMouseEnter={() => setHovItem(idx)}
-                  onMouseLeave={() => setHovItem(null)}
-                  style={{
-                    display: "flex", alignItems: "center",
-                    padding: isMobile ? "16px clamp(16px, 4vw, 24px)" : "0 clamp(20px, 3vw, 40px)",
-                    borderBottom: "1px solid rgba(0,0,0,0.07)",
-                    cursor: "pointer",
-                    background: isActive ? accent : "transparent",
-                    transition: "background 0.18s",
-                    flex: isMobile ? "0 0 auto" : 1,
-                    minHeight: isMobile ? 56 : 0,
-                    gap: 16,
-                    textDecoration: "none",
-                  }}
-                >
-                  {/* Number */}
-                  <span style={{
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontSize: "clamp(26px, 2.8vw, 40px)",
-                    fontWeight: 900,
-                    color: isActive ? "rgba(0,0,0,0.18)" : "rgba(0,0,0,0.07)",
-                    letterSpacing: "-0.03em",
-                    lineHeight: 1,
-                    flexShrink: 0,
-                    transition: "color 0.18s",
-                    userSelect: "none",
-                    minWidth: "clamp(36px, 3.5vw, 52px)",
-                  }}>
-                    {String(idx + 1).padStart(2, "0")}
-                  </span>
-
-                  {/* Name */}
-                  <span style={{
-                    flex: 1,
-                    fontSize: "clamp(13px, 1.3vw, 16px)",
-                    fontWeight: 600,
-                    letterSpacing: "-0.02em",
-                    color: isActive ? "#000" : "#1a1a1a",
-                    transition: "color 0.18s",
-                  }}>
-                    {item.name}
-                  </span>
-
-                  {/* Arrow */}
-                  <motion.span
-                    animate={{
-                      opacity: isActive ? 1 : 0,
-                      x: isActive ? 0 : -6,
-                    }}
-                    transition={{ duration: 0.15 }}
+              {items.map((item, idx) => {
+                const isActive = hovItem === idx || (hovItem === null && cur === idx);
+                return (
+                  <MotionLink
+                    key={item.slug}
+                    to={`/services/${item.slug}`}
+                    onMouseEnter={() => setHovItem(idx)}
+                    onMouseLeave={() => setHovItem(null)}
                     style={{
-                      fontSize: 16, color: "#000", fontWeight: 700,
-                      flexShrink: 0,
+                      display: "flex", alignItems: "center",
+                      padding: isMobile ? "16px clamp(16px, 4vw, 24px)" : "0 clamp(20px, 3vw, 40px)",
+                      borderBottom: "1px solid rgba(0,0,0,0.07)",
+                      cursor: "pointer",
+                      background: isActive ? accent : "transparent",
+                      transition: "background 0.18s",
+                      flex: isMobile ? "0 0 auto" : 1,
+                      minHeight: isMobile ? 56 : 0,
+                      gap: 16,
+                      textDecoration: "none",
                     }}
                   >
-                    →
-                  </motion.span>
-                </MotionLink>
-              );
-            })}
+                    {/* Number */}
+                    <span style={{
+                      fontFamily: "'Barlow Condensed', sans-serif",
+                      fontSize: "clamp(26px, 2.8vw, 40px)",
+                      fontWeight: 900,
+                      color: isActive ? "rgba(0,0,0,0.18)" : "rgba(0,0,0,0.07)",
+                      letterSpacing: "-0.03em",
+                      lineHeight: 1,
+                      flexShrink: 0,
+                      transition: "color 0.18s",
+                      userSelect: "none",
+                      minWidth: "clamp(36px, 3.5vw, 52px)",
+                    }}>
+                      {String(idx + 1).padStart(2, "0")}
+                    </span>
+
+                    {/* Name */}
+                    <span style={{
+                      flex: 1,
+                      fontSize: "clamp(13px, 1.3vw, 16px)",
+                      fontWeight: 600,
+                      letterSpacing: "-0.02em",
+                      color: isActive ? "#000" : "#1a1a1a",
+                      transition: "color 0.18s",
+                    }}>
+                      {item.name}
+                    </span>
+
+                    {/* Arrow */}
+                    <motion.span
+                      animate={{
+                        opacity: isActive ? 1 : 0,
+                        x: isActive ? 0 : -6,
+                      }}
+                      transition={{ duration: 0.15 }}
+                      style={{
+                        fontSize: 16, color: "#000", fontWeight: 700,
+                        flexShrink: 0,
+                      }}
+                    >
+                      →
+                    </motion.span>
+                  </MotionLink>
+                );
+              })}
             </div>
           </div>
         </motion.div>

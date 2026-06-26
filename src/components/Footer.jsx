@@ -28,9 +28,21 @@ export default function Footer() {
         <LiquidButton as={Link} to="/contact" tint="#C9A84C" textColor="#000" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
           {lang === 'de' ? 'Jetzt Angebot anfordern →' : 'Request a Quote →'}
         </LiquidButton>
-        <LiquidButton as={Link} to="/services" textColor="#fff" style={{ width: '100%', fontSize: 14, padding: '12px 20px' }}>
+        <Link
+          to="/services"
+          style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            width: '100%', fontSize: 14, padding: '12px 20px',
+            borderRadius: 999, border: '1px solid rgba(255,255,255,0.3)',
+            color: '#fff', textDecoration: 'none', fontWeight: 500,
+            letterSpacing: '-0.01em', transition: 'border-color 0.2s, background 0.2s',
+            boxSizing: 'border-box',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.7)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'; e.currentTarget.style.background = 'transparent' }}
+        >
           {lang === 'de' ? 'Leistungen ansehen' : 'View Services'}
-        </LiquidButton>
+        </Link>
       </div>
 
       <div className="footer-grid" style={{
@@ -135,7 +147,7 @@ export default function Footer() {
         {/* Services */}
         <FooterCol
           title={t('footer.servicesColumnTitle')}
-          links={t('footer.offerLinks').map(({ hash, label }) => ({ label, to: `/services#${hash}` }))}
+          links={t('footer.offerLinks').map(({ hash, label }) => ({ label, to: `/services/${hash}` }))}
         />
 
         {/* Social & Legal */}

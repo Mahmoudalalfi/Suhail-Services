@@ -97,7 +97,7 @@ const heroImages = [
   { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png', alt: 'Facility hero', top: 8, left: 2, w: 170, h: 118, rot: -8, delay: 0.35, depth: 1.0 },
   { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png', alt: 'About team', top: 34, left: 1, w: 155, h: 114, rot: 6, delay: 0.45, depth: 1.2 },
   { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png', alt: 'Janitorial', top: 60, left: 3, w: 148, h: 142, rot: -5, delay: 0.60, depth: 1.5 },
-  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png', alt: 'Construction', top: 78, left: 16, w: 148, h: 100, rot: 8, delay: 0.75, depth: 0.9 },
+  { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1782509228/FacilityManagment_tiavdj.jpg', alt: 'Construction', top: 78, left: 16, w: 148, h: 100, rot: 8, delay: 0.75, depth: 0.9 },
   // right side — 4 images
   { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png', alt: 'Outdoor care', top: 6, left: 70, w: 172, h: 118, rot: -7, delay: 0.38, depth: 1.1 },
   { url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png', alt: 'Healthcare', top: 33, left: 76, w: 148, h: 144, rot: -5, delay: 0.55, depth: 1.4 },
@@ -114,7 +114,7 @@ const MOBILE_HERO_CARDS = [
   },
   /* top — right, higher up, tilted right, different shape */
   {
-    url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490816/suhail-services/work-project-06.png', alt: 'Work 6', rot: 14,
+    url: 'https://res.cloudinary.com/df7aiznm6/image/upload/v1782509384/Supermarket_xg8zy4.jpg', alt: 'Work 6', rot: 14,
     pos: { top: '4%', right: '6%' }, w: 'clamp(118px,34vw,156px)', h: 'clamp(78px,22vw,100px)'
   },
   /* bottom — far left, low, tilted opposite */
@@ -386,6 +386,7 @@ function WorkCard({ project }) {
           width: '100%',
           height: '100%',
           objectFit: 'cover',
+          objectPosition: project.imgPosition || 'center',
           transform: hov ? 'scale(1.04)' : 'scale(1)',
           transition: 'transform 0.75s cubic-bezier(0.16,1,0.3,1)',
           willChange: 'transform',
@@ -409,19 +410,6 @@ function WorkCard({ project }) {
             {project.desc}
           </p>
         )}
-      </div>
-      <div style={{
-        position: 'absolute', top: 'clamp(10px,2.5vw,22px)', right: 'clamp(10px,2.5vw,22px)',
-        width: 'clamp(32px,8vw,44px)', height: 'clamp(32px,8vw,44px)', borderRadius: '50%',
-        background: hov ? '#C9A84C' : 'rgba(255,255,255,0.92)',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        fontSize: 18,
-        color: hov ? '#000' : '#000000',
-        transition: 'background 0.25s, color 0.25s',
-        backdropFilter: 'blur(6px)',
-        boxShadow: '0 2px 12px rgba(30,31,40,0.12)',
-      }}>
-        {'↗︎'}
       </div>
     </Link>
   )
@@ -756,8 +744,10 @@ export default function HomePage() {
             style={{
               fontFamily: "'Barlow Condensed', sans-serif",
               fontSize: 'clamp(28px, 4vw, 52px)',
-              letterSpacing: '-0.03em',
-              color: '#ffffff',
+              fontWeight: 700,
+              letterSpacing: '-0.02em',
+              lineHeight: 1.1,
+              color: 'rgba(255,255,255,0.88)',
             }}
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -784,7 +774,7 @@ export default function HomePage() {
               fontFamily: "'Barlow Condensed', sans-serif",
               fontSize: 'clamp(28px, 4vw, 52px)',
               fontWeight: 900,
-              letterSpacing: '-0.03em',
+              letterSpacing: '-0.02em',
               lineHeight: 1,
               width: '100%',
               display: 'flex',
@@ -1014,14 +1004,14 @@ function HomeServicesStaticGrid() {
    HOME SERVICES CAROUSEL (kept for reference)
 ───────────────────────────────────────────── */
 const HOME_SERVICES = [
-  { slug: 'reliability', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>, title: 'Bewährte Zuverlässigkeit', desc: 'Jahre vertrauensvoller Zusammenarbeit mit hunderten Kunden.' },
-  { slug: 'fast-response', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>, title: 'Schnelle Reaktion', desc: 'Kurzfristige Anfragen, Notfälle, Last-Minute-Einsätze – wir sind bereit.' },
-  { slug: 'transparent-pricing', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>, title: 'Transparente Preise', desc: 'Keine versteckten Kosten. Klare, faire Preise für Ihren Projektumfang.' },
-  { slug: 'expert-team', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>, title: 'Expertteam', desc: 'Geschulte, geprüfte Fachkräfte – kompetent, motiviert und professionell.' },
-  { slug: 'one-source', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>, title: 'Alles aus einer Hand', desc: 'Alle Leistungen unter einem Dach, ein Ansprechpartner.' },
-  { slug: 'nationwide', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, title: 'Deutschlandweite Abdeckung', desc: 'In allen großen Städten aktiv – schnell und zuverlässig vor Ort.' },
-  { slug: 'quality', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>, title: 'Qualität garantiert', desc: 'Jeder Auftrag nach höchstem Standard. Wir übernehmen Verantwortung.' },
-  { slug: 'customer-first', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>, title: 'Kunde an erster Stelle', desc: 'Langfristige Partnerschaften auf Basis von Vertrauen und offener Kommunikation.' },
+  { slug: 'reliability', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>, title: 'Bewährte Zuverlässigkeit', desc: 'Jahre vertrauensvoller Zusammenarbeit mit hunderten Kunden.' },
+  { slug: 'fast-response', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>, title: 'Schnelle Reaktion', desc: 'Kurzfristige Anfragen, Notfälle, Last-Minute-Einsätze – wir sind bereit.' },
+  { slug: 'transparent-pricing', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" /><line x1="7" y1="7" x2="7.01" y2="7" /></svg>, title: 'Transparente Preise', desc: 'Keine versteckten Kosten. Klare, faire Preise für Ihren Projektumfang.' },
+  { slug: 'expert-team', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>, title: 'Expertteam', desc: 'Geschulte, geprüfte Fachkräfte – kompetent, motiviert und professionell.' },
+  { slug: 'one-source', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 11 12 14 22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg>, title: 'Alles aus einer Hand', desc: 'Alle Leistungen unter einem Dach, ein Ansprechpartner.' },
+  { slug: 'nationwide', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>, title: 'Deutschlandweite Abdeckung', desc: 'In allen großen Städten aktiv – schnell und zuverlässig vor Ort.' },
+  { slug: 'quality', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6" /><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" /></svg>, title: 'Qualität garantiert', desc: 'Jeder Auftrag nach höchstem Standard. Wir übernehmen Verantwortung.' },
+  { slug: 'customer-first', icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>, title: 'Kunde an erster Stelle', desc: 'Langfristige Partnerschaften auf Basis von Vertrauen und offener Kommunikation.' },
 ]
 
 function HomeServiceCard({ service }) {

@@ -371,41 +371,30 @@ function LangButton({ lang, onToggle }) {
       type="button"
       onClick={handleClick}
       style={{
-        position: 'relative',
-        display: 'inline-flex', alignItems: 'center', gap: 7,
-        padding: '7px 14px', borderRadius: 999, border: 'none',
-        fontSize: 14, fontWeight: 500, letterSpacing: '0.03em',
-        whiteSpace: 'nowrap', cursor: 'pointer', color: '#000',
-        background: 'linear-gradient(145deg, rgba(201,168,76,0.55) 0%, rgba(184,151,46,0.35) 100%)',
-        backdropFilter: 'blur(14px) saturate(1.6)',
-        WebkitBackdropFilter: 'blur(14px) saturate(1.6)',
-        boxShadow: [
-          '0 3px 12px rgba(201,168,76,0.18)',
-          'inset 0 1px 0 rgba(255,220,100,0.5)',
-          'inset 0 -1px 0 rgba(140,100,0,0.15)',
-          '0 0 0 1px rgba(201,168,76,0.4)',
-        ].join(', '),
+        display: 'inline-flex', alignItems: 'center', gap: 6,
+        padding: '6px 12px 6px 8px', borderRadius: 999,
+        border: '1px solid rgba(201,168,76,0.5)',
+        background: 'rgba(0,0,0,0.35)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        fontSize: 13, fontWeight: 600, letterSpacing: '0.08em',
+        color: '#fff', cursor: 'pointer', whiteSpace: 'nowrap',
         transformOrigin: 'center center', willChange: 'transform',
-        transition: 'box-shadow 0.2s',
+        transition: 'border-color 0.2s, background 0.2s',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.boxShadow = '0 0 0 2px rgba(201,168,76,0.7), 0 4px 16px rgba(201,168,76,0.2), inset 0 1px 0 rgba(255,255,255,0.8)'
-        gsap.to(e.currentTarget, { scale: 1.06, duration: 0.18, ease: 'power2.out' })
+        e.currentTarget.style.borderColor = 'rgba(201,168,76,0.9)'
+        e.currentTarget.style.background = 'rgba(201,168,76,0.12)'
+        gsap.to(e.currentTarget, { scale: 1.05, duration: 0.18, ease: 'power2.out' })
       }}
       onMouseLeave={e => {
-        e.currentTarget.style.boxShadow = '0 3px 12px rgba(201,168,76,0.18), inset 0 1px 0 rgba(255,220,100,0.5), inset 0 -1px 0 rgba(140,100,0,0.15), 0 0 0 1px rgba(201,168,76,0.4)'
+        e.currentTarget.style.borderColor = 'rgba(201,168,76,0.5)'
+        e.currentTarget.style.background = 'rgba(0,0,0,0.35)'
         gsap.to(e.currentTarget, { scale: 1, duration: 0.22, ease: 'power2.out' })
       }}
     >
-      {/* gloss streak */}
-      <span aria-hidden style={{
-        position: 'absolute', top: 0, left: '10%', right: '10%', height: '40%',
-        borderRadius: '0 0 50% 50%',
-        background: 'linear-gradient(to bottom, rgba(255,220,100,0.35) 0%, transparent 100%)',
-        pointerEvents: 'none',
-      }} />
       {lang === 'en' ? <FlagUS /> : <FlagDE />}
-      <span style={{ lineHeight: 1, position: 'relative' }}>{lang.toUpperCase()}</span>
+      <span style={{ lineHeight: 1 }}>{lang.toUpperCase()}</span>
     </button>
   )
 }

@@ -8,24 +8,24 @@ import { useLanguage } from '../i18n/LanguageContext'
 gsap.registerPlugin(ScrollTrigger)
 
 const GALLERY_URLS = [
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490389/suhail-services/imprint-security-team.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490367/suhail-services/history-facts-facility-security-hero.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782407867/Imprint2_btiwsf.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782513136/VanCorrection_ywi7uk.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782507561/Work-Project1_ymvbij.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782507887/Work-Project2_wtfoe7.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782508071/Team1_euv5oq.jpg',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782508802/Work-Project4_zidfm1.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782508883/Work-Project5_bvcysi.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782509228/FacilityManagment_tiavdj.jpg',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782509384/Supermarket_xg8zy4.jpg',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782509473/Flooring_icg1gt.jpg',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Driver_Services_Staffing_xibcaw.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Construction_Trades_p2wisz.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782510407/Employee_xnjyis.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782510754/Janitor_uivopi.png',
   'https://res.cloudinary.com/df7aiznm6/image/upload/v1781795031/Office_Team_dgn7xf.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490580/suhail-services/pencil-facility-construction-sites.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490736/suhail-services/pencil-janitorial-services.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490754/suhail-services/pencil-security-technology.jpg',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490800/suhail-services/work-project-01.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490339/suhail-services/about_2_1777327661089.jpg',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490606/suhail-services/pencil-facility-healthcare.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490747/suhail-services/pencil-outdoor-area-care.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580100/pencil-day-service-staff_koskip.jpg',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490739/suhail-services/pencil-maintenance-cleaning.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490816/suhail-services/work-project-06.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490806/suhail-services/work-project-03.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777490647/suhail-services/pencil-glass-facade-cleaning.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580142/work-project-05_pwdduz.png',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580060/imprint-extra-operations_ojmpml.jpg',
-  'https://res.cloudinary.com/df7aiznm6/image/upload/v1777580123/work-project-02_sg8bni.jpg',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782511171/Warehouse_Worker_crhvgz.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782508883/Work-Project5_bvcysi.png',
+  'https://res.cloudinary.com/df7aiznm6/image/upload/v1782507887/Work-Project2_wtfoe7.png',
 ]
 
 const CARD_W = 320
@@ -125,14 +125,14 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
         {ITEMS.map((item, idx) => (
           <div
             key={idx}
-            onMouseEnter={() => { 
+            onMouseEnter={() => {
               if (window.innerWidth >= 1024) {
                 pausedRef.current = true; setHoveredIdx(idx); openZoom(item);
               }
             }}
-            onMouseLeave={() => { 
+            onMouseLeave={() => {
               if (window.innerWidth >= 1024) {
-                closeZoom() 
+                closeZoom()
               }
             }}
             onClick={(e) => {
@@ -145,9 +145,9 @@ function GallerySlideshow({ reverse = false, galleryItems }) {
                 openZoom(item);
               }
             }}
-            onTouchEnd={(e) => { 
+            onTouchEnd={(e) => {
               if (window.innerWidth >= 1024) {
-                e.preventDefault(); openZoom(item) 
+                e.preventDefault(); openZoom(item)
               }
             }}
             style={{
@@ -472,9 +472,10 @@ const WHY_ITEMS = [
   {
     color: '#4f8ef7',
     icon: (
+      // Shield with checkmark = reliability/trust
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        <path d="m9 12 2 2 4-4"/>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <polyline points="9 12 11 14 15 10" />
       </svg>
     ),
     title: 'Proven Reliability',
@@ -483,8 +484,10 @@ const WHY_ITEMS = [
   {
     color: '#f7a034',
     icon: (
+      // Clock with arrow = fast response/time
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
     title: 'Fast Response',
@@ -493,9 +496,10 @@ const WHY_ITEMS = [
   {
     color: '#34c98a',
     icon: (
+      // Receipt/tag with euro = transparent pricing
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-        <circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="1" x2="12" y2="23" />
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
       </svg>
     ),
     title: 'Transparent Pricing',
@@ -504,11 +508,10 @@ const WHY_ITEMS = [
   {
     color: '#a259f7',
     icon: (
+      // Graduation cap = expert/trained team
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+        <path d="M6 12v5c3 3 9 3 12 0v-5" />
       </svg>
     ),
     title: 'Expert Team',
@@ -517,9 +520,12 @@ const WHY_ITEMS = [
   {
     color: '#f75c7e',
     icon: (
+      // Grid/apps = one-stop / all-in-one
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="3"/>
-        <path d="M9 9h6M9 12h6M9 15h4"/>
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
       </svg>
     ),
     title: 'One-Stop Solution',
@@ -528,9 +534,10 @@ const WHY_ITEMS = [
   {
     color: '#34b8f7',
     icon: (
+      // Map pin = location / Germany-wide
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
       </svg>
     ),
     title: 'Germany-Wide Coverage',
@@ -539,8 +546,11 @@ const WHY_ITEMS = [
   {
     color: '#f7d034',
     icon: (
+      // Badge/certificate with check = quality guaranteed
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        <circle cx="12" cy="8" r="6" />
+        <polyline points="10 8 11.5 9.5 14.5 6.5" />
+        <path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12" />
       </svg>
     ),
     title: 'Quality Guaranteed',
@@ -549,8 +559,9 @@ const WHY_ITEMS = [
   {
     color: '#f7607a',
     icon: (
+      // Handshake = client-first / partnership
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z" />
       </svg>
     ),
     title: 'Client-First Mindset',
@@ -860,21 +871,7 @@ function WhyCard({ item, delay }) {
           boxSizing: 'border-box',
         }}
       >
-        {/* colored icon badge */}
-        <div style={{
-          width: 60,
-          height: 60,
-          borderRadius: 16,
-          background: `${color}18`,
-          border: `1.5px solid ${color}35`,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginBottom: 18,
-          color: color,
-          flexShrink: 0,
-          transition: 'background 0.28s ease, border-color 0.28s ease',
-        }}>
+        <div style={{ marginBottom: 18, color: color, flexShrink: 0 }}>
           {item.icon}
         </div>
         {/* thin color bar */}

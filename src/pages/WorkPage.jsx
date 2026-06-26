@@ -39,6 +39,7 @@ function ProjectCard({ project, index, wide = false }) {
           alt={project.title}
           style={{
             width: '100%', height: '100%', objectFit: 'cover',
+            objectPosition: project.imgPosition || 'center',
             transform: hov ? 'scale(1.05)' : 'scale(1)',
             transition: 'transform 0.75s cubic-bezier(0.16,1,0.3,1)',
             willChange: 'transform',
@@ -58,17 +59,6 @@ function ProjectCard({ project, index, wide = false }) {
             {project.title}
           </p>
         </div>
-        <div style={{
-          position: 'absolute', top: 'clamp(10px,2.5vw,22px)', right: 'clamp(10px,2.5vw,22px)',
-          width: 'clamp(30px,7vw,44px)', height: 'clamp(30px,7vw,44px)', borderRadius: '50%',
-          background: hov ? '#C9A84C' : 'rgba(255,255,255,0.92)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: 17,
-          color: hov ? '#fff' : '#000000',
-          transition: 'background 0.25s, color 0.25s',
-          backdropFilter: 'blur(6px)',
-          boxShadow: '0 2px 12px rgba(30,31,40,0.12)',
-        }}>{'↗︎'}</div>
       </Link>
     </div>
   )
@@ -194,7 +184,7 @@ export default function WorkPage() {
         </div>
         <div className="cta-image-side" style={{ position: 'relative', overflow: 'hidden' }}>
           <img
-            src={t('https://res.cloudinary.com/df7aiznm6/image/upload/v1782409749/Van_yd6gnc.png')}
+            src={t('https://res.cloudinary.com/df7aiznm6/image/upload/v1782513136/VanCorrection_ywi7uk.png')}
             alt={t('work.ctaImageAlt')}
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block' }}
           />
