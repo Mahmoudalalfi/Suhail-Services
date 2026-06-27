@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -8,19 +8,24 @@ import { useLanguage } from '../i18n/LanguageContext'
 gsap.registerPlugin(ScrollTrigger)
 
 function useScrollReveal(ref, opts = {}) {
+  useLayoutEffect(() => {
+    if (!ref.current) return
+    gsap.set(ref.current, { opacity: 0, y: opts.y ?? 30 })
+  }, [])
   useEffect(() => {
     if (!ref.current) return
     const el = ref.current
-    gsap.fromTo(
-      el,
+    const rect = el.getBoundingClientRect()
+    const aboveViewport = rect.bottom < 0
+    if (aboveViewport) { gsap.set(el, { opacity: 1, y: 0 }); return }
+    gsap.fromTo(el,
       { opacity: 0, y: opts.y ?? 30 },
       {
-        opacity: 1,
-        y: 0,
+        opacity: 1, y: 0,
         duration: opts.duration ?? 0.75,
         ease: 'power3.out',
         delay: opts.delay ?? 0,
-        scrollTrigger: { trigger: el, start: 'top 85%', once: true },
+        scrollTrigger: { trigger: el, start: 'top 70%', once: true },
       }
     )
   }, [])
@@ -30,7 +35,7 @@ function RevealBlock({ children, y = 30, delay = 0, style = {} }) {
   const ref = useRef(null)
   useScrollReveal(ref, { y, delay })
   return (
-    <div ref={ref} style={{ opacity: 0, ...style }}>
+    <div ref={ref} style={style}>
       {children}
     </div>
   )
@@ -152,7 +157,7 @@ export default function ReferencesPage() {
     <div>
 
       <section style={{ padding: '160px 40px 80px', background: '#fff', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
-        <div ref={headRef} style={{ opacity: 0, maxWidth: 1180, margin: '0 auto' }}>
+        <div ref={headRef} style={{ maxWidth: 1180, margin: '0 auto' }}>
           <Link
             to="/about"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 500, color: 'rgba(10,26,60,0.4)', textDecoration: 'none', letterSpacing: '0.02em', marginBottom: 28 }}

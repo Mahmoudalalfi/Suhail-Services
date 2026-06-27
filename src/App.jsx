@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import useLenis, { getLenis } from './hooks/useLenis'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
@@ -34,16 +35,23 @@ function PageTransition({ children }) {
 
   useEffect(() => {
     if (!el.current) return
-    // On route change: fade-slide in
+
+    // 1. Scroll to top immediately so getBoundingClientRect in child effects is correct
+    const lenis = getLenis()
+    if (lenis) lenis.scrollTo(0, { immediate: true })
+    else window.scrollTo(0, 0)
+
+    // 2. Fade-slide the page wrapper in
     gsap.fromTo(el.current,
       { opacity: 0, y: 18 },
       { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out', clearProps: 'all' }
     )
-    // Scroll to top via Lenis so smooth scroll resets cleanly
-    const lenis = getLenis()
-    if (lenis) lenis.scrollTo(0, { immediate: true })
-    else window.scrollTo(0, 0)
+
+    // 3. Refresh ScrollTrigger after children have mounted and registered their triggers
+    const id = setTimeout(() => ScrollTrigger.refresh(), 150)
+
     prevPath.current = location.pathname
+    return () => clearTimeout(id)
   }, [location.pathname])
 
   return <div ref={el} className="page-wrapper">{children}</div>

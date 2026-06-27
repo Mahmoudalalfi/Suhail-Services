@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -12,21 +12,30 @@ function ProjectCard({ project, index, wide = false }) {
   const ref = useRef(null)
   const [hov, setHov] = useState(false)
 
+  useLayoutEffect(() => {
+    if (!ref.current) return
+    gsap.set(ref.current, { opacity: 0, y: 55 })
+  }, [])
+
   useEffect(() => {
     if (!ref.current) return
-    gsap.fromTo(ref.current,
+    const el = ref.current
+    const rect = el.getBoundingClientRect()
+    const aboveViewport = rect.bottom < 0
+    if (aboveViewport) { gsap.set(el, { opacity: 1, y: 0 }); return }
+    gsap.fromTo(el,
       { opacity: 0, y: 55 },
       {
         opacity: 1, y: 0,
         duration: 0.8, ease: 'power3.out',
         delay: (index % 2) * 0.12,
-        scrollTrigger: { trigger: ref.current, start: 'top 88%', once: true },
+        scrollTrigger: { trigger: el, start: 'top 70%', once: true },
       }
     )
   }, [])
 
   return (
-    <div ref={ref} style={{ opacity: 0, minWidth: 0 }} className={wide ? 'work-project-wide' : undefined}>
+    <div ref={ref} style={{ minWidth: 0 }} className={wide ? 'work-project-wide' : undefined}>
       <Link
         className="work-project-card"
         to="#"
@@ -73,6 +82,11 @@ export default function WorkPage() {
   })
   const headRef = useRef(null)
 
+  useLayoutEffect(() => {
+    if (!headRef.current) return
+    gsap.set(headRef.current, { opacity: 0, y: 40 })
+  }, [])
+
   useEffect(() => {
     if (!headRef.current) return
     gsap.fromTo(headRef.current,
@@ -92,7 +106,6 @@ export default function WorkPage() {
         <div
           ref={headRef}
           style={{
-            opacity: 0,
             maxWidth: 920,
             margin: '0 auto',
             textAlign: 'center',

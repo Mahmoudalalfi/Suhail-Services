@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
 import useSEO from '../hooks/useSEO'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
@@ -75,9 +75,16 @@ const VALUE_ICONS = {
 }
 
 function useScrollReveal(ref, opts = {}) {
+  useLayoutEffect(() => {
+    if (!ref.current) return
+    gsap.set(ref.current, { opacity: 0, y: opts.y ?? 40 })
+  }, [])
   useEffect(() => {
     if (!ref.current) return
     const el = ref.current
+    const rect = el.getBoundingClientRect()
+    const aboveViewport = rect.bottom < 0
+    if (aboveViewport) { gsap.set(el, { opacity: 1, y: 0 }); return }
     gsap.fromTo(el,
       { opacity: 0, y: opts.y ?? 40 },
       {
@@ -85,7 +92,7 @@ function useScrollReveal(ref, opts = {}) {
         duration: opts.duration ?? 0.85,
         ease: opts.ease ?? 'power3.out',
         delay: opts.delay ?? 0,
-        scrollTrigger: { trigger: el, start: opts.start ?? 'top 82%', once: true },
+        scrollTrigger: { trigger: el, start: 'top 70%', once: true },
       }
     )
   }, [])
@@ -94,7 +101,7 @@ function useScrollReveal(ref, opts = {}) {
 function RevealBlock({ children, y = 40, delay = 0, style = {} }) {
   const ref = useRef(null)
   useScrollReveal(ref, { y, delay })
-  return <div ref={ref} style={{ opacity: 0, ...style }}>{children}</div>
+  return <div ref={ref} style={style}>{children}</div>
 }
 
 export default function AboutPage() {
@@ -108,6 +115,11 @@ export default function AboutPage() {
 
   const pillars = Array.isArray(t('about.pillars')) ? t('about.pillars') : []
   const values = Array.isArray(t('about.values')) ? t('about.values') : []
+
+  useLayoutEffect(() => {
+    if (!heroRef.current) return
+    gsap.set(heroRef.current, { opacity: 0, y: 36 })
+  }, [])
 
   useEffect(() => {
     if (!heroRef.current) return
@@ -156,7 +168,6 @@ export default function AboutPage() {
           style={{
             position: 'relative',
             zIndex: 1,
-            opacity: 0,
             width: '100%',
             maxWidth: 1200,
             margin: '0 auto',
@@ -246,42 +257,40 @@ export default function AboutPage() {
           gap: 'clamp(20px, 3vw, 32px)',
         }}>
           {pillars.map((pillar, i) => (
-            <RevealBlock key={pillar.id || i} delay={i * 0.06}>
-              <div style={{ textAlign: 'center', padding: '0 8px' }}>
-                <div style={{
-                  width: 64,
-                  height: 64,
-                  borderRadius: '50%',
-                  border: `2px solid ${GOLD}`,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 18px',
-                  color: GOLD,
-                }}>
-                  {PILLAR_ICONS[pillar.icon] || PILLAR_ICONS.cleaning}
-                </div>
-                <p style={{
-                  fontFamily: "'Barlow Condensed', sans-serif",
-                  fontSize: 'clamp(15px, 1.4vw, 17px)',
-                  fontWeight: 700,
-                  color: '#0a0a0a',
-                  letterSpacing: '0.02em',
-                  textTransform: 'uppercase',
-                  margin: '0 0 10px',
-                }}>
-                  {pillar.title}
-                </p>
-                <p style={{
-                  fontSize: 13,
-                  color: 'rgba(30,31,40,0.58)',
-                  lineHeight: 1.65,
-                  margin: 0,
-                }}>
-                  {pillar.desc}
-                </p>
+            <div key={pillar.id || i} style={{ textAlign: 'center', padding: '0 8px' }}>
+              <div style={{
+                width: 64,
+                height: 64,
+                borderRadius: '50%',
+                border: `2px solid ${GOLD}`,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 18px',
+                color: GOLD,
+              }}>
+                {PILLAR_ICONS[pillar.icon] || PILLAR_ICONS.cleaning}
               </div>
-            </RevealBlock>
+              <p style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: 'clamp(15px, 1.4vw, 17px)',
+                fontWeight: 700,
+                color: '#0a0a0a',
+                letterSpacing: '0.02em',
+                textTransform: 'uppercase',
+                margin: '0 0 10px',
+              }}>
+                {pillar.title}
+              </p>
+              <p style={{
+                fontSize: 13,
+                color: 'rgba(30,31,40,0.58)',
+                lineHeight: 1.65,
+                margin: 0,
+              }}>
+                {pillar.desc}
+              </p>
+            </div>
           ))}
         </div>
       </section>

@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -7,9 +7,16 @@ import { useLanguage } from '../i18n/LanguageContext'
 gsap.registerPlugin(ScrollTrigger)
 
 function useScrollReveal(ref, opts = {}) {
+  useLayoutEffect(() => {
+    if (!ref.current) return
+    gsap.set(ref.current, { opacity: 0, y: opts.y ?? 40 })
+  }, [])
   useEffect(() => {
     if (!ref.current) return
     const el = ref.current
+    const rect = el.getBoundingClientRect()
+    const aboveViewport = rect.bottom < 0
+    if (aboveViewport) { gsap.set(el, { opacity: 1, y: 0 }); return }
     gsap.fromTo(el,
       { opacity: 0, y: opts.y ?? 30 },
       {
@@ -17,7 +24,7 @@ function useScrollReveal(ref, opts = {}) {
         duration: opts.duration ?? 0.75,
         ease: 'power3.out',
         delay: opts.delay ?? 0,
-        scrollTrigger: { trigger: el, start: 'top 85%', once: true },
+        scrollTrigger: { trigger: el, start: 'top 70%', once: true },
       }
     )
   }, [])
@@ -26,7 +33,7 @@ function useScrollReveal(ref, opts = {}) {
 function RevealBlock({ children, y = 30, delay = 0, style = {} }) {
   const ref = useRef(null)
   useScrollReveal(ref, { y, delay })
-  return <div ref={ref} style={{ opacity: 0, ...style }}>{children}</div>
+  return <div ref={ref} style={style}>{children}</div>
 }
 
 /* Heading with animated gold underline */
@@ -36,7 +43,7 @@ function AnimatedHeading({ children }) {
 
   useEffect(() => {
     const tl = gsap.timeline({
-      scrollTrigger: { trigger: wrapRef.current, start: 'top 85%', once: true },
+      scrollTrigger: { trigger: wrapRef.current, start: 'top 70%', once: true },
     })
     tl.fromTo(wrapRef.current,
       { opacity: 0, y: 24 },
@@ -49,7 +56,7 @@ function AnimatedHeading({ children }) {
   }, [])
 
   return (
-    <div ref={wrapRef} style={{ opacity: 0, marginBottom: 'clamp(40px, 6vw, 64px)' }}>
+    <div ref={wrapRef} style={{ marginBottom: 'clamp(40px, 6vw, 64px)' }}>
       <h2 style={{
         fontSize: 'clamp(32px, 4.5vw, 52px)',
         fontWeight: 700,
@@ -91,7 +98,7 @@ function TimelineItem({ item, index, rowRef }) {
 
     const ctx = gsap.context(() => {
       gsap.timeline({
-        scrollTrigger: { trigger: card, start: 'top 87%', once: true },
+        scrollTrigger: { trigger: card, start: 'top 70%', once: true },
       })
       .to(card,
         { opacity: 1, x: 0, duration: 0.72, ease: 'power3.out' },
@@ -248,7 +255,7 @@ function TimelineZigzag({ items }) {
         ease: 'none',
         scrollTrigger: {
           trigger: wrap,
-          start: 'top 78%',
+          start: 'top 70%',
           end: 'bottom 60%',
           scrub: 1,
           invalidateOnRefresh: true,
@@ -318,7 +325,7 @@ export default function HistoryFactsPage() {
       ease: 'none',
       scrollTrigger: {
         trigger: imgRef.current.parentElement,
-        start: 'top bottom',
+        start: 'top 70%',
         end: 'bottom top',
         scrub: 1.5,
       },
@@ -334,7 +341,7 @@ export default function HistoryFactsPage() {
       {/* ── Page header ───────────────────────────────────────────── */}
       <section style={{ background: '#fff', padding: 'clamp(90px, 12vw, 140px) clamp(20px, 5vw, 40px) clamp(48px, 8vw, 80px)', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div ref={headRef} style={{ opacity: 0 }}>
+          <div ref={headRef}>
             <Link
               to="/about"
               style={{

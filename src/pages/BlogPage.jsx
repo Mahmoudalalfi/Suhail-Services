@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -10,14 +10,22 @@ function PostCard({ post, index, featured }) {
   const ref = useRef(null)
   const [hov, setHov] = useState(false)
 
+  useLayoutEffect(() => {
+    if (!ref.current) return
+    gsap.set(ref.current, { opacity: 0, y: 40 })
+  }, [])
   useEffect(() => {
     if (!ref.current) return
-    gsap.fromTo(ref.current,
+    const el = ref.current
+    const rect = el.getBoundingClientRect()
+    const aboveViewport = rect.bottom < 0
+    if (aboveViewport) { gsap.set(el, { opacity: 1, y: 0 }); return }
+    gsap.fromTo(el,
       { opacity: 0, y: 40 },
       {
         opacity: 1, y: 0, duration: 0.75, ease: 'power3.out',
         delay: (index % 3) * 0.07,
-        scrollTrigger: { trigger: ref.current, start: 'top 86%', once: true },
+        scrollTrigger: { trigger: el, start: 'top 70%', once: true },
       }
     )
   }, [])
@@ -26,7 +34,7 @@ function PostCard({ post, index, featured }) {
     <article
       ref={ref}
       className={featured ? 'blog-card-featured' : undefined}
-      style={{ opacity: 0 }}
+      style={{}}
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
     >
@@ -82,7 +90,7 @@ export default function BlogPage() {
   return (
     <div>
       <section style={{ padding: 'clamp(100px, 14vw, 160px) clamp(20px, 5vw, 40px) 60px', background: '#fff' }}>
-        <div ref={headRef} style={{ opacity: 0 }}>
+        <div ref={headRef}>
           <h1 style={{ fontSize: 'clamp(32px, 6vw, 88px)', fontWeight: 300, letterSpacing: '-0.04em', color: '#000000', lineHeight: 1.0, margin: 0 }}>
             {t('blog.title1')}<br />{t('blog.title2')}
           </h1>
