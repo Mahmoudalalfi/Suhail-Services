@@ -47,7 +47,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-grid" style={{
-        borderBottom: '1px solid rgba(255,255,255,0.07)',
+        borderBottom: lang === 'de' ? '1px solid rgba(255,255,255,0.07)' : 'none',
         paddingBottom: 'clamp(32px, 6vw, 56px)',
         marginBottom: 'clamp(24px, 4vw, 36px)',
       }}>

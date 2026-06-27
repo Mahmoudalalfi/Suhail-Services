@@ -60,21 +60,21 @@ export default {
       location: 'Berlin, Deutschland',
       linkedIn: 'LinkedIn',
       offerLinks: [
-        { hash: 'retail-supermarket-service', label: 'Einzelhandel & Supermarkt' },
-        { hash: 'cleaning-building-services', label: 'Reinigung' },
-        { hash: 'driver-services-staffing', label: 'Fahrdienste' },
-        { hash: 'construction-trades', label: 'Bau & Handwerk' },
-        { hash: 'electrical-technical-services', label: 'Elektrohilfsarbeiten' },
-        { hash: 'facility-management', label: 'Facilitymanagement' },
-        { hash: 'inventory-control', label: 'Inventur & Kontrolle' },
-        { hash: 'garden-outdoor-services', label: 'Garten & Außenanlagen' },
-        { hash: 'assembly-disassembly', label: 'Montage & Demontage' },
-        { hash: 'food-service-events', label: 'Gastronomie & Events' },
-        { hash: 'staffing-services', label: 'Personaldienstleistungen' },
-        { hash: 'hotel-services', label: 'Hoteldienstleistungen' },
-        { hash: 'transportation-moving-services', label: 'Transport & Umzug' },
-        { hash: 'property-management-services', label: 'Hausverwaltung' },
-        { hash: 'kitchen-dishwashing-services', label: 'Küche & Spülservice' },
+        { hash: 'retail-supermarket-service',    label: 'Supermarkt' },
+        { hash: 'cleaning-building-services',    label: 'Reinigung' },
+        { hash: 'driver-services-staffing',      label: 'Logistik & Lager' },
+        { hash: 'construction-trades',           label: 'Bau & Handwerk' },
+        { hash: 'electrical-technical-services', label: 'Elektronik & Technik' },
+        { hash: 'facility-management',           label: 'Facility Management' },
+        { hash: 'inventory-control',             label: 'Inventur & Kontrolle' },
+        { hash: 'garden-outdoor-services',       label: 'Garten & Außenservice' },
+        { hash: 'assembly-disassembly',          label: 'Montage & Demontage' },
+        { hash: 'food-service-events',           label: 'Gastronomie & Events' },
+        { hash: 'transportation-moving-services',label: 'Transport & Umzug' },
+        { hash: 'property-management-services',  label: 'Hausmeisterdienste' },
+        { hash: 'staffing-services',             label: 'Personalservice' },
+        { hash: 'hotel-services',                label: 'Hotel Services' },
+        { hash: 'kitchen-dishwashing-services',  label: 'Küchen- & Spülservice' },
       ],
     },
     home: {
@@ -164,24 +164,24 @@ export default {
       subpageCategoryFacility: 'Gebäude- und Anlagendienstleistungen',
       servicesList: [
         {
-          category: 'Einzelhandel & Supermarkt Service',
-          desc: 'Zuverlässiges Personal für Einzelhandel und Supermärkte – Kassen, Verkauf und mehr.',
+          category: 'Supermarkt',
+          desc: 'Zuverlässiges Personal für Supermärkte und Einzelhandel – Kassen, Verkauf und mehr.',
           items: [
-            { slug: 'retail-supermarket-service', name: 'Einzelhandel & Supermarkt Service', subtitle: 'Personal für Handel & Märkte', desc: 'Qualifiziertes Personal für Supermärkte und Einzelhandel – zuverlässig, flexibel und kurzfristig verfügbar.' },
+            { slug: 'retail-supermarket-service', name: 'Supermarkt', subtitle: 'Personal für Handel & Märkte', desc: 'Qualifiziertes Personal für Supermärkte und Einzelhandel – zuverlässig, flexibel und kurzfristig verfügbar.' },
           ],
         },
         {
-          category: 'Reinigung & Gebäudeservice',
+          category: 'Reinigung',
           desc: 'Professionelle Reinigungsdienstleistungen für alle Bereiche – zuverlässig, effizient und maßgeschneidert.',
           items: [
-            { slug: 'cleaning-building-services', name: 'Reinigung & Gebäudeservice', subtitle: 'Gebäude- und Unterhaltsreinigung', desc: 'Umfassende Reinigungs- und Gebäudedienstleistungen für Unternehmen jeder Größe – professionell und zuverlässig.' },
+            { slug: 'cleaning-building-services', name: 'Reinigung', subtitle: 'Gebäude- und Unterhaltsreinigung', desc: 'Umfassende Reinigungsdienstleistungen für Unternehmen jeder Größe – professionell und zuverlässig.' },
           ],
         },
         {
-          category: 'Fahrerservice & Personalgestellung',
-          desc: 'Professionelle Fahrer und Personalgestellungsservice – zuverlässig und flexibel.',
+          category: 'Logistik & Lager',
+          desc: 'Professionelle Logistik- und Lagerpersonal – zuverlässig und flexibel.',
           items: [
-            { slug: 'driver-services-staffing', name: 'Fahrerservice & Personalgestellung', subtitle: 'Fahrer & Logistikpersonal', desc: 'Erfahrene Fahrer und flexibles Logistikpersonal für Ihr Unternehmen – pünktlich, sicher und professionell.' },
+            { slug: 'driver-services-staffing', name: 'Logistik & Lager', subtitle: 'Fahrer & Logistikpersonal', desc: 'Erfahrene Fahrer und flexibles Logistikpersonal für Ihr Unternehmen – pünktlich, sicher und professionell.' },
           ],
         },
         {
@@ -192,10 +192,10 @@ export default {
           ],
         },
         {
-          category: 'Elektro & Technik',
+          category: 'Elektronik & Technik',
           desc: 'Elektro- und technische Dienstleistungen für Baustellen und Unternehmen.',
           items: [
-            { slug: 'electrical-technical-services', name: 'Elektro & Technik', subtitle: 'Elektrische & technische Services', desc: 'Fachkundige Unterstützung bei elektrischen und technischen Arbeiten – flexibel und kurzfristig verfügbar.' },
+            { slug: 'electrical-technical-services', name: 'Elektronik & Technik', subtitle: 'Elektrische & technische Services', desc: 'Fachkundige Unterstützung bei elektrischen und technischen Arbeiten – flexibel und kurzfristig verfügbar.' },
           ],
         },
         {
@@ -213,10 +213,10 @@ export default {
           ],
         },
         {
-          category: 'Garten- & Außenservice',
+          category: 'Garten & Außenservice',
           desc: 'Professionelle Garten- und Außenanlagenpflege für Unternehmen und Privatpersonen.',
           items: [
-            { slug: 'garden-outdoor-services', name: 'Garten- & Außenservice', subtitle: 'Gartenarbeit & Außenpflege', desc: 'Fachkundige Pflege von Gärten und Außenanlagen – zuverlässig, saisonal und maßgeschneidert.' },
+            { slug: 'garden-outdoor-services', name: 'Garten & Außenservice', subtitle: 'Gartenarbeit & Außenpflege', desc: 'Fachkundige Pflege von Gärten und Außenanlagen – zuverlässig, saisonal und maßgeschneidert.' },
           ],
         },
         {
@@ -234,6 +234,20 @@ export default {
           ],
         },
         {
+          category: 'Transport & Umzug',
+          desc: 'Umzüge, Lieferungen und Logistikunterstützung – pünktlich und sicher.',
+          items: [
+            { slug: 'transportation-moving-services', name: 'Transport & Umzug', subtitle: 'Transport, Umzug & Logistik', desc: 'Zuverlässiger Transport- und Umzugsservice sowie Logistikunterstützung – pünktlich, sicher und professionell.' },
+          ],
+        },
+        {
+          category: 'Hausmeisterdienste',
+          desc: 'Professionelle Hausverwaltung und Hausmeisterdienste für Immobilien.',
+          items: [
+            { slug: 'property-management-services', name: 'Hausmeisterdienste', subtitle: 'Hausverwaltung & Objektbetreuung', desc: 'Zuverlässige Hausmeister- und Hausverwaltungsdienstleistungen für Wohn- und Gewerbeimmobilien.' },
+          ],
+        },
+        {
           category: 'Personalservice',
           desc: 'Qualifizierte Zeitarbeitskräfte und flexible Personallösungen für Ihr Unternehmen.',
           items: [
@@ -245,20 +259,6 @@ export default {
           desc: 'Professionelles Hotelpersonal für alle Bereiche des Hotelbetriebs.',
           items: [
             { slug: 'hotel-services', name: 'Hotel Services', subtitle: 'Hotelpersonal & Housekeeping', desc: 'Zuverlässiges und erfahrenes Personal für alle Bereiche des Hotelbetriebs – von Rezeption bis Housekeeping.' },
-          ],
-        },
-        {
-          category: 'Transport & Umzugsservice',
-          desc: 'Umzüge, Lieferungen und Logistikunterstützung – pünktlich und sicher.',
-          items: [
-            { slug: 'transportation-moving-services', name: 'Transport & Umzugsservice', subtitle: 'Transport, Umzug & Logistik', desc: 'Zuverlässiger Transport- und Umzugsservice sowie Logistikunterstützung – pünktlich, sicher und professionell.' },
-          ],
-        },
-        {
-          category: 'Hausmeisterservice',
-          desc: 'Professionelle Hausverwaltung und Hausmeisterdienste für Immobilien.',
-          items: [
-            { slug: 'property-management-services', name: 'Hausmeisterservice', subtitle: 'Hausverwaltung & Objektbetreuung', desc: 'Zuverlässige Hausmeister- und Hausverwaltungsdienstleistungen für Wohn- und Gewerbeimmobilien.' },
           ],
         },
         {
@@ -979,21 +979,21 @@ export default {
       location: 'Berlin, Germany',
       linkedIn: 'LinkedIn',
       offerLinks: [
-        { hash: 'retail-supermarket-service', label: 'Retail & Supermarket' },
-        { hash: 'cleaning-building-services', label: 'Cleaning' },
-        { hash: 'driver-services-staffing', label: 'Driver Services' },
-        { hash: 'construction-trades', label: 'Construction & Trades' },
-        { hash: 'electrical-technical-services', label: 'Electrical Assistance' },
-        { hash: 'facility-management', label: 'Facility Management' },
-        { hash: 'inventory-control', label: 'Inventory Control' },
-        { hash: 'garden-outdoor-services', label: 'Garden & Outdoor' },
-        { hash: 'assembly-disassembly', label: 'Assembly & Disassembly' },
-        { hash: 'food-service-events', label: 'Food Service & Events' },
-        { hash: 'staffing-services', label: 'Staffing Services' },
-        { hash: 'hotel-services', label: 'Hotel Services' },
-        { hash: 'transportation-moving-services', label: 'Transport & Moving' },
-        { hash: 'property-management-services', label: 'Property Management' },
-        { hash: 'kitchen-dishwashing-services', label: 'Kitchen & Dishwashing' },
+        { hash: 'retail-supermarket-service',    label: 'Supermarket' },
+        { hash: 'cleaning-building-services',    label: 'Cleaning' },
+        { hash: 'driver-services-staffing',      label: 'Logistics & Warehousing' },
+        { hash: 'construction-trades',           label: 'Construction & Skilled Trades' },
+        { hash: 'electrical-technical-services', label: 'Electronics & Technology' },
+        { hash: 'facility-management',           label: 'Facility Management' },
+        { hash: 'inventory-control',             label: 'Inventory & Auditing' },
+        { hash: 'garden-outdoor-services',       label: 'Landscaping & Outdoor Services' },
+        { hash: 'assembly-disassembly',          label: 'Assembly & Disassembly' },
+        { hash: 'food-service-events',           label: 'Catering & Events' },
+        { hash: 'transportation-moving-services',label: 'Transport & Relocation' },
+        { hash: 'property-management-services',  label: 'Caretaker Services' },
+        { hash: 'staffing-services',             label: 'Personnel Services' },
+        { hash: 'hotel-services',                label: 'Hotel Services' },
+        { hash: 'kitchen-dishwashing-services',  label: 'Kitchen & Dishwashing' },
       ],
     },
     home: {
@@ -1083,38 +1083,45 @@ export default {
       subpageCategoryFacility: 'Facility Services',
       servicesList: [
         {
-          category: 'Retail & Supermarket Service',
-          desc: 'Reliable staff for retail and supermarkets – checkouts, sales, and more.',
+          category: 'Personnel Services',
+          desc: 'Qualified temporary workers and flexible staffing solutions for your business.',
           items: [
-            { slug: 'retail-supermarket-service', name: 'Retail & Supermarket Service', subtitle: 'Staff for retail & supermarkets', desc: 'Qualified staff for supermarkets and retail – reliable, flexible, and available on short notice.' },
+            { slug: 'staffing-services', name: 'Personnel Services', subtitle: 'Temporary workers & flexible workforce', desc: 'Qualified temporary workers and flexible staffing – available on short notice for your projects.' },
           ],
         },
         {
-          category: 'Cleaning & Building Services',
+          category: 'Supermarket',
+          desc: 'Reliable staff for supermarkets and retail – checkouts, sales, and more.',
+          items: [
+            { slug: 'retail-supermarket-service', name: 'Supermarket', subtitle: 'Staff for retail & supermarkets', desc: 'Qualified staff for supermarkets and retail – reliable, flexible, and available on short notice.' },
+          ],
+        },
+        {
+          category: 'Cleaning',
           desc: 'Professional cleaning services for every area – reliable, efficient, and tailored to your needs.',
           items: [
-            { slug: 'cleaning-building-services', name: 'Cleaning & Building Services', subtitle: 'Building & maintenance cleaning', desc: 'Comprehensive cleaning and building services for businesses of all sizes – professional and reliable.' },
+            { slug: 'cleaning-building-services', name: 'Cleaning', subtitle: 'Building & maintenance cleaning', desc: 'Comprehensive cleaning services for businesses of all sizes – professional and reliable.' },
           ],
         },
         {
-          category: 'Driver Services & Staffing',
-          desc: 'Professional drivers and staffing services – reliable and flexible.',
+          category: 'Logistics & Warehousing',
+          desc: 'Professional logistics and warehouse staff – reliable and flexible.',
           items: [
-            { slug: 'driver-services-staffing', name: 'Driver Services & Staffing', subtitle: 'Drivers & logistics staff', desc: 'Experienced drivers and flexible logistics staff for your business – punctual, safe, and professional.' },
+            { slug: 'driver-services-staffing', name: 'Logistics & Warehousing', subtitle: 'Drivers & logistics staff', desc: 'Experienced drivers and flexible logistics staff for your business – punctual, safe, and professional.' },
           ],
         },
         {
-          category: 'Construction & Trades',
+          category: 'Construction & Skilled Trades',
           desc: 'Skilled support for construction projects and trade activities.',
           items: [
-            { slug: 'construction-trades', name: 'Construction & Trades', subtitle: 'Construction projects & trade services', desc: 'Qualified professionals for construction projects and trade activities – reliable and on schedule.' },
+            { slug: 'construction-trades', name: 'Construction & Skilled Trades', subtitle: 'Construction projects & trade services', desc: 'Qualified professionals for construction projects and trade activities – reliable and on schedule.' },
           ],
         },
         {
-          category: 'Electrical & Technical Services',
+          category: 'Electronics & Technology',
           desc: 'Electrical and technical services for construction sites and businesses.',
           items: [
-            { slug: 'electrical-technical-services', name: 'Electrical & Technical Services', subtitle: 'Electrical & technical support', desc: 'Expert support for electrical and technical work – flexible and available on short notice.' },
+            { slug: 'electrical-technical-services', name: 'Electronics & Technology', subtitle: 'Electrical & technical support', desc: 'Expert support for electrical and technical work – flexible and available on short notice.' },
           ],
         },
         {
@@ -1125,17 +1132,17 @@ export default {
           ],
         },
         {
-          category: 'Inventory & Control',
+          category: 'Inventory & Auditing',
           desc: 'Reliable inventory and goods control services for retail and industry.',
           items: [
-            { slug: 'inventory-control', name: 'Inventory & Control', subtitle: 'Stocktaking & goods control', desc: 'Professional inventory services and goods control – accurate, fast, and reliable.' },
+            { slug: 'inventory-control', name: 'Inventory & Auditing', subtitle: 'Stocktaking & goods control', desc: 'Professional inventory services and goods control – accurate, fast, and reliable.' },
           ],
         },
         {
-          category: 'Garden & Outdoor Services',
+          category: 'Landscaping & Outdoor Services',
           desc: 'Professional garden and outdoor area maintenance for businesses and private clients.',
           items: [
-            { slug: 'garden-outdoor-services', name: 'Garden & Outdoor Services', subtitle: 'Gardening & outdoor maintenance', desc: 'Expert care of gardens and outdoor areas – reliable, seasonal, and tailored to your needs.' },
+            { slug: 'garden-outdoor-services', name: 'Landscaping & Outdoor Services', subtitle: 'Gardening & outdoor maintenance', desc: 'Expert care of gardens and outdoor areas – reliable, seasonal, and tailored to your needs.' },
           ],
         },
         {
@@ -1146,17 +1153,24 @@ export default {
           ],
         },
         {
-          category: 'Food Service & Events',
+          category: 'Catering & Events',
           desc: 'Service staff for catering, food service, and events.',
           items: [
-            { slug: 'food-service-events', name: 'Food Service & Events', subtitle: 'Catering & event staff', desc: 'Experienced service staff for food service, catering, and events – professional and reliable.' },
+            { slug: 'food-service-events', name: 'Catering & Events', subtitle: 'Catering & event staff', desc: 'Experienced service staff for food service, catering, and events – professional and reliable.' },
           ],
         },
         {
-          category: 'Staffing Services',
-          desc: 'Qualified temporary workers and flexible staffing solutions for your business.',
+          category: 'Transport & Relocation',
+          desc: 'Moving, deliveries, and logistics support – punctual and safe.',
           items: [
-            { slug: 'staffing-services', name: 'Staffing Services', subtitle: 'Temporary workers & flexible workforce', desc: 'Qualified temporary workers and flexible staffing – available on short notice for your projects.' },
+            { slug: 'transportation-moving-services', name: 'Transport & Relocation', subtitle: 'Transport, moving & logistics', desc: 'Reliable transportation and moving services as well as logistics support – punctual, safe, and professional.' },
+          ],
+        },
+        {
+          category: 'Caretaker Services',
+          desc: 'Professional property management and caretaker services for real estate.',
+          items: [
+            { slug: 'property-management-services', name: 'Caretaker Services', subtitle: 'Property management & caretaking', desc: 'Reliable caretaker and property management services for residential and commercial properties.' },
           ],
         },
         {
@@ -1164,20 +1178,6 @@ export default {
           desc: 'Professional hotel staff for all areas of hotel operations.',
           items: [
             { slug: 'hotel-services', name: 'Hotel Services', subtitle: 'Hotel staff & housekeeping', desc: 'Reliable and experienced staff for all areas of hotel operations – from reception to housekeeping.' },
-          ],
-        },
-        {
-          category: 'Transportation & Moving Services',
-          desc: 'Moving, deliveries, and logistics support – punctual and safe.',
-          items: [
-            { slug: 'transportation-moving-services', name: 'Transportation & Moving Services', subtitle: 'Transport, moving & logistics', desc: 'Reliable transportation and moving services as well as logistics support – punctual, safe, and professional.' },
-          ],
-        },
-        {
-          category: 'Property Management Services',
-          desc: 'Professional property management and caretaker services for real estate.',
-          items: [
-            { slug: 'property-management-services', name: 'Property Management Services', subtitle: 'Property management & caretaking', desc: 'Reliable caretaker and property management services for residential and commercial properties.' },
           ],
         },
         {
