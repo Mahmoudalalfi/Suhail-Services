@@ -203,7 +203,7 @@ export default function Footer() {
             letterSpacing: '-0.02em',
           }}>
             {lang === 'de'
-              ? <><span>Ein starkes Netzwerk für </span><span style={{ color: '#C9A84C' }}>starke Ergebnisse.</span></>
+              ? <><span>Stark vernetzt für </span><span style={{ color: '#C9A84C' }}>starke Ergebnisse.</span></>
               : <><span>A strong network for </span><span style={{ color: '#C9A84C' }}>strong results.</span></>}
           </h2>
           <p style={{ fontSize: 'clamp(12px, 1.2vw, 14px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.65, margin: 0 }}>

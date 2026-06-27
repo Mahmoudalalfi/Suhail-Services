@@ -370,11 +370,12 @@ function WorkCard({ project }) {
   const imgRef = useRef(null)
 
   return (
-    <Link
+    <div
       className="work-feature-card"
-      to="/work"
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
+      onClick={() => window.location.href = '/work'}
+      style={{ cursor: 'pointer' }}
     >
       <img
         ref={imgRef}
@@ -394,24 +395,17 @@ function WorkCard({ project }) {
       />
       <div style={{
         position: 'absolute', inset: 0,
-        background: 'linear-gradient(to top, rgba(10,11,18,0.75) 0%, rgba(10,11,18,0.15) 40%, transparent 65%)',
-        transition: 'opacity 0.4s',
-        opacity: hov ? 1 : 0.7,
+        background: 'linear-gradient(to top, rgba(10,11,18,0.92) 0%, rgba(10,11,18,0.5) 35%, transparent 60%)',
       }} />
-      <div style={{ position: 'absolute', bottom: 14, left: 12, right: 52, color: '#fff' }}>
-        <p style={{ fontSize: 'clamp(9px,2vw,12px)', fontWeight: 400, opacity: 0.6, letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 4 }}>
-          {project.tag}
+      <div style={{ position: 'absolute', bottom: 14, left: 14, right: 14, color: '#fff' }}>
+        <p style={{ fontSize: 'clamp(9px,2vw,11px)', fontWeight: 400, opacity: 0.6, letterSpacing: '0.07em', textTransform: 'uppercase', margin: 0, marginBottom: 4 }}>
+          {project.tag} · {project.year}
         </p>
-        <p style={{ fontSize: 'clamp(13px,3vw,24px)', fontWeight: 400, letterSpacing: '-0.025em', lineHeight: 1.1, marginBottom: project.desc ? 8 : 0 }}>
+        <p style={{ fontSize: 'clamp(13px,3vw,22px)', fontWeight: 400, letterSpacing: '-0.025em', lineHeight: 1, margin: 0 }}>
           {project.title}
         </p>
-        {project.desc && (
-          <p style={{ fontSize: 'clamp(11px,1.4vw,14px)', fontWeight: 300, opacity: hov ? 0.8 : 0, color: 'rgba(255,255,255,0.85)', lineHeight: 1.5, transition: 'opacity 0.35s ease', margin: 0 }}>
-            {project.desc}
-          </p>
-        )}
       </div>
-    </Link>
+    </div>
   )
 }
 
@@ -855,7 +849,7 @@ export default function HomePage() {
             color: '#000000',
             lineHeight: 1.1,
           }}>
-            {t('home.workTitle1')}<br />{t('home.workTitle2')}
+            {t('home.workTitle1')} {t('home.workTitle2')}
           </h2>
           <Link to="/work" style={{
             fontSize: 14, fontWeight: 400, color: '#000000',
@@ -1032,13 +1026,7 @@ function HomeServiceCard({ service }) {
         cursor: 'default',
       }}
     >
-      <div style={{
-        width: 52, height: 52, borderRadius: 12,
-        background: 'rgba(30,31,40,0.05)',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        marginBottom: 16,
-        color: '#0f0f12',
-      }}>
+      <div style={{ marginBottom: 16, color: '#0f0f12' }}>
         {service.icon}
       </div>
       <p style={{
