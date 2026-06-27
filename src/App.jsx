@@ -48,7 +48,7 @@ function PageTransition({ children }) {
     )
 
     // 3. Refresh ScrollTrigger after children have mounted and registered their triggers
-    const id = setTimeout(() => ScrollTrigger.refresh(), 150)
+    const id = setTimeout(() => ScrollTrigger.refresh(), 300)
 
     prevPath.current = location.pathname
     return () => clearTimeout(id)
