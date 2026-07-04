@@ -17,27 +17,27 @@ import { useLanguage } from "../../i18n/LanguageContext";
 
 const SUB_IMAGES = {
   "retail-supermarket-service": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782512227/SupermarketEmployee_goteeo.jpg",
-  "cleaning-building-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782331386/Cleaning_and_Building_services_sktlvm.jpg",
+  "cleaning-building-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1783163176/Cleaning_zplqdy.png",
   "driver-services-staffing": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Driver_Services_Staffing_xibcaw.png",
   "construction-trades": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329210/Construction_Trades_p2wisz.png",
   "electrical-technical-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782509228/FacilityManagment_tiavdj.jpg",
   "facility-management": "https://res.cloudinary.com/df7aiznm6/image/upload/v1783161071/FacilityManagment_gvwsch.png",
-  "inventory-control": "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1400",
+  "inventory-control": "https://res.cloudinary.com/df7aiznm6/image/upload/v1783163270/Inventory_bbdg8o.png",
   "garden-outdoor-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1783160264/Garden_Outdoor_Services_ux0mwm.png",
-  "assembly-disassembly": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1400",
+  "assembly-disassembly": "https://res.cloudinary.com/df7aiznm6/image/upload/v1783162964/Assembly_hk1wx8.png",
   "food-service-events": "https://res.cloudinary.com/df7aiznm6/image/upload/v1783160442/Food_Service_Events_qrpihn.png",
-  "staffing-services": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1400",
-  "hotel-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329213/Hotel_Services_ur9iqp.jpg",
+  "staffing-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1783163087/PersonnalService_dpc4r0.png",
+  "hotel-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1783165343/HotelService_z3qlhm.png",
   "transportation-moving-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782513136/VanCorrection_ywi7uk.png",
-  "property-management-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329212/Property_Management_Services_nlwmvv.jpg",
-  "kitchen-dishwashing-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1782329212/Kitchen_Dishwashing_Services_kmmv1f.jpg",
+  "property-management-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1783165118/PropertyManagement_hvsoo5.png",
+  "kitchen-dishwashing-services": "https://res.cloudinary.com/df7aiznm6/image/upload/v1783165524/DishWashers_jrkx7r.png",
 };
 
 const FALLBACKS = [
   "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1400",
   "https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=1400",
-  "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1400",
-  "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1400",
+  "https://res.cloudinary.com/df7aiznm6/image/upload/v1783163270/Inventory_bbdg8o.png",
+  "https://res.cloudinary.com/df7aiznm6/image/upload/v1783163087/PersonnalService_dpc4r0.png",
 ];
 
 const CAT_COLORS = ["#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C", "#C9A84C"];
