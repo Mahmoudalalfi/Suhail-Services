@@ -653,7 +653,7 @@ export default function HomePage() {
       {/* ════ HERO ════ */}
       <section
         ref={heroRef}
-        className="relative w-full overflow-hidden hero-section"
+        className="relative w-full overflow-hidden hero-section home-hero"
         style={{
           height: '100vh',
           background: '#0a0a0f',
@@ -732,6 +732,24 @@ export default function HomePage() {
               <BrandLogo variant="dark" />
             </div>
           </motion.div>
+
+          <motion.div
+            className="hero-mobile-service-logo"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.45 }}
+          >
+            <BrandLogo variant="dark" mobile />
+          </motion.div>
+
+          <motion.p
+            className="hero-eyebrow"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.24, duration: 0.45 }}
+          >
+            {lang === 'de' ? 'Professionelle Facility Services' : 'Professional Facility Services'}
+          </motion.p>
 
           <motion.h1
             className="font-black leading-none mb-1"
@@ -816,12 +834,23 @@ export default function HomePage() {
             style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 12, marginTop: 16 }}
           >
             <LiquidButton as={Link} to="/contact" tint="#C9A84C" textColor="#000">
-              {lang === 'de' ? 'Jetzt Angebot anfordern' : 'Request a Quote'} →
+              {lang === 'de' ? 'Jetzt anfragen' : 'Get in touch'} →
             </LiquidButton>
-            <LiquidButton as={Link} to="/services" textColor="#0f0f12">
+            <LiquidButton
+              as={Link}
+              to="/services"
+              textColor="#0f0f12"
+              aria-label={lang === 'de' ? 'Leistungen entdecken' : 'View Services'}
+              data-mobile-label={lang === 'de' ? 'Leistungen' : 'Services'}
+            >
               {lang === 'de' ? 'Leistungen entdecken' : 'View Services'}
             </LiquidButton>
           </motion.div>
+
+          <div className="hero-scroll-cue" aria-hidden="true">
+            <span />
+            {lang === 'de' ? 'Entdecken' : 'Explore'}
+          </div>
         </div>
       </section>
 
@@ -924,7 +953,7 @@ export default function HomePage() {
         </div>
         <div className="cta-dark-buttons" style={{ alignSelf: 'flex-start', display: 'flex', flexWrap: 'wrap', gap: 16 }}>
           <LiquidButton as={Link} to="/contact" tint="#C9A84C" textColor="#000" style={{ fontSize: 15, padding: '10px 24px' }}>
-            {lang === 'de' ? 'Jetzt Angebot anfordern →' : 'Request a Quote →'}
+            {lang === 'de' ? 'Jetzt anfragen →' : 'Get in touch →'}
           </LiquidButton>
           <LiquidButton as={Link} to="/services" textColor="#fff" style={{ fontSize: 15, padding: '10px 24px' }}>
             {lang === 'de' ? 'Leistungen ansehen' : 'View Services'}
